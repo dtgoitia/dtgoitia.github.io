@@ -4,7 +4,7 @@ html {
   background-color: #2d3c4b;
 	/* background: url('./../img/indexBackground.png');
 	background-attachment: fixed; */
-	}
+}
 body {
 	text-align: center;
 	color: white;
@@ -12,14 +12,14 @@ body {
 	margin: 0px auto;
 	padding: 0px;
 	position: relative;
-	}
+}
 header {
 	text-align:center;
 	color: white;
 	padding: 50px 70px;
 	position: relative;
 	top: 0;
-	}
+}
 .nombre {
 	font-family: "Open Sans", sans;
 	font-size: 70px;
@@ -27,7 +27,7 @@ header {
 	letter-spacing: -5px;
 	color: #c8c8c8;
 	padding: 100px 0px 0px 0px;
-	}
+}
 .apellido {
 	font-family: "Open Sans", sans;
 	font-size: 70px;
@@ -36,7 +36,7 @@ header {
 	color: #ffffff;
 	margin: 0px;
 	padding: 0px;
-	}
+}
 .web2 {
 	font-family: "Open Sans", sans;
 	font-size: 14px;
@@ -44,14 +44,14 @@ header {
 	letter-spacing: -1px;
 	word-spacing: 10px;
 	padding: 0px 0px 0px 0px;
-	}
+}
 .menu {
 	width: 600px;
 	height: 350px;
 	margin: 0px auto;
 	position: fixed;
 	bottom: 0px;
-	}
+}
 .vertical1 {
 	/* background: url("./../../img/index_menu1.svg") no-repeat; */
 	width: 265px;
@@ -61,7 +61,7 @@ header {
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
-	}
+}
 .vertical2 {
 	/* background: url("./../../img/index_menu2.svg") no-repeat; */
 	width: 200px;
@@ -71,7 +71,7 @@ header {
 	position: absolute;
 	bottom: 0px;
 	left: 212px;
-	}
+}
 .vertical3 {
 	/* background: url("./../../img/index_menu3.svg") no-repeat; */
 	width: 265px;
@@ -81,7 +81,7 @@ header {
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
-	}
+}
 .caja_girada {
   text-align: right;
   font-family: "Open Sans", sans;
@@ -95,48 +95,55 @@ header {
   transform: rotate (-90deg);
   position: absolute;
 	z-index: 9999;
-  }
-.caja_girada a {
-	text-decoration:none;
-  }
+}
 .vertical1 .caja_girada {
   width: 160px;
 	top: 104px;
   right: -59px;
-  }
+}
 .vertical2 .caja_girada {
   width: 199px;
 	top: 104px;
   right: 9px;
-  }
+}
 .vertical3 .caja_girada {
   width: 186px;
 	top: 107px;
   right: 142px;
-  }
+}
 .vertical1 .texto_fijo,
 .vertical2 .texto_fijo,
 .vertical3 .texto_fijo {
   color: #2d3c4b;
-  }
+}
+.vertical1 svg path,
+.vertical2 svg path,
+.vertical3 svg path {
+  cursor: pointer;
+}
+.vertical1 svg path:hover,
+.vertical2 svg path:hover,
+.vertical3 svg path:hover {
+  fill: black;
+}
 .vertical1 .texto_oculto,
 .vertical2 .texto_oculto,
 .vertical3 .texto_oculto {
   opacity: 0;
   transition: all 0.25s ease-in-out 0s;
-  }
+}
 .vertical1 .caja_girada:hover .texto_oculto,
 .vertical2 .caja_girada:hover .texto_oculto,
 .vertical3 .caja_girada:hover .texto_oculto {
   color: #1b252e /*rgba(45,60,75,0.9)*/;
   opacity: 1;
   transition: opacity 0.15s ease-in-out 0s;
-  }
+}
 .vertical1 .caja_girada:hover .texto_fijo,
 .vertical2 .caja_girada:hover .texto_fijo,
 .vertical3 .caja_girada:hover .texto_fijo {
   color: #1b252e; /* 212d38 161e25 */
-  }
+}
 
 
 /* --- IDIOMA ---------------------------------------------- */
@@ -148,7 +155,7 @@ header {
 	left: 0px;
 	bottom: 0px;
 	z-index: 9999;
-	}
+}
 .idioma1 {
 	font-family: "Open Sans", sans;
 	font-size: 15px;
@@ -157,33 +164,33 @@ header {
 	line-height: 10px;
 	width: 200px;
 	height: 70px;
-	}
+}
 .idioma1 h1 {
 	font-family: "Open Sans", sans;
 	font-size: 13px;
 	font-weight: 600;
 	margin: 0px auto;
-	}
+}
 .idioma1 h2 {
 	font-family: "Open Sans", sans;
 	font-size: 20px;
 	font-weight: 600;
 	margin: 10px auto;
 	padding: 0px;
-	}
+}
 
 
 /* --- LINKS ----------------------------------------------- */
 .idioma0 span:link {
 	text-decoration:none;
 	color: #ffffff;
-	}
+}
 .idioma0 span:visited {
 	text-decoration:none;
 	color: #ffffff;
-	}
+}
 .idioma0 span:hover {
 	text-decoration:none;
 	color: #2d3c4b;
 	text-decoration: blink;
-	}
+}
