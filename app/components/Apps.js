@@ -1,6 +1,9 @@
 import React from 'react';
-import Intro from './intro';
-import Language from './language';
+import Intro from './Intro';
+import Language from './Language';
+import Past from './Past';
+import Present from './Present';
+import Future from './Future';
 
 
 const db = {
@@ -54,7 +57,8 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      page: 'intro',
+      // page: 'intro',
+      page: 'past',
       language: 'English'
     }
     this.changePage = this.changePage.bind(this)
@@ -70,7 +74,6 @@ class App extends React.Component {
   }
 
   changeLanguage(lang) {
-    // console.log('Language changed to ', lang, '!');
     this.setState(() => {
       return (
         {language: lang}
@@ -97,6 +100,27 @@ class App extends React.Component {
               changeLanguage={this.changeLanguage}
             />
           </div>
+        );
+        break;
+      case 'past':
+        return(
+          <Past
+            changePage={this.changePage}
+          />
+        );
+        break;
+      case 'present':
+        return(
+          <Present
+            changePage={this.changePage}
+          />
+        );
+        break;
+      case 'future':
+        return(
+          <Future
+            changePage={this.changePage}
+          />
         );
         break;
     
