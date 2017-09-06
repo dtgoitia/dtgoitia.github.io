@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+// Individual horizontal bars
 class AcademiaBar extends React.Component {
   render() {
     const l = this.props.length - 10; // Total length - (round corners' X displacement)
@@ -23,6 +23,17 @@ class AcademiaBar extends React.Component {
   }
 }
 
+// Block containing all horizontal bars
+const AcademiaBars = (props) => {
+  return(
+    <div className='academiaBars'>
+      {props.bars.map((item,i) => {
+        return <AcademiaBar length={item} fill={props.c} stroke='black' key={i}/>
+      })}
+    </div>
+  );
+}
+
 // Tag with a circle shape: when the user clicks on the tag,
 // it will show a card with the information
 class AcademiaTag extends React.Component {
@@ -36,6 +47,7 @@ class AcademiaTag extends React.Component {
     this.setState({foldedTray: !this.state.foldedTray})
   }
 
+  componendidmoun
   render() {
     return (
       <div
@@ -64,16 +76,7 @@ class AcademiaTag extends React.Component {
   }
 }
 
-const AcademiaBars = (props) => {
-  return(
-    <div className='academiaBars'>
-      {props.bars.map((item,i) => {
-        return <AcademiaBar length={item} fill={props.c} stroke='black' key={i}/>
-      })}
-    </div>
-  );
-}
-
+// Block containing the entry tag and its horizontal bars
 class AcademiaEntry extends React.Component {
   render() {
     const c = this.props.color;
