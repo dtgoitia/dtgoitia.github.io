@@ -198,12 +198,28 @@ header {
 
 
 /* --- ACADEMIA TAG ---------------------------------------- */
+.academiaTagBall {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 30px;
+	border: solid 4px #2d3c4b;
+}
+.academiaTagBall img {
+	width: 30px;
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	margin: auto;
+}
 .academiaTag {
 	position: relative;
-	width: 435px;		/* 40px closed */
-	height: 148px;	/* 40px closed */
-	/* border-radius: 30px;  /when closed */
-	/* border-radius: 30px;  /when closed */
+	width: 40px;
+	height: 40px;
+	border-radius: 30px;
+	border: solid 4px #2d3c4b;
+}
+.academiaTag {
+	position: relative;
 	width: 427px;
   height: 140px;
   border-radius: 30px 30px 70px 30px;
@@ -212,10 +228,10 @@ header {
 		0px 0px 0px 5px rgba(188,188,188,0.5);
 }
 .academiaTag img {
-	width: 30px;
 	position: absolute;
-	top: 5px;
-	left: 5px;
+	width: 45px;
+	top: 7px;
+	left: 10px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
@@ -264,4 +280,17 @@ header {
 .academiaBar {
 	display: block;
 	margin: 5px 0 5px auto;
+}
+
+
+
+/* TEST */
+.c1 {
+	background-color: black;
+	width: 100px;
+	transition: width 0.2s ease-in;
+}
+.c2 {
+	width: 500px;
+	transition: width 2s ease-in;
 }

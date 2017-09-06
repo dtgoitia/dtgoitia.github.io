@@ -1,5 +1,6 @@
 import React from 'react';
-import NavBar from './NavBar'
+import NavBar from './NavBar';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class AcademiaBar extends React.Component {
   render() {
@@ -25,13 +26,33 @@ class AcademiaBar extends React.Component {
 // Tag with a circle shape: when the user clicks on the tag,
 // it will show a card with the information
 class AcademiaTag extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      foldedTray: true,
+      devMode: false,
+      testState: true
+    }
+
+    this.showHideTray = this.showHideTray.bind(this);
+  }
+
+  showHideTray(){
+    this.setState({devMode: !this.state.devMode})
+  }
+
   render() {
     return (
       <div
-        className='academiaTag'
+        className={this.state.foldedTray === false ? 'academiaTagBall' : 'academiaTagBall academiaTag'}
+        style={ {backgroundColor: this.props.color} }
+        onClick={this.showHideTray.bind(null)}
       >
         <img src={this.props.data.symbolPath} />
-        <div className='academiaTagTray'>
+        <div
+          className='academiaTagTray'
+          style={this.state.foldedTray === true ? {display: 'none'} : {display: 'block'}}
+        >
           <h1>{this.props.data.title}</h1>
           <h2>{this.props.data.subtitle}</h2>
           <h3>This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.</h3>
@@ -72,6 +93,31 @@ class AcademiaEntry extends React.Component {
   }
 }
 
+class TestAnimation extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = { testState: true }
+
+    this.change = this.change.bind(this);
+  }
+  
+  change(){
+    this.setState({testState: !this.state.testState})
+  }
+
+  render() {
+    return (
+      <div
+        className={this.state.testState === true ? 'c1' : 'c1 c2'}
+        style={ {backgroundColor: this.props.color} }
+        onClick={this.change.bind(null)}
+      >
+        ukelele!
+      </div>
+    );
+  }
+}
+
 class DesktopChronology extends React.Component {
   render() {
     return (
@@ -86,6 +132,7 @@ class DesktopChronology extends React.Component {
           }}
           color='#92905d'
         />
+        <TestAnimation />
       </div>
     );
   }
