@@ -28,8 +28,7 @@ class AcademiaBar extends React.Component {
 class AcademiaTag extends React.Component {
   constructor(props){
     super(props)
-    this.state = { foldedTray: false }
-
+    this.state = { foldedTray: true }
     this.showHideTray = this.showHideTray.bind(this);
   }
 
@@ -40,75 +39,48 @@ class AcademiaTag extends React.Component {
   render() {
     return (
       <div
-        className={this.state.foldedTray === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
-        style={ {backgroundColor: this.props.color} }
-        onClick={this.showHideTray.bind(null)}
+        className='academiaTagContainer'
+        style={{top: this.props.position.y, left: this.props.position.x}}
       >
-        <img src={this.props.data.symbolPath} />
-        <h1>{this.props.data.title}</h1>
-        <h2>{this.props.data.subtitle}</h2>
         <div
-          className='academiaTagTray'
-          style={{display: 'block'}}
+          className={this.state.foldedTray === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
+          style={ {backgroundColor: this.props.color} }
+          onClick={this.showHideTray.bind(null)}
         >
-          <h3>This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.</h3>
-          <p><i>Start date:</i> Nov 2014</p>
-          <p><i>End date:</i> not yet</p>
+          <img src={this.props.data.symbolPath} />
+          <h1>{this.props.data.title}</h1>
+          <h2>{this.props.data.subtitle}</h2>
+          <div
+            className='academiaTagTray'
+            style={{display: 'block'}}
+          >
+            <h3>This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.</h3>
+            <p><i>Start date:</i> Nov 2014</p>
+            <p><i>End date:</i> not yet</p>
+          </div>
         </div>
       </div>
     );
   }
 }
-// <div class="past_bola_der" style="width: 300px; bottom: 1189px; left: 116px;">
-//   <div class="past_bola_der_panel"  style=" background: #92905d; ">
-//     <img src="img/past_capm.svg">
-//     <h1>Certified Associate in Project Management</h1>
-//     <h2>Project Management Institute (PMI) & Learning People</h2>
-//     <div class="past_bola_der_bandeja">
-//       <h3>This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.</h3>
-//       <p><i>Start date:</i> Nov 2014</p>
-//       <p><i>End date:</i> not yet</p>
-//     </div>
-//   </div>
-// </div>
+
+const AcademiaBars = (props) => {
+  return(
+    <div className='academiaBars'>
+      {props.bars.map((item,i) => {
+        return <AcademiaBar length={item} fill={props.c} stroke='black' key={i}/>
+      })}
+    </div>
+  );
+}
 
 class AcademiaEntry extends React.Component {
   render() {
     const c = this.props.color;
     return (
-      <div>
-        <AcademiaTag data={this.props.data} color={c} />
-        <div className='academiaBars'>
-          <AcademiaBar length='100' fill={c} stroke='black' />
-          <AcademiaBar length='210' fill={c} stroke='black' />
-          <AcademiaBar length='110' fill={c} stroke='black' />
-          <AcademiaBar length='110' fill={c} stroke='black' />
-        </div>
-      </div>
-    );
-  }
-}
-
-class TestAnimation extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = { testState: true }
-
-    this.change = this.change.bind(this);
-  }
-  
-  change(){
-    this.setState({testState: !this.state.testState})
-  }
-
-  render() {
-    return (
-      <div
-        className={this.state.testState === true ? 'c1' : 'c1 c2'}
-        style={ {backgroundColor: this.props.color} }
-        onClick={this.change.bind(null)}
-      >
-        ukelele!
+      <div className='academiaEntry'>
+        <AcademiaTag data={this.props.data} color={c} position={this.props.position} />
+        <AcademiaBars c={c} bars={this.props.bars}/>
       </div>
     );
   }
@@ -127,8 +99,9 @@ class DesktopChronology extends React.Component {
             symbolPath: './../img/past_capm.svg'
           }}
           color='#92905d'
+          bars={[ 50, 30, 250, 40, 210, 90 ]}
+          position={{x: 50, y: -10}}
         />
-        <TestAnimation />
       </div>
     );
   }
