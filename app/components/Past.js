@@ -28,33 +28,29 @@ class AcademiaBar extends React.Component {
 class AcademiaTag extends React.Component {
   constructor(props){
     super(props)
-    this.state = {
-      foldedTray: true,
-      devMode: false,
-      testState: true
-    }
+    this.state = { foldedTray: false }
 
     this.showHideTray = this.showHideTray.bind(this);
   }
 
   showHideTray(){
-    this.setState({devMode: !this.state.devMode})
+    this.setState({foldedTray: !this.state.foldedTray})
   }
 
   render() {
     return (
       <div
-        className={this.state.foldedTray === false ? 'academiaTagBall' : 'academiaTagBall academiaTag'}
+        className={this.state.foldedTray === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
         style={ {backgroundColor: this.props.color} }
         onClick={this.showHideTray.bind(null)}
       >
         <img src={this.props.data.symbolPath} />
+        <h1>{this.props.data.title}</h1>
+        <h2>{this.props.data.subtitle}</h2>
         <div
           className='academiaTagTray'
-          style={this.state.foldedTray === true ? {display: 'none'} : {display: 'block'}}
+          style={{display: 'block'}}
         >
-          <h1>{this.props.data.title}</h1>
-          <h2>{this.props.data.subtitle}</h2>
           <h3>This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.</h3>
           <p><i>Start date:</i> Nov 2014</p>
           <p><i>End date:</i> not yet</p>
