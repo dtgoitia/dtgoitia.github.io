@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class AcademiaBar extends React.Component {
   render() {
@@ -54,9 +54,9 @@ class AcademiaTag extends React.Component {
             className='academiaTagTray'
             style={{display: 'block'}}
           >
-            <h3>This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.</h3>
-            <p><i>Start date:</i> Nov 2014</p>
-            <p><i>End date:</i> not yet</p>
+            <h3>{this.props.data.description}</h3>
+            <p><i>Start date: </i>{this.props.data.start}</p>
+            <p><i>End date: </i>{this.props.data.end === '' ? 'not yet' : this.props.data.end}</p>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@ class DesktopChronology extends React.Component {
           }}
           color='#92905d'
           bars={[ 50, 30, 250, 40, 210, 90 ]}
-          position={{x: 50, y: -10}}
+          position={{x: 50, y: 20}}
         />
       </div>
     );
