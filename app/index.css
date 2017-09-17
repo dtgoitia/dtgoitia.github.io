@@ -416,10 +416,10 @@ header {
 
 /* --- ACADEMIA BAR ---------------------------------------- */
 
-.academiaBars { width: 300px; }
+/* .academiaBars { width: 300px; } */
 .academiaBar {
 	display: block;
-	margin: 5px 0 5px auto;
+	margin: 0 0 0 auto;
 }
 
 

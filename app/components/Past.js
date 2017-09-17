@@ -24,12 +24,66 @@ class AcademiaBar extends React.Component {
   }
 }
 
+class MultipleAcademiaBar extends React.Component {
+  render() {
+    const totalLength = this.props.data.map( barData => {
+      return barData.l;
+    }).reduce((accumulatedLength, currentLength) => {
+      return accumulatedLength + currentLength;
+    });
+    const barWidth = this.props.barFormat.barWidth;
+    const spacing = this.props.barFormat.barSpacing;
+    let initialX = 0.5 * barWidth;
+    let lastLength = 0;
+    return (
+      <svg
+        className='academiaBar'
+        viewBox={'0 0 '+ totalLength +' ' + barWidth}
+        width={totalLength}
+        height={barWidth + spacing}
+      >
+        { 
+          this.props.data.map( (barData,i) => {
+            const subTotalLength = barData.l;
+            const l = subTotalLength - barWidth; // Total length - (round corners' X displacement)
+            const dString =
+              'm ' + initialX + ' 0' +
+              'h '+ l +
+              'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + barWidth +
+              'h -'+ l +
+              'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + (-1 * barWidth);
+            initialX += subTotalLength;
+            return(
+              <path
+                d={dString}
+                fill={barData.color ? barData.color : 'fill'}
+                key={i}
+              />
+            );
+          })
+        }
+      </svg>
+    );
+  }
+}
+
+class MultipleAcademiaBars extends React.Component {
+  render() {
+    const data = this.props.barData;
+    if ( data.length > 0 ) {
+      return <MultipleAcademiaBar data={data} barFormat={this.props.barFormat} />
+    } else {
+      return <div>MultipleAcademiaBars this.props.barData is zero!</div>
+    }
+  }
+}
+
 // Block containing all horizontal bars
 const AcademiaBars = (props) => {
   return(
     <div className='academiaBars'>
-      {props.bars.map((item,i) => {
-        return <AcademiaBar length={item} fill={props.c} stroke='black' key={i}/>
+      {props.data.bars.map((item,i) => {
+        return <AcademiaBar length={item} fill={props.data.color} stroke='black' key={i}/>
       })}
     </div>
   );
@@ -84,19 +138,80 @@ class AcademiaEntry extends React.Component {
     return (
       <div className='academiaEntry'>
         <AcademiaTag data={d} />
-        <AcademiaBars c={d.color} bars={d.bars}/>
+        <AcademiaBars data={d} />
       </div>
     );
   }
 }
 
 class DesktopChronology extends React.Component {
+  getDateRange(academiaData){
+    // Get academiaData date boundary information:
+    //  - earliest date
+    //  - latest date
+    //  - number of months in between
+
+    // Get earliest start date in academiaData
+    const start = academiaData.map(entry => {
+      const date = new Date(entry.start);
+      return date
+    }).reduce((earliestDateFound, currentDate) => {
+      if (earliestDateFound < currentDate) {
+        return earliestDateFound
+      } else {
+        return currentDate
+      }
+    })
+    
+    // Get latest end date in academiaData (today)
+    const end = new Date();
+    
+    // Get number of months in between
+    let months = (end.getFullYear() - start.getFullYear()) * 12;
+    months -= start.getMonth() + 1;
+    months += end.getMonth();
+    months <= 0 ? 0 : months;
+    
+    // Return all data
+    // return {'start': start, 'end': end, 'months': months}
+
+    // example bar array with multiple bars per line
+    let barArray = [
+      [ { 'l': 200, 'color': "#fa70ae" }, { 'l': 200, 'color': "#fff" }, { 'l': 80, 'color': "#999" } ],
+      [ { 'l': 80, 'color': "#aaa" } ],
+      [ { 'l': 60, 'color': "#aaa" } ],
+      [ { 'l': 100, 'color': "#aaa" } ],
+      [ { 'l': 100, 'color': "#aaa" } ],
+      [ { 'l': 100, 'color': "#aaa" } ],
+      [ { 'l': 100, 'color': "#aaa" } ],
+    ];
+
+    // example bar array without multiple bars per line
+    // TODO: join bars according to their date
+    barArray = academiaData.map( academiaEntry => {
+      return academiaEntry.bars.map( barLength => {
+        return [{ 'l': barLength, 'color': academiaEntry.color }]
+      });
+    }).reduce( (previous, academiaEntry) => {
+      return previous.concat(academiaEntry)
+    });
+
+    return barArray;
+  }
+
   render() {
+    const test = this.getDateRange(pastData.academia);
     return(
       <div>
         {pastData.academia.map((academiaEntry, i) => {
           return <AcademiaEntry data={academiaEntry} key={i}/>
         })}
+        <div className='academiaBars'>
+          {test.map((barData,i) => {
+            return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} />
+          })}
+        </div>
+        }
       </div>
     )
   }
@@ -111,7 +226,7 @@ class Past extends React.Component {
           right={{label:'MY PRESENT',target:'present'}}
           changePage={this.props.changePage}
         />
-        <DesktopChronology />
+        <DesktopChronology barFormat={{barWidth: 8, barSpacing: 8}} />
       </div>
     )
   }
