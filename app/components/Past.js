@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
+import pastData from './../../pastData.json';
 
 // Individual horizontal bars
 class AcademiaBar extends React.Component {
@@ -52,14 +53,14 @@ class AcademiaTag extends React.Component {
     return (
       <div
         className='academiaTagContainer'
-        style={{top: this.props.position.y, left: this.props.position.x}}
+        style={{top: this.props.data.y, left: this.props.data.x}}
       >
         <div
           className={this.state.foldedTray === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
-          style={ {backgroundColor: this.props.color} }
+          style={ {backgroundColor: this.props.data.color} }
           onClick={this.showHideTray.bind(null)}
         >
-          <img src={this.props.data.symbolPath} />
+          <img src={'./../img/' + this.props.data.img} />
           <h1>{this.props.data.title}</h1>
           <h2>{this.props.data.subtitle}</h2>
           <div
@@ -79,11 +80,11 @@ class AcademiaTag extends React.Component {
 // Block containing the entry tag and its horizontal bars
 class AcademiaEntry extends React.Component {
   render() {
-    const c = this.props.color;
+    const d = this.props.data;
     return (
       <div className='academiaEntry'>
-        <AcademiaTag data={this.props.data} color={c} position={this.props.position} />
-        <AcademiaBars c={c} bars={this.props.bars}/>
+        <AcademiaTag data={d} />
+        <AcademiaBars c={d.color} bars={d.bars}/>
       </div>
     );
   }
@@ -91,22 +92,13 @@ class AcademiaEntry extends React.Component {
 
 class DesktopChronology extends React.Component {
   render() {
-    return (
+    return(
       <div>
-        <AcademiaEntry
-          data={{ title: 'Certified Associate in Project Management',
-            subtitle: 'Project Management Institute (PMI) & Learning People',
-            description: 'This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.',
-            start: 'Nov 2014',
-            end: '',
-            symbolPath: './../img/past_capm.svg'
-          }}
-          color='#92905d'
-          bars={[ 50, 30, 250, 40, 210, 90 ]}
-          position={{x: 50, y: 20}}
-        />
+        {pastData.academia.map((academiaEntry, i) => {
+          return <AcademiaEntry data={academiaEntry} key={i}/>
+        })}
       </div>
-    );
+    )
   }
 }
 

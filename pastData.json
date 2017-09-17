@@ -1,0 +1,28 @@
+{
+  "academia": [
+    {
+      "title": "Certified Associate in Project Management",
+      "subtitle": "Project Management Institute (PMI) & Learning People",
+      "description": "This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.",
+      "start": "Nov 2014",
+      "end": "",
+      "img": "past_capm.svg",
+      "color": "#92905d",
+      "bars": [ 50, 30, 250, 40, 210, 90 ],
+      "x": 50,
+      "y": 20
+    },
+    {
+      "title": "Graduated in Civil Engineering",
+      "subtitle": "Project Management Institute (PMI) & Learning People",
+      "description": "This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.",
+      "start": "Nov 2014",
+      "end": "",
+      "img": "past_capm.svg",
+      "color": "#92905d",
+      "bars": [ 50, 30, 250, 40, 210, 90 ],
+      "x": 50,
+      "y": 20
+    }
+  ]
+}
