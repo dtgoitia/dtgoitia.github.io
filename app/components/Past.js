@@ -145,6 +145,14 @@ class AcademiaEntry extends React.Component {
 }
 
 class DesktopChronology extends React.Component {
+
+  getMonthsInBetween(earlyDate, lateDate){
+    // Get number of months in between
+    let months = (lateDate.getFullYear() - earlyDate.getFullYear()) * 12;
+    months -= earlyDate.getMonth() + 1;
+    months += lateDate.getMonth();
+    return months <= 0 ? 0 : months;
+  }
   getDateRange(academiaData){
     // Get academiaData date boundary information:
     //  - earliest date
@@ -167,11 +175,11 @@ class DesktopChronology extends React.Component {
     const end = new Date();
     
     // Get number of months in between
-    let months = (end.getFullYear() - start.getFullYear()) * 12;
-    months -= start.getMonth() + 1;
-    months += end.getMonth();
-    months <= 0 ? 0 : months;
+    const totalMonths = this.getMonthsInBetween(start, end);
     
+    console.log('months:', totalMonths);
+    console.log('start:', start.getFullYear(), start.getMonth()+1 );
+    console.log('end:', end.getFullYear(), end.getMonth()+1 );
     // Return all data
     // return {'start': start, 'end': end, 'months': months}
 
@@ -185,7 +193,7 @@ class DesktopChronology extends React.Component {
       [ { 'l': 100, 'color': "#aaa" } ],
       [ { 'l': 100, 'color': "#aaa" } ],
     ];
-
+    
     // example bar array without multiple bars per line
     // TODO: join bars according to their date
     barArray = academiaData.map( academiaEntry => {
@@ -195,6 +203,40 @@ class DesktopChronology extends React.Component {
     }).reduce( (previous, academiaEntry) => {
       return previous.concat(academiaEntry)
     });
+    console.log('barArray:', barArray);
+
+    // 1. Take the absolute index of the start date of the event (remember to join months in pairs)
+    // 2. Map all bars and each one gets an index 2 units bigger than the previous one (index = prevIndex + 2)
+    // 3. Return an object containing the absolute index of each bar, and its properties (length and color)
+
+    // // test
+    // const test = academiaData.map( academiaEntry => {
+    //   // If the activity doesn't have end date, asign today's date
+    //   let endDate;
+    //   academiaEntry.end === '' ? endDate = new Date() : endDate = new Date(academiaEntry.end);
+    //   const startDate = new Date (academiaEntry.start);
+
+    //   // Get amount of months covered by the entry
+    //   const entryMonths = this.getMonthsInBetween(startDate, endDate);
+      
+    //   // Add 'months' member to academiaEntry
+    //   let entry = academiaEntry;
+    //   entry.months = entryMonths;
+
+    //   // Run through every bar
+    //   const monthsPerBar = entry.bars.length / entry.months;
+    //   console.log('monthsPerBar:', monthsPerBar);
+
+    //   let currentMonth = startDat
+    //   const kk = entry.bars.filter((barLength,i) => {
+        
+    //   })
+    //   console.log('kk:', kk);
+
+    //   // Return updated academiaEntry
+    //   return entry;
+    // })
+    // console.log('test:', test);
 
     return barArray;
   }
@@ -208,10 +250,9 @@ class DesktopChronology extends React.Component {
         })}
         <div className='academiaBars'>
           {test.map((barData,i) => {
-            return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} />
+            return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} key={i} />
           })}
         </div>
-        }
       </div>
     )
   }
