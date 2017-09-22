@@ -40,7 +40,11 @@ const getAbsoluteIndex = date => {
  * @param {Date} targetDate -    Target date
  * @returns {number} Relative index of the targetDate as per referenceDate
  */
+<<<<<<< HEAD
 const getRelativeIndex = (referenceDate, targetDate) => {
+=======
+const relativeIndex = (referenceDate, targetDate) => {
+>>>>>>> eb92749ce6f6d72db606053a853216662c8be724
   if (referenceDate instanceof Date && targetDate instanceof Date) {
     return getAbsoluteIndex(targetDate) - getAbsoluteIndex(referenceDate)
   } else {
@@ -57,8 +61,13 @@ const getRelativeIndex = (referenceDate, targetDate) => {
  */
 const getEntryBarIndexes = (entry, referenceDate) => {
   if (entry.hasOwnProperty('bars') === true) {
+<<<<<<< HEAD
     let entryStartIndex = getRelativeIndex(referenceDate, new Date(entry.start));
     const entryEndIndex   = getRelativeIndex(referenceDate, new Date(entry.end  ));
+=======
+    let entryStartIndex = relativeIndex(referenceDate, new Date(entry.start));
+    const entryEndIndex   = relativeIndex(referenceDate, new Date(entry.end  ));
+>>>>>>> eb92749ce6f6d72db606053a853216662c8be724
     const indexDifference = entryEndIndex - entryStartIndex + 1 - entry.bars.length;
     if (indexDifference > 0 ) {
       console.error('Entry  "' + entry.title + '" is missing ' + indexDifference + ' bar(s)');
