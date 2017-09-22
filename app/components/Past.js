@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import pastData from './../../pastData.json';
+// import pastEntryUtils from './../../utils/pastEntry.js'
 
 // Individual horizontal bars
 class AcademiaBar extends React.Component {
