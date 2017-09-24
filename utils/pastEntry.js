@@ -1,5 +1,3 @@
-const originalDb = require('./../pastData.json');
-
 /**
  * Return a new entry object with "start" and "end" string members converted to Date.
  * @param {Object} entry Entry type object. Needs to contain at least "start" and "end" members
@@ -40,11 +38,7 @@ const getAbsoluteIndex = date => {
  * @param {Date} targetDate -    Target date
  * @returns {number} Relative index of the targetDate as per referenceDate
  */
-<<<<<<< HEAD
 const getRelativeIndex = (referenceDate, targetDate) => {
-=======
-const relativeIndex = (referenceDate, targetDate) => {
->>>>>>> eb92749ce6f6d72db606053a853216662c8be724
   if (referenceDate instanceof Date && targetDate instanceof Date) {
     return getAbsoluteIndex(targetDate) - getAbsoluteIndex(referenceDate)
   } else {
@@ -61,13 +55,8 @@ const relativeIndex = (referenceDate, targetDate) => {
  */
 const getEntryBarIndexes = (entry, referenceDate) => {
   if (entry.hasOwnProperty('bars') === true) {
-<<<<<<< HEAD
     let entryStartIndex = getRelativeIndex(referenceDate, new Date(entry.start));
     const entryEndIndex   = getRelativeIndex(referenceDate, new Date(entry.end  ));
-=======
-    let entryStartIndex = relativeIndex(referenceDate, new Date(entry.start));
-    const entryEndIndex   = relativeIndex(referenceDate, new Date(entry.end  ));
->>>>>>> eb92749ce6f6d72db606053a853216662c8be724
     const indexDifference = entryEndIndex - entryStartIndex + 1 - entry.bars.length;
     if (indexDifference > 0 ) {
       console.error('Entry  "' + entry.title + '" is missing ' + indexDifference + ' bar(s)');
@@ -87,42 +76,9 @@ const getEntryBarIndexes = (entry, referenceDate) => {
   }
 }
 
-// Convert to Date all string-dates in db
-let db = {};
-db.academia   = originalDb.academia  .map(entry => convertEntryStringDatestoDates(entry));
-db.experience = originalDb.experience.map(entry => convertEntryStringDatestoDates(entry));
-
-// Gather all entries in a single array
-const allEntries = originalDb.academia.concat(originalDb.experience)
-.map(entry => convertEntryStringDatestoDates(entry));
-
-// Get earliest start date from all entries
-const earliestDate = allEntries.reduce( (previousEntry, currentEntry) => {
-  if (previousEntry.start < currentEntry.start) {
-    return previousEntry
-  } else {
-    return currentEntry
-  }
-}).start;
-
-// Get latest end date from all entries
-const latestDate = allEntries.reduce( (previousEntry, currentEntry) => {
-  if (previousEntry.end > currentEntry.end) {
-    return previousEntry
-  } else {
-    return currentEntry
-  }
-}).end;
-
-// Get range of index units covered by the database (db)
-const totalAmountOfUnits = getRelativeIndex(earliestDate, latestDate);
-
-// console.log('case 1:', getEntryBarIndexes(db.academia[0], earliestDate));
-// console.log('case 2:', getEntryBarIndexes(db.academia[1], earliestDate));
-// console.log('case 3:', getEntryBarIndexes(db.academia[3], earliestDate));
-
 module.exports = {
-  getAbsoluteIndex: getAbsoluteIndex,
-  getEntryBarIndexes: getEntryBarIndexes,
-  getRelativeIndex: getRelativeIndex
+  convertEntryStringDatestoDates,
+  getAbsoluteIndex,
+  getEntryBarIndexes,
+  getRelativeIndex
 };

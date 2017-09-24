@@ -1,10 +1,5 @@
 {
   "saveAndRun": {
-    "commands": [
-      {
-        "match": ".*",
-        "cmd": "npm test"
-      }
-    ]
+    "commands": []
   }
 }

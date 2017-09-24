@@ -1,9 +1,8 @@
-// const pastEntry = require ('../utils/past-entry/pastEntry.js');
-
+const pastEntry = require ('../utils/pastEntry.js');
+const originalDb = require('../pastData.json');
 const chai = require('chai');
 
-describe("Past Entry Tests", function() {
-  it("Dumb test!",function() {
-    chai.expect('number').to.equal('number');
-  });
+describe.skip("Past Entry Tests", function() {
+  it("TODO");
 });
+
