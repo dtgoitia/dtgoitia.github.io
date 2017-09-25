@@ -1,5 +1,5 @@
 const pastEntry = require ('./utils/pastEntry.js');
-const originalDb = require('./pastData.json');
+const originalDb = require('./test-pastData.json');
 
 // Convert to Date all string-dates in db
 let db = {};
@@ -33,13 +33,14 @@ const totalAmountOfUnits = pastEntry.getRelativeIndex(earliestDate, latestDate);
 
 // Get bar/index object array for a single entry
 const testBarIndexArray = pastEntry.getEntryBarIndexes(db.academia[0], earliestDate)
-console.log('testBarIndexArray:', testBarIndexArray);
+// console.log('testBarIndexArray:', testBarIndexArray);
 
 // Get each entry barIndexArray
-const academiaBarIndexArray = db.academia.map( entry => {
-  return pastEntry.getEntryBarIndexes(entry, earliestDate)
-  // TODO some bars need to be amended because they are missing bar info in pastData.json
-});
+let academiaBarIndexArray = db.academia.map( entry => pastEntry.getEntryBarIndexes(entry, earliestDate));
+let experieceBarIndexArray = db.experience.map( entry => pastEntry.getEntryBarIndexes(entry, earliestDate));
+
+// Join entries with the same index
+
 
 // TODO
 // Get each entry barIndexArray

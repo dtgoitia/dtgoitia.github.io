@@ -76,9 +76,14 @@ const getEntryBarIndexes = (entry, referenceDate) => {
   }
 }
 
+const joinBarsPerIndex = entryArray => {
+  entryArray
+};
+
 module.exports = {
   convertEntryStringDatestoDates,
   getAbsoluteIndex,
   getEntryBarIndexes,
-  getRelativeIndex
+  getRelativeIndex,
+  joinBarsPerIndex
 };
