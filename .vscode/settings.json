@@ -4,10 +4,6 @@
       {
         "match": "\\.js$",
         "cmd": "node C:/Users/dtg/projects/dtgoitia-react/usingPastEntry.js"
-      },
-      {
-        "match": "\\.json$",
-        "cmd": "node C:/Users/dtg/projects/dtgoitia-react/usingPastEntry.js"
       }
     ]
   }

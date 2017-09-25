@@ -76,8 +76,26 @@ const getEntryBarIndexes = (entry, referenceDate) => {
   }
 }
 
-const joinBarsPerIndex = entryArray => {
-  entryArray
+/**
+ * Join bar-index entries with the same index and return them in an object
+ * @param {number} indexRange - Number of of indexes to check
+ * @param {array} barIndexArray - Array of bar-index object array
+ */
+const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
+  let tmp = {};
+  let i = 0;
+  while (i < indexRange) {
+    // Foreach each index
+    let results = barIndexArray.map(entryArray => {
+      return entryArray.filter( bar => bar.index === i ); // get entry bars that have the index property = i
+    }).filter( result => result.length > 0 )              // get rid of empty empty cases
+    .map(resultsPerIndex => {                             // join all the results in one array
+      return resultsPerIndex.reduce( (prev, cur) => prev.concat(cur) )
+    });
+    tmp[i] = results; // add the array to tpp object
+    i++;
+  }
+  return tmp;
 };
 
 module.exports = {
@@ -85,5 +103,5 @@ module.exports = {
   getAbsoluteIndex,
   getEntryBarIndexes,
   getRelativeIndex,
-  joinBarsPerIndex
+  joinEntriesWithSameIndex
 };

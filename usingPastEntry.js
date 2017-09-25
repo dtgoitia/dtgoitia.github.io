@@ -33,16 +33,14 @@ const totalAmountOfUnits = pastEntry.getRelativeIndex(earliestDate, latestDate);
 
 // Get bar/index object array for a single entry
 const testBarIndexArray = pastEntry.getEntryBarIndexes(db.academia[0], earliestDate)
-// console.log('testBarIndexArray:', testBarIndexArray);
 
 // Get each entry barIndexArray
 let academiaBarIndexArray = db.academia.map( entry => pastEntry.getEntryBarIndexes(entry, earliestDate));
 let experieceBarIndexArray = db.experience.map( entry => pastEntry.getEntryBarIndexes(entry, earliestDate));
 
 // Join entries with the same index
+academiaBarIndexArray  = pastEntry.joinEntriesWithSameIndex(totalAmountOfUnits, academiaBarIndexArray);
+experieceBarIndexArray = pastEntry.joinEntriesWithSameIndex(totalAmountOfUnits, experieceBarIndexArray);
 
-
-// TODO
-// Get each entry barIndexArray
-// Join all in a single array (an array for academia, another one for experience)
-// Merge barIndexObject with the same index to be shown in the same line
+console.log('academiaBarIndexArray:', academiaBarIndexArray);
+console.log('experieceBarIndexArray:', experieceBarIndexArray);
