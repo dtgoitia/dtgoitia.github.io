@@ -1,5 +1,10 @@
 {
   "saveAndRun": {
-    "commands": []
+    "commands": [
+      {
+        "match": "\\.js$",
+        "cmd": "node C:/Users/davidt/projects/dtgoitia-react/usingPastEntry.js"
+      },
+    ]
   }
 }

@@ -31,6 +31,17 @@ const latestDate = allEntries.reduce( (previousEntry, currentEntry) => {
 // Get range of index units covered by the database (db)
 const totalAmountOfUnits = pastEntry.getRelativeIndex(earliestDate, latestDate);
 
-console.log('case 1:', pastEntry.getEntryBarIndexes(db.academia[0], earliestDate));
-console.log('case 2:', pastEntry.getEntryBarIndexes(db.academia[1], earliestDate));
-console.log('case 3:', pastEntry.getEntryBarIndexes(db.academia[3], earliestDate));
+// Get bar/index object array for a single entry
+const testBarIndexArray = pastEntry.getEntryBarIndexes(db.academia[0], earliestDate)
+console.log('testBarIndexArray:', testBarIndexArray);
+
+// Get each entry barIndexArray
+const academiaBarIndexArray = db.academia.map( entry => {
+  return pastEntry.getEntryBarIndexes(entry, earliestDate)
+  // TODO some bars need to be amended because they are missing bar info in pastData.json
+});
+
+// TODO
+// Get each entry barIndexArray
+// Join all in a single array (an array for academia, another one for experience)
+// Merge barIndexObject with the same index to be shown in the same line
