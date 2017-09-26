@@ -41,5 +41,5 @@ describe("Argument Handling Test", function() {
   it("Array", function(){
     expect('Array').to.equal(argumentHandling.isType([ 1, 2 ]));
   });
-  it("Symbol"); // new in ECMAScript 6
+  // it("Symbol"); // new in ECMAScript 6
 });
