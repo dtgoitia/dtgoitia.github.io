@@ -6,6 +6,8 @@ let db = {};
 db.academia   = originalDb.academia  .map(entry => pastEntry.convertEntryStringDatestoDates(entry));
 db.experience = originalDb.experience.map(entry => pastEntry.convertEntryStringDatestoDates(entry));
 
+const kk = pastEntry.convertEntryStringDatestoDates(originalDb.academia[0]);
+
 // Gather all entries in a single array
 const allEntries = originalDb.academia.concat(originalDb.experience)
 .map(entry => pastEntry.convertEntryStringDatestoDates(entry));
@@ -42,5 +44,5 @@ let experieceBarIndexArray = db.experience.map( entry => pastEntry.getEntryBarIn
 academiaBarIndexArray  = pastEntry.joinEntriesWithSameIndex(totalAmountOfUnits, academiaBarIndexArray);
 experieceBarIndexArray = pastEntry.joinEntriesWithSameIndex(totalAmountOfUnits, experieceBarIndexArray);
 
-console.log('academiaBarIndexArray:', academiaBarIndexArray);
-console.log('experieceBarIndexArray:', experieceBarIndexArray);
+// console.log('academiaBarIndexArray:', academiaBarIndexArray);
+// console.log('experieceBarIndexArray:', experieceBarIndexArray);

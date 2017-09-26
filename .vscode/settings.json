@@ -3,7 +3,7 @@
     "commands": [
       {
         "match": "\\.js$",
-        "cmd": "node C:/Users/dtg/projects/dtgoitia-react/usingPastEntry.js"
+        "cmd": "npm test"
       }
     ]
   }
