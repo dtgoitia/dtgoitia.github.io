@@ -15,6 +15,57 @@ const convertEntryStringDatestoDates = entry => {
 }
 
 /**
+ * Convert all string-dates in db to Date objects
+ * @param {Object} originalDb - Raw past entry database
+ * @return {Object} - Past database with dates as Data objects
+ */
+const importDb = rawDb => {
+  let db = {};
+  db.academia   = rawDb.academia.  map(entry => convertEntryStringDatestoDates(entry));
+  db.experience = rawDb.experience.map(entry => convertEntryStringDatestoDates(entry));
+  return db
+}
+
+/**
+ * Get db range: earliest date, latest date and indexes in between
+ * @param {Object} db - Past entry database
+ * @returns {Object} - Earliest and latest data within db, and index amount in between those dates
+ */
+const getDbRange = db => {
+  // Gather all entries in a single array
+  const allEntries = db.academia.concat(db.experience)
+
+  // Get earliest start date from all entries
+  const earliestDate =  allEntries
+    .reduce( (previousEntry, currentEntry) => {
+      if (previousEntry.start < currentEntry.start) {
+        return previousEntry
+      } else {
+        return currentEntry
+      }
+    }).start;
+
+  // Get latest end date from all entries
+  const latestDate = allEntries
+    .reduce( (previousEntry, currentEntry) => {
+      if (previousEntry.end > currentEntry.end) {
+        return previousEntry
+      } else {
+        return currentEntry
+      }
+    }).end;
+  
+  // Get range of index units covered by the database (db)
+  const indexRange = getRelativeIndex(earliestDate, latestDate);
+
+  return {
+    earliest:   earliestDate,
+    latest:     latestDate,
+    indexRange: indexRange
+  }
+}
+
+/**
  * Return the date expresed in couples of months.
  * Jan 0000 = 0    Mar 0000 = 1    May 2000 = 12002
  * Feb 0000 = 0    Apr 0000 = 1    Dec 2000 = 12005
@@ -48,9 +99,9 @@ const getRelativeIndex = (referenceDate, targetDate) => {
 }
 
 /**
- * Return an array
- * @param {Object} entry 
- * @param {Date}   referenceDate Reference date, point where the zero index value will be set
+ * Get passed entry bar indexes based on entry dates
+ * @param {Object} entry - Entry object
+ * @param {Date}   referenceDate - Reference date, point where the zero index value will be set
  * @returns {Array} Array with bar data objects, which contain bar length, colour and index
  */
 const getEntryBarIndexes = (entry, referenceDate) => {
@@ -79,7 +130,8 @@ const getEntryBarIndexes = (entry, referenceDate) => {
 /**
  * Join bar-index entries with the same index and return them in an object
  * @param {number} indexRange - Number of of indexes to check
- * @param {array} barIndexArray - Array of bar-index object array
+ * @param {Array} barIndexArray - Array of bar-index object arrays
+ * @returns {Object} - Object containing all bar entries (arrays with bar objects) grouped and sorted by index
  */
 const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
   let tmp = {};
@@ -89,10 +141,11 @@ const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
     let results = barIndexArray.map(entryArray => {
       return entryArray.filter( bar => bar.index === i ); // get entry bars that have the index property = i
     }).filter( result => result.length > 0 )              // get rid of empty empty cases
+    // .map( ) // get rid of index property
     .map(resultsPerIndex => {                             // join all the results in one array
       return resultsPerIndex.reduce( (prev, cur) => prev.concat(cur) )
     });
-    tmp[i] = results; // add the array to tpp object
+    tmp[i] = results; // add the array to tmp object
     i++;
   }
   return tmp;
@@ -100,7 +153,9 @@ const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
 
 module.exports = {
   convertEntryStringDatestoDates,
+  importDb,
   getAbsoluteIndex,
+  getDbRange,
   getEntryBarIndexes,
   getRelativeIndex,
   joinEntriesWithSameIndex
