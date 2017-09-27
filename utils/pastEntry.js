@@ -1,7 +1,7 @@
 /**
  * Return a new entry object with "start" and "end" string members converted to Date.
  * @param {Object} entry Entry type object. Needs to contain at least "start" and "end" members
- * @returns A new entry object with "start" and "end" string members converted to Date
+ * @returns {Object} A new entry object with "start" and "end" string members converted to Date
  */
 const convertEntryStringDatestoDates = entry => {
   let newEntry = entry;
@@ -16,7 +16,7 @@ const convertEntryStringDatestoDates = entry => {
 
 /**
  * Convert all string-dates in db to Date objects
- * @param {Object} originalDb - Raw past entry database
+ * @param {Object} rawDb - Raw past entry database
  * @return {Object} - Past database with dates as Data objects
  */
 const importDb = rawDb => {
@@ -102,7 +102,7 @@ const getRelativeIndex = (referenceDate, targetDate) => {
  * Get passed entry bar indexes based on entry dates
  * @param {Object} entry - Entry object
  * @param {Date}   referenceDate - Reference date, point where the zero index value will be set
- * @returns {Array} Array with bar data objects, which contain bar length, colour and index
+ * @returns {Array} Array with bar data objects, which contain bar length, index and colour
  */
 const getEntryBarIndexes = (entry, referenceDate) => {
   if (entry.hasOwnProperty('bars') === true) {
@@ -116,7 +116,7 @@ const getEntryBarIndexes = (entry, referenceDate) => {
     } else {
       return entry.bars.map( barLength => {
         try {
-          return { bar: barLength, index: entryStartIndex };
+          return { bar: barLength, index: entryStartIndex, color: entry.color };
         } finally {
           entryStartIndex++;
         }
@@ -151,6 +151,28 @@ const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
   return tmp;
 };
 
+/**
+ * Get database bar list sorted and grouped by index
+ * @param {Object} db - Object with academia and experience members containing entry data objects within arrays
+ * @return {Object} - Object with bars sorted and grouped by index
+ */
+const getDbBars = db => {
+  const dbRange = getDbRange(db);
+  
+  // Get db entry barIndexArray
+  let dbBars = {
+    academia:   db.academia  .map(entry => getEntryBarIndexes(entry, dbRange.earliest)),
+    experience: db.experience.map(entry => getEntryBarIndexes(entry, dbRange.earliest))
+  };
+  
+  // Join entries with the same index
+  dbBars = {
+    academia:   joinEntriesWithSameIndex(dbRange.indexRange, dbBars.academia),
+    experience: joinEntriesWithSameIndex(dbRange.indexRange, dbBars.experience)
+  }
+  return dbBars
+}
+
 module.exports = {
   convertEntryStringDatestoDates,
   importDb,
@@ -158,5 +180,6 @@ module.exports = {
   getDbRange,
   getEntryBarIndexes,
   getRelativeIndex,
-  joinEntriesWithSameIndex
+  joinEntriesWithSameIndex,
+  getDbBars
 };
