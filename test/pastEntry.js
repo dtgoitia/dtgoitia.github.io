@@ -9,7 +9,7 @@ const db_step0 = {
       "description": "This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.",
       "start": "Nov 2014",
       "end": "Feb 2015",
-      "img": "past_capm.svg",
+      "img": "test_image_path_academia1.svg",
       "color": "#92905d",
       "bars": [ 11, 11 ],
       "x": 0,
@@ -21,8 +21,8 @@ const db_step0 = {
       "description": "Single-year course, to adapt my Bachelor's degree to new european academic standards.",
       "start": "Sep 2013",
       "end": "Dec 2013",
-      "img": "past_civil.svg",
-      "color": "#8789e3",
+      "img": "test_image_path_academia2.svg",
+      "color": "#888888",
       "bars": [ 22, 22 ],
       "x": 50,
       "y": 20
@@ -33,8 +33,8 @@ const db_step0 = {
       "description": "Single-year course, to adapt my Bachelor's degree to new european academic standards.",
       "start": "Jul 2013",
       "end": "Oct 2013",
-      "img": "past_civil.svg",
-      "color": "#8789e3",
+      "img": "test_image_path_academia3.svg",
+      "color": "#666666",
       "bars": [ 33, 33 ],
       "x": 50,
       "y": 20
@@ -47,7 +47,11 @@ const db_step0 = {
       "description": "TODO",
       "start": "2015-07",
       "end": "2015-09",
-      "bars": [10, 10]
+      "img": "test_image_path_experience1.svg",
+      "color": "#ffffff",
+      "bars": [44, 44],
+      "x": 50,
+      "y": 20
     },
     {
       "title": "Graduate Civil Engsineer",
@@ -55,7 +59,11 @@ const db_step0 = {
       "description": "TODO",
       "start": "2015-07",
       "end": "2015-10",
-      "bars": [10, 10]
+      "img": "test_image_path_experience2.svg",
+      "color": "#aaaaaa",
+      "bars": [55, 55],
+      "x": 50,
+      "y": 20
     }
   ]
 };
@@ -70,7 +78,7 @@ const db_step1_expected = {
       "description": "This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.",
       "start": new Date("Nov 2014"),
       "end": new Date("Feb 2015"),
-      "img": "past_capm.svg",
+      "img": "test_image_path_academia1.svg",
       "color": "#92905d",
       "bars": [ 11, 11 ],
       "x": 0,
@@ -82,8 +90,8 @@ const db_step1_expected = {
       "description": "Single-year course, to adapt my Bachelor's degree to new european academic standards.",
       "start": new Date("Sep 2013"),
       "end": new Date("Dec 2013"),
-      "img": "past_civil.svg",
-      "color": "#8789e3",
+      "img": "test_image_path_academia2.svg",
+      "color": "#888888",
       "bars": [ 22, 22 ],
       "x": 50,
       "y": 20
@@ -94,8 +102,8 @@ const db_step1_expected = {
       "description": "Single-year course, to adapt my Bachelor's degree to new european academic standards.",
       "start": new Date("Jul 2013"),
       "end": new Date("Oct 2013"),
-      "img": "past_civil.svg",
-      "color": "#8789e3",
+      "img": "test_image_path_academia3.svg",
+      "color": "#666666",
       "bars": [ 33, 33 ],
       "x": 50,
       "y": 20
@@ -108,7 +116,11 @@ const db_step1_expected = {
       "description": "TODO",
       "start": new Date("2015-07-01"),
       "end": new Date("2015-09-01"),
-      "bars": [10, 10]
+      "img": "test_image_path_experience1.svg",
+      "color": "#ffffff",
+      "bars": [44, 44],
+      "x": 50,
+      "y": 20
     },
     {
       "title": "Graduate Civil Engsineer",
@@ -116,7 +128,11 @@ const db_step1_expected = {
       "description": "TODO",
       "start": new Date("2015-07-01"),
       "end": new Date("2015-10-01"),
-      "bars": [10, 10]
+      "img": "test_image_path_experience2.svg",
+      "color": "#aaaaaa",
+      "bars": [55, 55],
+      "x": 50,
+      "y": 20
     }
   ]
 };
@@ -134,6 +150,40 @@ const dbRange_expected = {
   earliest: earliestDate_expected,
   latest: latestDate_expected,
   indexRange: indexRange_expected
+}
+
+const db_step2 = pastEntry.getDbBars(db_step1);
+const db_step2_expected = {
+  academia: {
+    '0': [ { bar: 33, index: 0, color: '#666666' } ],
+    '1': [ { bar: 22, index: 1, color: '#888888' }, { bar: 33, index: 1, color: '#666666' } ],
+    '2': [ { bar: 22, index: 2, color: '#888888' } ],
+    '3': [],
+    '4': [],
+    '5': [],
+    '6': [],
+    '7': [],
+    '8': [ { bar: 11, index: 8, color: '#92905d' } ],
+    '9': [ { bar: 11, index: 9, color: '#92905d' } ],
+    '10': [],
+    '11': [],
+    '12': []
+  },
+  experience: {
+    0: [],
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: [],
+    10: [],
+    11: [],
+    12: [ { bar: 44, index: 12, color: '#ffffff' }, { bar: 55, index: 12, color: '#aaaaaa' } ]
+  }
 }
 
 // This is what you need to get from the initial data
@@ -178,7 +228,7 @@ const expectedEntry = {
 }
 describe("Past Entry Tests", function() {
   it("Convert string-dates to Date objects", function(){
-    expect(db_step1_expected).to.deep.equal(db_step0);
+    expect(db_step1_expected).to.deep.equal(db_step1);
   });
   it("Get database range (earliest and latest date, and index amount in between)", function (){
     expect(dbRange_expected).to.deep.equal(dbRange);
@@ -199,10 +249,13 @@ describe("Past Entry Tests", function() {
     let rawEntry = expectedEntry;
     let referenceDate = new Date("Jan 2015");
     let result = [
-      { bar: 11, index: -1 },
-      { bar: 11, index: 0 }
+      { bar: 11, index: -1, color: "#92905d" },
+      { bar: 11, index: 0, color: "#92905d" }
     ];
     expect(result).to.deep.equal(pastEntry.getEntryBarIndexes(rawEntry, referenceDate));
+  });
+  it("Get database bar list sorted and grouped by index", function(){
+    expect(db_step2_expected).to.deep.equal(db_step2);
   });
   it("Join bar-index entries with the same index and return them in an object", function(){
     let arg1 = 13;
