@@ -75,7 +75,7 @@
       "description": "3 month theoretical and practical rescue course to get the needed competences to work as swimming pool, sea, river, lakes or waterpark lifeguard.",
       "start": "2010-02",
       "end": "2010-04",
-      "bars": []
+      "bars": [10,10]
     },
     {
       "title": "First Aid",
@@ -83,7 +83,7 @@
       "description": "2 month theoretical and practical course to get the nedded competences on First Aid, Cardiopulmonary Resuscitation and AED.",
       "start": "2009-10",
       "end": "2009-12",
-      "bars": []
+      "bars": [10, 10]
     },
     {
       "title": "Science High School",
@@ -91,7 +91,7 @@
       "description": "2 years of non-obligatory education, in which I had to start defining my future studies, focusing on science areas.",
       "start": "2006-09",
       "end": "2008-06",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Secundary School",
@@ -99,7 +99,7 @@
       "description": "4 years during which I had every detail about my life's path perfectly defined and I was absolutelly sure about my future... (naive)",
       "start": "2002-09",
       "end": "2006-06",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     }
   ],
   "experience": [
@@ -109,7 +109,7 @@
       "description": "TODO",
       "start": "2015-07",
       "end": "",
-      "bars": [10]
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Front of house",
@@ -117,7 +117,7 @@
       "description": "TODO",
       "start": "2015-05",
       "end": "2016-01",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10]
     },
     {
       "title": "Bartender",
@@ -125,7 +125,7 @@
       "description": "Lovelly restaurant in which I get involved in a great team-working environment with client-facing work. Main task: make beverages for restaurant and bar.",
       "start": "2014-11",
       "end": "2015-05",
-      "bars": []
+      "bars": [10, 10, 10, 10]
     },
     {
       "title": "Bachelor's degree Final Project",
@@ -133,7 +133,7 @@
       "description": "Research and experimental project to study the feasibility of using metallurgical byproducts on mansory mortars, to get greener materials.",
       "start": "2014-01",
       "end": "2014-09",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10]
     },
     {
       "title": "Climbing",
@@ -141,7 +141,7 @@
       "description": "I wanted to try a sport with mind challenges and I found climbing was perfect. It dares me to be disciplined, strong, precise and keep calm under pressure.",
       "start": "2013-09",
       "end": "2014-10",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Master's Final Project",
@@ -149,7 +149,7 @@
       "description": "Research and experimental project to obtain greener and more efficient catalysts for the production of Hydrogen from industrial byproducts.",
       "start": "2012-10",
       "end": "2013-10",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Rescue craft master and beach lifeguard",
@@ -157,7 +157,7 @@
       "description": "Summer job in which I learnt a lot about team-work, fast decissions under pressure, camaraderie and communal living. Extra task: use and maintain craft.",
       "start": "2012-05",
       "end": "2012-09",
-      "bars": []
+      "bars": [10, 10, 10]
     },
     {
       "title": "Athletics",
@@ -165,7 +165,7 @@
       "description": "One of the best experiences related to physical activies. Incredible people, fantastic environment and better trainer. I learnt a lot about self-trainning.",
       "start": "2011-09",
       "end": "2012-04",
-      "bars": []
+      "bars": [10, 10, 10, 10]
     },
     {
       "title": "Beach lifeguard",
@@ -173,7 +173,7 @@
       "description": "Summer job in which I learnt a lot about team-work, fast decissions under pressure, camaraderie and communal living.",
       "start": "2011-05",
       "end": "2011-09",
-      "bars": []
+      "bars": [10, 10, 10]
     },
     {
       "title": "Safety Technician Internship",
@@ -181,7 +181,7 @@
       "description": "First situation in real contact with engineering, in the construction of the Mechanical Biological Treatment Plant in Arraiz Mountain in Bilbao (Spain).",
       "start": "2010-10",
       "end": "2011-03",
-      "bars": []
+      "bars": [10, 10, 10, 10]
     },
     {
       "title": "Volunteer basketball coach",
@@ -189,7 +189,7 @@
       "description": "Basketball coach for many school teams, as wel as a disabled team. I was responsible for the coaching and training of students.",
       "start": "2005-09",
       "end": "2010-05",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Basketball",
@@ -197,7 +197,7 @@
       "description": "During these seasons, I learnt and felt the importance of team play, hard work, honesty, commitment and many more values, like friendship or loyalty.",
       "start": "1998-09",
       "end": "2010-05",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Volunteer basketball referee",
@@ -205,7 +205,7 @@
       "description": "Basketball referee for local school teams. I was responsible for correct evolution of the competitions and its fairness.",
       "start": "2005-09",
       "end": "2008-05",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Summercamp basketball coach",
@@ -213,7 +213,7 @@
       "description": "Basketball coach in few end of term camps during 2 summers. I was responsible for the care, coaching and training of kids.",
       "start": "2007-06",
       "end": "2008-07",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10]
     },
     {
       "title": "Volunteer basketball referee",
@@ -221,7 +221,7 @@
       "description": "Basketball referee for local school teams. I was responsible for correct evolution of the competitions and its fairness.",
       "start": "2005-09",
       "end": "2008-05",
-      "bars": []
+      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     }
   ]
 }
