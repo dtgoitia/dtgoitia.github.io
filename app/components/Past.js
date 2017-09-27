@@ -30,55 +30,67 @@ const originalDb = require('./../../pastData.json');
 
 class MultipleAcademiaBar extends React.Component {
   render() {
-    const totalLength = this.props.data.map( barData => {
-      return barData.l;
-    }).reduce((accumulatedLength, currentLength) => {
-      return accumulatedLength + currentLength;
-    });
-    const barWidth = this.props.barFormat.barWidth;
-    const spacing = this.props.barFormat.barSpacing;
-    let initialX = 0.5 * barWidth;
-    let lastLength = 0;
-    return (
-      <svg
-        className='academiaBar'
-        viewBox={'0 0 '+ totalLength +' ' + barWidth}
-        width={totalLength}
-        height={barWidth + spacing}
-      >
-        { 
-          this.props.data.map( (barData,i) => {
-            const subTotalLength = barData.l;
-            const l = subTotalLength - barWidth; // Total length - (round corners' X displacement)
-            const dString =
-              'm ' + initialX + ' 0' +
-              'h '+ l +
-              'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + barWidth +
-              'h -'+ l +
-              'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + (-1 * barWidth);
-            initialX += subTotalLength;
-            return(
-              <path
-                d={dString}
-                fill={barData.color ? barData.color : 'fill'}
-                key={i}
-              />
-            );
-          })
-        }
-      </svg>
-    );
+    const data = this.props.data;
+    if (data.length === 0) {
+      // empty bar
+      console.log('empty data found, data =', data);
+      return <div>create here empty svg with the correct height!</div>
+    } else {
+      const totalLength = data.map( barData => barData.bar)
+        .reduce((accumulatedLength, currentLength) => accumulatedLength + currentLength);
+      const barWidth = this.props.barFormat.barWidth;
+      const spacing = this.props.barFormat.barSpacing;
+      let initialX = 0.5 * barWidth;
+      let lastLength = 0;
+      return (
+        <svg
+          className='academiaBar'
+          viewBox={'0 0 '+ totalLength +' ' + barWidth}
+          width={totalLength}
+          height={barWidth + spacing}
+        >
+          { 
+            this.props.data.map( (barData,i) => {
+              const subTotalLength = barData.bar;
+              const bar = subTotalLength - barWidth; // Total length - (round corners' X displacement)
+              const dString =
+                'm ' + initialX + ' 0' +
+                'h '+ bar +
+                'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + barWidth +
+                'h -'+ bar +
+                'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + (-1 * barWidth);
+              initialX += subTotalLength;
+              return(
+                <path
+                  d={dString}
+                  fill={barData.color ? barData.color : 'fill'}
+                  key={i}
+                />
+              );
+            })
+          }
+        </svg>
+      );
+    }
   }
 }
 
 class MultipleAcademiaBars extends React.Component {
   render() {
     const data = this.props.barData;
-    if ( data.length > 0 ) {
+    // if ( data.length > 0 ) {
       return <MultipleAcademiaBar data={data} barFormat={this.props.barFormat} />
-    } else {
-      return <div>MultipleAcademiaBars this.props.barData is zero!</div>
-    }
+    // } else {
+    //   return(
+    //     <svg
+    //       className='academiaBar'
+    //       viewBox={'0 0 '+ totalLength +' ' + barWidth}
+    //       width={totalLength}
+    //       height={barWidth + spacing}
+    //     >
+    //     </svg>
+    //   )
+    // }
   }
 }
 
@@ -152,11 +164,12 @@ class DesktopChronology extends React.Component {
   render() {
     return(
       <div className='academiaBars'>
-        {this.props.barData.map((barData,i) => {
+        {Object.values(this.props.academiaBars).map((barData,i) => {
           return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} key={i} />
         })}
       </div>
     )
+    // DON'T DELETE UNTIL TAG IS IMPLEMENTED AS WELL
     // return(
     //   <div>
     //     {pastData.academia.map((academiaEntry, i) => {
@@ -173,12 +186,12 @@ class DesktopChronology extends React.Component {
 }
 
 // This is what you need to get from the initial bar
-const test = [
-  [ { 'l': 200, 'color': "#fa70ae" }, { 'l': 200, 'color': "#fff" }, { 'l': 80, 'color': "#999" } ],
-  [ { 'l': 80, 'color': "#aaa" } ],
-  [ { 'l': 60, 'color': "#aaa" } ],
-  [ { 'l': 100, 'color': "#aaa" } ]
-];
+// const test = [
+//   [ { 'bar': 100, 'color': "#fa70ae" }, { 'bar': 200, 'color': "#fff" }, { 'bar': 80, 'color': "#999" } ],
+//   [ { 'bar': 80, 'color': "#aaa" } ],
+//   [ { 'bar': 60, 'color': "#aaa" } ],
+//   [ { 'bar': 100, 'color': "#aaa" } ]
+// ];
 
 class Past extends React.Component {
   render () {
@@ -198,7 +211,7 @@ class Past extends React.Component {
           right={{label:'MY PRESENT',target:'present'}}
           changePage={this.props.changePage}
         />
-        <DesktopChronology barFormat={{barWidth: 8, barSpacing: 8}} barData={test} />
+        <DesktopChronology barFormat={{barWidth: 8, barSpacing: 8}} academiaBars={dbBars.academia} />
       </div>
     )
   }
