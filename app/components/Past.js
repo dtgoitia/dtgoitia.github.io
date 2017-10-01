@@ -6,35 +6,24 @@ import pastEntryUtils from './../../utils/pastEntry.js'
 const pastEntry = require ('./../../utils/pastEntry.js');
 const originalDb = require('./../../pastData.json');
 
-// // Individual horizontal bars
-// class AcademiaBar extends React.Component {
-//   render() {
-//     const l = this.props.length - 10; // Total length - (round corners' X displacement)
-//     const dString = 'm 5 0 h '+ l +' a 5 5 0 0 1 0 10 h -'+ l +' a 5 5 0 0 1 0 -10';
-//     return (
-//       <svg
-//         className='academiaBar'
-//         viewBox={'0 0 '+ this.props.length +' 10'}
-//         width={this.props.length}
-//         height='10'
-//       >
-//         <path
-//           d={dString}
-//           fill={this.props.fill ? this.props.fill : 'fill'}
-//           stroke={this.props.stroke ? this.props.stroke : 'black'}
-//         />
-//       </svg>
-//     );
-//   }
-// }
-
 class MultipleAcademiaBar extends React.Component {
   render() {
     const data = this.props.data;
     if (data.length === 0) {
       // empty bar
-      console.log('empty data found, data =', data);
-      return <div>create here empty svg with the correct height!</div>
+      const totalLength = 0;
+      const barWidth = this.props.barFormat.barWidth;
+      const spacing = this.props.barFormat.barSpacing;
+      return (
+        <svg
+          className='academiaBar'
+          viewBox={'0 0 '+ totalLength +' ' + barWidth}
+          width={totalLength}
+          height={barWidth + spacing}
+        >
+          <path></path>
+        </svg>
+      )
     } else {
       const totalLength = data.map( barData => barData.bar)
         .reduce((accumulatedLength, currentLength) => accumulatedLength + currentLength);
@@ -52,7 +41,11 @@ class MultipleAcademiaBar extends React.Component {
           { 
             this.props.data.map( (barData,i) => {
               const subTotalLength = barData.bar;
-              const bar = subTotalLength - barWidth; // Total length - (round corners' X displacement)
+              let bar = subTotalLength - barWidth; // Total length - (round corners' X displacement)
+              if (bar < 0) {
+                console.log('barData.bar is too small (see <MultipleAcademiaBar/>) and its value it\'s been overwritten by default length which need to match with bar width (barWidth = ' + barWidth + ', set by user)\nbarData:', barData);
+                bar = 0;
+              }
               const dString =
                 'm ' + initialX + ' 0' +
                 'h '+ bar +
@@ -164,7 +157,7 @@ class DesktopChronology extends React.Component {
   render() {
     return(
       <div className='academiaBars'>
-        {Object.values(this.props.academiaBars).map((barData,i) => {
+        {Object.values(this.props.academiaBars).reverse().map((barData,i) => {
           return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} key={i} />
         })}
       </div>
