@@ -416,9 +416,63 @@ header {
 /* --- ACADEMIA BAR ---------------------------------------- */
 
 /* .academiaBars { width: 300px; } */
+.timelineContainer {
+	position: relative;
+	max-width: 1080px;
+	margin: auto;
+	margin-top: 200px;
+}
+/* Check if this div is necessary! */
+.timeline {
+	border: 1px solid yellow;
+}
+.years {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	/* border: 10px solid white; */
+	z-index: 0;
+}
+.year {
+	background: rgba(94, 26, 26, 0.32);
+	border: 1px solid rgba(255, 255, 255, 0.26);
+	border-radius: 20px;
+	margin: 2px 0px;
+	text-align: left;
+
+	
+	font-family: "Open Sans", sans;
+	font-size: 120%;
+	font-weight: 400;
+	letter-spacing: -2px;
+
+	color: rgba(255, 255, 255, 0.45);
+}
+.academia {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 50%;
+	bottom: 0px;
+	z-index: 0;
+}
 .academiaBar {
 	display: block;
 	margin: 0 0 0 auto;
+	z-index: 10;
+}
+.experience {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+	height: 200px;
+	
+	border: 10px solid yellow;
 }
 
 

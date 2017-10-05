@@ -12,14 +12,14 @@ class MultipleAcademiaBar extends React.Component {
     if (data.length === 0) {
       // empty bar
       const totalLength = 0;
-      const barWidth = this.props.barFormat.barWidth;
+      const barThickness = this.props.barFormat.barThickness;
       const spacing = this.props.barFormat.barSpacing;
       return (
         <svg
           className='academiaBar'
-          viewBox={'0 0 '+ totalLength +' ' + barWidth}
+          viewBox={'0 0 '+ totalLength +' ' + barThickness}
           width={totalLength}
-          height={barWidth + spacing}
+          height={barThickness + spacing}
         >
           <path></path>
         </svg>
@@ -27,31 +27,31 @@ class MultipleAcademiaBar extends React.Component {
     } else {
       const totalLength = data.map( barData => barData.bar)
         .reduce((accumulatedLength, currentLength) => accumulatedLength + currentLength);
-      const barWidth = this.props.barFormat.barWidth;
+      const barThickness = this.props.barFormat.barThickness;
       const spacing = this.props.barFormat.barSpacing;
-      let initialX = 0.5 * barWidth;
+      let initialX = 0.5 * barThickness;
       let lastLength = 0;
       return (
         <svg
           className='academiaBar'
-          viewBox={'0 0 '+ totalLength +' ' + barWidth}
+          viewBox={'0 0 '+ totalLength +' ' + barThickness}
           width={totalLength}
-          height={barWidth + spacing}
+          height={barThickness + spacing} // Total SVG height = half-spacing + barThickness + half spacing
         >
           { 
             this.props.data.map( (barData,i) => {
               const subTotalLength = barData.bar;
-              let bar = subTotalLength - barWidth; // Total length - (round corners' X displacement)
+              let bar = subTotalLength - barThickness; // Total length - (round corners' X displacement)
               if (bar < 0) {
-                console.log('barData.bar is too small (see <MultipleAcademiaBar/>) and its value it\'s been overwritten by default length which need to match with bar width (barWidth = ' + barWidth + ', set by user)\nbarData:', barData);
+                console.log('barData.bar is too small (see <MultipleAcademiaBar/>) and its value it\'s been overwritten by default length which need to match with bar width (barThickness = ' + barThickness + ', set by user)\nbarData:', barData);
                 bar = 0;
               }
               const dString =
                 'm ' + initialX + ' 0' +
                 'h '+ bar +
-                'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + barWidth +
+                'a ' + 0.5 * barThickness + ' ' + 0.5 * barThickness + ' 0 0 1 0 ' + barThickness +
                 'h -'+ bar +
-                'a ' + 0.5 * barWidth + ' ' + 0.5 * barWidth + ' 0 0 1 0 ' + (-1 * barWidth);
+                'a ' + 0.5 * barThickness + ' ' + 0.5 * barThickness + ' 0 0 1 0 ' + (-1 * barThickness);
               initialX += subTotalLength;
               return(
                 <path
@@ -77,9 +77,9 @@ class MultipleAcademiaBars extends React.Component {
     //   return(
     //     <svg
     //       className='academiaBar'
-    //       viewBox={'0 0 '+ totalLength +' ' + barWidth}
+    //       viewBox={'0 0 '+ totalLength +' ' + barThickness}
     //       width={totalLength}
-    //       height={barWidth + spacing}
+    //       height={barThickness + spacing}
     //     >
     //     </svg>
     //   )
@@ -155,11 +155,55 @@ class MultipleAcademiaBars extends React.Component {
 
 class DesktopChronology extends React.Component {
   render() {
+    const barFormat = this.props.barFormat;
+    
+    const yearPaddingTop  = 15;
+    const yearPaddingLeft = yearPaddingTop + 7;
+    const yearHeight =
+      (barFormat.barThickness + barFormat.barSpacing) * 6
+      + barFormat.barSpacing
+      - 2 * yearPaddingTop;
+
+    const dbRange = this.props.dbRange;
+    /**
+     * TO-DO: adjust 'year' bands position according to dbRange
+     */
+
+    
+    const yearArray = [2013, 2012, 2011, 2010, 2009];
+
     return(
-      <div className='academiaBars'>
-        {Object.values(this.props.academiaBars).reverse().map((barData,i) => {
-          return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} key={i} />
-        })}
+      <div className='timelineContainer'>
+        <div className='years'>
+          {
+            yearArray.map( year => {
+              return (
+                <div
+                  className='year'
+                  key={year}
+                  style={{
+                    height: yearHeight + 'px',
+                    padding: yearPaddingTop + 'px ' + yearPaddingLeft + 'px'
+                  }}
+                >
+                  {year}
+                </div> 
+              )
+            })
+          }
+        </div>
+        <div className='timeline'>
+          <div className='experience'>
+            Experience bars TO-DO
+          </div>
+          <div className='academia'>
+            <div className='academiaBars'>
+              {Object.values(this.props.academiaBars).reverse().map((barData,i) => {
+                return <MultipleAcademiaBars barData={barData} barFormat={barFormat} key={i} />
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     )
     // DON'T DELETE UNTIL TAG IS IMPLEMENTED AS WELL
@@ -177,14 +221,6 @@ class DesktopChronology extends React.Component {
     // )
   }
 }
-
-// This is what you need to get from the initial bar
-// const test = [
-//   [ { 'bar': 100, 'color': "#fa70ae" }, { 'bar': 200, 'color': "#fff" }, { 'bar': 80, 'color': "#999" } ],
-//   [ { 'bar': 80, 'color': "#aaa" } ],
-//   [ { 'bar': 60, 'color': "#aaa" } ],
-//   [ { 'bar': 100, 'color': "#aaa" } ]
-// ];
 
 class Past extends React.Component {
   render () {
@@ -204,7 +240,11 @@ class Past extends React.Component {
           right={{label:'MY PRESENT',target:'present'}}
           changePage={this.props.changePage}
         />
-        <DesktopChronology barFormat={{barWidth: 8, barSpacing: 8}} academiaBars={dbBars.academia} />
+        <DesktopChronology
+          barFormat={{barThickness: 8, barSpacing: 8}}
+          academiaBars={dbBars.academia}
+          dbRange={dbRange}
+        />
       </div>
     )
   }
