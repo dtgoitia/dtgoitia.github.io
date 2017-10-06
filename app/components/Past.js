@@ -165,12 +165,15 @@ class DesktopChronology extends React.Component {
       - 2 * yearPaddingTop;
 
     const dbRange = this.props.dbRange;
+    const yearArray = pastEntry.getYearsArray(
+      dbRange.latest.getFullYear(),
+      pastEntry.yearRange(dbRange.earliest, dbRange.latest)
+    );
+
     /**
      * TO-DO: adjust 'year' bands position according to dbRange
      */
-
     
-    const yearArray = [2013, 2012, 2011, 2010, 2009];
 
     return(
       <div className='timelineContainer'>

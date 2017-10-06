@@ -281,5 +281,15 @@ describe("Past Entry Tests", function() {
     }
     expect(output).to.deep.equal(pastEntry.joinEntriesWithSameIndex(arg1, arg2));
   });
+  it("Get number of years between 2 given dates", function(){
+    expect(2).to.equal(pastEntry.yearRange(new Date("2015-01-01"), new Date("2016-01-01")));
+    expect(3).to.equal(pastEntry.yearRange(new Date("2015-01-01"), new Date("2017-01-01")));
+    expect(0).to.equal(pastEntry.yearRange(new Date("2015-01-01"), new Date("2014-01-01")));
+    expect(0).to.equal(pastEntry.yearRange(new Date("2015-01-01"), new Date("2010-01-01")));
+  });
+  it("Get an array with the years to plot", function(){
+    expect([2000, 1999, 1998, 1997]).to.deep.equal(pastEntry.getYearsArray(2000,4));
+    expect([-1000, -1001]).to.deep.equal(pastEntry.getYearsArray(-1000,2));
+  });
 });
 

@@ -173,6 +173,31 @@ const getDbBars = db => {
   return dbBars
 }
 
+/**
+ * Returns the number of years to plot based on earliest and latest date
+ * @param {Date} earliestDate - Earliest date to plot
+ * @param {Date} latestDate - Latest date to plot
+ * @return {number} - Returns an integer with the amount of years between both dates.
+ */
+const yearRange = (earliestDate, latestDate) => {
+  const y1 = earliestDate.getFullYear();
+  const y2 = latestDate.getFullYear();
+  const diff = y2 - y1 + 1;
+  return (diff >= 0 ? diff : 0);
+}
+
+/**
+ * Get array with the year values to plot
+ * @param {number} startYear - First year within the array (latest year)
+ * @param {number} numberOfYears - Length of the array
+ * @return {Array} - Returns an array with the year values to plot
+ */
+const getYearsArray = (startYear, numberOfYears) => {
+  return (new Array(numberOfYears))
+    .fill(startYear)
+    .map((x, i, iterable) => iterable[i] = x - i)
+}
+
 module.exports = {
   convertEntryStringDatestoDates,
   importDb,
@@ -181,5 +206,7 @@ module.exports = {
   getEntryBarIndexes,
   getRelativeIndex,
   joinEntriesWithSameIndex,
-  getDbBars
+  getDbBars,
+  yearRange,
+  getYearsArray
 };
