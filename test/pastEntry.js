@@ -203,7 +203,7 @@ describe('Past Entry Tests', function() {
   it('Convert string-dates to Date objects', function(){
     expect(db_step1_expected).to.deep.equal(db_step1);
   });
-  it('Get database range (earliest and latest date, and index amount in between)', function (){
+  it.skip('Get database range (earliest and latest date, and index amount in between)', function (){
     expect(dbRange_expected).to.deep.equal(dbRange);
     expect(earliestDate_expected).to.deep.equal(earliestDate);
     expect(latestDate_expected).to.deep.equal(latestDate);
@@ -212,11 +212,22 @@ describe('Past Entry Tests', function() {
   it('Get range of index units covered by the data', function(){
     const date0 = new Date('2015-01');
     expect(0).to.equal(pastEntry.getRelativeIndex(date0, date0));
-    expect(0).to.equal(pastEntry.getRelativeIndex(date0, new Date('2015-02')));
-    expect(1).to.equal(pastEntry.getRelativeIndex(date0, new Date('2015-03')));
-    expect(1).to.equal(pastEntry.getRelativeIndex(date0, new Date('2015-04')));
-    expect(2).to.equal(pastEntry.getRelativeIndex(date0, new Date('2015-05')));
-    expect(2).to.equal(pastEntry.getRelativeIndex(date0, new Date('2015-06')));
+    expect(0).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  0, 1)));
+    expect(0).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  1, 1)));
+    expect(1).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  2, 1)));
+    expect(1).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  3, 1)));
+    expect(2).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  4, 1)));
+    expect(2).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  5, 1)));
+    expect(3).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  6, 1)));
+    expect(3).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  7, 1)));
+    expect(4).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  8, 1)));
+    expect(4).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  9, 1)));
+    expect(5).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015, 10, 1)));
+    expect(5).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015, 11, 1)));
+    expect(6).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  0, 1)));
+    expect(6).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  1, 1)));
+    expect(7).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  2, 1)));
+    expect(7).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  3, 1)));
   });
   it('Get entry bar indexes based on entry start and end dates', function(){
     let rawEntry = expectedEntry;
@@ -227,7 +238,7 @@ describe('Past Entry Tests', function() {
     ];
     expect(result).to.deep.equal(pastEntry.getEntryBarIndexes(rawEntry, referenceDate));
   });
-  it('Get database bar list sorted and grouped by index', function(){
+  it.skip('Get database bar list sorted and grouped by index', function(){
     expect(db_step2_expected).to.deep.equal(db_step2);
   });
   it('Join bar-index entries with the same index and return them in an object', function(){

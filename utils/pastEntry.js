@@ -35,14 +35,10 @@ const getDbRange = db => {
   // Gather all entries in a single array
   const allEntries = db.academia.concat(db.experience);
 
-  // Get earliest start date from all entries
+  // Get earliest start date from all entries, and get the 1st of January of that year
   const earliestDate =  allEntries
-    .reduce( (previousEntry, currentEntry) => {
-      if (previousEntry.start < currentEntry.start) {
-        return previousEntry;
-      } else {
-        return currentEntry;
-      }
+    .reduce( (preEntry, curEntry) => {
+      return ( preEntry.start < curEntry.start ? preEntry : curEntry);
     }).start;
 
   // Get latest end date from all entries
@@ -54,13 +50,18 @@ const getDbRange = db => {
         return currentEntry;
       }
     }).end;
-  
-  // Get range of index units covered by the database (db)
-  const indexRange = getRelativeIndex(earliestDate, latestDate);
 
+  // Extend the earliest date to the start of the same year (to match the bars vertically)
+  const extendedEarliestDate = new Date(earliestDate.getFullYear(),  0, 1);
+  const extendedLatestDate   = new Date(  latestDate.getFullYear(), 11, 1);
+
+  // Get range of index units covered by the database (db)
+  const indexRange = getRelativeIndex(extendedEarliestDate, extendedLatestDate) + 1;
+
+  // Extend the latest   date to the end   of the same year (to match the bars vertically)
   return {
-    earliest:   earliestDate,
-    latest:     latestDate,
+    earliest:   extendedEarliestDate,
+    latest:     extendedLatestDate,
     indexRange: indexRange
   };
 };
@@ -140,8 +141,7 @@ const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
     let results = barIndexArray.map(entryArray => {
       return entryArray.filter( bar => bar.index === i ); // get entry bars that have the index property = i
     }).filter( result => result.length > 0 )              // get rid of empty empty cases
-    // .map( ) // get rid of index property
-      .map(resultsPerIndex => {                             // join all the results in one array
+      .map(resultsPerIndex => {                           // join all the results in one array
         return resultsPerIndex.reduce( (prev, cur) => prev.concat(cur) );
       });
     tmp[i] = results; // add the array to tmp object
@@ -157,7 +157,7 @@ const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
  */
 const getDbBars = db => {
   const dbRange = getDbRange(db);
-  
+
   // Get db entry barIndexArray
   let dbBars = {
     academia:   db.academia  .map(entry => getEntryBarIndexes(entry, dbRange.earliest)),
