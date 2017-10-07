@@ -12,7 +12,7 @@ class Present extends React.Component {
         />
         Hi! I am "Present.js"
       </div>
-    )
+    );
   }
 }
 

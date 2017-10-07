@@ -12,7 +12,7 @@ class Future extends React.Component {
         />
         Hi! I am "Future.js"
       </div>
-    )
+    );
   }
 }
 

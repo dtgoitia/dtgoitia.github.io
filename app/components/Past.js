@@ -1,9 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
-import pastData from './../../pastData.json';
-import pastEntryUtils from './../../utils/pastEntry.js'
 
-const pastEntry = require ('./../../utils/pastEntry.js');
+const pastEntry = require('./../../utils/pastEntry.js');
 const originalDb = require('./../../pastData.json');
 
 class MultipleAcademiaBar extends React.Component {
@@ -23,14 +21,13 @@ class MultipleAcademiaBar extends React.Component {
         >
           <path></path>
         </svg>
-      )
+      );
     } else {
       const totalLength = data.map( barData => barData.bar)
         .reduce((accumulatedLength, currentLength) => accumulatedLength + currentLength);
       const barThickness = this.props.barFormat.barThickness;
       const spacing = this.props.barFormat.barSpacing;
       let initialX = 0.5 * barThickness;
-      let lastLength = 0;
       return (
         <svg
           className='academiaBar'
@@ -72,7 +69,7 @@ class MultipleAcademiaBars extends React.Component {
   render() {
     const data = this.props.barData;
     // if ( data.length > 0 ) {
-      return <MultipleAcademiaBar data={data} barFormat={this.props.barFormat} />
+    return <MultipleAcademiaBar data={data} barFormat={this.props.barFormat} />;
     // } else {
     //   return(
     //     <svg
@@ -191,7 +188,7 @@ class DesktopChronology extends React.Component {
                 >
                   {year}
                 </div> 
-              )
+              );
             })
           }
         </div>
@@ -202,13 +199,13 @@ class DesktopChronology extends React.Component {
           <div className='academia'>
             <div className='academiaBars'>
               {Object.values(this.props.academiaBars).reverse().map((barData,i) => {
-                return <MultipleAcademiaBars barData={barData} barFormat={barFormat} key={i} />
+                return <MultipleAcademiaBars barData={barData} barFormat={barFormat} key={i} />;
               })}
             </div>
           </div>
         </div>
       </div>
-    )
+    );
     // DON'T DELETE UNTIL TAG IS IMPLEMENTED AS WELL
     // return(
     //   <div>
@@ -249,7 +246,7 @@ class Past extends React.Component {
           dbRange={dbRange}
         />
       </div>
-    )
+    );
   }
 }
 

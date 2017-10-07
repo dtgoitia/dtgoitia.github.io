@@ -51,86 +51,72 @@ const db = {
       t1: 'Jun 2008'
     }
   ]
-}
+};
 
 class App extends React.Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       // page: 'intro',
       page: 'past',
       language: 'English'
-    }
-    this.changePage = this.changePage.bind(this)
-    this.changeLanguage = this.changeLanguage.bind(this)
+    };
+    this.changePage = this.changePage.bind(this);
+    this.changeLanguage = this.changeLanguage.bind(this);
   }
 
   changePage(pag) {
-    this.setState(() => {
-      return (
-        {page: pag}
-      )
-    })
+    this.setState(() => ({page: pag}));
   }
-
+  
   changeLanguage(lang) {
-    this.setState(() => {
-      return (
-        {language: lang}
-      )
-    })
+    this.setState(() => ({language: lang}));
   }
 
   render() {
-    const currentPage = this.state.page
+    const currentPage = this.state.page;
     switch (this.state.page) {
-      case 'intro':
-        return (
-          <div>
-            <Intro
-              db={db}
-              st={this.state}
-              lang={this.state.language}
-              changePage={this.changePage}
-            />
-            <Language
-              db={db}
-              st={this.state}
-              lang={this.state.language}
-              changeLanguage={this.changeLanguage}
-            />
-          </div>
-        );
-        break;
-      case 'past':
-        return(
-          <Past
+    case 'intro':
+      return (
+        <div>
+          <Intro
+            db={db}
+            st={this.state}
+            lang={this.state.language}
             changePage={this.changePage}
           />
-        );
-        break;
-      case 'present':
-        return(
-          <Present
-            changePage={this.changePage}
+          <Language
+            db={db}
+            st={this.state}
+            lang={this.state.language}
+            changeLanguage={this.changeLanguage}
           />
-        );
-        break;
-      case 'future':
-        return(
-          <Future
-            changePage={this.changePage}
-          />
-        );
-        break;
-    
-      default:
-        return(
-          <div>
+        </div>
+      );
+    case 'past':
+      return(
+        <Past
+          changePage={this.changePage}
+        />
+      );
+    case 'present':
+      return(
+        <Present
+          changePage={this.changePage}
+        />
+      );
+    case 'future':
+      return(
+        <Future
+          changePage={this.changePage}
+        />
+      );
+    default:
+      return(
+        <div>
             Oops, this.state.page = {currentPage ? currentPage : 'null'}
-          </div>
-        );
-        break;
+        </div>
+      );
     }
   }
 }

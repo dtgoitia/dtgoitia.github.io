@@ -11,8 +11,8 @@ const convertEntryStringDatestoDates = entry => {
   } else {
     newEntry.end = new Date(entry.end+'-01');   // add day to avoid date overflows
   }
-  return newEntry
-}
+  return newEntry;
+};
 
 /**
  * Convert all string-dates in db to Date objects
@@ -23,8 +23,8 @@ const importDb = rawDb => {
   let db = {};
   db.academia   = rawDb.academia.  map(entry => convertEntryStringDatestoDates(entry));
   db.experience = rawDb.experience.map(entry => convertEntryStringDatestoDates(entry));
-  return db
-}
+  return db;
+};
 
 /**
  * Get db range: earliest date, latest date and indexes in between
@@ -33,15 +33,15 @@ const importDb = rawDb => {
  */
 const getDbRange = db => {
   // Gather all entries in a single array
-  const allEntries = db.academia.concat(db.experience)
+  const allEntries = db.academia.concat(db.experience);
 
   // Get earliest start date from all entries
   const earliestDate =  allEntries
     .reduce( (previousEntry, currentEntry) => {
       if (previousEntry.start < currentEntry.start) {
-        return previousEntry
+        return previousEntry;
       } else {
-        return currentEntry
+        return currentEntry;
       }
     }).start;
 
@@ -49,9 +49,9 @@ const getDbRange = db => {
   const latestDate = allEntries
     .reduce( (previousEntry, currentEntry) => {
       if (previousEntry.end > currentEntry.end) {
-        return previousEntry
+        return previousEntry;
       } else {
-        return currentEntry
+        return currentEntry;
       }
     }).end;
   
@@ -62,8 +62,8 @@ const getDbRange = db => {
     earliest:   earliestDate,
     latest:     latestDate,
     indexRange: indexRange
-  }
-}
+  };
+};
 
 /**
  * Return the date expresed in couples of months.
@@ -78,10 +78,9 @@ const getAbsoluteIndex = date => {
     let monthPair = Math.floor(date.getMonth() / 2); // Get index months
     return date.getFullYear()*6 + monthPair;
   } else {
-    throw 'getAbsoluteIndex: "date" is not a Date instance'
-    return NaN
+    throw 'getAbsoluteIndex: "date" is not a Date instance';
   }
-}
+};
 
 /**
  * Return the relative index of the targetDate as per referenceDate, being the index based on couples of months (see getAbsoluteIndex).
@@ -91,12 +90,12 @@ const getAbsoluteIndex = date => {
  */
 const getRelativeIndex = (referenceDate, targetDate) => {
   if (referenceDate instanceof Date && targetDate instanceof Date) {
-    return getAbsoluteIndex(targetDate) - getAbsoluteIndex(referenceDate)
+    return getAbsoluteIndex(targetDate) - getAbsoluteIndex(referenceDate);
   } else {
-    if (referenceDate instanceof Date === false) { throw new TypeError('referenceDate expected to be a Date instance, but a ') }
-    if (targetDate    instanceof Date === false) { throw new TypeError(   'targetDate expected to be a Date instance, ') }
+    if (referenceDate instanceof Date === false) { throw new TypeError('referenceDate expected to be a Date instance, but a '); }
+    if (targetDate    instanceof Date === false) { throw new TypeError(   'targetDate expected to be a Date instance, '); }
   }
-}
+};
 
 /**
  * Get passed entry bar indexes based on entry dates
@@ -120,12 +119,12 @@ const getEntryBarIndexes = (entry, referenceDate) => {
         } finally {
           entryStartIndex++;
         }
-      })
+      });
     } 
   } else {
     console.error('Entry  "' + entry.title + '" has no "bars" member.');
   }
-}
+};
 
 /**
  * Join bar-index entries with the same index and return them in an object
@@ -142,9 +141,9 @@ const joinEntriesWithSameIndex = (indexRange, barIndexArray) => {
       return entryArray.filter( bar => bar.index === i ); // get entry bars that have the index property = i
     }).filter( result => result.length > 0 )              // get rid of empty empty cases
     // .map( ) // get rid of index property
-    .map(resultsPerIndex => {                             // join all the results in one array
-      return resultsPerIndex.reduce( (prev, cur) => prev.concat(cur) )
-    });
+      .map(resultsPerIndex => {                             // join all the results in one array
+        return resultsPerIndex.reduce( (prev, cur) => prev.concat(cur) );
+      });
     tmp[i] = results; // add the array to tmp object
     i++;
   }
@@ -169,9 +168,9 @@ const getDbBars = db => {
   dbBars = {
     academia:   joinEntriesWithSameIndex(dbRange.indexRange, dbBars.academia),
     experience: joinEntriesWithSameIndex(dbRange.indexRange, dbBars.experience)
-  }
-  return dbBars
-}
+  };
+  return dbBars;
+};
 
 /**
  * Returns the number of years to plot based on earliest and latest date
@@ -184,7 +183,7 @@ const yearRange = (earliestDate, latestDate) => {
   const y2 = latestDate.getFullYear();
   const diff = y2 - y1 + 1;
   return (diff >= 0 ? diff : 0);
-}
+};
 
 /**
  * Get array with the year values to plot
@@ -195,8 +194,8 @@ const yearRange = (earliestDate, latestDate) => {
 const getYearsArray = (startYear, numberOfYears) => {
   return (new Array(numberOfYears))
     .fill(startYear)
-    .map((x, i, iterable) => iterable[i] = x - i)
-}
+    .map((x, i, iterable) => iterable[i] = x - i);
+};
 
 module.exports = {
   convertEntryStringDatestoDates,

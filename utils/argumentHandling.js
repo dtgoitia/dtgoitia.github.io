@@ -6,17 +6,17 @@
 const isType = arg => {
   const t = typeof(arg); // Get argument type
   if (arg === null) {
-    return 'null'
+    return 'null';
   } else if (t === 'object') {
     const i = arg.constructor;
     if (typeof(i) === 'function') {
-      return i.name
+      return i.name;
     }
   } else {
-    return t
+    return t;
   }
-}
+};
 
 module.exports = {
-  isType: isType
+  isType
 };

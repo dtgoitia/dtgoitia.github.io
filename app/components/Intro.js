@@ -8,7 +8,7 @@ class SvgMenuLeft extends React.Component {
           fill="rgba(150,150,150,0.78)"
         />
       </svg>
-    )
+    );
   }
 }
 
@@ -17,18 +17,18 @@ class SvgMenuCenter extends React.Component {
     return (
       <svg width="250" height="350">
         <path
-          d="
-            m 63 200
-            v -170
-            a 7.5 7.5 0 0 1 50 0
-            v 170
-            l 63 150
-            h -176
-          "
+          d={ 
+            'm 63 200' +
+            'v -170' +
+            'a 7.5 7.5 0 0 1 50 0' +
+            'v 170' +
+            'l 63 150' +
+            'h -176'
+          }
           fill="rgba(206,206,206,0.78)"
         />
       </svg>
-    )
+    );
   }
 }
 
@@ -37,18 +37,18 @@ class SvgMenuRight extends React.Component {
     return (
       <svg width="265" height="350">
         <path
-          d="
-            m 0 200
-            v -152
-            a 7.5 7.5 0 0 1 50 0
-            v 152
-            l 215 150
-            h -176
-          "
+          d={
+            'm 0 200' + 
+            'v -152' + 
+            'a 7.5 7.5 0 0 1 50 0' + 
+            'v 152' + 
+            'l 215 150' + 
+            'h -176'
+          }
           fill="rgba(255,255,255,0.78)"
         />
       </svg>
-    )
+    );
   }
 }
 
@@ -61,7 +61,7 @@ class MenuVerticalText extends React.Component {
           <span className='texto_fijo'>{this.props.words[1]}</span>
         </span>
       </div>
-    )
+    );
   }
 }
 
@@ -82,7 +82,7 @@ class SvgMenu extends React.Component {
           <MenuVerticalText words={['your', 'future']} changePage={this.props.changePage}/>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -98,7 +98,7 @@ class Intro extends React.Component {
         </div>
         <SvgMenu changePage={this.props.changePage} />
       </div>
-    )
+    );
   }
 }
 
