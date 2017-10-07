@@ -120,72 +120,150 @@ class AcademiaTag extends React.Component {
   }
 }
 
-class DesktopChronology extends React.Component {
+class AcademiaTags extends React.Component {
+  render() {
+    const h = this.props.h;
+    return (
+      <div
+        id='academiaTags'
+        className='academiaTags'
+        style={{position: 'absolute', bottom: (-h), height: h}}
+      >
+        {
+          originalDb.academia.map((entry, i) => {
+            return(
+              <AcademiaTag
+                key={i}
+                id={'academiaTag' + i}
+                data={entry}
+                referenceDate={this.props.referenceDate}
+                barFormat={this.props.barFormat}
+              />
+            );
+          })
+        }
+      </div>
+    );
+  }
+}
+
+class AcademiaBars extends React.Component {
+  render() {
+    return (
+      <div className='academiaBars'>
+        {Object.values(this.props.academiaBars).reverse().map((barData,i) => {
+          return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} key={i} />;
+        })}
+      </div>
+    );
+  }
+}
+
+class Academia extends React.Component {
+  render() {
+    const barFormat = this.props.barFormat;
+    return (
+      <div className='academia'>
+        <AcademiaBars
+          academiaBars={this.props.academiaBars}
+          barFormat={barFormat}
+        />
+        <AcademiaTags
+          h={this.props.h}
+          barFormat={barFormat}
+          referenceDate={this.props.referenceDate}
+        />
+      </div>
+    );
+  }
+}
+
+class Experience extends React.Component {
+  render() {
+    return (
+      <div className='experience'>
+        Experience bars TO-DO
+      </div>
+    );
+  }
+}
+
+class AcademiaAndExperience extends React.Component {
   render() {
     const barFormat = this.props.barFormat;
     
-    const yearHeight =
-      6 * (barFormat.barThickness + barFormat.barSpacing)
-      - barFormat.yearSpacing;
-    
-    const dbRange = this.props.dbRange;
-    const yearArray = pastEntry.getYearsArray(
-      dbRange.latest.getFullYear(),
-      pastEntry.yearRange(dbRange.earliest, dbRange.latest)
-    );
-
     // Get academiaTags div height from number of years ploted and bar size
-    const h = (yearArray.length + 0) * 6 * (barFormat.barThickness + barFormat.barSpacing);
+    const h = (this.props.yearArray.length + 0) * 6 * (barFormat.barThickness + barFormat.barSpacing);
+    return (
+      <div className='timeline'>
+        <Experience />
+        <Academia
+          academiaBars={this.props.academiaBars}
+          barFormat={barFormat}
+          h={h}
+          referenceDate={this.props.referenceDate}
+        />
+      </div>
+    );
+  }
+}
 
-    return(
+class Year extends React.Component {
+  render() {
+    return (
+      <div
+        className='year'
+        style={{
+          height: this.props.yearHeight + 'px',
+          margin: this.props.barFormat.yearSpacing + 'px 0px '
+        }}
+      >
+        <div className='yearTag'>{this.props.year}</div>
+      </div>
+    );
+  }
+}
+
+class Years extends React.Component {
+  render() {
+    return (
+      <div className='years'>
+        {
+          this.props.yearArray.map( year => {
+            return (
+              <Year
+                key={year}
+                year={year}
+                yearHeight={this.props.yearHeight}
+                barFormat={this.props.barFormat}
+              />
+            );
+          })
+        }
+      </div>
+    );
+  }
+}
+
+class Timeline extends React.Component {
+  render() {
+    const barFormat = this.props.barFormat;
+    const dbRange   = this.props.dbRange;
+    const yearArray = pastEntry.getYearsArray(dbRange.latest.getFullYear(), pastEntry.yearRange(dbRange.earliest, dbRange.latest));
+    return (
       <div className='timelineContainer'>
-        <div className='years'>
-          {
-            yearArray.map( year => {
-              return (
-                <div
-                  className='year'
-                  key={year}
-                  style={{
-                    height: yearHeight + 'px',
-                    margin: barFormat.yearSpacing + 'px 0px '
-                  }}
-                >
-                  <div className='yearTag'>{year}</div>
-                </div> 
-              );
-            })
-          }
-        </div>
-        <div className='timeline'>
-          <div className='experience'>
-            Experience bars TO-DO
-          </div>
-          <div className='academia'>
-            <div className='academiaBars'>
-              {Object.values(this.props.academiaBars).reverse().map((barData,i) => {
-                return <MultipleAcademiaBars barData={barData} barFormat={barFormat} key={i} />;
-              })}
-            </div>
-            <div
-              className='academiaTags'
-              style={{position: 'absolute', bottom: (-h), height: h}}
-            >
-              {
-                originalDb.academia.map((entry, i) => {
-                  return(
-                    <AcademiaTag
-                      key={i}
-                      data={entry}
-                      referenceDate={this.props.dbRange.earliest}
-                      barFormat={barFormat}
-                    />
-                  );
-                })
-              }
-            </div>
-          </div>
-        </div>
+        <Years
+          yearArray={yearArray}
+          yearHeight={6 * (barFormat.barThickness + barFormat.barSpacing) - barFormat.yearSpacing}
+          barFormat={barFormat}
+        />
+        <AcademiaAndExperience
+          yearArray={yearArray}
+          academiaBars={this.props.academiaBars}
+          experienceBars={this.props.experienceBars}
+          referenceDate={dbRange.earliest}
+          barFormat={barFormat}
+        />
       </div>
     );
   }
@@ -204,9 +282,10 @@ class Past extends React.Component {
           right={{label:'MY PRESENT',target:'present'}}
           changePage={this.props.changePage}
         />
-        <DesktopChronology
-          barFormat={{barThickness: 8, barSpacing: 8, yearSpacing: 2}}
+        <Timeline
           academiaBars={dbBars.academia}
+          experienceBars={dbBars.experience}
+          barFormat={{barThickness: 8, barSpacing: 8, yearSpacing: 2}}
           dbRange={dbRange}
         />
       </div>
