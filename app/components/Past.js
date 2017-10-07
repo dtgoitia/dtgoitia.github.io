@@ -71,71 +71,54 @@ class MultipleAcademiaBars extends React.Component {
   }
 }
 
-// // Block containing all horizontal bars
-// const AcademiaBars = (props) => {
-//   return(
-//     <div className='academiaBars'>
-//       {props.data.bars.map((item,i) => {
-//         return <AcademiaBar length={item} fill={props.data.color} stroke='black' key={i}/>
-//       })}
-//     </div>
-//   );
-// }
+// Tag with a circle shape: when the user clicks on the tag,
+// it will unfold and show more information
+class AcademiaTag extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { foldedTray: true };
+    this.showHideTray = this.showHideTray.bind(this);
+  }
 
-// // Tag with a circle shape: when the user clicks on the tag,
-// // it will show a card with the information
-// class AcademiaTag extends React.Component {
-//   constructor(props){
-//     super(props)
-//     this.state = { foldedTray: true }
-//     this.showHideTray = this.showHideTray.bind(this);
-//   }
+  showHideTray(){
+    this.setState({foldedTray: !this.state.foldedTray});
+  }
 
-//   showHideTray(){
-//     this.setState({foldedTray: !this.state.foldedTray})
-//   }
+  render() {
+    const data = this.props.data;
+    const endDate = (data.end === '' | data.end === 'not yet') ? new Date() : new Date(data.end + '-01');
+    const endIndex = pastEntry.getRelativeIndex(this.props.referenceDate, endDate);
+    const barHeight = this.props.barFormat.barThickness + this.props.barFormat.barSpacing;
 
-//   componendidmoun
-//   render() {
-//     return (
-//       <div
-//         className='academiaTagContainer'
-//         style={{top: this.props.data.y, left: this.props.data.x}}
-//       >
-//         <div
-//           className={this.state.foldedTray === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
-//           style={ {backgroundColor: this.props.data.color} }
-//           onClick={this.showHideTray.bind(null)}
-//         >
-//           <img src={'./../img/' + this.props.data.img} />
-//           <h1>{this.props.data.title}</h1>
-//           <h2>{this.props.data.subtitle}</h2>
-//           <div
-//             className='academiaTagTray'
-//             style={{display: 'block'}}
-//           >
-//             <h3>{this.props.data.description}</h3>
-//             <p><i>Start date: </i>{this.props.data.start}</p>
-//             <p><i>End date: </i>{this.props.data.end === '' ? 'not yet' : this.props.data.end}</p>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-// // Block containing the entry tag and its horizontal bars
-// class AcademiaEntry extends React.Component {
-//   render() {
-//     const d = this.props.data;
-//     return (
-//       <div className='academiaEntry'>
-//         <AcademiaTag data={d} />
-//         <AcademiaBars data={d} />
-//       </div>
-//     );
-//   }
-// }
+    return (
+      <div
+        className='academiaTagContainer'
+        style={{
+          bottom: ((endIndex * barHeight) - data.y) + 'px',
+          left: data.x
+        }}
+      >
+        <div
+          className={this.state.foldedTray === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
+          style={ {backgroundColor: data.color} }
+          onClick={this.showHideTray.bind(null)}
+        >
+          <img src={'./../img/' + data.img} />
+          <h1>{data.title}</h1>
+          <h2>{data.subtitle}</h2>
+          <div
+            className='academiaTagTray'
+            style={{display: 'block'}}
+          >
+            <h3>{data.description}</h3>
+            <p><i>Start date: </i>{data.start}</p>
+            <p><i>End date: </i>{data.end}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
 class DesktopChronology extends React.Component {
   render() {
@@ -149,7 +132,10 @@ class DesktopChronology extends React.Component {
     const yearArray = pastEntry.getYearsArray(
       dbRange.latest.getFullYear(),
       pastEntry.yearRange(dbRange.earliest, dbRange.latest)
-    );    
+    );
+
+    // Get academiaTags div height from number of years ploted and bar size
+    const h = (yearArray.length + 0) * 6 * (barFormat.barThickness + barFormat.barSpacing);
 
     return(
       <div className='timelineContainer'>
@@ -181,36 +167,35 @@ class DesktopChronology extends React.Component {
                 return <MultipleAcademiaBars barData={barData} barFormat={barFormat} key={i} />;
               })}
             </div>
+            <div
+              className='academiaTags'
+              style={{position: 'absolute', bottom: (-h), height: h}}
+            >
+              {
+                originalDb.academia.map((entry, i) => {
+                  return(
+                    <AcademiaTag
+                      key={i}
+                      data={entry}
+                      referenceDate={this.props.dbRange.earliest}
+                      barFormat={barFormat}
+                    />
+                  );
+                })
+              }
+            </div>
           </div>
         </div>
       </div>
     );
-    // DON'T DELETE UNTIL TAG IS IMPLEMENTED AS WELL
-    // return(
-    //   <div>
-    //     {pastData.academia.map((academiaEntry, i) => {
-    //       return <AcademiaEntry data={academiaEntry} key={i}/>
-    //     })}
-    //     <div className='academiaBars'>
-    //       {test.map((barData,i) => {
-    //         return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} key={i} />
-    //       })}
-    //     </div>
-    //   </div>
-    // )
   }
 }
 
 class Past extends React.Component {
   render () {
-    // Convert to Date all string-dates in db
-    const db = pastEntry.importDb(originalDb);
-
-    // Get db range
-    const dbRange = pastEntry.getDbRange(db);
-    
-    // Get database bar list sorted and grouped by index
-    let dbBars = pastEntry.getDbBars(db);
+    const db = pastEntry.importDb(originalDb);  // Convert to Date all string-dates in db
+    const dbRange = pastEntry.getDbRange(db);   // Get db range
+    const dbBars = pastEntry.getDbBars(db);     // Get database bar list sorted and grouped by index
 
     return (
       <div>
