@@ -4,7 +4,7 @@
  * @returns {Object} A new entry object with "start" and "end" string members converted to Date
  */
 const convertEntryStringDatestoDates = entry => {
-  let newEntry = entry;
+  const newEntry = Object.assign({}, entry);
   newEntry.start = new Date(entry.start);
   if (entry.end === '' || entry.end === 'not yet') {
     newEntry.end = new Date();
@@ -20,7 +20,7 @@ const convertEntryStringDatestoDates = entry => {
  * @return {Object} - Past database with dates as Data objects
  */
 const importDb = rawDb => {
-  let db = {};
+  const db = {};
   db.academia   = rawDb.academia.  map(entry => convertEntryStringDatestoDates(entry));
   db.experience = rawDb.experience.map(entry => convertEntryStringDatestoDates(entry));
   return db;
