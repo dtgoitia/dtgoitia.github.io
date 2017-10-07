@@ -67,20 +67,7 @@ class MultipleAcademiaBar extends React.Component {
 
 class MultipleAcademiaBars extends React.Component {
   render() {
-    const data = this.props.barData;
-    // if ( data.length > 0 ) {
-    return <MultipleAcademiaBar data={data} barFormat={this.props.barFormat} />;
-    // } else {
-    //   return(
-    //     <svg
-    //       className='academiaBar'
-    //       viewBox={'0 0 '+ totalLength +' ' + barThickness}
-    //       width={totalLength}
-    //       height={barThickness + spacing}
-    //     >
-    //     </svg>
-    //   )
-    // }
+    return <MultipleAcademiaBar data={this.props.barData} barFormat={this.props.barFormat} />;
   }
 }
 
@@ -154,13 +141,10 @@ class DesktopChronology extends React.Component {
   render() {
     const barFormat = this.props.barFormat;
     
-    const yearPaddingTop  = 15;
-    const yearPaddingLeft = yearPaddingTop + 7;
     const yearHeight =
-      (barFormat.barThickness + barFormat.barSpacing) * 6
-      + barFormat.barSpacing
-      - 2 * yearPaddingTop;
-
+      6 * (barFormat.barThickness + barFormat.barSpacing)
+      - barFormat.yearSpacing;
+    
     const dbRange = this.props.dbRange;
     const yearArray = pastEntry.getYearsArray(
       dbRange.latest.getFullYear(),
@@ -183,10 +167,10 @@ class DesktopChronology extends React.Component {
                   key={year}
                   style={{
                     height: yearHeight + 'px',
-                    padding: yearPaddingTop + 'px ' + yearPaddingLeft + 'px'
+                    margin: barFormat.yearSpacing + 'px 0px '
                   }}
                 >
-                  {year}
+                  <div className='yearTag'>{year}</div>
                 </div> 
               );
             })
@@ -241,7 +225,7 @@ class Past extends React.Component {
           changePage={this.props.changePage}
         />
         <DesktopChronology
-          barFormat={{barThickness: 8, barSpacing: 8}}
+          barFormat={{barThickness: 8, barSpacing: 8, yearSpacing: 2}}
           academiaBars={dbBars.academia}
           dbRange={dbRange}
         />
