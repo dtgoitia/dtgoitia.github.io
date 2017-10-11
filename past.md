@@ -1,6 +1,6 @@
 ```mermaid
 graph TB
-  JSON((JSON)) --> require
+  JSON((pastData.json)) --> require
   require --> originalDb((originalDb))
   originalDb --> importDb
   importDb --> db((db))

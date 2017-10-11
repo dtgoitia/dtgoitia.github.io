@@ -68,6 +68,175 @@ const db_step0 = {
   ]
 };
 
+const originalDb = {
+  'actual': {    
+    'academia': [
+      {
+        'title': 'Certified Associate in Project Management',
+        'subtitle': 'Project Management Institute (PMI) & Learning People',
+        'description': 'This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.',
+        'start': '2014-11',
+        'end': 'not yet',
+        'img': 'past_capm.svg',
+        'color': '#92905d',
+        'bars': [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 111 ],
+        'x': 300,
+        'y': 0
+      },
+      {
+        'title': 'Graduated in Civil Engineering',
+        'subtitle': 'University of the Basque Country (UPV/EHU)',
+        'description': 'Single-year course, to adapt my Bachelor\'s degree to new european academic standards.',
+        'start': '2013-09',
+        'end': '2014-10',
+        'img': 'past_civil.svg',
+        'color': '#8789e3',
+        'bars': [ 35, 25, 200, 190, 155, 145, 8 ],
+        'x': 50,
+        'y': 20
+      }
+    ],
+    'experience': [
+      {
+        'title': 'Graduate Civil Engineer',
+        'subtitle': 'MJA Consulting',
+        'description': 'TODO',
+        'start': '2015-07',
+        'end': '',
+        'img': 'past_jamies.svg',
+        'color': '#48c649',
+        'bars': [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+        'x': 50,
+        'y': 20
+      },
+      {
+        'title': 'Front of house',
+        'subtitle': 'Byron',
+        'description': 'TODO',
+        'start': '2015-05',
+        'end': '2016-01',
+        'img': 'past_jamies.svg',
+        'color': '#48c649',
+        'bars': [10, 10, 10, 10, 10],
+        'x': 50,
+        'y': 20
+      }
+    ]
+  },
+  'expected': {
+    'academia': [
+      {
+        'title': 'Certified Associate in Project Management',
+        'subtitle': 'Project Management Institute (PMI) & Learning People',
+        'description': 'This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.',
+        'start': '2014-11',
+        'end': 'not yet',
+        'img': 'past_capm.svg',
+        'color': '#92905d',
+        'bars': [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 111 ],
+        'x': 300,
+        'y': 0
+      },
+      {
+        'title': 'Graduated in Civil Engineering',
+        'subtitle': 'University of the Basque Country (UPV/EHU)',
+        'description': 'Single-year course, to adapt my Bachelor\'s degree to new european academic standards.',
+        'start': '2013-09',
+        'end': '2014-10',
+        'img': 'past_civil.svg',
+        'color': '#8789e3',
+        'bars': [ 35, 25, 200, 190, 155, 145, 8 ],
+        'x': 50,
+        'y': 20
+      }
+    ],
+    'experience': [
+      {
+        'title': 'Graduate Civil Engineer',
+        'subtitle': 'MJA Consulting',
+        'description': 'TODO',
+        'start': '2015-07',
+        'end': '',
+        'img': 'past_jamies.svg',
+        'color': '#48c649',
+        'bars': [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+        'x': 50,
+        'y': 20
+      },
+      {
+        'title': 'Front of house',
+        'subtitle': 'Byron',
+        'description': 'TODO',
+        'start': '2015-05',
+        'end': '2016-01',
+        'img': 'past_jamies.svg',
+        'color': '#48c649',
+        'bars': [10, 10, 10, 10, 10],
+        'x': 50,
+        'y': 20
+      }
+    ]
+  }
+};
+
+const db = {
+  'actual': pastEntry.importDb(originalDb.actual),
+  'expected': {
+    'academia': [
+      {
+        'title': 'Certified Associate in Project Management',
+        'subtitle': 'Project Management Institute (PMI) & Learning People',
+        'description': 'This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.',
+        'start': new Date ('2014-11'),
+        'end': new Date(),
+        'img': 'past_capm.svg',
+        'color': '#92905d',
+        'bars': [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 111 ],
+        'x': 300,
+        'y': 0
+      },
+      {
+        'title': 'Graduated in Civil Engineering',
+        'subtitle': 'University of the Basque Country (UPV/EHU)',
+        'description': 'Single-year course, to adapt my Bachelor\'s degree to new european academic standards.',
+        'start': new Date ('2013-09'),
+        'end': new Date ('2014-10'),
+        'img': 'past_civil.svg',
+        'color': '#8789e3',
+        'bars': [ 35, 25, 200, 190, 155, 145, 8 ],
+        'x': 50,
+        'y': 20
+      }
+    ],
+    'experience': [
+      {
+        'title': 'Graduate Civil Engineer',
+        'subtitle': 'MJA Consulting',
+        'description': 'TODO',
+        'start': new Date ('2015-07'),
+        'end': new Date(),
+        'img': 'past_jamies.svg',
+        'color': '#48c649',
+        'bars': [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+        'x': 50,
+        'y': 20
+      },
+      {
+        'title': 'Front of house',
+        'subtitle': 'Byron',
+        'description': 'TODO',
+        'start': new Date ('2015-05'),
+        'end': new Date ('2016-01'),
+        'img': 'past_jamies.svg',
+        'color': '#48c649',
+        'bars': [10, 10, 10, 10, 10],
+        'x': 50,
+        'y': 20
+      }
+    ]
+  }
+};
+
 // Convert to Date all string-dates in db
 const db_step1 = pastEntry.importDb(db_step0);
 const db_step1_expected = {
@@ -138,18 +307,14 @@ const db_step1_expected = {
 };
 
 // Get db range
-const dbRange      = pastEntry.getDbRange(db_step1);
-const earliestDate = dbRange.earliest;
-const latestDate   = dbRange.latest;
-const indexRange   = dbRange.indexRange;
-
-const earliestDate_expected = new Date('2013-06-30T23:00:00.000Z');
-const latestDate_expected   = new Date('2015-10-01T00:00:00.000Z');
-const indexRange_expected   = 13;
-const dbRange_expected = {
-  earliest: earliestDate_expected,
-  latest: latestDate_expected,
-  indexRange: indexRange_expected
+// const dbRange      = pastEntry.getDbRange(db_step1);
+const dbRange = {
+  'actual': pastEntry.getDbRange(db.actual),
+  'expected': {
+    'earliest': new Date (2013, 0, 1),
+    'indexRange': 30,
+    'latest': new Date (2017, 11, 1)
+  }
 };
 
 const db_step2 = pastEntry.getDbBars(db_step1);
@@ -201,13 +366,12 @@ const expectedEntry = {
 
 describe('Past Entry Tests', function() {
   it('Convert string-dates to Date objects', function(){
-    expect(db_step1_expected).to.deep.equal(db_step1);
+    expect(originalDb.expected).to.deep.equal(originalDb.actual);
+    expect(db.expected).to.deep.equal(db.actual);
+    // expect(db_step1_expected).to.deep.equal(db_step1);
   });
-  it.skip('Get database range (earliest and latest date, and index amount in between)', function (){
-    expect(dbRange_expected).to.deep.equal(dbRange);
-    expect(earliestDate_expected).to.deep.equal(earliestDate);
-    expect(latestDate_expected).to.deep.equal(latestDate);
-    expect(indexRange_expected).to.deep.equal(indexRange);
+  it('Get database range (earliest and latest date, and index amount in between)', function (){
+    expect(dbRange.expected).to.deep.equal(dbRange.actual);
   });
   it('Get range of index units covered by the data', function(){
     const date0 = new Date('2015-01');
