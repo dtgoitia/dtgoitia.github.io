@@ -176,12 +176,58 @@ header {
 .idioma0 a:link {
 	text-decoration:none;
 	color: #ffffff;
-	}
+}
 .idioma0 a:visited {
 	text-decoration:none;
 	color: #ffffff;
-	}
+}
 .idioma0 a:hover {
 	text-decoration:none;
 	color: #2d3c4b;
-	}
+}
+
+/* --- RIBBON ---------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+/* The ribbons */
+.corner-ribbon{
+	font-family: "Noto Sans", "Open Sans", sans;
+	font-size: 110%;
+  width: 200px;
+  background: #BFDC7A;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: -1.1px;
+  color: #333;
+  transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	box-shadow: 0px 0px 10px #a7a7a7;
+  z-index: 99999;
+}
+
+.corner-ribbon.sticky{
+  position: fixed;
+}
+
+.corner-ribbon.top-right{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.corner-ribbon:link,
+.corner-ribbon:visited,
+.corner-ribbon:active {
+	text-decoration: none;
+}
+.corner-ribbon:hover {
+	text-decoration: none;
+	background-color: #3b5998;
+	color: white;;
+	box-shadow: 0px 0px 10px #ffffff;
+}

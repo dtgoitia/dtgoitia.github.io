@@ -1,0 +1,15 @@
+{
+  "name": "dtgoitia.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dtgoitia/dtgoitia.github.io.git",
+  "author": "David Torralba Goitia <david.torralba.goitia@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "./node_modules/.bin/live-server.cmd"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "live-server": "^1.2.0"
+  }
+}
