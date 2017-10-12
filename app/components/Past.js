@@ -76,12 +76,19 @@ class MultipleAcademiaBars extends React.Component {
 class AcademiaTag extends React.Component {
   constructor(props){
     super(props);
-    this.state = { foldedTray: true };
+    this.state = {
+      foldedTray: this.props.folded
+    };
     this.showHideTray = this.showHideTray.bind(this);
   }
 
   showHideTray(){
     this.setState({foldedTray: !this.state.foldedTray});
+    if (this.state.foldedTray === false) {
+      this.props.handleSelectedTag('');
+    } else {
+      this.props.handleSelectedTag(this.props.id);
+    }
   }
 
   render() {
@@ -99,7 +106,7 @@ class AcademiaTag extends React.Component {
         }}
       >
         <div
-          className={this.state.foldedTray === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
+          className={this.props.folded === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
           style={ {backgroundColor: data.color} }
           onClick={this.showHideTray.bind(null)}
         >
@@ -131,13 +138,17 @@ class AcademiaTags extends React.Component {
       >
         {
           originalDb.academia.map((entry, i) => {
+            const id = 'academiaTag' + i;
             return(
               <AcademiaTag
                 key={i}
-                id={'academiaTag' + i}
+                id={id}
                 data={entry}
                 referenceDate={this.props.referenceDate}
                 barFormat={this.props.barFormat}
+                handleSelectedTag={this.props.handleSelectedTag}
+                selectedTagId={this.props.selectedTagId}
+                folded={this.props.selectedTagId === id ? false : true}
               />
             );
           })
@@ -172,6 +183,8 @@ class Academia extends React.Component {
           h={this.props.h}
           barFormat={barFormat}
           referenceDate={this.props.referenceDate}
+          handleSelectedTag={this.props.handleSelectedTag}
+          selectedTagId={this.props.selectedTagId}
         />
       </div>
     );
@@ -202,6 +215,8 @@ class AcademiaAndExperience extends React.Component {
           barFormat={barFormat}
           h={h}
           referenceDate={this.props.referenceDate}
+          handleSelectedTag={this.props.handleSelectedTag}
+          selectedTagId={this.props.selectedTagId}
         />
       </div>
     );
@@ -246,7 +261,22 @@ class Years extends React.Component {
 }
 
 class Timeline extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedTagId: ''
+    };
+    this.handleSelectedTag = this.handleSelectedTag.bind(this);
+  }
+
+  handleSelectedTag(tagId) {
+    this.setState({
+      selectedTagId: tagId
+    });
+  }
+
   render() {
+    console.log('this.state.selectedTagId: ' + this.state.selectedTagId);
     const barFormat = this.props.barFormat;
     const dbRange   = this.props.dbRange;
     const yearArray = pastEntry.getYearsArray(dbRange.latest.getFullYear(), pastEntry.yearRange(dbRange.earliest, dbRange.latest));
@@ -263,6 +293,8 @@ class Timeline extends React.Component {
           experienceBars={this.props.experienceBars}
           referenceDate={dbRange.earliest}
           barFormat={barFormat}
+          handleSelectedTag={this.handleSelectedTag}
+          selectedTagId={this.state.selectedTagId}
         />
       </div>
     );
