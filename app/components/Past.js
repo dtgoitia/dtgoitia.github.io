@@ -99,28 +99,31 @@ class AcademiaTag extends React.Component {
 
     return (
       <div
-        className='academiaTagContainer'
+        className='academiaTag'
         style={{
           bottom: ((endIndex * barHeight) - data.y) + 'px',
-          left: data.x
+          left: data.x,
+          zIndex: this.props.folded === true ? 1000 : 9000
         }}
       >
-        <div
-          className={this.props.folded === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
-          style={ {backgroundColor: data.color} }
-          onClick={this.showHideTray.bind(null)}
-        >
-          <img src={'./../img/' + data.img} />
-          <h1>{data.title}</h1>
-          <h2>{data.subtitle}</h2>
+        <div className='academiaTagContainer'>
           <div
-            className='academiaTagTray'
-            style={{display: 'block'}}
+            className={this.props.folded === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
+            style={{backgroundColor: data.color}}
+            onClick={this.showHideTray.bind(null)}
           >
-            <h3>{data.description}</h3>
-            <p><i>Start date: </i>{data.start}</p>
-            <p><i>End date: </i>{data.end}</p>
-          </div>
+            <img src={'./../img/' + data.img} />
+            <h1>{data.title}</h1>
+            <h2>{data.subtitle}</h2>
+            <div
+              className='academiaTagTray'
+              style={{display: 'block'}}
+            >
+              <h3>{data.description}</h3>
+              <p><i>Start date: </i>{data.start}</p>
+              <p><i>End date: </i>{data.end}</p>
+            </div>
+          </div>  
         </div>
       </div>
     );

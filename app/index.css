@@ -204,6 +204,11 @@ header {
 	position: absolute;
 	/* top: 0; */
 	left: 0;
+}
+.academiaTag {
+	position: absolute;
+	/* top: 0; */
+	left: 0;
 	z-index: 1000;
 }
 .academiaTagClosed {
@@ -304,30 +309,30 @@ header {
   box-shadow:
 		1px 1px 3px rgba(0,0,0,0.2),
 		0px 0px 0px 5px rgba(188,188,188,0.5);
-		-webkit-transition:
+	-webkit-transition:
     width 0.25s ease-in-out,
     left 0.25s ease-in-out,
     box-shadow 0.25s ease-in-out,
     height 0.5s ease-in-out 0.4s,
-    border-radius 0.8s ease-in-out 0.7s;
+		border-radius 0.8s ease-in-out 0.7s;
   -moz-transition:
     width 0.25s ease-in-out,
     left 0.25s ease-in-out,
     box-shadow 0.25s ease-in-out,
     height 0.5s ease-in-out 0.4s,
-    border-radius 0.8s ease-in-out 0.7s;
+		border-radius 0.8s ease-in-out 0.7s;
   -ms-transition:
     width 0.25s ease-in-out,
     left 0.25s ease-in-out,
     box-shadow 0.25s ease-in-out,
     height 0.5s ease-in-out 0.4s,
-    border-radius 0.8s ease-in-out 0.7s;
+		border-radius 0.8s ease-in-out 0.7s;
   -o-transition:
     width 0.25s ease-in-out,
     left 0.25s ease-in-out,
     box-shadow 0.25s ease-in-out,
     height 0.5s ease-in-out 0.4s,
-    border-radius 0.8s ease-in-out 0.7s;
+		border-radius 0.8s ease-in-out 0.7s;
   transition:
     width 0.25s ease-in-out,
     left 0.25s ease-in-out,
