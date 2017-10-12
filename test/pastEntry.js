@@ -284,19 +284,6 @@ const db_step2_expected = {
   }
 };
 
-const expectedEntry = {
-  title: 'Entry title',
-  subtitle: 'Entry subtitle',
-  description: 'Entry description',
-  start: new Date ('Nov 2014'),
-  end: new Date('Feb 2015'),
-  img: 'past_capm.svg',
-  color: '#92905d',
-  bars: [ 11, 11 ],
-  x: 0,
-  y: 0
-};
-
 describe('Past Entry Tests', function() {
   it('Convert string-dates to Date objects', function(){
     expect(originalDb.expected).to.deep.equal(originalDb.actual);
@@ -310,7 +297,6 @@ describe('Past Entry Tests', function() {
     const referenceDate = new Date(y, m, 1);
     for (var i = 0; i < 200; i++) {
       let targetDate = new Date( Date.UTC(y, m, 1) ); 
-      // console.log( 'i:', i, '  y:', y, '  m:', m, '  i2:', i2, '  ii:', ii, '  ', referenceDate, '  ', targetDate);
       expect(i2).to.equal(pastEntry.getRelativeIndex(referenceDate, targetDate ));
       
       if (m === 11) {
@@ -323,33 +309,17 @@ describe('Past Entry Tests', function() {
       ii === true ? i2 += 1 : null;
       ii = !ii;
     }
-    
-    // const date0 = new Date('2015-01');
-    
-    // expect(0).to.equal(pastEntry.getRelativeIndex(date0, date0));
-    // expect(0).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  0, 1)));
-    // expect(0).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  1, 1)));
-    // expect(1).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  2, 1)));
-    // expect(1).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  3, 1)));
-    // expect(2).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  4, 1)));
-    // expect(2).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  5, 1)));
-    // expect(3).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  6, 1)));
-    // expect(3).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  7, 1)));
-    // expect(4).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  8, 1)));
-    // expect(4).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015,  9, 1)));
-    // expect(5).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015, 10, 1)));
-    // expect(5).to.equal(pastEntry.getRelativeIndex(date0, new Date(2015, 11, 1)));
-    // expect(6).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  0, 1)));
-    // expect(6).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  1, 1)));
-    // expect(7).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  2, 1)));
-    // expect(7).to.equal(pastEntry.getRelativeIndex(date0, new Date(2016,  3, 1)));
   });
-  it.skip('Get entry bar indexes based on entry start and end dates', function(){
-    let rawEntry = expectedEntry;
-    let referenceDate = new Date('Jan 2015');
-    let result = [
-      { bar: 11, index: -1, color: '#92905d' },
-      { bar: 11, index: 0, color: '#92905d' }
+  it('Get entry bar indexes based on entry start and end dates', function(){
+    const rawEntry = db.actual.academia[1];
+    const referenceDate = new Date(Date.UTC(2013, 0, 1));
+    const result = [ { bar: 35, index: 4, color: '#8789e3' },
+      { bar: 25, index: 5, color: '#8789e3' },
+      { bar: 200, index: 6, color: '#8789e3' },
+      { bar: 190, index: 7, color: '#8789e3' },
+      { bar: 155, index: 8, color: '#8789e3' },
+      { bar: 145, index: 9, color: '#8789e3' },
+      { bar: 8, index: 10, color: '#8789e3' }
     ];
     expect(result).to.deep.equal(pastEntry.getEntryBarIndexes(rawEntry, referenceDate));
   });
