@@ -486,13 +486,16 @@ header {
 
 
 
-/* TEST */
-.c1 {
-	background-color: black;
-	width: 100px;
-	transition: width 0.2s ease-in;
+/* --- SMALL SCREEN VIEW --------------------------------- */
+.smallView {
+	padding: 25px;
+	font-family: "Open Sans", sans;
+	font-size: 200%;
 }
-.c2 {
-	width: 500px;
-	transition: width 2s ease-in;
+.smallView a:link,
+.smallView a:active,
+.smallView a:hover,
+.smallView a:visited {
+	text-decoration: none;
+	color: white;
 }

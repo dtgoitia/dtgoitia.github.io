@@ -4,6 +4,7 @@ import Language from './Language';
 import Past from './Past';
 import Present from './Present';
 import Future from './Future';
+import Phone from './Phone';
 
 
 const db = {
@@ -57,8 +58,8 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      // page: 'intro',
-      page: 'past',
+      page: 'intro',
+      // page: 'past',
       language: 'English'
     };
     this.changePage = this.changePage.bind(this);
@@ -75,6 +76,11 @@ class App extends React.Component {
 
   render() {
     const currentPage = this.state.page;
+    if (window.screen.width < 420) {
+      return <Phone db={db} />;
+    } else {
+      console.log('screen!')
+    }
     switch (this.state.page) {
     case 'intro':
       return (
