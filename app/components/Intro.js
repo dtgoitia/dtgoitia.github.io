@@ -94,7 +94,7 @@ class Intro extends React.Component {
           <span className='apellido'>torralba</span>
         </div>
         <div className='web2'>
-          { this.props.db.introSubtitle.filter( arr => arr[0] === this.props.st.language )[0][1]}
+          { this.props.originalDb.introSubtitle.filter( arr => arr[0] === this.props.st.language )[0][1]}
         </div>
         <SvgMenu changePage={this.props.changePage} />
       </div>

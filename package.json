@@ -43,6 +43,7 @@
     "eslint": "^4.8.0",
     "eslint-plugin-react": "^7.4.0",
     "html-webpack-plugin": "^2.29.0",
+    "json-loader": "^0.5.7",
     "mocha": "^3.5.3",
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0",

@@ -2,7 +2,7 @@ import React from 'react';
 
 class Phone extends React.Component {
   render() {
-    const db = this.props.db;
+    const db = this.props.originalDb;
     return(
       <div className='smallView'>
         <h1>Hold on!</h1>

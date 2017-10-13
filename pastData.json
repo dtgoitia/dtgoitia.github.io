@@ -1,4 +1,27 @@
 {
+  "languageBar": [
+    ["Spanish", "idioma"],
+    ["English", "language"]
+  ],
+  "introSubtitle": [
+    ["Spanish", "CREATIVO · DINÁMICO · COMPROMETIDO · CURIOSO"],
+    ["English", "CREATIVE · DYNAMIC · COMMITTED · INQUISITIVE"]
+  ],
+  "personalInfo": {
+    "name": "David",
+    "surnames": "Torralba Goitia",
+    "phone": "+44 (0)7598 178 122",
+    "email": "david.torralba.goitia@gmail.com",
+    "location": [
+      ["Spanish", "Oxford, Reino Unido"],
+      ["English", "Oxford, United Kingdom"]
+    ]
+  },
+  "socialMedia": {
+    "github":   "https://github.com/dtgoitia",
+    "linkedin": "https://www.linkedin.com/in/dtgoitia",
+    "facebook": "https://www.facebook.com/dtgoitia"
+  },
   "academia": [
     {
       "title": "Certified Associate in Project Management",

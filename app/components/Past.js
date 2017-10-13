@@ -2,7 +2,6 @@ import React from 'react';
 import NavBar from './NavBar';
 
 const pastEntry = require('./../../utils/pastEntry.js');
-const originalDb = require('./../../pastData.json');
 
 class MultipleAcademiaBar extends React.Component {
   render() {
@@ -140,7 +139,7 @@ class AcademiaTags extends React.Component {
         style={{position: 'absolute', bottom: (-h), height: h}}
       >
         {
-          originalDb.academia.map((entry, i) => {
+          this.props.originalDb.academia.map((entry, i) => {
             const id = 'academiaTag' + i;
             return(
               <AcademiaTag
@@ -188,6 +187,7 @@ class Academia extends React.Component {
           referenceDate={this.props.referenceDate}
           handleSelectedTag={this.props.handleSelectedTag}
           selectedTagId={this.props.selectedTagId}
+          originalDb={this.props.originalDb}
         />
       </div>
     );
@@ -220,6 +220,7 @@ class AcademiaAndExperience extends React.Component {
           referenceDate={this.props.referenceDate}
           handleSelectedTag={this.props.handleSelectedTag}
           selectedTagId={this.props.selectedTagId}
+          originalDb={this.props.originalDb}
         />
       </div>
     );
@@ -298,6 +299,7 @@ class Timeline extends React.Component {
           barFormat={barFormat}
           handleSelectedTag={this.handleSelectedTag}
           selectedTagId={this.state.selectedTagId}
+          originalDb={this.props.originalDb}
         />
       </div>
     );
@@ -306,15 +308,15 @@ class Timeline extends React.Component {
 
 class Past extends React.Component {
   render () {
-    const db = pastEntry.importDb(originalDb);  // Convert to Date all string-dates in db
-    const dbRange = pastEntry.getDbRange(db);   // Get db range
-    const dbBars = pastEntry.getDbBars(db);     // Get database bar list sorted and grouped by index
+    const db = pastEntry.importDb(this.props.originalDb);
+    const dbRange = pastEntry.getDbRange(db); 
+    const dbBars = pastEntry.getDbBars(db);
 
     return (
       <div>
         <NavBar
-          left={{label:'YOUR FUTURE',target:'future'}}
-          right={{label:'MY PRESENT',target:'present'}}
+          left={{label:'YOUR FUTURE', target:'future'}}
+          right={{label:'MY PRESENT', target:'present'}}
           changePage={this.props.changePage}
         />
         <Timeline
@@ -322,6 +324,7 @@ class Past extends React.Component {
           experienceBars={dbBars.experience}
           barFormat={{barThickness: 8, barSpacing: 8, yearSpacing: 2}}
           dbRange={dbRange}
+          originalDb={this.props.originalDb}
         />
       </div>
     );

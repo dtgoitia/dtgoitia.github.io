@@ -5,54 +5,7 @@ import Past from './Past';
 import Present from './Present';
 import Future from './Future';
 import Phone from './Phone';
-
-
-const db = {
-  languageBar: [
-    ['Spanish', 'idioma'],
-    ['English', 'language']
-  ],
-  introSubtitle: [
-    ['Spanish', 'CREATIVO · DINÁMICO · COMPROMETIDO · CURIOSO'],
-    ['English', 'CREATIVE · DYNAMIC · COMMITTED · INQUISITIVE']
-  ],
-  personalInfo: {
-    name: 'David',
-    surnames: 'Torralba Goitia',
-    phone: '+44 (0)7598 178 122',
-    email: 'david.torralba.goitia@gmail.com',
-    location: [
-      ['Spanish', 'Oxford, Reino Unido'],
-      ['English', 'Oxford, United Kingdom']
-    ]
-  },
-  socialMedia: {
-    github:   'https://github.com/dtgoitia',
-    linkedin: 'https://www.linkedin.com/in/dtgoitia',
-    facebook: 'https://www.facebook.com/dtgoitia'
-  },
-  academia: [
-    {
-      h1: 'Secundary School',
-      h2: 'J. M. Barandiaran (behekoa)',
-      p:  '4 years during which I had every detail about my life\'s path perfectly defined and I was absolutelly sure about my future... (naive)',
-      /**
-       * Find out how to show dates on different languages, this way you can
-       * avoid to create an array with dates in each language stored as strings.
-       * The fact of storing them as dates allows you to sort them if needed.
-       */ 
-      t0: 'Sep 2002',
-      t1: 'Jun 2006'
-    },
-    {
-      h1: 'Science High School',
-      h2: 'J. M. Barandiaran (goikoa)',
-      p:  '2 years of non-obligatory education, in which I had to start defining my future studies, focusing on science areas.',
-      t0: 'Sep 2006',
-      t1: 'Jun 2008'
-    }
-  ]
-};
+const originalDb = require('./../../pastData.json');
 
 class App extends React.Component {
   constructor (props) {
@@ -77,52 +30,56 @@ class App extends React.Component {
   render() {
     const currentPage = this.state.page;
     if (window.screen.width < 420) {
-      return <Phone db={db} />;
+      return(
+        <Phone
+          originalDb={originalDb}
+        />
+      );
     } else {
-      console.log('screen!')
-    }
-    switch (this.state.page) {
-    case 'intro':
-      return (
-        <div>
-          <Intro
-            db={db}
-            st={this.state}
-            lang={this.state.language}
+      switch (this.state.page) {
+      case 'intro':
+        return (
+          <div>
+            <Intro
+              originalDb={originalDb}
+              st={this.state}
+              changePage={this.changePage}
+            />
+            <Language
+              originalDb={originalDb}
+              st={this.state}
+              changeLanguage={this.changeLanguage}
+            />
+          </div>
+        );
+      case 'past':
+        return(
+          <Past
+            originalDb={originalDb}
             changePage={this.changePage}
           />
-          <Language
-            db={db}
-            st={this.state}
-            lang={this.state.language}
-            changeLanguage={this.changeLanguage}
+        );
+      case 'present':
+        return(
+          <Present
+            originalDb={originalDb}
+            changePage={this.changePage}
           />
-        </div>
-      );
-    case 'past':
-      return(
-        <Past
-          changePage={this.changePage}
-        />
-      );
-    case 'present':
-      return(
-        <Present
-          changePage={this.changePage}
-        />
-      );
-    case 'future':
-      return(
-        <Future
-          changePage={this.changePage}
-        />
-      );
-    default:
-      return(
-        <div>
-            Oops, this.state.page = {currentPage ? currentPage : 'null'}
-        </div>
-      );
+        );
+      case 'future':
+        return(
+          <Future
+            originalDb={originalDb}
+            changePage={this.changePage}
+          />
+        );
+      default:
+        return(
+          <div>
+              Oops, this.state.page = {currentPage ? currentPage : 'null'}
+          </div>
+        );
+      }
     }
   }
 }

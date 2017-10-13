@@ -6,7 +6,7 @@ class Language extends React.Component {
       <div className='idioma0'>
         <div className='idioma1'>
           <h1>
-            { this.props.db.languageBar.filter( arr => arr[0] === this.props.st.language )[0][1]}
+            { this.props.originalDb.languageBar.filter( arr => arr[0] === this.props.st.language )[0][1]}
           </h1>
           <h2>
             <span
