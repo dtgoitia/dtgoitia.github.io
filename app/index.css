@@ -19,7 +19,7 @@ header {
 	position: relative;
 	top: 0;
 }
-.nombre {
+.myName {
 	font-family: "Open Sans", sans;
 	font-size: 70px;
 	font-weight: 600;
@@ -27,7 +27,7 @@ header {
 	color: #c8c8c8;
 	padding: 100px 0px 0px 0px;
 }
-.apellido {
+.mySurname {
 	font-family: "Open Sans", sans;
 	font-size: 70px;
 	font-weight: 700;
@@ -129,6 +129,26 @@ header {
 .vertical2 .caja_girada:hover .texto_fijo,
 .vertical3 .caja_girada:hover .texto_fijo {
   color: #1b252e; /* 212d38 161e25 */
+}
+
+.SvgMenu {
+	font-size: 25px;
+	font-weight: 400;
+}
+.SvgMenu:hover path {
+	fill: white;
+	cursor: pointer;
+}
+.SvgMenu:hover .verticalTextHidden {
+	display: inline;
+}
+.SvgMenu .verticalText {
+	font-family: Arial, Helvetica, "Open Sans", sans;
+	cursor: pointer;
+}
+.SvgMenu .verticalTextHidden {
+	display: none;
+	cursor: pointer;
 }
 
 
