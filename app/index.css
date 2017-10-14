@@ -1,9 +1,10 @@
 html {
 	margin: 0px;
   padding: 0px;
-  background-color: #2d3c4b;
+	background: url("../img/index_background.png");
 }
 body {
+	font-family: "Open Sans", sans;
 	text-align: center;
 	color: white;
 	/* width: 600px; */
@@ -20,7 +21,7 @@ header {
 	top: 0;
 }
 .myName {
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 70px;
 	font-weight: 600;
 	letter-spacing: -5px;
@@ -28,7 +29,7 @@ header {
 	padding: 100px 0px 0px 0px;
 }
 .mySurname {
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 70px;
 	font-weight: 700;
 	letter-spacing: -5px;
@@ -37,7 +38,7 @@ header {
 	padding: 0px;
 }
 .web2 {
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: -1px;
@@ -80,7 +81,7 @@ header {
 }
 .caja_girada {
   text-align: right;
-  font-family: "Open Sans", sans;
+  /* font-family: "Open Sans", sans; */
 	font-size: 25px;
 	font-weight: 400;
   height: 50px;
@@ -143,7 +144,6 @@ header {
 	display: inline;
 }
 .SvgMenu .verticalText {
-	font-family: Arial, Helvetica, "Open Sans", sans;
 	cursor: pointer;
 }
 .SvgMenu .verticalTextHidden {
@@ -163,7 +163,7 @@ header {
 	z-index: 9999;
 }
 .idioma1 {
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 15px;
 	font-weight: 600;
 	margin: 0px auto;
@@ -172,13 +172,13 @@ header {
 	height: 70px;
 }
 .idioma1 h1 {
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 13px;
 	font-weight: 600;
 	margin: 0px auto;
 }
 .idioma1 h2 {
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 20px;
 	font-weight: 600;
 	margin: 10px auto;
@@ -473,7 +473,7 @@ header {
 }
 .yearTag {
 	color: rgba(255, 255, 255, 0.2);
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 105%;
 	font-weight: 700;
 	letter-spacing: -.8px;
@@ -509,7 +509,7 @@ header {
 /* --- SMALL SCREEN VIEW --------------------------------- */
 .smallView {
 	padding: 25px;
-	font-family: "Open Sans", sans;
+	/* font-family: "Open Sans", sans; */
 	font-size: 200%;
 }
 .smallView a:link,
