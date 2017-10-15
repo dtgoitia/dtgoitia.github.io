@@ -1,3 +1,7 @@
+:root {
+	--index-vertical-menu-text: #2d3c4b;
+	--index-vertical-menu-text-hover: #1b252e;
+}
 html {
 	margin: 0px;
   padding: 0px;
@@ -13,15 +17,14 @@ body {
 	position: relative;
 	font-size: 16px;
 }
-header {
+.introHeader {
 	text-align:center;
 	color: white;
+	margin: 0px;
 	padding: 50px 70px;
-	position: relative;
-	top: 0;
+	height: 460px;
 }
 .myName {
-	/* font-family: "Open Sans", sans; */
 	font-size: 70px;
 	font-weight: 600;
 	letter-spacing: -5px;
@@ -29,7 +32,6 @@ header {
 	padding: 100px 0px 0px 0px;
 }
 .mySurname {
-	/* font-family: "Open Sans", sans; */
 	font-size: 70px;
 	font-weight: 700;
 	letter-spacing: -5px;
@@ -38,7 +40,6 @@ header {
 	padding: 0px;
 }
 .web2 {
-	/* font-family: "Open Sans", sans; */
 	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: -1px;
@@ -46,139 +47,57 @@ header {
 	padding: 0px 0px 0px 0px;
 }
 .menu {
-	width: 600px;
-	height: 350px;
-	margin: 0px auto;
 	position: fixed;
 	bottom: 0px;
-}
-.vertical1 {
-	width: 265px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 	height: 350px;
-	margin: 0px;
-	padding: 0px;
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
 }
-.vertical2 {
-	width: 200px;
-	height: 350px;
-	margin: 0px;
-	padding: 0px;
-	position: absolute;
-	bottom: 0px;
-	left: 212px;
-}
-.vertical3 {
-	width: 265px;
-	height: 350px;
-	margin: 0px;
-	padding: 0px;
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-}
-.caja_girada {
-  text-align: right;
-  /* font-family: "Open Sans", sans; */
-	font-size: 25px;
-	font-weight: 400;
-  height: 50px;
-  opacity: 1;
-  -webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-  transform: rotate (-90deg);
-  position: absolute;
-	z-index: 9999;
-}
-.vertical1 .caja_girada {
-  width: 160px;
-	top: 104px;
-  right: -59px;
-}
-.vertical2 .caja_girada {
-  width: 199px;
-	top: 104px;
-  right: 9px;
-}
-.vertical3 .caja_girada {
-  width: 186px;
-	top: 107px;
-  right: 142px;
-}
-.vertical1 .texto_fijo,
-.vertical2 .texto_fijo,
-.vertical3 .texto_fijo {
-  color: #2d3c4b;
-}
-.vertical1 .texto_oculto,
-.vertical2 .texto_oculto,
-.vertical3 .texto_oculto {
-  opacity: 0;
-  transition: all 0.25s ease-in-out 0s;
-}
-.vertical1 .caja_girada:hover .texto_oculto,
-.vertical2 .caja_girada:hover .texto_oculto,
-.vertical3 .caja_girada:hover .texto_oculto {
-  color: #1b252e /*rgba(45,60,75,0.9)*/;
-  opacity: 1;
-  transition: opacity 0.15s ease-in-out 0s;
-}
-.vertical1 .caja_girada:hover .texto_fijo,
-.vertical2 .caja_girada:hover .texto_fijo,
-.vertical3 .caja_girada:hover .texto_fijo {
-  color: #1b252e; /* 212d38 161e25 */
-}
-
 .SvgMenu {
 	font-size: 25px;
 	font-weight: 400;
 }
 .SvgMenu:hover path {
-	fill: white;
 	cursor: pointer;
+	fill: rgba(255, 255, 255, 0.9);
 }
 .SvgMenu:hover .verticalTextHidden {
-	display: inline;
+	opacity: 1;
 }
 .SvgMenu .verticalText {
 	cursor: pointer;
+	fill: var(--index-vertical-menu-text)
 }
 .SvgMenu .verticalTextHidden {
-	display: none;
+	opacity: 0;
 	cursor: pointer;
+	transition: opacity 0.1s ease-in-out 0s;
 }
 
-
-/* --- IDIOMA ---------------------------------------------- */
-
-.idioma0 {
-	margin: 0px auto;
-	width: 100%;
+/* --- LANGUAGE ---------------------------------------------- */
+.language-container {
+	margin: 0px -45px;
 	position: fixed;
-	left: 0px;
-	bottom: 0px;
+	left: 50%;
+	right: 50%;
+	bottom: 30px;
 	z-index: 9999;
 }
-.idioma1 {
-	/* font-family: "Open Sans", sans; */
+.language {
 	font-size: 15px;
 	font-weight: 600;
-	margin: 0px auto;
+	margin: 0;
 	line-height: 10px;
-	width: 200px;
-	height: 70px;
+	width: 90px;
+	height: 40px;
 }
-.idioma1 h1 {
-	/* font-family: "Open Sans", sans; */
+.language h1 {
 	font-size: 13px;
 	font-weight: 600;
 	margin: 0px auto;
 }
-.idioma1 h2 {
-	/* font-family: "Open Sans", sans; */
+.language h2 {
 	font-size: 20px;
 	font-weight: 600;
 	margin: 10px auto;
@@ -187,18 +106,19 @@ header {
 
 
 /* --- LINKS ----------------------------------------------- */
-.idioma0 span:link {
+.language-container span:link {
 	text-decoration:none;
 	color: #ffffff;
 }
-.idioma0 span:visited {
+.language-container span:visited {
 	text-decoration:none;
 	color: #ffffff;
 }
-.idioma0 span:hover {
+.language-container span:hover {
 	text-decoration:none;
 	color: #2d3c4b;
 	text-decoration: blink;
+	cursor: pointer;
 }
 
 
@@ -473,7 +393,6 @@ header {
 }
 .yearTag {
 	color: rgba(255, 255, 255, 0.2);
-	/* font-family: "Open Sans", sans; */
 	font-size: 105%;
 	font-weight: 700;
 	letter-spacing: -.8px;
@@ -509,7 +428,6 @@ header {
 /* --- SMALL SCREEN VIEW --------------------------------- */
 .smallView {
 	padding: 25px;
-	/* font-family: "Open Sans", sans; */
 	font-size: 200%;
 }
 .smallView a:link,
