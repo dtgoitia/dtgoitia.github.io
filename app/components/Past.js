@@ -3,7 +3,7 @@ import NavBar from './NavBar';
 
 const pastEntry = require('./../../utils/pastEntry.js');
 
-class MultipleAcademiaBar extends React.Component {
+class MultipleBar extends React.Component {
   render() {
     const data = this.props.data;
     if (data.length === 0) {
@@ -13,7 +13,7 @@ class MultipleAcademiaBar extends React.Component {
       const spacing = this.props.barFormat.barSpacing;
       return (
         <svg
-          className='academiaBar'
+          className={this.props.className}
           viewBox={'0 0 '+ totalLength +' ' + barThickness}
           width={totalLength}
           height={barThickness + spacing}
@@ -29,7 +29,7 @@ class MultipleAcademiaBar extends React.Component {
       let initialX = 0.5 * barThickness;
       return (
         <svg
-          className='academiaBar'
+          className={this.props.className}
           viewBox={'0 0 '+ totalLength +' ' + barThickness}
           width={totalLength}
           height={barThickness + spacing} // Total SVG height = half-spacing + barThickness + half spacing
@@ -39,7 +39,7 @@ class MultipleAcademiaBar extends React.Component {
               const subTotalLength = barData.bar;
               let bar = subTotalLength - barThickness; // Total length - (round corners' X displacement)
               if (bar < 0) {
-                console.log('barData.bar is too small (see <MultipleAcademiaBar/>) and its value it\'s been overwritten by default length which need to match with bar width (barThickness = ' + barThickness + ', set by user)\nbarData:', barData);
+                console.log('barData.bar is too small (see <MultipleBar/>) and its value it\'s been overwritten by default length which need to match with bar width (barThickness = ' + barThickness + ', set by user)\nbarData:', barData);
                 bar = 0;
               }
               const dString =
@@ -64,15 +64,21 @@ class MultipleAcademiaBar extends React.Component {
   }
 }
 
-class MultipleAcademiaBars extends React.Component {
+class MultipleBars extends React.Component {
   render() {
-    return <MultipleAcademiaBar data={this.props.barData} barFormat={this.props.barFormat} />;
+    return(
+      <MultipleBar
+        data={this.props.barData}
+        barFormat={this.props.barFormat}
+        className={this.props.className}
+      />
+    );
   }
 }
 
 // Tag with a circle shape: when the user clicks on the tag,
 // it will unfold and show more information
-class AcademiaTag extends React.Component {
+class Tag extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -98,16 +104,20 @@ class AcademiaTag extends React.Component {
 
     return (
       <div
-        className='academiaTag'
+        className={this.props.className}
         style={{
           bottom: ((endIndex * barHeight) - data.y) + 'px',
           left: data.x,
           zIndex: this.props.folded === true ? 1000 : 9000
         }}
       >
-        <div className='academiaTagContainer'>
+        <div className={this.props.className + 'Container'}>
           <div
-            className={this.props.folded === true ? 'academiaTagClosed' : 'academiaTagClosed academiaTagOpen'}
+            className={
+              this.props.folded === true
+                ? this.props.className+'Closed'
+                : this.props.className+'Closed '+this.props.className+'Open'
+            }
             style={{backgroundColor: data.color}}
             onClick={this.showHideTray.bind(null)}
           >
@@ -115,7 +125,7 @@ class AcademiaTag extends React.Component {
             <h1>{data.title}</h1>
             <h2>{data.subtitle}</h2>
             <div
-              className='academiaTagTray'
+              className='tagTray'
               style={{display: 'block'}}
             >
               <h3>{data.description}</h3>
@@ -129,21 +139,18 @@ class AcademiaTag extends React.Component {
   }
 }
 
-class AcademiaTags extends React.Component {
+class Tags extends React.Component {
   render() {
     const h = this.props.h;
     return (
-      <div
-        id='academiaTags'
-        className='academiaTags'
-        style={{position: 'absolute', bottom: (-h), height: h}}
-      >
+      <div style={{position: 'absolute', bottom: (-h), height: h}} >
         {
           this.props.originalDb.academia.map((entry, i) => {
-            const id = 'academiaTag' + i;
+            const id = this.props.className + i;
             return(
-              <AcademiaTag
+              <Tag
                 key={i}
+                className={this.props.className}
                 id={id}
                 data={entry}
                 referenceDate={this.props.referenceDate}
@@ -160,12 +167,18 @@ class AcademiaTags extends React.Component {
   }
 }
 
-class AcademiaBars extends React.Component {
+class Bars extends React.Component {
   render() {
     return (
-      <div className='academiaBars'>
-        {Object.values(this.props.academiaBars).reverse().map((barData,i) => {
-          return <MultipleAcademiaBars barData={barData} barFormat={this.props.barFormat} key={i} />;
+      <div className='bars'>
+        {Object.values(this.props.barsData).reverse().map((barData,i) => {
+          return(
+            <MultipleBars key={i}
+              barData={barData}
+              barFormat={this.props.barFormat}
+              className={this.props.className}
+            />
+          );
         })}
       </div>
     );
@@ -177,11 +190,13 @@ class Academia extends React.Component {
     const barFormat = this.props.barFormat;
     return (
       <div className='academia'>
-        <AcademiaBars
-          academiaBars={this.props.academiaBars}
+        <Bars
+          barsData={this.props.academiaBars}
           barFormat={barFormat}
+          className='academiaBar'
         />
-        <AcademiaTags
+        <Tags
+          className='academiaTag'
           h={this.props.h}
           barFormat={barFormat}
           referenceDate={this.props.referenceDate}
@@ -196,9 +211,23 @@ class Academia extends React.Component {
 
 class Experience extends React.Component {
   render() {
+    const barFormat = this.props.barFormat;
     return (
       <div className='experience'>
-        Experience bars TO-DO
+        <Bars
+          barsData={this.props.experienceBars}
+          barFormat={barFormat}
+          className='experienceBar'
+        />
+        <Tags
+          className='experienceTag'
+          h={this.props.h}
+          barFormat={barFormat}
+          referenceDate={this.props.referenceDate}
+          handleSelectedTag={this.props.handleSelectedTag}
+          selectedTagId={this.props.selectedTagId}
+          originalDb={this.props.originalDb}
+        />
       </div>
     );
   }
@@ -212,9 +241,17 @@ class AcademiaAndExperience extends React.Component {
     const h = (this.props.yearArray.length + 0) * 6 * (barFormat.barThickness + barFormat.barSpacing);
     return (
       <div className='timeline'>
-        <Experience />
         <Academia
           academiaBars={this.props.academiaBars}
+          barFormat={barFormat}
+          h={h}
+          referenceDate={this.props.referenceDate}
+          handleSelectedTag={this.props.handleSelectedTag}
+          selectedTagId={this.props.selectedTagId}
+          originalDb={this.props.originalDb}
+        />
+        <Experience
+          experienceBars={this.props.academiaBars}
           barFormat={barFormat}
           h={h}
           referenceDate={this.props.referenceDate}
@@ -280,7 +317,6 @@ class Timeline extends React.Component {
   }
 
   render() {
-    console.log('this.state.selectedTagId: ' + this.state.selectedTagId);
     const barFormat = this.props.barFormat;
     const dbRange   = this.props.dbRange;
     const yearArray = pastEntry.getYearsArray(dbRange.latest.getFullYear(), pastEntry.yearRange(dbRange.earliest, dbRange.latest));

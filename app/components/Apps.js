@@ -11,8 +11,8 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      page: 'intro',
-      // page: 'past',
+      // page: 'intro',
+      page: 'past',
       // page: 'present',
       // page: 'future',
       language: 'English'
