@@ -102,21 +102,21 @@ class Tag extends React.Component {
     const endIndex = pastEntry.getRelativeIndex(this.props.referenceDate, endDate);
     const barHeight = this.props.barFormat.barThickness + this.props.barFormat.barSpacing;
 
+    const className = this.props.className;
+    const tagStyle = {
+      bottom: ((endIndex * barHeight) - data.y) + 'px',
+      zIndex: this.props.folded === true ? 1000 : 9000
+    };
+    className === 'academiaTag' ? tagStyle.left = data.x : tagStyle.right = data.x;
+    
     return (
-      <div
-        className={this.props.className}
-        style={{
-          bottom: ((endIndex * barHeight) - data.y) + 'px',
-          left: data.x,
-          zIndex: this.props.folded === true ? 1000 : 9000
-        }}
-      >
-        <div className={this.props.className + 'Container'}>
+      <div className={className} style={tagStyle}>
+        <div className={className + 'Container'}>
           <div
             className={
               this.props.folded === true
-                ? this.props.className+'Closed'
-                : this.props.className+'Closed '+this.props.className+'Open'
+                ? className+'Closed'
+                : className+'Closed '+className+'Open'
             }
             style={{backgroundColor: data.color}}
             onClick={this.showHideTray.bind(null)}
@@ -143,7 +143,7 @@ class Tags extends React.Component {
   render() {
     const h = this.props.h;
     return (
-      <div style={{position: 'absolute', bottom: (-h), height: h}} >
+      <div className='tagsContainer' style={{position: 'absolute', bottom: (-h), height: h}} >
         {
           this.props.originalDb.academia.map((entry, i) => {
             const id = this.props.className + i;
@@ -241,24 +241,34 @@ class AcademiaAndExperience extends React.Component {
     const h = (this.props.yearArray.length + 0) * 6 * (barFormat.barThickness + barFormat.barSpacing);
     return (
       <div className='timeline'>
-        <Academia
-          academiaBars={this.props.academiaBars}
-          barFormat={barFormat}
-          h={h}
-          referenceDate={this.props.referenceDate}
-          handleSelectedTag={this.props.handleSelectedTag}
-          selectedTagId={this.props.selectedTagId}
-          originalDb={this.props.originalDb}
-        />
-        <Experience
-          experienceBars={this.props.academiaBars}
-          barFormat={barFormat}
-          h={h}
-          referenceDate={this.props.referenceDate}
-          handleSelectedTag={this.props.handleSelectedTag}
-          selectedTagId={this.props.selectedTagId}
-          originalDb={this.props.originalDb}
-        />
+        <div className='academia'>
+          <Bars barsData={this.props.academiaBars} barFormat={barFormat} className='academiaBar' />
+        </div>
+        <div className='experience'>
+          <Bars barsData={this.props.academiaBars} barFormat={barFormat} className='experienceBar' />
+        </div>
+        <div className='academia'>
+          <Tags
+            className='academiaTag'
+            h={h}
+            barFormat={barFormat}
+            referenceDate={this.props.referenceDate}
+            handleSelectedTag={this.props.handleSelectedTag}
+            selectedTagId={this.props.selectedTagId}
+            originalDb={this.props.originalDb}
+          />
+        </div>
+        <div className='experience'>
+          <Tags
+            className='experienceTag'
+            h={h}
+            barFormat={barFormat}
+            referenceDate={this.props.referenceDate}
+            handleSelectedTag={this.props.handleSelectedTag}
+            selectedTagId={this.props.selectedTagId}
+            originalDb={this.props.originalDb}
+          />
+        </div>
       </div>
     );
   }
