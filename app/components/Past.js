@@ -27,6 +27,13 @@ class MultipleBar extends React.Component {
       const barThickness = this.props.barFormat.barThickness;
       const spacing = this.props.barFormat.barSpacing;
       let initialX = 0.5 * barThickness;
+
+      let dataSorted;
+      if (this.props.stackDirection === 'right') {
+        dataSorted = Object.assign([], data).reverse();
+      } else if (this.props.stackDirection === 'left') {
+        dataSorted = Object.assign([], data);
+      }
       return (
         <svg
           className={this.props.className}
@@ -35,7 +42,8 @@ class MultipleBar extends React.Component {
           height={barThickness + spacing} // Total SVG height = half-spacing + barThickness + half spacing
         >
           { 
-            this.props.data.map( (barData,i) => {
+            dataSorted.map( (barData,i) => {
+              
               const subTotalLength = barData.bar;
               let bar = subTotalLength - barThickness; // Total length - (round corners' X displacement)
               if (bar < 0) {
@@ -71,6 +79,7 @@ class MultipleBars extends React.Component {
         data={this.props.barData}
         barFormat={this.props.barFormat}
         className={this.props.className}
+        stackDirection={this.props.stackDirection}
       />
     );
   }
@@ -177,6 +186,7 @@ class Bars extends React.Component {
               barData={barData}
               barFormat={this.props.barFormat}
               className={this.props.className}
+              stackDirection={this.props.stackDirection}              
             />
           );
         })}
@@ -242,10 +252,18 @@ class AcademiaAndExperience extends React.Component {
     return (
       <div className='timeline'>
         <div className='academia'>
-          <Bars barsData={this.props.academiaBars} barFormat={barFormat} className='academiaBar' />
+          <Bars barsData={this.props.academiaBars}
+            barFormat={barFormat}
+            className='academiaBar'
+            stackDirection='right'
+          />
         </div>
         <div className='experience'>
-          <Bars barsData={this.props.academiaBars} barFormat={barFormat} className='experienceBar' />
+          <Bars barsData={this.props.academiaBars}
+            barFormat={barFormat}
+            className='experienceBar'
+            stackDirection='left'
+          />
         </div>
         <div className='academia'>
           <Tags
