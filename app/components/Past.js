@@ -154,7 +154,7 @@ class Tags extends React.Component {
     return (
       <div className='tagsContainer' style={{position: 'absolute', bottom: (-h), height: h}} >
         {
-          this.props.originalDb.academia.map((entry, i) => {
+          this.props.tagData.map((entry, i) => {
             const id = this.props.className + i;
             return(
               <Tag
@@ -195,54 +195,6 @@ class Bars extends React.Component {
   }
 }
 
-class Academia extends React.Component {
-  render() {
-    const barFormat = this.props.barFormat;
-    return (
-      <div className='academia'>
-        <Bars
-          barsData={this.props.academiaBars}
-          barFormat={barFormat}
-          className='academiaBar'
-        />
-        <Tags
-          className='academiaTag'
-          h={this.props.h}
-          barFormat={barFormat}
-          referenceDate={this.props.referenceDate}
-          handleSelectedTag={this.props.handleSelectedTag}
-          selectedTagId={this.props.selectedTagId}
-          originalDb={this.props.originalDb}
-        />
-      </div>
-    );
-  }
-}
-
-class Experience extends React.Component {
-  render() {
-    const barFormat = this.props.barFormat;
-    return (
-      <div className='experience'>
-        <Bars
-          barsData={this.props.experienceBars}
-          barFormat={barFormat}
-          className='experienceBar'
-        />
-        <Tags
-          className='experienceTag'
-          h={this.props.h}
-          barFormat={barFormat}
-          referenceDate={this.props.referenceDate}
-          handleSelectedTag={this.props.handleSelectedTag}
-          selectedTagId={this.props.selectedTagId}
-          originalDb={this.props.originalDb}
-        />
-      </div>
-    );
-  }
-}
-
 class AcademiaAndExperience extends React.Component {
   render() {
     const barFormat = this.props.barFormat;
@@ -259,7 +211,7 @@ class AcademiaAndExperience extends React.Component {
           />
         </div>
         <div className='experience'>
-          <Bars barsData={this.props.academiaBars}
+          <Bars barsData={this.props.experienceBars}
             barFormat={barFormat}
             className='experienceBar'
             stackDirection='left'
@@ -273,7 +225,7 @@ class AcademiaAndExperience extends React.Component {
             referenceDate={this.props.referenceDate}
             handleSelectedTag={this.props.handleSelectedTag}
             selectedTagId={this.props.selectedTagId}
-            originalDb={this.props.originalDb}
+            tagData={this.props.originalDb.academia}
           />
         </div>
         <div className='experience'>
@@ -284,7 +236,7 @@ class AcademiaAndExperience extends React.Component {
             referenceDate={this.props.referenceDate}
             handleSelectedTag={this.props.handleSelectedTag}
             selectedTagId={this.props.selectedTagId}
-            originalDb={this.props.originalDb}
+            tagData={this.props.originalDb.experience}
           />
         </div>
       </div>
