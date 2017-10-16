@@ -28,10 +28,10 @@
       "subtitle": "Project Management Institute (PMI) & Learning People",
       "description": "This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.",
       "start": "2014-11",
-      "end": "not yet",
+      "end": "2015-10",
       "img": "past_capm.svg",
       "color": "#92905d",
-      "bars": [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 111 ],
+      "bars": [ 30, 0, 0, 60, 100, 250 ],
       "x": 300,
       "y": 0
     },
@@ -43,7 +43,7 @@
       "end": "2014-10",
       "img": "past_civil.svg",
       "color": "#8789e3",
-      "bars": [ 35, 25, 200, 190, 155, 145, 8 ],
+      "bars": [ 100, 120, 130, 155, 170, 25, 35 ],
       "x": 50,
       "y": 20
     },
