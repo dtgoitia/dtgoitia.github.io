@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
+    "build": "webpack --optimize-minimize",
     "test": "mocha --reporter spec"
   },
   "babel": {
