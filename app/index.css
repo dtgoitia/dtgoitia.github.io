@@ -1,6 +1,7 @@
 :root {
 	--index-vertical-menu-text: #2d3c4b;
 	--index-vertical-menu-text-hover: #1b252e;
+	--timeline-bar-space: 30px;
 }
 html {
 	margin: 0px;
@@ -459,7 +460,7 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	right: 50%;
+	right: calc(50% + calc(0.5 * var(--timeline-bar-space)));
 	bottom: 0px;
 	z-index: 0;
 }
@@ -471,7 +472,7 @@ body {
 .experience {
 	position: absolute;
 	top: 0px;
-	left: 50%;
+	left: calc(50% + calc(0.5 * var(--timeline-bar-space)));
 	right: 0px;
 	bottom: 0px;
 	z-index: 0;
@@ -486,6 +487,15 @@ body {
 }
 
 
+
+/* --- VERTICAL BAR -------------------------------------- */
+.verticalBar {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+	fill: white;
+}
 
 /* --- SMALL SCREEN VIEW --------------------------------- */
 .smallView {

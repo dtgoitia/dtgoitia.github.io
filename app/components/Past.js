@@ -281,6 +281,33 @@ class Years extends React.Component {
   }
 }
 
+class VerticalBar extends React.Component {
+  render() {
+    const totalHeight = this.props.totalHeight;
+    const barThickness = 0.6 * this.props.barFormat.barSpacing;
+    const spacing = this.props.barFormat.yearSpacing;
+    const dString=
+      'M' + spacing + ' ' + (0.5 * barThickness) +
+      'a ' + 0.5 * barThickness + ' ' + 0.5 * barThickness + ' 0 0 1 ' + barThickness + ' 0' +
+      'v' + (totalHeight - barThickness) +
+      'a ' + 0.5 * barThickness + ' ' + 0.5 * barThickness + ' 0 0 1 ' + (-barThickness) + ' 0' +
+      'v' + -(totalHeight - barThickness)
+      ;
+    console.log(spacing);
+    return(
+      <div className='verticalBar'>
+        <svg
+          viewBox={'0 0 '+ (spacing + barThickness + spacing) +' ' + totalHeight}
+          width={spacing + barThickness + spacing}
+          height={totalHeight}
+        >
+          <path d={dString}/>
+        </svg>
+      </div>
+    );
+  }
+}
+
 class Timeline extends React.Component {
   constructor(props) {
     super(props);
@@ -300,11 +327,16 @@ class Timeline extends React.Component {
     const barFormat = this.props.barFormat;
     const dbRange   = this.props.dbRange;
     const yearArray = pastEntry.getYearsArray(dbRange.latest.getFullYear(), pastEntry.yearRange(dbRange.earliest, dbRange.latest));
+    const yearHeight = 6 * (barFormat.barThickness + barFormat.barSpacing) - barFormat.yearSpacing;
     return (
       <div className='timelineContainer'>
         <Years
           yearArray={yearArray}
           yearHeight={6 * (barFormat.barThickness + barFormat.barSpacing) - barFormat.yearSpacing}
+          barFormat={barFormat}
+        />
+        <VerticalBar
+          totalHeight={yearHeight * (yearArray.length)}
           barFormat={barFormat}
         />
         <AcademiaAndExperience
