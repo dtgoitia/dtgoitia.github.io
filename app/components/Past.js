@@ -327,7 +327,6 @@ class Timeline extends React.Component {
     const barFormat = this.props.barFormat;
     const dbRange   = this.props.dbRange;
     const yearArray = pastEntry.getYearsArray(dbRange.latest.getFullYear(), pastEntry.yearRange(dbRange.earliest, dbRange.latest));
-    const yearHeight = 6 * (barFormat.barThickness + barFormat.barSpacing) - barFormat.yearSpacing;
     return (
       <div className='timelineContainer'>
         <Years
@@ -336,7 +335,7 @@ class Timeline extends React.Component {
           barFormat={barFormat}
         />
         <VerticalBar
-          totalHeight={yearHeight * (yearArray.length)}
+          totalHeight={(6 * (barFormat.barThickness + barFormat.barSpacing) + barFormat.yearSpacing) * (yearArray.length)}
           barFormat={barFormat}
         />
         <AcademiaAndExperience
