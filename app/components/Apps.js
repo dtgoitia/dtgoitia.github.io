@@ -5,7 +5,7 @@ import Past from './Past';
 import Present from './Present';
 import Future from './Future';
 import Phone from './Phone';
-const originalDb = require('./../../pastData.json');
+const originalDb = require('./../../db.json');
 
 class App extends React.Component {
   constructor (props) {
