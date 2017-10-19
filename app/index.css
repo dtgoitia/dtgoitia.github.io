@@ -845,3 +845,16 @@ body {
 	text-decoration: none;
 	color: white;
 }
+.androidButton {
+	position: fixed;
+	right: 	80px;
+	bottom: 80px;
+	width: 	150px;
+	height: 150px;
+	line-height: 150px;
+	font-size: 200%;
+	border-radius: 50%;
+
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	background-color: var(--index-vertical-menu-text-hover);
+}

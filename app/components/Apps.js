@@ -11,10 +11,10 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      // page: 'intro',
+      page: 'intro',
       // page: 'past',
       // page: 'present',
-      page: 'future',
+      // page: 'future',
       language: 'English'
     };
     this.changePage = this.changePage.bind(this);
@@ -32,7 +32,7 @@ class App extends React.Component {
 
   render() {
     const currentPage = this.state.page;
-    if (window.screen.width < 420) {
+    if (window.screen.width < 430) {
       return(
         <Phone
           originalDb={originalDb}
