@@ -1,26 +1,36 @@
 import React from 'react';
 
-class AndroidButton extends React.Component {
-  render() {
-    console.log(this.props.email);
-    return (
-      <a className='androidButton' href={'mailto:' + this.props.email + '&subject=What\'s up David!'}>
-        <i className="fa fa-envelope"></i>
-      </a>
-    );
-  }
-}
+const Data = props => {
+  return (
+    <div className='data'>
+      <h1>{props.label}</h1>
+      {props.data}
+    </div>
+  );
+};
+
+const AndroidButton = props => {
+  return (
+    <a className='androidButton' href={'mailto:' + props.email + '&subject=What\'s up David!'}>
+      <i className="fa fa-envelope"></i>
+    </a>
+  );
+};
 
 class Phone extends React.Component {
   render() {
-    const db = this.props.originalDb;
+    const info = this.props.originalDb.personalInfo;
+    console.log('info:', info);
     return(
       <div className='smallView'>
         <h1>Hold on!</h1>
         <p>It looks like your <b>screen</b> is too <b>small</b>.</p>
         <p>Check me from a bigger screen!</p>
-        <a href={'mailto:' + db.personalInfo.email}>{db.personalInfo.email}</a>
-        <AndroidButton email={db.personalInfo.email} />
+        <Data label={'Name'} data={info.name} />
+        <Data label={'Surnames'} data={info.surnames} />
+        <Data label={'Email'} data={info.email} />
+        <Data label={'Phone'} data={info.phone} />
+        <AndroidButton email={info.email} />
       </div>
     )
   }

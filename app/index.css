@@ -858,3 +858,14 @@ body {
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 	background-color: var(--index-vertical-menu-text-hover);
 }
+.smallView .data {
+	text-align: left;
+	font-size: 150%;
+	margin: 30px 0 30px 0;
+}
+.smallView .data h1 {
+	font-weight: 200;
+	font-size: 60%;
+	margin: 0 0 0 10px;
+	opacity: 0.6;
+}
