@@ -2,7 +2,12 @@ var path = require('path');
 var HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './app/index.js',
+  entry: [
+    './app/index.js'
+  ],
+  // entry: [
+  //   'webpack-dev-server/client?http://0.0.0.0:8123'    
+  // ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js'
@@ -15,7 +20,14 @@ module.exports = {
       { test: /\.(png|jpg)$/, use: 'url-loader' }
     ]
   },
-  plugins: [new HtmlWebPackPlugin({
-    template: 'app/index.html'
-  })]
+  devServer: {
+    // host: '0.0.0.0',
+    port: 8080,
+    stats: 'errors-only'
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: 'app/index.html'
+    })
+  ]
 };

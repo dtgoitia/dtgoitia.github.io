@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --progress --colors --open",
     "build": "webpack --optimize-minimize",
     "test": "mocha --reporter spec"
   },
