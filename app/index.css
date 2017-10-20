@@ -2,6 +2,10 @@
 	--index-vertical-menu-text: #2d3c4b;
 	--index-vertical-menu-text-hover: #1b252e;
 	--timeline-bar-space: 30px;
+	--background-color: #2d3c4b;
+	--background-line-color: #222e39;
+	--text-color: #c1cee1;
+	--h1-color: #DCE6EF;
 }
 html {
 	margin: 0px;
@@ -835,8 +839,10 @@ body {
 
 /* --- SMALL SCREEN VIEW --------------------------------- */
 .smallView {
-	padding: 25px;
-	font-size: 200%;
+	color: var(--text-color);
+	margin: 0;
+	padding: 45px;
+	font-size: x-large;
 }
 .smallView a:link,
 .smallView a:active,
@@ -852,20 +858,45 @@ body {
 	width: 	150px;
 	height: 150px;
 	line-height: 150px;
-	font-size: 200%;
+	padding-bottom: 10px;
+	font-size: 75px;
 	border-radius: 50%;
 
+	color: white;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 	background-color: var(--index-vertical-menu-text-hover);
 }
 .smallView .data {
 	text-align: left;
-	font-size: 150%;
+	font-size: 1.5em;
 	margin: 30px 0 30px 0;
+	padding: 0;
 }
 .smallView .data h1 {
 	font-weight: 200;
-	font-size: 60%;
-	margin: 0 0 0 10px;
+	font-size: 40%;
+	margin: 0;
 	opacity: 0.6;
+}
+.nutshell {
+	text-align: left;
+	margin-bottom: 230px;
+	text-rendering: optimizeLegibility;
+}
+.nutshell h1 {
+	font-family: 'PT Sans', 'Lato', 'Noto Sans', 'Source Sans Pro', 'Open Sans', 'Droid Sans', 'Helvetica', sans-serif;
+	font-size: 2.5em;
+	padding: 0;
+	margin-top: 1.5em;
+	margin-bottom: 0.3em;
+	color: var(--h1-color);
+}
+.nutshellItem {
+	font-family: 'PT Serif', 'Noto Serif', 'Droid Serif', 'Georgia', serif;
+	font-size: 1em;
+	letter-spacing: -0.011em;
+	line-height: 3em;
+	margin: 0;
+	margin-bottom: 2.5em;
+	word-spacing: 0.14em;
 }

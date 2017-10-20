@@ -17,10 +17,27 @@ const AndroidButton = props => {
   );
 };
 
+const NutshellItem = props => {
+  return <p className='nutshellItem'>{props.text}</p>;
+};
+
+const Nutshell = props => {
+  return (
+    <div className='nutshell'>
+      <h1>In a Nutshell</h1>
+      {
+        props.nutshell.map((itemText, i) => {
+          return <NutshellItem text={itemText} key={i} />;
+        })
+      }
+      <div className='nutshellItemBottom'></div>
+    </div>
+  );
+};
+
 class Phone extends React.Component {
   render() {
     const info = this.props.originalDb.personalInfo;
-    console.log('info:', info);
     return(
       <div className='smallView'>
         <h1>Hold on!</h1>
@@ -30,6 +47,7 @@ class Phone extends React.Component {
         <Data label={'Surnames'} data={info.surnames} />
         <Data label={'Email'} data={info.email} />
         <Data label={'Phone'} data={info.phone} />
+        <Nutshell nutshell={this.props.originalDb.nutshell} />
         <AndroidButton email={info.email} />
       </div>
     )

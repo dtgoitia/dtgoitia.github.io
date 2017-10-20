@@ -11,10 +11,10 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      page: 'intro',
+      // page: 'intro',
       // page: 'past',
       // page: 'present',
-      // page: 'future',
+      page: 'future',
       language: 'English'
     };
     this.changePage = this.changePage.bind(this);
