@@ -75,7 +75,7 @@
       "bars": [ 180, 180, 100, 100, 70, 70, 10 ],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Bachelor's degree in Civil Engineering",
@@ -101,7 +101,7 @@
       "bars": [10,10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "First Aid",
@@ -114,7 +114,7 @@
       "bars": [10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Science High School",
@@ -127,7 +127,7 @@
       "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Secundary School",
@@ -139,7 +139,8 @@
       "color": "#f71d81",
       "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "x": 50,
-      "y": 20
+      "y": 20,
+      "relevant": false
     }
   ],
   "experience": [
@@ -193,7 +194,7 @@
       "bars": [10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Climbing",
@@ -206,7 +207,7 @@
       "bars": [10, 10, 10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Master's Final Project",
@@ -219,7 +220,7 @@
       "bars": [10, 10, 10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Rescue craft master and beach lifeguard",
@@ -245,7 +246,7 @@
       "bars": [10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Beach lifeguard",
@@ -297,7 +298,7 @@
       "bars": [10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Volunteer basketball coach",
@@ -310,7 +311,7 @@
       "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Basketball",
@@ -323,7 +324,7 @@
       "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Volunteer basketball referee",
@@ -336,7 +337,7 @@
       "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Summercamp basketball coach",
@@ -349,7 +350,7 @@
       "bars": [10, 10, 10, 10, 10, 10, 10, 10],
       "x": 50,
       "y": 20,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Volunteer basketball referee",
@@ -361,7 +362,8 @@
       "color": "#3258f7",
       "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "x": 50,
-      "y": 20
+      "y": 20,
+      "relevant": false
     }
   ],
   "nutshell": [

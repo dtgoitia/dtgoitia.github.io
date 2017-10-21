@@ -17,7 +17,6 @@ body {
 	font-family: "Open Sans", sans;
 	text-align: center;
 	color: white;
-	/* width: 600px; */
 	margin: 0px auto;
 	padding: 0px;
 	position: relative;
@@ -843,7 +842,7 @@ body {
 	margin: 0;
 	padding: 45px;
 	/* margin-bottom: .5em; */
-	font-size: 2em;
+	font-size: 30px;
 }
 .smallView a:link,
 .smallView a:active,
@@ -856,92 +855,75 @@ body {
 	position: fixed;
 	right: 	80px;
 	bottom: 80px;
-	width: 	150px;
-	height: 140px;
+	width: 	240px;
+	height: 230px;
 	padding-bottom: 10px;
-	line-height: 140px;
-	font-size: 75px;
+	line-height: 230px;
+	font-size: 128px;
 	border-radius: 50%;
-
 	color: white;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 	background-color: var(--index-vertical-menu-text-hover);
 }
-.smallView .data {
-	text-align: left;
-	font-size: 1.5em;
-	margin: 0;
-	margin-top: .5em;
-	padding: 0;
-}
-.smallView .data h1 {
-	font-weight: 200;
-	font-size: 40%;
-	margin: 0;
-	opacity: 0.6;
-}
-.nutshell {
-	text-align: left;
-	margin-bottom: 230px;
-	text-rendering: optimizeLegibility;
-}
-.nutshell h1 {
-	font-family: 'PT Sans', 'Lato', 'Noto Sans', 'Source Sans Pro', 'Open Sans', 'Droid Sans', 'Helvetica', sans-serif;
-	font-size: 2.5em;
-	padding: 0;
-	margin-top: 1.5em;
-	margin-bottom: 0.3em;
-	color: var(--h1-color);
-}
-.nutshellItem {
-	font-family: 'PT Serif', 'Noto Serif', 'Droid Serif', 'Georgia', serif;
-	font-size: 1em;
-	letter-spacing: -0.011em;
-	line-height: 3em;
-	margin: 0;
-	margin-bottom: 2.5em;
-	word-spacing: 0.14em;
-}
-.foldingMenu {
+.foldingTab {
 	text-align: left;
 	margin-bottom: 0.8em;
+	font-size: 36px;
 }
-.foldingMenu>.header {
-	/* background-color: rgba(255, 255, 255, 0.1); */
-	padding: 0.2em;
-}
-.foldingMenu div i {
-	line-height: 2.5;
-	width: 1em;
-	background-color: transparent;
-}
-.foldingMenu h2 {
-	display: inline-block;
+.foldingTab .headerContainer {
 	margin: 0;
-	margin-left: 0.4em;
-
-	font-family: 'PT Sans', 'Lato', 'Noto Sans', 'Source Sans Pro', 'Open Sans', 'Droid Sans', 'Helvetica', sans-serif;
-	font-size: 2.2em;
 	padding: 0;
-	margin-bottom: 0.3em;
+	font-family: 'PT Sans', 'Lato', 'Noto Sans', 'Source Sans Pro', 'Open Sans', 'Droid Sans', 'Helvetica', sans-serif;
+	font-size: 1.5em;
+}
+.arrowOpen,
+.arrowClose {
+	width:  40px;
+	height: 40px;
+}
+.arrowOpen path,
+.arrowClose path {
+	stroke: white;
+}
+.foldingTab .headerContainer .header {
+	display: inline-block;
+	font-size: 1.3em;
+	font-weight: 700;
+	margin-left: 0.3em;
+	padding: 0;
 	color: var(--h1-color);
 }
-.foldingMenu .entryContainer {
+.foldingTab .headerContainer i {
+	line-height: 1.5em;
+	font-size: 0.3em;
+	width: 47px;
+}
+.foldingTab .tab {
+	display: block;
+	font-size: 1em;
 	margin-left: 0.7em;
 	border-left: 1px solid rgba(255, 255, 255, 1);
 	padding-left: 1em;
 }
-.foldingMenu .entry {
-	margin-bottom: 1.4em;
+.tabEntry {
+	margin-top: 0.3em;
+	margin-bottom: 0.7em;
 }
-.foldingMenu .entry p {
+.entryHead {
 	margin: 0;
-	line-height: 0.92em;
+	font-size: 1em;
 }
-.foldingMenu .entry span {
-	font-size: 0.6em;
-	opacity: 0.8;
-	margin-left: 1em;
+.entrySub {
+	margin: 0;
+	font-size: 0.4em;
+	opacity: 0.7;
+}
+.tab .pa {
+	font-size: 0.7em;
+	line-height: 1.66;
+	margin-top: 20px;
+	margin-bottom: 60px;
+	/* text-align: justify; */
 }
 .social {
 	display: flex;
@@ -960,20 +942,21 @@ body {
 .photo img {
 	margin-top: 8%;
 	width: 70%;
-	/* max-width: 400px; */
+	max-width: 800px;
 	/* border-top-left-radius: 30%; */
 	/* border-bottom-right-radius: 30%; */
 	box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.8);
 }
 .reminder {
 	position: fixed;
-	top: 1em;
-	left: 1em;
-	right: 1em;
+	top:   2em;
+	left:  2em;
+	right: 2em;
 	padding: 1.5em;
 	background-color: rgba(0, 0, 0, 0.95);
 	box-shadow: 0 0 1em white;
 	border-radius: 1.5em;
+	font-size: 1.5em;
 	z-index: 9999;
 }
 .reminder .diagram {

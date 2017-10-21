@@ -5,9 +5,6 @@ module.exports = {
   entry: [
     './app/index.js'
   ],
-  // entry: [
-  //   'webpack-dev-server/client?http://0.0.0.0:8123'    
-  // ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js'

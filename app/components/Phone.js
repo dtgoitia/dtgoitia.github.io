@@ -8,151 +8,10 @@ const AndroidButton = props => {
   );
 };
 
-const NutshellItem = props => {
-  return <p className='nutshellItem'>{props.text}</p>;
-};
-
-class Nutshell extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { folded: true };
-    this.handleFolding = this.handleFolding.bind(this);
-  }
-
-  handleFolding(){
-    this.setState({folded: !this.state.folded});
-  }
-
-  render() {
-    return(
-      <div className='foldingMenu'>
-        <div className='header'>
-          <i className={'fa fa-chevron-' + (this.state.folded ? 'right' : 'down')} aria-hidden='true'></i>
-          <h2 onClick={this.handleFolding}>In a Nutshell</h2>
-        </div>
-        <div className='entryContainer'>
-          {
-            this.state.folded
-              ? null
-              : this.props.nutshell.map((itemText, i) => <NutshellItem text={itemText} key={i} />)
-          }
-        </div>
-      </div>
-    );
-  }
-}
-
-class FoldingMenu extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { folded: true };
-    this.handleFolding = this.handleFolding.bind(this);
-  }
-
-  handleFolding(){
-    this.setState({folded: !this.state.folded});
-  }
-
-  render() {
-    return(
-      <div className='foldingMenu'>
-        <div className='header'>
-          <i className={'fa fa-chevron-' + (this.state.folded ? 'right' : 'down')} aria-hidden='true'></i>
-          <h2 onClick={this.handleFolding}>{this.props.menuTitle}</h2>
-        </div>
-        <div className='entryContainer'>
-          {
-            this.state.folded
-              ? null
-              : this.props.db.map((entry, i) => {
-                if (entry.relevant === true) {
-                  return <FoldingMenuEntry entry={entry} key={i} />;
-                } else {
-                  return null;
-                }
-                
-              })
-          }
-        </div>
-      </div>
-    );
-  }
-}
-
-const FoldingMenuEntry = props => {
-  return(
-    <div className='entry'>
-      <div>{props.entry.title}</div>
-      <span>{props.entry.start} - {props.entry.end}</span>
-    </div>
-  );
-};
-
-const SocialEntry = props => {
-  return(
-    <div>
-      <a href={props.url}>
-        <i className={'fa fa-' + props.socialMedia + ' fa-4x'}></i>
-      </a>
-    </div>
-  );
-};
-
-const Social = props => {
-  const dbKeys = Object.keys(props.db);
-  return (
-    <div className='social'>
-      {
-        Object.values(props.db).map((url, i) => {
-          return <SocialEntry key={i} socialMedia={dbKeys[i]} url={url} />;
-        })
-      }
-    </div>
-  );
-};
-
-class PersonalInfo extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { folded: false };
-    this.handleFolding = this.handleFolding.bind(this);
-  }
-
-  handleFolding(){
-    this.setState({folded: !this.state.folded});
-  }
-
-  render() {
-    return(
-      <div className='foldingMenu'>
-        <div className='header'>
-          <i className={'fa fa-chevron-' + (this.state.folded ? 'right' : 'down')} aria-hidden='true'></i>
-          <h2 onClick={this.handleFolding}>{this.props.menuTitle}</h2>
-        </div>
-        <div className='entryContainer' style={this.state.folded ? {display: 'none'} : {display: 'block'}}>
-          <Data label={'Name'} data={this.props.info.name} />
-          <Data label={'Surnames'} data={this.props.info.surnames} />
-          <Data label={'Email'} data={this.props.info.email} />
-          <Data label={'Phone'} data={this.props.info.phone} />
-        </div>
-      </div>
-    );
-  }
-}
-
-const Photo = props => {
-  return(
-    <div className='photo'>
-      <img src={'./../img/' + props.url} />
-    </div>
-  );
-};
-
 class Reminder extends React.Component {
   constructor(props){
     super(props);
     this.state = {open: true};
-    // this.state = {open: false};
     this.handleOpen = this.handleOpen.bind(this);
   }
   handleOpen() {
@@ -170,7 +29,7 @@ class Reminder extends React.Component {
             <i className="fa fa-long-arrow-right fa-3x fadeOut" aria-hidden="true"></i>
             <div><i className="fa fa-desktop fa-4x" aria-hidden="true"></i></div>
           </div>
-          <p>Is worth to <b>check</b> this site from a <b>bigger display</b>! ;)</p>
+          <p>Is worth <b>checking</b> this site from a <b>bigger display</b>! ;)</p>
           <p>TAP TO CARRY ON</p>
         </div>
       );
@@ -180,27 +39,150 @@ class Reminder extends React.Component {
   }
 }
 
-const Data = props => {
-  return (
-    <div className='data'>
-      <h1>{props.label}</h1>
-      {props.data}
+const Photo = props => {
+  return(
+    <div className='photo'>
+      <img src={'./../img/' + props.url} />
     </div>
   );
 };
 
-class Phone extends React.Component {
+const Social = props => {
+  const dbKeys = Object.keys(props.db);
+  return (
+    <div className='social'>
+      {
+        Object.values(props.db).map((url, i) => {
+          return <SocialEntry key={i} socialMedia={dbKeys[i]} url={url} />;
+        })
+      }
+    </div>
+  );
+};
+
+const SocialEntry = props => {
+  return(
+    <div>
+      <a href={props.url}>
+        <i className={'fa fa-' + props.socialMedia + ' fa-4x'}></i>
+      </a>
+    </div>
+  );
+};
+
+const Entry = props => {
+  return(
+    <div className='tabEntry'>
+      <div className='entryHead'>{props.head}</div>
+      <div className='entrySub'>{props.sub}</div>
+    </div>
+  );
+};
+
+const Entries = props => {
+  return(
+    <div className='tab'>
+      {props.db.map((entry, i) => {
+        return <Entry head={entry[0]} sub={entry[1]}  key={i} />;
+      })}
+    </div>
+  );
+};
+
+const ArrowOpen = () => {
+  const dString = 'm 20 10 l20 20 l-20 20';
+  return(
+    <svg className='arrowOpen' viewBox={'0 0 60 60'}>
+      <path d={dString} fill='none' strokeWidth='10'/>
+    </svg>
+  );
+};
+
+const ArrowClose = () => {
+  const dString = 'm 10 20 l20 20 l20 -20';
+  return(
+    <svg className='arrowClose' viewBox={'0 0 60 60'}>
+      <path d={dString} fill='none' strokeWidth='10'/>
+    </svg>
+  );
+};
+
+class FoldingMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { folded: this.props.folded };
+    this.handleFolding = this.handleFolding.bind(this);
+  }
+
+  handleFolding(){
+    this.setState({folded: !this.state.folded});
+  }
+
   render() {
     return(
-      <div className='smallView yui3-cssreset'>
+      <div className='foldingTab'>
+        <div className='headerContainer'>
+          {this.state.folded ? <ArrowOpen/> : <ArrowClose/>}
+          <div className='header' onClick={this.handleFolding}>{this.props.header}</div>
+        </div>
+        {this.state.folded ? null : <Entries db={this.props.db}/>}
+      </div>
+    );
+  }
+}
+
+const NutshellItem = props => <div className='pa'>{props.text}</div>;
+
+class Nutshell extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { folded: this.props.folded };
+    this.handleFolding = this.handleFolding.bind(this);
+  }
+
+  handleFolding(){
+    this.setState({folded: !this.state.folded});
+  }
+
+  render() {
+    return(
+      <div className='foldingTab'>
+        <div className='headerContainer'>
+          {this.state.folded ? <ArrowOpen/> : <ArrowClose/>}
+          <div className='header' onClick={this.handleFolding}>In a Nutshell</div>
+        </div>
+        <div className='tab' style={this.state.folded ? {display: 'none'} : {display: 'block'}}>
+          {this.props.nutshell.map((itemText, i) => <NutshellItem text={itemText} key={i} />)}
+        </div>
+      </div>
+    );
+  }
+}
+
+class Phone extends React.Component {
+  render() {
+    const contactData = [
+      [this.props.originalDb.personalInfo.name, 'Name'],
+      [this.props.originalDb.personalInfo.surnames, 'Surnames'],
+      [this.props.originalDb.personalInfo.email, 'Email'],
+      [this.props.originalDb.personalInfo.phone, 'Phone'],
+    ];
+    const academiaData = this.props.originalDb.academia
+      .filter(x => x.relevant)
+      .map(x => [x.title, x.start + ' - ' + x.end]);
+    const experienceData = this.props.originalDb.experience
+      .filter(x => x.relevant)
+      .map(x => [x.title, x.start + ' - ' + x.end]);
+    return(
+      <div className='smallView'>
         <Reminder />
-        <Photo url={this.props.originalDb.personalInfo.photo} />
+        <Photo url={this.props.originalDb.personalInfo.photo}/>
         <Social db={this.props.originalDb.socialMedia}/>
-        <PersonalInfo menuTitle={'Contact'} info={this.props.originalDb.personalInfo} />
-        <FoldingMenu menuTitle={'Academia'} db={this.props.originalDb.academia} />
-        <FoldingMenu menuTitle={'Experience'} db={this.props.originalDb.experience} />
-        <Nutshell nutshell={this.props.originalDb.nutshell} />
-        <AndroidButton email={this.props.originalDb.personalInfo.email} />
+        <FoldingMenu folded={true} header={'Contact'}    db={contactData}/>
+        <FoldingMenu folded={true} header={'Academia'}   db={academiaData}/>
+        <FoldingMenu folded={true} header={'Experience'} db={experienceData}/>
+        <Nutshell folded={false} nutshell={this.props.originalDb.nutshell}/>
+        <AndroidButton email={this.props.originalDb.personalInfo.email}/>
       </div>
     );
   }
