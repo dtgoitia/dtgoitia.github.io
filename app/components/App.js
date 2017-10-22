@@ -13,8 +13,8 @@ class App extends React.Component {
     this.state = {
       // page: 'intro',
       // page: 'past',
-      // page: 'present',
-      page: 'future',
+      page: 'present',
+      // page: 'future',
       language: 'English'
     };
     this.changePage = this.changePage.bind(this);
