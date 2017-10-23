@@ -429,7 +429,12 @@ body {
 	margin: auto;
 	margin-top: 20px;
 }
-/* the class below might not be necessary! */
+.timeline {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
 .bars {
 	position: absolute;
 	top: 0px;
@@ -975,10 +980,52 @@ body {
 }
 
 
-/* --- PRESENT ------------------------------------------- */
-.presentEntryContainer {
+/* --- NUTSHELL ------------------------------------------ */
+.nutshellEntryContainer {
+	position: relative;
 	margin: 0 auto;
 	max-width: 1000px;
+}
+.nutshellTitle {
+	font-size: 2em;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.nutshellEntry {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2em 50px;
+}
+.nutshellEntry::after {
+	content: '';
+	padding-top: 2em;
+	width: 65%;
+	/* height: 0px; */
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(188,188,188,0.5);
+}
+.nutshellEntryText {
+	margin: 0;
+	margin-left: 10%;
+	width: 50%;
+	text-align: left;
+}
+.nutshellEntryGraph {
+	margin: 0;
+	width: 40%;
+}
+
+
+/* --- PRESENT ------------------------------------------ */
+.presentSkillContainer {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.presentTitle {
+	font-size: 2em;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .presentEntry {
 	display: flex;
@@ -993,12 +1040,19 @@ body {
 	margin: 0 auto;
 	border-bottom: 1px solid rgba(188,188,188,0.5);
 }
+.presentEntryTitle {
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+}
 .presentEntryText {
 	margin: 0;
+	margin-left: 10%;
 	width: 50%;
 	text-align: left;
 }
 .presentEntryGraph {
 	margin: 0;
-	width: 50%;
+	width: 40%;
 }

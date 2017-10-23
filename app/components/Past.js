@@ -327,15 +327,16 @@ class Timeline extends React.Component {
     const barFormat = this.props.barFormat;
     const dbRange   = this.props.dbRange;
     const yearArray = pastEntry.getYearsArray(dbRange.latest.getFullYear(), pastEntry.yearRange(dbRange.earliest, dbRange.latest));
+    const barTotalHeight = (6 * (barFormat.barThickness + barFormat.barSpacing) + barFormat.yearSpacing) * (yearArray.length);
     return (
-      <div className='timelineContainer'>
+      <div className='timelineContainer' style={{height: barTotalHeight}}>
         <Years
           yearArray={yearArray}
           yearHeight={6 * (barFormat.barThickness + barFormat.barSpacing) - barFormat.yearSpacing}
           barFormat={barFormat}
         />
         <VerticalBar
-          totalHeight={(6 * (barFormat.barThickness + barFormat.barSpacing) + barFormat.yearSpacing) * (yearArray.length)}
+          totalHeight={barTotalHeight}
           barFormat={barFormat}
         />
         <AcademiaAndExperience
@@ -352,6 +353,23 @@ class Timeline extends React.Component {
     );
   }
 }
+
+const NutshellEntryGraph = props => {
+  return <div className='nutshellEntryGraph'>{props.graph}</div>;
+};
+
+const NutshellEntryText = props => {
+  return <div className='nutshellEntryText'>{props.text}</div>;
+};
+
+const NutshellEntry = props => {
+  return(
+    <div className='nutshellEntry'>
+      <NutshellEntryGraph graph={props.content.graph} />
+      <NutshellEntryText text={props.content.text}/>
+    </div>
+  );
+};
 
 class Past extends React.Component {
   render () {
@@ -373,6 +391,12 @@ class Past extends React.Component {
           dbRange={dbRange}
           originalDb={this.props.originalDb}
         />
+        <div className='nutshellEntryContainer'>
+          <div className='nutshellTitle'>In a Nutshell</div>
+          {this.props.originalDb.nutshell.map((content, i) => {
+            return <NutshellEntry content={content} key={i}/>;
+          })}
+        </div>
       </div>
     );
   }

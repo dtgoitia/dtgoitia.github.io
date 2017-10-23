@@ -152,7 +152,7 @@ class Nutshell extends React.Component {
           <div className='header' onClick={this.handleFolding}>In a Nutshell</div>
         </div>
         <div className='tab' style={this.state.folded ? {display: 'none'} : {display: 'block'}}>
-          {this.props.nutshell.map((itemText, i) => <NutshellItem text={itemText} key={i} />)}
+          {this.props.nutshell.map((entry, i) => <NutshellItem text={entry.text} key={i} />)}
         </div>
       </div>
     );
