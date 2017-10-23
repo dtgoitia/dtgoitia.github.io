@@ -973,3 +973,32 @@ body {
 .reminder .fadeOut {
 	opacity: 0.6;
 }
+
+
+/* --- PRESENT ------------------------------------------- */
+.presentEntryContainer {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.presentEntry {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2em 50px;
+}
+.presentEntry::after {
+	content: '';
+	padding-top: 2em;
+	width: 65%;
+	/* height: 0px; */
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(188,188,188,0.5);
+}
+.presentEntryText {
+	margin: 0;
+	width: 50%;
+	text-align: left;
+}
+.presentEntryGraph {
+	margin: 0;
+	width: 50%;
+}
