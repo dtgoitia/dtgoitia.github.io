@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import LogoHtml5 from './logos/html5';
 import LogoCss3 from './logos/css3';
-import LogoCss3Tmp from './logos/css3tmp';
+import LogoJs from './logos/js';
 
 const PresentSkills = props => {
   return(
@@ -57,8 +57,8 @@ class Present extends React.Component {
           changePage={this.props.changePage}
         />
         <LogoHtml5 color={'white'} />
-        <LogoCss3 color={{ c1: '#264de4', c2: '#2965f1', c3: '#ebebeb', c4: '#ffffff'}} color2={'white'} />
-        <LogoCss3Tmp color={{ c1: '#264de4', c2: '#2965f1', c3: '#ebebeb', c4: '#ffffff'}} color2={'white'} />
+        <LogoCss3 color={'white'} />
+        <LogoJs color={'white'} />
         <PresentSkills skillArray={skillArray} />
       </div>
     );
