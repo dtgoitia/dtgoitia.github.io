@@ -1056,3 +1056,7 @@ body {
 	margin: 0;
 	width: 40%;
 }
+.presentEntryGraph svg {
+	margin: 0;
+	width: 52px;
+}
