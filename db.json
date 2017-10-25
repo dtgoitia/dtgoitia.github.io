@@ -39,6 +39,45 @@
      "relevant": true
     },
     {
+      "title": "Certified Associate in Project Management",
+      "subtitle": "Open University (OU)",
+      "description": "This online course is the first step to get involved in project management world, focused to a later PMP, to achieve my goal: become a Project Manager.",
+      "start": "2014-11",
+      "end": "2015-10",
+      "img": "past_capm.svg",
+      "color": "#92905d",
+      "bars": [ 30, 0, 0, 60, 100, 250 ],
+      "x": 300,
+      "y": 0,
+     "relevant": true
+    },
+    {
+      "title": "AutoLISP",
+      "subtitle": "Self tought",
+      "description": "I taught myself how to script in AutoCAD to speed up and standardize my CAD work.",
+      "start": "2015-07",
+      "end": "",
+      "img": "past_capm.svg",
+      "color": "blue",
+      "bars": [ 40, 40, 40, 80, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100   ],
+      "x": 300,
+      "y": 0,
+     "relevant": true
+    },
+    {
+      "title": "Web development. HTML and CSS",
+      "subtitle": "Self tought. Just for fun",
+      "description": "I learnt HTML & CSS basics after spending every time off during a whole month only coding and trying to create a static site (check same color on the right).",
+      "start": "2014-12",
+      "end": "2014-12",
+      "img": "past_cad.svg",
+      "color": "#aaaaaa",
+      "bars": [300],
+      "x": 70,
+      "y": -30,
+     "relevant": true
+    },
+    {
       "title": "Graduated in Civil Engineering",
       "subtitle": "University of the Basque Country (UPV/EHU)",
       "description": "Single-year course, to adapt my Bachelor's degree to new european academic standards.",
@@ -152,8 +191,21 @@
       "end": "",
       "img": "past_cad.svg",
       "color": "#002E5D",
-      "bars": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+      "bars": [250, 170, 170, 170, 175, 175, 180, 195, 200, 205, 210, 210, 210, 210],
       "x": 50,
+      "y": 20,
+     "relevant": true
+    },
+    {
+      "title": "Rewrite davidtorralba.com fully in React",
+      "subtitle": "Personal project for learning purposes",
+      "description": "This new version is fully written in React (no Redux). Now, the content is stored in a JSON file from which the site pulls data to create all diagrams from scratch",
+      "start": "2017-09",
+      "end": "2017-11",
+      "img": "past_cad.svg",
+      "color": "#aaaaaa",
+      "bars": [300, 200],
+      "x": 150,
       "y": 20,
      "relevant": true
     },
@@ -167,6 +219,19 @@
       "color": "#48c649",
       "bars": [10, 10, 10, 10, 10],
       "x": 50,
+      "y": 20,
+     "relevant": true
+    },
+    {
+      "title": "Write davidtorralba.com only in  HTML and CSS",
+      "subtitle": "Personal project for learning purposes",
+      "description": "This was my first web project. Fully written in HTML and CSS with a plain text editor! No, I had no clue about IDEs.",
+      "start": "2014-12",
+      "end": "2014-11",
+      "img": "past_cad.svg",
+      "color": "#aaaaaa",
+      "bars": [300],
+      "x": 0,
       "y": 20,
      "relevant": true
     },
