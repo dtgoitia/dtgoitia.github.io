@@ -10,6 +10,8 @@ import LogoMongo from './logos/mongo';
 import LogoGit from './logos/git';
 import LogoVsc from './logos/vsc';
 import LogoAtom from './logos/atom';
+import LogoSocketio from './logos/socketio';
+import LogoExpress from './logos/express';
 
 const PresentSkills = props => {
   return(
@@ -37,23 +39,18 @@ const PresentSkill = props => {
     break;
   case 'backEnd':
     graph = <div>
-      <LogoReact color={props.color} />
-      <LogoReact color={props.color} />
-      <LogoReact color={props.color} />
+      <LogoNode color={props.color} />
+      <LogoExpress color={props.color} />
+      <LogoMongo color={props.color} />
+      <LogoSocketio color={props.color} />
     </div>;
     break;
   case 'coding':
     graph = <div>
-      <LogoReact color={props.color} />
-      <LogoReact color={props.color} />
-      <LogoReact color={props.color} />
-    </div>;
-    break;
-  case 'react':
-    graph = <div>
-      <LogoReact color={props.color} />
-      <LogoReact color={props.color} />
-      <LogoReact color={props.color} />
+      <LogoGit color={props.color} />
+      <LogoAtom color={props.color} />
+      <LogoVsc color={props.color} />
+      <LogoAutoCAD color={props.color} />
     </div>;
     break;
   default:
@@ -64,8 +61,8 @@ const PresentSkill = props => {
   return(
     <div className='presentEntry'>
       <div className='presentEntryTitle'>{props.skill.skill}</div>
-      <div className='presentEntryText'>{props.skill.text}</div>
       <div className='presentEntryGraph'>{graph}</div>
+      <div className='presentEntryText'>{props.skill.text}</div>
     </div>
   );
 };
@@ -115,9 +112,7 @@ class Present extends React.Component {
           right={{label:'YOUR FUTURE',target:'future'}}
           changePage={this.props.changePage}
         />
-        <LogoAtom color={'white'} />
         <div className='flex-container'>
-          <PresentSkills skillArray={skillArray} color={'white'}/>
           <PresentSkills skillArray={skillArray} color={'white'}/>
         </div>
       </div>
