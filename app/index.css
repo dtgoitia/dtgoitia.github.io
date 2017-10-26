@@ -1017,46 +1017,46 @@ body {
 
 
 /* --- PRESENT ------------------------------------------ */
-.presentSkillContainer {
+.present {
+	display: flex;
+	flex-wrap: wrap;
+}
+.presentEntryContainer {
 	position: relative;
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: 600px;
 }
+.presentEntry { margin: 0; }
 .presentTitle {
 	font-size: 2em;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
-.presentEntry {
+.presentSubEntry {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 2em 50px;
+	margin: 4em 0 8em 0;
 }
-.presentEntry::after {
-	content: '';
-	padding-top: 2em;
-	width: 65%;
-	/* height: 0px; */
-	margin: 0 auto;
-	border-bottom: 1px solid rgba(188,188,188,0.5);
-}
-.presentEntryTitle {
+.presentSubEntryTitle {
 	margin: 0;
+	margin-top: 15px;
 	width: 100%;
 	text-align: center;
-	font-size: 2em;
+	font-size: 1.5em;
 }
-.presentEntryText {
-	margin: 0;
-	margin-left: 10%;
-	width: 50%;
-	text-align: left;
+.presentSubEntryText {
+	margin: 0 auto;
+	width: 70%;
+	margin-top: 15px;
 }
-.presentEntryGraph {
+.presentSubEntryGraph {
 	margin: 0;
-	width: 40%;
+	width: 100%;
 }
-.presentEntryGraph svg {
-	margin: 0;
-	width: 52px;
+.presentSubEntryGraph svg {
+	height: 75px;
+	margin: 0 20px;
+}
+.presentSubEntryGraph .pack {
+	display: inline-block;
 }

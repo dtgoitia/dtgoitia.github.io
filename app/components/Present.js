@@ -13,15 +13,17 @@ import LogoAtom from './logos/atom';
 import LogoSocketio from './logos/socketio';
 import LogoExpress from './logos/express';
 
-const PresentSkills = props => {
+const PresentEntry = props => {
   return(
-    <div className='presentSkillContainer'>
-      <div className='presentTitle'>Title!</div>
-      {
-        props.skillArray.map((skill, i) => {
-          return <PresentSkill skill={skill} key={i} color={props.color}/>;
-        })
-      }
+    <div className='presentEntryContainer'>
+      <div className='presentTitle'>{props.title}</div>
+      <div className='presentSubEntryContainer'>
+        {
+          props.skillArray.map((skill, i) => {
+            return <PresentSkill skill={skill} key={i} color={props.color}/>;
+          })
+        }
+      </div>
     </div>
   );
 };
@@ -30,27 +32,39 @@ const PresentSkill = props => {
   let graph;
   switch (props.skill.graph) {
   case 'frontEnd':
-    graph = <div>
-      <LogoHtml5 color={props.color} />
-      <LogoCss3 color={props.color} />
-      <LogoJs color={props.color} />
-      <LogoReact color={props.color} />
+    graph = <div className='presentSubEntryGraph'>
+      <div className='pack'>
+        <LogoJs color={props.color} />
+        <LogoHtml5 color={props.color} />
+      </div>
+      <div className='pack'>
+        <LogoCss3 color={props.color} />
+        <LogoReact color={props.color} />
+      </div>
     </div>;
     break;
   case 'backEnd':
-    graph = <div>
-      <LogoNode color={props.color} />
-      <LogoExpress color={props.color} />
-      <LogoMongo color={props.color} />
-      <LogoSocketio color={props.color} />
+    graph = <div className='presentSubEntryGraph'>
+      <div className='pack'>
+        <LogoNode color={props.color} />
+        <LogoExpress color={props.color} />
+      </div>
+      <div className='pack'>
+        <LogoMongo color={props.color} />
+        <LogoSocketio color={props.color} />
+      </div>
     </div>;
     break;
   case 'coding':
-    graph = <div>
-      <LogoGit color={props.color} />
-      <LogoAtom color={props.color} />
-      <LogoVsc color={props.color} />
-      <LogoAutoCAD color={props.color} />
+    graph = <div className='presentSubEntryGraph'>
+      <div className='pack'>
+        <LogoGit color={props.color} />
+        <LogoAtom color={props.color} />
+      </div>
+      <div className='pack'>
+        <LogoVsc color={props.color} />
+        <LogoAutoCAD color={props.color} />
+      </div>
     </div>;
     break;
   default:
@@ -59,10 +73,10 @@ const PresentSkill = props => {
   }
 
   return(
-    <div className='presentEntry'>
-      <div className='presentEntryTitle'>{props.skill.skill}</div>
-      <div className='presentEntryGraph'>{graph}</div>
-      <div className='presentEntryText'>{props.skill.text}</div>
+    <div className='presentSubEntry'>
+      {graph}
+      <div className='presentSubEntryTitle'>{props.skill.skill}</div>
+      <div className='presentSubEntryText'>{props.skill.text}</div>
     </div>
   );
 };
@@ -112,8 +126,8 @@ class Present extends React.Component {
           right={{label:'YOUR FUTURE',target:'future'}}
           changePage={this.props.changePage}
         />
-        <div className='flex-container'>
-          <PresentSkills skillArray={skillArray} color={'white'}/>
+        <div className='present'>
+          <PresentEntry title='SKILLS' skillArray={skillArray} color={'white'}/>
         </div>
       </div>
     );
