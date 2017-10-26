@@ -2,7 +2,7 @@ import React from 'react';
 
 const LogoCss3Color = () => {
   return (
-    <svg x='0px' y='0px' width='512px' height='512px' viewBox='0 0 512 512'>
+    <svg x='0px' y='0px' viewBox='0 0 512 512'>
       <polygon fill={'#264de4'} points='255.778,512 107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 '/>
       <polygon fill={'#2965f1'} points='376.03,447.246 404.27,130.894 256,130.894 256,480.523 '/>
       <polygon fill={'#ebebeb'} points='150.31,268.217 154.38,313.627 256,313.627 256,268.217 '/>
