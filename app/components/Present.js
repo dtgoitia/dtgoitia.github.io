@@ -12,6 +12,8 @@ import LogoVsc from './logos/vsc';
 import LogoAtom from './logos/atom';
 import LogoSocketio from './logos/socketio';
 import LogoExpress from './logos/express';
+import LogoUxUi from './logos/uxui';
+import LogoUxUi2 from './logos/uxui2';
 
 const PresentEntry = props => {
   return(
@@ -19,8 +21,8 @@ const PresentEntry = props => {
       <div className='presentTitle'>{props.title}</div>
       <div className='presentSubEntryContainer'>
         {
-          props.skillArray.map((skill, i) => {
-            return <PresentSkill skill={skill} key={i} color={props.color}/>;
+          props.entryArray.map((subEntry, i) => {
+            return <PresentSubEntry subEntry={subEntry} key={i} color={props.color}/>;
           })
         }
       </div>
@@ -28,9 +30,9 @@ const PresentEntry = props => {
   );
 };
 
-const PresentSkill = props => {
+const PresentSubEntry = props => {
   let graph;
-  switch (props.skill.graph) {
+  switch (props.subEntry.graph) {
   case 'frontEnd':
     graph = <div className='presentSubEntryGraph'>
       <div className='pack'>
@@ -67,16 +69,26 @@ const PresentSkill = props => {
       </div>
     </div>;
     break;
+  case 'uxui':
+    graph = <div className='presentSubEntryGraph'>
+      <LogoUxUi color={props.color} />
+      <LogoUxUi2 color={props.color} />
+    </div>;
+    break;
   default:
-    graph = props.skill.graph;
+    graph = props.subEntry.graph;
     break;
   }
-
   return(
     <div className='presentSubEntry'>
       {graph}
-      <div className='presentSubEntryTitle'>{props.skill.skill}</div>
-      <div className='presentSubEntryText'>{props.skill.text}</div>
+      <div className='presentSubEntryTitle'>{props.subEntry.title}</div>
+      <div className='presentSubEntryText'>{props.subEntry.text}</div>
+      {
+        props.subEntry.hasOwnProperty('link')
+          ? <a href={props.subEntry.link.url} target='_blank'>{props.subEntry.link.alt}</a>
+          : null
+      }
     </div>
   );
 };
@@ -86,34 +98,62 @@ const PresentSkill = props => {
 // const loremXS = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const skillArray = [
   {
-    skill: 'Front End development',
+    title: 'Front End development',
     text: 'My first page was a static site purely developed on HTML and CSS. Recently I started to learn about React and decided to fully rewrite my website to be able to update it from a JSON.',
     graph: 'frontEnd'
   },
   {
-    skill: 'Back End development',
+    title: 'Back End development',
     text: 'I recently got involved in Node, Express and MongoDB to set basics of apps. I have also developed some small apps with SocketIO (see http://github...,)',
     graph: 'backEnd'
   },
   {
-    skill: 'Programming',
+    title: 'Programming',
     text: 'Git+GitHub+Yarn are my repository musts. For JavaScript development, I use Visual Studio Code with ESLint. I have created some unit tests with Mocha and Chia to test the logic behind this website. To produce markdown based reports and to develop with AutoLISP I tend to use atom as I created an AutoLISP language package for this editor.',
     graph: 'coding'
   },
   {
-    skill: 'Effective communication',
+    title: 'Effective communication',
     text: 'Ineffective communication is, unfortunately, more common than we\'d wish, and it wastes resources and wears relationships down. It\'s critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.',
     graph: 'handshake'
   },
   {
-    skill: 'Analytic problem solving',
+    title: 'Analytic problem solving',
     text: 'As an engineer, I prefer to approach the obstacles from an analytic perspective. I have successfully applied this in different fields problems such us chemistry research, construction consultancy projects or business decisions.',
     graph: 'Paper with a pie chart and a line chart'
   },
   {
-    skill: 'UX/UI awareness',
+    title: 'UX/UI awareness',
     text: 'I have a strong UX awareness. It\'s not only about performance, it\'s about helping people to perform whatever task we want to execute in a much comfortable way and efficient way.',
-    graph: 'a phone with a finger on the screen'
+    graph: 'uxui'
+  }
+];
+const portfolioArray = [
+  {
+    link: {
+      url: 'https://github.io/dtgoitia...',
+      alt: 'GitHub Repository'
+    },
+    title: 'davidtorralba.com',
+    text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
+    graph: 'davidtorralba'
+  },
+  {
+    link: {
+      url: 'https://github.io/dtgoitia...',
+      alt: 'Check my repos'
+    },
+    title: 'davidtorralba.com',
+    text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
+    graph: 'davidtorralba'
+  }
+];
+const interestsArray = [
+  {
+    type: 'interest',
+    title: 'davidtorralba.com',
+    text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
+    graph: 'davidtorralba'
   }
 ];
 
@@ -127,7 +167,9 @@ class Present extends React.Component {
           changePage={this.props.changePage}
         />
         <div className='present'>
-          <PresentEntry title='SKILLS' skillArray={skillArray} color={'white'}/>
+          <PresentEntry title='PORTFOLIO' entryArray={portfolioArray} color={'white'}/>
+          <PresentEntry title='SKILLS'    entryArray={skillArray}     color={'white'}/>
+          <PresentEntry title='INTERESTS' entryArray={interestsArray} color={'white'}/>
         </div>
       </div>
     );

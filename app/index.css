@@ -1017,25 +1017,26 @@ body {
 
 
 /* --- PRESENT ------------------------------------------ */
-.present {
-	display: flex;
-	flex-wrap: wrap;
-}
 .presentEntryContainer {
 	position: relative;
-	margin: 0 auto;
-	max-width: 600px;
+	margin: 0 auto 100px auto;
 }
 .presentEntry { margin: 0; }
 .presentTitle {
 	font-size: 2em;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 80px;
+	margin-bottom: 0;
 }
-.presentSubEntry {
+.presentSubEntryContainer {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 4em 0 8em 0;
+	justify-content: center;
+	/* max-width: 600px; */
+}
+.presentSubEntry {
+	margin: 4em 20px 8em 20px;
+	max-width: 600px;
+	min-width: 400px;
 }
 .presentSubEntryTitle {
 	margin: 0;
@@ -1059,4 +1060,25 @@ body {
 }
 .presentSubEntryGraph .pack {
 	display: inline-block;
+}
+.presentSubEntry a:link,
+.presentSubEntry a:hover,
+.presentSubEntry a:visited,
+.presentSubEntry a:active {
+	display: inline-block;
+	margin: 20px;
+	padding: 10px 25px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 25px;
+	text-decoration:none;
+	/* display: block; */
+}
+.presentSubEntry a:link,
+.presentSubEntry a:visited,
+.presentSubEntry a:active {
+	color: #bdbdbd;
+}
+.presentSubEntry a:hover {
+	color: white;
+	background-color: rgba(0,0,0,0.7);
 }
