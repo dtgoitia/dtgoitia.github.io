@@ -17,6 +17,10 @@ import LogoUxUi2 from './logos/uxui2';
 import LogoDiscommunication from './logos/discommunication';
 import LogoAnalytic from './logos/analytic';
 import LogoIdea from './logos/idea';
+import LogoRelax from './logos/relax';
+import LogoFactory from './logos/factory';
+import LogoFactory2 from './logos/factory2';
+import LogoDavidTorralba from './logos/davidtorralba';
 
 const PresentEntry = props => {
   return(
@@ -73,7 +77,7 @@ const PresentSubEntry = props => {
     </div>;
     break;
   case 'discommunication':
-    graph = <div className='presentSubEntryGraph'>
+    graph = <div className='presentSubEntryGraph' id='discommunication'>
       <LogoDiscommunication color={props.color} />
     </div>;
     break;
@@ -85,13 +89,23 @@ const PresentSubEntry = props => {
     break;
   case 'analytic':
     graph = <div className='presentSubEntryGraph'>
-      <LogoIdea color={props.color} />
       <LogoAnalytic color={props.color} />
+      <LogoIdea color={props.color} />
     </div>;
     break;
   case 'interests':
-    graph = <div className='presentSubEntryGraph'>
-      <LogoIdea color={props.color} />
+    graph = <div className='presentSubEntryGraph big'>
+      <LogoRelax color={props.color} />
+    </div>;
+    break;
+  case 'davidtorralba':
+    graph = <div className='presentSubEntryGraph big'>
+      <LogoDavidTorralba color={props.color} />
+    </div>;
+    break;
+  case 'factory':
+    graph = <div className='presentSubEntryGraph big'>
+      <LogoFactory color={props.color} />
     </div>;
     break;
   default:
@@ -153,10 +167,10 @@ const portfolioArray = [
   {
     link: {
       url: 'https://github.com/dtgoitia/dtgoitia.github.io',
-      alt: 'GitHub repository'
+      alt: 'See GitHub repository'
     },
-    title: 'davidtorralba.com',
-    text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
+    title: 'Current site',
+    text: 'Personal static site: HTML + CSS + React (data fed from JSON). HTML & CSS exclusivelly was unmaintainable.',
     graph: 'davidtorralba'
   },
   {
@@ -164,9 +178,9 @@ const portfolioArray = [
       url: 'https://github.com/dtgoitia?tab=repositories',
       alt: 'Check out my repos'
     },
-    title: 'davidtorralba.com',
-    text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
-    graph: 'davidtorralba'
+    title: 'More on the way!',
+    text: 'There are a couple more projects in the oven...',
+    graph: 'factory'
   }
 ];
 const interestsArray = [

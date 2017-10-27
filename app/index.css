@@ -1034,7 +1034,7 @@ body {
 	/* max-width: 600px; */
 }
 .presentSubEntry {
-	margin: 4em 20px 8em 20px;
+	margin: 2em 20px 4em 20px;
 	max-width: 600px;
 	min-width: 400px;
 }
@@ -1081,4 +1081,7 @@ body {
 .presentSubEntry a:hover {
 	color: white;
 	background-color: rgba(0,0,0,0.7);
+}
+.big svg{
+	height: 120px;
 }
