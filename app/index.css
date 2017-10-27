@@ -129,13 +129,19 @@ body {
 /* --- NAVBAR ---------------------------------------------- */
 .navBar {
 	display: flex;
-  justify-content: center;
+  justify-content: space-between;
 	flex-wrap: wrap;
 	background-color: black;
 }
 .navBar .navBarLeft,
 .navBar .navBarRight {
-	margin: 10px;
+	margin: 10px 15px;
+	color: #dfdfdf;
+	cursor: pointer;
+}
+.navBar .navBarLeft:hover,
+.navBar .navBarRight:hover {
+	color: white;
 }
 
 
