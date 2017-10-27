@@ -12,8 +12,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       // page: 'intro',
-      // page: 'past',
-      page: 'present',
+      page: 'past',
+      // page: 'present',
       // page: 'future',
       language: 'English'
     };
