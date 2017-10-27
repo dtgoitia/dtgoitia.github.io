@@ -14,6 +14,9 @@ import LogoSocketio from './logos/socketio';
 import LogoExpress from './logos/express';
 import LogoUxUi from './logos/uxui';
 import LogoUxUi2 from './logos/uxui2';
+import LogoDiscommunication from './logos/discommunication';
+import LogoAnalytic from './logos/analytic';
+import LogoIdea from './logos/idea';
 
 const PresentEntry = props => {
   return(
@@ -69,10 +72,26 @@ const PresentSubEntry = props => {
       </div>
     </div>;
     break;
+  case 'discommunication':
+    graph = <div className='presentSubEntryGraph'>
+      <LogoDiscommunication color={props.color} />
+    </div>;
+    break;
   case 'uxui':
     graph = <div className='presentSubEntryGraph'>
       <LogoUxUi color={props.color} />
       <LogoUxUi2 color={props.color} />
+    </div>;
+    break;
+  case 'analytic':
+    graph = <div className='presentSubEntryGraph'>
+      <LogoIdea color={props.color} />
+      <LogoAnalytic color={props.color} />
+    </div>;
+    break;
+  case 'interests':
+    graph = <div className='presentSubEntryGraph'>
+      <LogoIdea color={props.color} />
     </div>;
     break;
   default:
@@ -82,12 +101,14 @@ const PresentSubEntry = props => {
   return(
     <div className='presentSubEntry'>
       {graph}
-      <div className='presentSubEntryTitle'>{props.subEntry.title}</div>
+      {props.subEntry.hasOwnProperty('title')
+        ? <div className='presentSubEntryTitle'>{props.subEntry.title}</div>
+        : null
+      }
       <div className='presentSubEntryText'>{props.subEntry.text}</div>
-      {
-        props.subEntry.hasOwnProperty('link')
-          ? <a href={props.subEntry.link.url} target='_blank'>{props.subEntry.link.alt}</a>
-          : null
+      {props.subEntry.hasOwnProperty('link')
+        ? <a href={props.subEntry.link.url} target='_blank'>{props.subEntry.link.alt}</a>
+        : null
       }
     </div>
   );
@@ -115,12 +136,12 @@ const skillArray = [
   {
     title: 'Effective communication',
     text: 'Ineffective communication is, unfortunately, more common than we\'d wish, and it wastes resources and wears relationships down. It\'s critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.',
-    graph: 'handshake'
+    graph: 'discommunication'
   },
   {
     title: 'Analytic problem solving',
     text: 'As an engineer, I prefer to approach the obstacles from an analytic perspective. I have successfully applied this in different fields problems such us chemistry research, construction consultancy projects or business decisions.',
-    graph: 'Paper with a pie chart and a line chart'
+    graph: 'analytic'
   },
   {
     title: 'UX/UI awareness',
@@ -131,8 +152,8 @@ const skillArray = [
 const portfolioArray = [
   {
     link: {
-      url: 'https://github.io/dtgoitia...',
-      alt: 'GitHub Repository'
+      url: 'https://github.com/dtgoitia/dtgoitia.github.io',
+      alt: 'GitHub repository'
     },
     title: 'davidtorralba.com',
     text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
@@ -140,8 +161,8 @@ const portfolioArray = [
   },
   {
     link: {
-      url: 'https://github.io/dtgoitia...',
-      alt: 'Check my repos'
+      url: 'https://github.com/dtgoitia?tab=repositories',
+      alt: 'Check out my repos'
     },
     title: 'davidtorralba.com',
     text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
@@ -150,10 +171,8 @@ const portfolioArray = [
 ];
 const interestsArray = [
   {
-    type: 'interest',
-    title: 'davidtorralba.com',
-    text: 'Personal static site built with HTML, CSS and React. The previous version was purelly HTML and CSS.',
-    graph: 'davidtorralba'
+    text: 'When I’m not at a computer, I enjoy training and travelling. I also periodically throw myself into photography, finance, foreign languages and dancing.',
+    graph: 'interests'
   }
 ];
 
