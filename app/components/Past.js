@@ -367,21 +367,8 @@ class Timeline extends React.Component {
   }
 }
 
-const NutshellEntryGraph = props => {
-  return <div className='nutshellEntryGraph'>{props.graph}</div>;
-};
-
-const NutshellEntryText = props => {
-  return <div className='nutshellEntryText'>{props.text}</div>;
-};
-
 const NutshellEntry = props => {
-  return(
-    <div className='nutshellEntry'>
-      <NutshellEntryGraph graph={props.content.graph} />
-      <NutshellEntryText text={props.content.text}/>
-    </div>
-  );
+  return <div className='nutshellEntry'>{props.content.text}</div>;
 };
 
 class Past extends React.Component {
@@ -404,11 +391,13 @@ class Past extends React.Component {
           dbRange={dbRange}
           originalDb={this.props.originalDb}
         />
-        <div className='nutshellEntryContainer'>
+        <div className='nutshellContainer'>
           <div className='nutshellTitle'>In a Nutshell</div>
-          {this.props.originalDb.nutshell.map((content, i) => {
-            return <NutshellEntry content={content} key={i}/>;
-          })}
+          <div className='nutshellEntryContainer'>
+            {this.props.originalDb.nutshell.map((content, i) => {
+              return <NutshellEntry content={content} key={i}/>;
+            })}
+          </div>
         </div>
       </div>
     );

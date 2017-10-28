@@ -1015,38 +1015,24 @@ body {
 
 
 /* --- NUTSHELL ------------------------------------------ */
-.nutshellEntryContainer {
+.nutshellContainer {
 	position: relative;
-	margin: 0 auto;
-	max-width: 1000px;
+	margin: 0 auto 100px auto;
+	max-width: 800px;
 }
 .nutshellTitle {
 	font-size: 2em;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+.nutshellEntryContainer {
+	border-left: 1px solid white;
+}
 .nutshellEntry {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 2em 50px;
-}
-.nutshellEntry::after {
-	content: '';
-	padding-top: 2em;
-	width: 65%;
-	/* height: 0px; */
-	margin: 0 auto;
-	border-bottom: 1px solid rgba(188,188,188,0.5);
-}
-.nutshellEntryText {
-	margin: 0;
-	margin-left: 10%;
-	width: 50%;
-	text-align: left;
-}
-.nutshellEntryGraph {
-	margin: 0;
-	width: 40%;
+	margin: 1.7em auto;
+	padding: 0 30px;
+	text-align: justify;
+	line-height: 1.70;
 }
 
 
