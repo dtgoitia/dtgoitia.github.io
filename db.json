@@ -41,7 +41,7 @@
     {
       "title": "Programming",
       "subtitle": "Teach myself to code professionaly",
-      "description": "... git, vscode, atom, golang, ",
+      "description": "Learn and use: version control system (Git), IDEs, linters, testing libraries (Mocha + Chia). Study JavaScript. Fiddle with Go, Python and C#. If possible, apply TDD.",
       "start": "2016-03",
       "end": "",
       "img": "programming.svg",
@@ -54,7 +54,7 @@
     {
       "title": "Web development",
       "subtitle": "Teach myself to develop websites, both front and backend.",
-      "description": "...",
+      "description": "I want to become a full (MERN) stack developer. Thus, I am studying how to use Node, Express, Webpack, React, Redux and MongoDb.",
       "start": "2017-09",
       "end": "",
       "img": "webdev.svg",
@@ -251,7 +251,7 @@
     {
       "title": "Graduate Civil Engineer",
       "subtitle": "MJA Consulting",
-      "description": "TODO",
+      "description": "Produce level information, drainage calculations, 3D models, cut & fill analysis and other required documents. Liaise with local authorities for Technical Approval.",
       "start": "2015-07",
       "end": "2017-11",
       "img": "bridge.svg",
@@ -290,7 +290,7 @@
     {
       "title": "Front of house",
       "subtitle": "Byron",
-      "description": "TODO",
+      "description": "Informal restaurant were I could strike up any kind of conversation with clients. Target: fast service with a double portion of warmth.",
       "start": "2015-05",
       "end": "2016-01",
       "img": "byron.svg",
@@ -303,7 +303,7 @@
     {
       "title": "Bartender",
       "subtitle": "Jamie's Italian Restaurant",
-      "description": "Lovelly restaurant in which I get involved in a great team-working environment with client-facing work. Main task: make beverages for restaurant and bar.",
+      "description": "High standard restaurant in which dealt with clients on a regular basis. Greet friendly and serve customers fast to create for them a unique experience.",
       "start": "2014-11",
       "end": "2015-05",
       "img": "past_jamies.svg",
@@ -519,6 +519,73 @@
     {
       "text": "I am currently trying to split my time in a fair way between my adorable girlfriend, teaching to myself serious web development, keeping fit (boot camp), and codirecting Valtor -a small company I've just co-founded with a friend of mine.",
       "graph": "graphURL!!"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Front End development",
+      "text": "My first page was a static site purely developed on HTML and CSS. Recently I started to learn about React and decided to fully rewrite my website to be able to update it from a JSON.",
+      "graph": "frontEnd"
+    },
+    {
+      "title": "Back End development",
+      "text": "I recently got involved in Node, Express and MongoDB to set basics of apps. I have also developed some small apps with SocketIO (see http://github...,)",
+      "graph": "backEnd"
+    },
+    {
+      "title": "Programming",
+      "text": "Git+GitHub+Yarn are my repository musts. For JavaScript development, I use Visual Studio Code with ESLint. I have created some unit tests with Mocha and Chia to test the logic behind this website. To produce markdown based reports and to develop with AutoLISP I tend to use atom as I created an AutoLISP language package for this editor.",
+      "graph": "coding"
+    },
+    {
+      "title": "Effective communication",
+      "text": "Ineffective communication is, unfortunately, more common than we\"d wish, and it wastes resources and wears relationships down. It\"s critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.",
+      "graph": "discommunication"
+    },
+    {
+      "title": "Analytic problem solving",
+      "text": "As an engineer, I prefer to approach the obstacles from an analytic perspective. I have successfully applied this in different fields problems such us chemistry research, construction consultancy projects or business decisions.",
+      "graph": "analytic"
+    },
+    {
+      "title": "UX/UI awareness",
+      "text": "I have a strong UX awareness. It\"s not only about performance, it\"s about helping people to perform whatever task we want to execute in a much comfortable way and efficient way.",
+      "graph": "uxui"
+    }
+  ],
+  "portfolio": [
+    {
+      "link": {
+        "url": "https://github.com/dtgoitia/dtgoitia.github.io",
+        "alt": "See GitHub repository"
+      },
+      "title": "Current site",
+      "text": "Personal static site: HTML + CSS + React (data fed from JSON). HTML & CSS exclusivelly was unmaintainable.",
+      "graph": "davidtorralba"
+    },
+    {
+      "link": {
+        "url": "https://github.com/dtgoitia/civil-autolisp",
+        "alt": "See GitHub repository"
+      },
+      "title": "civil-autolisp",
+      "text": "Library with core AutoLISP scripts used in my civil engineering day by day. Check \"Dump folder\" for latest features",
+      "graph": "civilAutolisp"
+    },
+    {
+      "link": {
+        "url": "https://github.com/dtgoitia?tab=repositories",
+        "alt": "Check out my repos"
+      },
+      "title": "More on the way!",
+      "text": "There are a couple more projects in the oven...",
+      "graph": "factory"
+    }
+  ],
+  "interests": [
+    {
+      "text": "When I’m not at a computer, I enjoy training and travelling. I also periodically throw myself into photography, finance, foreign languages and dancing.",
+      "graph": "interests"
     }
   ]
 }

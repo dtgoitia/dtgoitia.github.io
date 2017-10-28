@@ -19,7 +19,7 @@ import LogoAnalytic from './logos/analytic';
 import LogoIdea from './logos/idea';
 import LogoRelax from './logos/relax';
 import LogoFactory from './logos/factory';
-import LogoFactory2 from './logos/factory2';
+// import LogoFactory2 from './logos/factory2';
 import LogoDavidTorralba from './logos/davidtorralba';
 
 const PresentEntry = props => {
@@ -133,77 +133,6 @@ const PresentSubEntry = props => {
   );
 };
 
-// const lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-// const loremS = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
-// const loremXS = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-const skillArray = [
-  {
-    title: 'Front End development',
-    text: 'My first page was a static site purely developed on HTML and CSS. Recently I started to learn about React and decided to fully rewrite my website to be able to update it from a JSON.',
-    graph: 'frontEnd'
-  },
-  {
-    title: 'Back End development',
-    text: 'I recently got involved in Node, Express and MongoDB to set basics of apps. I have also developed some small apps with SocketIO (see http://github...,)',
-    graph: 'backEnd'
-  },
-  {
-    title: 'Programming',
-    text: 'Git+GitHub+Yarn are my repository musts. For JavaScript development, I use Visual Studio Code with ESLint. I have created some unit tests with Mocha and Chia to test the logic behind this website. To produce markdown based reports and to develop with AutoLISP I tend to use atom as I created an AutoLISP language package for this editor.',
-    graph: 'coding'
-  },
-  {
-    title: 'Effective communication',
-    text: 'Ineffective communication is, unfortunately, more common than we\'d wish, and it wastes resources and wears relationships down. It\'s critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.',
-    graph: 'discommunication'
-  },
-  {
-    title: 'Analytic problem solving',
-    text: 'As an engineer, I prefer to approach the obstacles from an analytic perspective. I have successfully applied this in different fields problems such us chemistry research, construction consultancy projects or business decisions.',
-    graph: 'analytic'
-  },
-  {
-    title: 'UX/UI awareness',
-    text: 'I have a strong UX awareness. It\'s not only about performance, it\'s about helping people to perform whatever task we want to execute in a much comfortable way and efficient way.',
-    graph: 'uxui'
-  }
-];
-const portfolioArray = [
-  {
-    link: {
-      url: 'https://github.com/dtgoitia/dtgoitia.github.io',
-      alt: 'See GitHub repository'
-    },
-    title: 'Current site',
-    text: 'Personal static site: HTML + CSS + React (data fed from JSON). HTML & CSS exclusivelly was unmaintainable.',
-    graph: 'davidtorralba'
-  },
-  {
-    link: {
-      url: 'https://github.com/dtgoitia/civil-autolisp',
-      alt: 'See GitHub repository'
-    },
-    title: 'civil-autolisp',
-    text: 'Library with core AutoLISP scripts used in my civil engineering day by day. Check "Dump folder" for latest features',
-    graph: 'civilAutolisp'
-  },
-  {
-    link: {
-      url: 'https://github.com/dtgoitia?tab=repositories',
-      alt: 'Check out my repos'
-    },
-    title: 'More on the way!',
-    text: 'There are a couple more projects in the oven...',
-    graph: 'factory'
-  }
-];
-const interestsArray = [
-  {
-    text: 'When I’m not at a computer, I enjoy training and travelling. I also periodically throw myself into photography, finance, foreign languages and dancing.',
-    graph: 'interests'
-  }
-];
-
 class Present extends React.Component {
   render () {
     return (
@@ -214,9 +143,9 @@ class Present extends React.Component {
           changePage={this.props.changePage}
         />
         <div className='present'>
-          <PresentEntry title='PORTFOLIO' entryArray={portfolioArray} color={'white'}/>
-          <PresentEntry title='SKILLS'    entryArray={skillArray}     color={'white'}/>
-          <PresentEntry title='INTERESTS' entryArray={interestsArray} color={'white'}/>
+          <PresentEntry title='PORTFOLIO' entryArray={this.props.originalDb.portfolio} color={'white'}/>
+          <PresentEntry title='SKILLS'    entryArray={this.props.originalDb.skills}     color={'white'}/>
+          <PresentEntry title='INTERESTS' entryArray={this.props.originalDb.interests} color={'white'}/>
         </div>
       </div>
     );
