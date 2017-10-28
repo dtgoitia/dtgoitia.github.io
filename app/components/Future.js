@@ -1,10 +1,31 @@
 import React from 'react';
 import NavBar from './NavBar';
 
+const SocialMediaEntry = props => {
+  return (
+    <div className='futureSocialEntry'>
+      <img src={'./../img/future_social.png'} />
+      <img className='symbol' src={'./../img/'+props.imgName+'.svg'} />
+      <a href={props.url} target='_blank'>
+        <img src='./../img/future_peri.png' />
+      </a>
+    </div>
+  );
+};
+
+const SocialMedia = props => {
+  return (
+    <div className='futureSocialContainer'>
+      {Object.values(props.socialMedia).map((entry, i) => {
+        return <SocialMediaEntry imgName={entry.img} url={entry.url} key={i} />;
+      })}
+    </div>
+  );
+};
+
 class Future extends React.Component {
   render () {
     const info = this.props.originalDb.personalInfo;
-    console.log(info);
     return (
       <div>
         <NavBar
@@ -53,16 +74,7 @@ class Future extends React.Component {
               <div className='f09'>SOCIAL<span className='f10'>MEDIA</span></div>
               <div className='f11'></div>
             </div>
-            <div className='f08'>
-              <div className='f15'>
-                <img src='./../img/future_fb.png' />
-                <div className='f16'><a href='https://www.facebook.com/dtgoitia' target='_blank'><img src='./../img/future_fb1.png' /></a></div>
-              </div>
-              <div className='f17'>
-                <img src='./../img/future_in.png' />
-                <div className='f18'><a href='https://www.linkedin.com/in/dtgoitia' target='_blank'><img src='./../img/future_fb1.png' /></a></div>
-              </div>
-            </div>
+            <SocialMedia socialMedia={this.props.originalDb.socialMedia} />
           </div>
         </div>
       </div>

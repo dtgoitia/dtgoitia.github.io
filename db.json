@@ -19,10 +19,10 @@
     "photo": "profile.png"
   },
   "socialMedia": {
-    "github":   "https://github.com/dtgoitia",
-    "linkedin": "https://www.linkedin.com/in/dtgoitia",
-    "twitter":  "https://twitter.com/dtgoitia",
-    "facebook": "https://www.facebook.com/dtgoitia"
+    "github":   { "img": "future_gh", "url": "https://github.com/dtgoitia" },
+    "linkedin": { "img": "future_in", "url": "https://www.linkedin.com/in/dtgoitia" },
+    "twitter":  { "img": "future_tw", "url": "https://twitter.com/dtgoitia" },
+    "facebook": { "img": "future_fb", "url": "https://www.facebook.com/dtgoitia" }
   },
   "academia": [
     {
@@ -505,7 +505,7 @@
       "graph": "graphURL!!"
     },
     {
-      "text": "After 6 years in the university, I moved to Oxford and took a break. I worked as bartender and waiter in a couple of well-named restaurants. It was great. I really enjoyed the hustle and bustle of the restaurants. During this time I learnt about photography and built my personal website: purely HTML and CSS, written in a miserable notepad, I had no clue what an IDE or linter was!",
+      "text": "After 6 years in the university, I moved to Oxford and took a break. I worked as bartender and waiter in a couple of well-named restaurants. It was great. I really enjoyed the restaurant hustle and bustle. During this time I learnt about photography and built my personal website: purely HTML and CSS, written in a miserable notepad... I had no clue what an IDE or linter was!",
       "graph": "graphURL!!"
     },
     {
