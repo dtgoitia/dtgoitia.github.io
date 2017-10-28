@@ -60,8 +60,21 @@
       "img": "webdev.svg",
       "color": "#aaaaaa",
       "bars": [ 200 ],
-      "x": 130,
+      "x": 80,
       "y": -8,
+     "relevant": true
+    },
+    {
+      "title": "Finance",
+      "subtitle": "Learn and study about investing and trading",
+      "description": "Attend meetups and courses about macroeconomics, swing trading and intraday trading. Code and backtest algorithms with MetaTrader.",
+      "start": "2010-07",
+      "end": "2015-01",
+      "img": "trading.svg",
+      "color": "#2e6193",
+      "bars": [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 29, 27, 25, 23, 20, 17, 15],
+      "x": 130,
+      "y": 295,
      "relevant": true
     },
     {
@@ -106,14 +119,14 @@
     {
       "title": "Web development. HTML and CSS",
       "subtitle": "Self tought. Just for fun",
-      "description": "Learn HTML & CSS basics along an intense month in which I dedicated my whole spare time to learn and code a static site (check same color on the right).",
+      "description": "Learn HTML & CSS basics along an intense month in which I dedicated my whole non-working time to learn and code a static site (check same color on the right).",
       "start": "2014-12",
       "end": "2014-12",
       "img": "webdev.svg",
       "color": "#aaaaaa",
       "bars": [300],
-      "x": 170,
-      "y": -30,
+      "x": 140,
+      "y": -25,
      "relevant": true
     },
     {
@@ -249,6 +262,19 @@
      "relevant": true
     },
     {
+      "title": "Bootcamp training",
+      "subtitle": "BMF (British Military Fitness)",
+      "description": "\"Legs like jelly. Lungs on fire. Heart of a lion!\" Amazing outdoor training sessions to keep a high stamina. Great atmosphere, better people!",
+      "start": "2015-12",
+      "end": "2017-10",
+      "img": "bmf.svg",
+      "color": "#565656",
+      "bars": [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ],
+      "x": 50,
+      "y": 77,
+     "relevant": true
+    },
+    {
       "title": "Rewrite davidtorralba.com fully in React",
       "subtitle": "Personal project for learning purposes",
       "description": "This new version is fully written in React (no Redux). Now, the content is stored in a JSON file from which the site pulls data to create all diagrams from scratch",
@@ -366,6 +392,32 @@
      "relevant": false
     },
     {
+      "title": "Volunteer basketball coach",
+      "subtitle": "School Teams in Biscay (Spain)",
+      "description": "Basketball coach for many school teams, as wel as a disabled team. I was responsible for the coaching and training of students.",
+      "start": "2005-09",
+      "end": "2010-05",
+      "img": "past_coach.svg",
+      "color": "#5a5903",
+      "bars": [80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80],
+      "x": 410,
+      "y": 5,
+     "relevant": false
+    },
+    {
+      "title": "Basketball",
+      "subtitle": "12 seasons as basketball player that defined me",
+      "description": "During these years, I learnt and felt the importance of team work, hard work, honesty, commitment or loyalty among others.",
+      "start": "1998-09",
+      "end": "2010-05",
+      "img": "past_basket.svg",
+      "color": "#515a47",
+      "bars": [60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115],
+      "x": 200,
+      "y": 570,
+     "relevant": false
+    },
+    {
       "title": "Beach lifeguard",
       "subtitle": "Biscay Red Cross, Plentzia (Spain)",
       "description": "Summer job in which I learnt a lot about team-work, fast decissions under pressure, camaraderie and communal living.",
@@ -405,19 +457,6 @@
      "relevant": false
     },
     {
-      "title": "Volunteer basketball coach",
-      "subtitle": "School Teams in Biscay (Spain)",
-      "description": "Basketball coach for many school teams, as wel as a disabled team. I was responsible for the coaching and training of students.",
-      "start": "2005-09",
-      "end": "2010-05",
-      "img": "past_coach.svg",
-      "color": "#5a5903",
-      "bars": [80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80, 0, 80, 80, 80, 80, 80],
-      "x": 410,
-      "y": 5,
-     "relevant": false
-    },
-    {
       "title": "Volunteer basketball referee",
       "subtitle": "School Teams in Biscay (Spain)",
       "description": "Basketball referee for local school teams. I was responsible for correct evolution of the competitions and its fairness.",
@@ -428,19 +467,6 @@
       "bars": [25, 25, 25, 25, 25, 0, 25, 25, 25, 25, 25, 0, 25, 25, 25, 25, 25],
       "x": 330,
       "y": 195,
-     "relevant": false
-    },
-    {
-      "title": "Basketball",
-      "subtitle": "12 seasons as basketball player that defined me",
-      "description": "During these years, I learnt and felt the importance of team work, hard work, honesty, commitment or loyalty among others.",
-      "start": "1998-09",
-      "end": "2010-05",
-      "img": "past_basket.svg",
-      "color": "#515a47",
-      "bars": [60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115, 0, 60, 100, 105, 110, 115],
-      "x": 20,
-      "y": 120,
      "relevant": false
     },
     {
