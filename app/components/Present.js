@@ -108,6 +108,11 @@ const PresentSubEntry = props => {
       <LogoFactory color={props.color} />
     </div>;
     break;
+  case 'civilAutolisp':
+    graph = <div className='presentSubEntryGraph big'>
+      <LogoAutoCAD color={props.color} />
+    </div>;
+    break;
   default:
     graph = props.subEntry.graph;
     break;
@@ -172,6 +177,15 @@ const portfolioArray = [
     title: 'Current site',
     text: 'Personal static site: HTML + CSS + React (data fed from JSON). HTML & CSS exclusivelly was unmaintainable.',
     graph: 'davidtorralba'
+  },
+  {
+    link: {
+      url: 'https://github.com/dtgoitia/civil-autolisp',
+      alt: 'See GitHub repository'
+    },
+    title: 'civil-autolisp',
+    text: 'Library with core AutoLISP scripts used in my civil engineering day by day. Check "Dump folder" for latest features',
+    graph: 'civilAutolisp'
   },
   {
     link: {
