@@ -433,7 +433,8 @@ body {
 	position: relative;
 	width: 980px;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 170px;
+	cursor: default;
 }
 .timeline {
 	position: absolute;
@@ -441,6 +442,32 @@ body {
 	left: 0px;
 	right: 0px;
 }
+.timelineHeader {
+	font-family: Lato, 'Open Sans', sans;
+	font-size: 2.33em;
+	font-weight: 700;
+	word-spacing: 0.35em;
+	position: absolute;
+	top: -135px;
+	width: 100%;
+}
+.timelineHeaderFlex {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+.timelineH2 {
+	padding-top: 10px;
+	border-top: 1px solid rgba(255, 255, 255, 1);
+}
+.timelineH2 {
+	font-weight: 400;
+	font-size: 0.8em;
+	width: 30%;
+	margin: 0 20px;
+}
+#timelineHeaderLeft { text-align: right; }
+#timelineHeaderRight { text-align: left; }
 .bars {
 	position: absolute;
 	top: 0px;
@@ -505,6 +532,7 @@ body {
 /* --- VERTICAL BAR -------------------------------------- */
 .verticalBar {
 	position: absolute;
+	top: -85px;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 0;

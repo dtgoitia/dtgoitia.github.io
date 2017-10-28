@@ -308,6 +308,18 @@ class VerticalBar extends React.Component {
   }
 }
 
+const TimelineHeader = () => {
+  return (
+    <div className='timelineHeader'>
+      <div className='timelineH1'>LIFE TIMELINE</div>
+      <div className='timelineHeaderFlex'>
+        <div id='timelineHeaderLeft'  className='timelineH2'>ACADEMIA</div>
+        <div id='timelineHeaderRight' className='timelineH2'>EXPERIENCE</div>
+      </div>
+    </div>
+  );
+};
+
 class Timeline extends React.Component {
   constructor(props) {
     super(props);
@@ -327,9 +339,10 @@ class Timeline extends React.Component {
     const barFormat = this.props.barFormat;
     const dbRange   = this.props.dbRange;
     const yearArray = pastEntry.getYearsArray(dbRange.latest.getFullYear(), pastEntry.yearRange(dbRange.earliest, dbRange.latest));
-    const barTotalHeight = (6 * (barFormat.barThickness + barFormat.barSpacing) + barFormat.yearSpacing) * (yearArray.length);
+    const barTotalHeight = (6 * (barFormat.barThickness + barFormat.barSpacing) + barFormat.yearSpacing) * (yearArray.length + 1);
     return (
       <div className='timelineContainer' style={{height: barTotalHeight}}>
+        <TimelineHeader />
         <Years
           yearArray={yearArray}
           yearHeight={6 * (barFormat.barThickness + barFormat.barSpacing) - barFormat.yearSpacing}
