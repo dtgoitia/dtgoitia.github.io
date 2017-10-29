@@ -12,7 +12,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       // page: 'intro',
-      page: 'past',
+      page: 'introNoLang',
+      // page: 'past',
       // page: 'present',
       // page: 'future',
       language: 'English'
@@ -52,6 +53,16 @@ class App extends React.Component {
               originalDb={originalDb}
               st={this.state}
               changeLanguage={this.changeLanguage}
+            />
+          </div>
+        );
+      case 'introNoLang':
+        return (
+          <div>
+            <Intro
+              originalDb={originalDb}
+              st={this.state}
+              changePage={this.changePage}
             />
           </div>
         );

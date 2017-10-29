@@ -28,11 +28,11 @@
     {
       "title": "AutoLISP",
       "subtitle": "Self tought",
-      "description": "I taught myself how to script in AutoCAD to speed up and standardize my CAD work.",
+      "description": "I use AutoLISP to script in AutoCAD in order to speed up my work, get a standard output and reduce the number of human errors as much as possible.",
       "start": "2015-07",
       "end": "",
       "img": "autolisp.svg",
-      "color": "blue",
+      "color": "#5555dd",
       "bars": [ 40, 40, 48, 65, 80, 85, 90, 95, 98, 100, 100, 100, 100, 100 ],
       "x": 390,
       "y": 70,
@@ -58,7 +58,7 @@
       "start": "2017-09",
       "end": "",
       "img": "webdev.svg",
-      "color": "#aaaaaa",
+      "color": "#888888",
       "bars": [ 200 ],
       "x": 80,
       "y": -8,
@@ -123,7 +123,7 @@
       "start": "2014-12",
       "end": "2014-12",
       "img": "webdev.svg",
-      "color": "#aaaaaa",
+      "color": "#888888",
       "bars": [300],
       "x": 140,
       "y": -25,
@@ -272,7 +272,7 @@
       "bars": [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ],
       "x": 50,
       "y": 77,
-     "relevant": true
+     "relevant": false
     },
     {
       "title": "Rewrite davidtorralba.com fully in React",
@@ -281,7 +281,7 @@
       "start": "2017-09",
       "end": "2017-10",
       "img": "webdev.svg",
-      "color": "#aaaaaa",
+      "color": "#888888",
       "bars": [260],
       "x": 30,
       "y": -38,
@@ -320,7 +320,7 @@
       "start": "2014-12",
       "end": "2014-11",
       "img": "webdev.svg",
-      "color": "#aaaaaa",
+      "color": "#888888",
       "bars": [130],
       "x": 80,
       "y": -40,
@@ -539,17 +539,17 @@
     },
     {
       "title": "Effective communication",
-      "text": "Ineffective communication is, unfortunately, more common than we\"d wish, and it wastes resources and wears relationships down. It\"s critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.",
+      "text": "Ineffective communication is, unfortunately, more common than we'd wish, and it wastes resources and wears relationships down. It's critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.",
       "graph": "discommunication"
     },
     {
-      "title": "Analytic problem solving",
-      "text": "As an engineer, I prefer to approach the obstacles from an analytic perspective. I have successfully applied this in different fields problems such us chemistry research, construction consultancy projects or business decisions.",
+      "title": "Problem solving",
+      "text": "My core strength is the creative thinking. Besides, I face challenges from an analytic perspective and I effectivelly solve problems. I have successfully applied this in different fields such us chemistry research, construction consultancy projects or business decisions.",
       "graph": "analytic"
     },
     {
       "title": "UX/UI awareness",
-      "text": "I have a strong UX awareness. It\"s not only about performance, it\"s about helping people to perform whatever task we want to execute in a much comfortable way and efficient way.",
+      "text": "I have a strong UX awareness. It's not only about performance, it's about helping people to perform whatever task we want to execute in a much comfortable way and efficient way.",
       "graph": "uxui"
     }
   ],
