@@ -52,8 +52,8 @@ const Social = props => {
   return (
     <div className='social'>
       {
-        Object.values(props.db).map((entryData, i) => {
-          return <SocialEntry key={i} socialMedia={dbKeys[i]} url={entryData.url} />;
+        Object.values(props.db).map((url, i) => {
+          return <SocialEntry key={i} socialMedia={dbKeys[i]} url={url} />;
         })
       }
     </div>
