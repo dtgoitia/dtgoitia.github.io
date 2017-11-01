@@ -21,6 +21,7 @@ import LogoRelax from './logos/relax';
 import LogoFactory from './logos/factory';
 // import LogoFactory2 from './logos/factory2';
 import LogoDavidTorralba from './logos/davidtorralba';
+import LogoSearchBar from './logos/searchbar';
 
 const PresentEntry = props => {
   return(
@@ -111,6 +112,11 @@ const PresentSubEntry = props => {
   case 'civilAutolisp':
     graph = <div className='presentSubEntryGraph big'>
       <LogoAutoCAD color={props.color} />
+    </div>;
+    break;
+  case 'searchbar':
+    graph = <div className='presentSubEntryGraph big'>
+      <LogoSearchBar color={props.color} />
     </div>;
     break;
   default:

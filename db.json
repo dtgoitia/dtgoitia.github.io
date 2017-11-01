@@ -565,6 +565,15 @@
     },
     {
       "link": {
+        "url": "https://github.com/dtgoitia/ndb-ingredients",
+        "alt": "See GitHub repository"
+      },
+      "title": "NDB search bar",
+      "text": "React + Electron search bar to find food ingredients within National Nutrient Database (USDA).",
+      "graph": "searchbar"
+    },
+    {
+      "link": {
         "url": "https://github.com/dtgoitia/civil-autolisp",
         "alt": "See GitHub repository"
       },
