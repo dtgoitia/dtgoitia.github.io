@@ -489,19 +489,19 @@
       "graph": "graphURL!!"
     },
     {
-      "text": "With 18, I went to the uni to become a Civil Engineer. During my first year, I also got my certifications and license to work as a lifeguard and -training quite hard- I got a position as a lifeguard in Plentzi Beach when I was 19. This made me juggle between exams and full time working on rescue industry for 3 summers. No student holiday/break. Tough, but fun. These savings, together with some cash earned giving drawing private lessons to university students, allowed me to leave my parents home with 21",
+      "text": "I went to the uni to become a Civil Engineer when I was 18 years old. During my first year, I also got my certifications and license to work as a lifeguard and -training quite hard- I got a position as a lifeguard in Plentzi Beach when I was 19. This made me juggle between exams and full time working on rescue industry for 3 summers. No student holiday/break. Tough, but fun. These savings, together with some cash earned giving drawing private lessons to university students, allowed me to leave my parents home at the age of 21.",
       "graph": "graphURL!!"
     },
     {
-      "text": "With 20 years I stumbled into stock markets. I thought myself how to code automatic trading systems and invest lots of time and effort learning more about finances. The same year I took my boating license in order to progress in my summer job.",
+      "text": "When I was 20, I stumbled into stock markets. I thought myself how to code automatic trading systems and invest lots of time and effort learning more about finances. The same year I took my boating license in order to progress in my summer job.",
       "graph": "graphURL!!"
     },
     {
-      "text": "I graduated with 22, and I jumped into a research-focused Material Science masters hungry of deeper science knowledge. The more I dove into an academic environment, the less I was enjoying to learn anything, so I decided to speed up my year-and-a-half master's and conclude it in a single year. Lectures in the evenings and working in laboratories as a volunteer in the mornings. Tough, but -once more- fun. I chose catalyst labs looking to broaden my engineering knowledge, as they were not related at all with my degree. Thanks to this challenging volunteering, I was able to defend my master's final dissertation in less than a year.",
+      "text": "I graduated in Civil Engineering with Honors in 2012 and decided to carry on with a research-focused Material Science masters as I was hungry for deeper science knowledge. The more I dove into an academic environment, the less I was enjoying to learn anything, so I decided to speed up my year-and-a-half master's and conclude it in a single year. Lectures in the evenings and working in laboratories as a volunteer in the mornings. Tough, but -once more- fun. I chose catalyst labs looking to broaden my engineering knowledge, as they were not related at all with my degree. Thanks to this challenging volunteering, I was able to defend my master's final dissertation in less than a year.",
       "graph": "graphURL!!"
     },
     {
-      "text": "Postgraduate, I was caught in the middle of an education system transition at a national level. So, I went back to my civil engineering roots and returned to the uni for one year more to get my degree according to the new standards.",
+      "text": "Once I was a postgraduate, I was caught in the middle of an education system transition at a national level. So, I went back to my civil engineering roots and returned to the uni for one year more to get my degree according to the new standards.",
       "graph": "graphURL!!"
     },
     {
@@ -529,12 +529,12 @@
     },
     {
       "title": "Back End development",
-      "text": "I recently got involved in Node, Express and MongoDB to set basics of apps. I have also developed some small apps with SocketIO (see http://github...,)",
-      "graph": "backEnd"
+      "text": "I have some experience in Node, Express and SocketIO. Check my GitHub raspberry-chat' repository. I am currently working on extending my backend experience.",
+      "graph": "backEndNoMongo"
     },
     {
       "title": "Programming",
-      "text": "Git+GitHub+Yarn are my repository musts. For JavaScript development, I use Visual Studio Code with ESLint. I have created some unit tests with Mocha and Chia to test the logic behind this website. To produce markdown based reports and to develop with AutoLISP I tend to use atom as I created an AutoLISP language package for this editor.",
+      "text": "Git+Yarn are my repository musts. To write JavaScript, I use Visual Studio Code with ESLint. I have created some unit tests with Mocha and Chia to test the logic behind this website. To produce markdown reports and to develop with AutoLISP I tend to use Atom as I created an AutoLISP language package for this editor.",
       "graph": "coding"
     },
     {
@@ -549,7 +549,7 @@
     },
     {
       "title": "UX/UI awareness",
-      "text": "I have a strong UX awareness. It's not only about performance, it's about helping people to perform whatever task we want to execute in a much comfortable way and efficient way.",
+      "text": "I have a strong UX awareness and, on top of front and backend technical abilities, I do have designer skills.",
       "graph": "uxui"
     }
   ],
