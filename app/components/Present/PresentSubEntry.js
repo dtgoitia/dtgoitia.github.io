@@ -1,42 +1,27 @@
 import React from 'react';
-import NavBar from './NavBar';
-import LogoHtml5 from './logos/html5';
-import LogoCss3 from './logos/css3';
-import LogoJs from './logos/js';
-import LogoNode from './logos/node';
-import LogoAutoCAD from './logos/acad';
-import LogoReact from './logos/react';
-import LogoMongo from './logos/mongo';
-import LogoGit from './logos/git';
-import LogoVsc from './logos/vsc';
-import LogoAtom from './logos/atom';
-import LogoSocketio from './logos/socketio';
-import LogoExpress from './logos/express';
-import LogoUxUi from './logos/uxui';
-import LogoUxUi2 from './logos/uxui2';
-import LogoDiscommunication from './logos/discommunication';
-import LogoAnalytic from './logos/analytic';
-import LogoIdea from './logos/idea';
-import LogoRelax from './logos/relax';
-import LogoFactory from './logos/factory';
-// import LogoFactory2 from './logos/factory2';
-import LogoDavidTorralba from './logos/davidtorralba';
-import LogoSearchBar from './logos/searchbar';
 
-const PresentEntry = props => {
-  return(
-    <div className='presentEntryContainer'>
-      <div className='presentTitle'>{props.title}</div>
-      <div className='presentSubEntryContainer'>
-        {
-          props.entryArray.map((subEntry, i) => {
-            return <PresentSubEntry subEntry={subEntry} key={i} color={props.color}/>;
-          })
-        }
-      </div>
-    </div>
-  );
-};
+import LogoHtml5 from './../logos/html5';
+import LogoCss3 from './../logos/css3';
+import LogoJs from './../logos/js';
+import LogoNode from './../logos/node';
+import LogoAutoCAD from './../logos/acad';
+import LogoReact from './../logos/react';
+import LogoMongo from './../logos/mongo';
+import LogoGit from './../logos/git';
+import LogoVsc from './../logos/vsc';
+import LogoAtom from './../logos/atom';
+import LogoSocketio from './../logos/socketio';
+import LogoExpress from './../logos/express';
+import LogoUxUi from './../logos/uxui';
+import LogoUxUi2 from './../logos/uxui2';
+import LogoDiscommunication from './../logos/discommunication';
+import LogoAnalytic from './../logos/analytic';
+import LogoIdea from './../logos/idea';
+import LogoRelax from './../logos/relax';
+import LogoFactory from './../logos/factory';
+// import LogoFactory2 from './../logos/factory2';
+import LogoDavidTorralba from './../logos/davidtorralba';
+import LogoSearchBar from './../logos/searchbar';
 
 const PresentSubEntry = props => {
   let graph;
@@ -150,23 +135,4 @@ const PresentSubEntry = props => {
   );
 };
 
-class Present extends React.Component {
-  render () {
-    return (
-      <div>
-        <NavBar
-          left={{label:'MY PAST',target:'past'}}
-          right={{label:'YOUR FUTURE',target:'future'}}
-          changePage={this.props.changePage}
-        />
-        <div className='present'>
-          <PresentEntry title='PORTFOLIO' entryArray={this.props.originalDb.portfolio} color={'white'}/>
-          <PresentEntry title='SKILLS'    entryArray={this.props.originalDb.skills}     color={'white'}/>
-          <PresentEntry title='INTERESTS' entryArray={this.props.originalDb.interests} color={'white'}/>
-        </div>
-      </div>
-    );
-  }
-}
-
-module.exports = Present;
+module.exports = PresentSubEntry;

@@ -1,27 +1,6 @@
 import React from 'react';
-import NavBar from './NavBar';
-
-const SocialMediaEntry = props => {
-  return (
-    <div className='futureSocialEntry'>
-      <img src={'./../img/future_social.png'} />
-      <img className='symbol' src={'./../img/'+props.imgName+'.svg'} />
-      <a href={props.url} target='_blank'>
-        <img src='./../img/future_peri.png' />
-      </a>
-    </div>
-  );
-};
-
-const SocialMedia = props => {
-  return (
-    <div className='futureSocialContainer'>
-      {Object.values(props.socialMedia).map((entry, i) => {
-        return <SocialMediaEntry imgName={entry.img} url={entry.url} key={i} />;
-      })}
-    </div>
-  );
-};
+import NavBar from './../NavBar';
+import SocialMedia from './SocialMedia';
 
 class Future extends React.Component {
   render () {
@@ -35,7 +14,7 @@ class Future extends React.Component {
         />
         <div className='future_main'>
           <div className='future_submain'>
-            <img src='./../img/future_photo.svg' />
+            <img src={require('./../../img/future_photo.svg')} />
           </div>
           <div className='future_submain'>
             <div className='f01'>
@@ -43,31 +22,31 @@ class Future extends React.Component {
               <div className='f11'></div>
             </div>
             <div className='f02'>
-              <img src='./../img/future_name.png' />
+              <img src={require('./../../img/future_name.png')} />
               <div className='f12'>name<span className='f13'>surnames</span></div>
               <div className='f14'>{info.name + ' ' + info.surnames}</div>
             </div>
             <div className='f03'>
-              <img src='./../img/future_phone.png' />
+              <img src={require('./../../img/future_phone.png')} />
               <div className='f12'>phone numer</div>
               <div className='f14'>{info.phone}</div>
             </div>
             <div className='f04'>
-              <img src='./../img/future_mail.png' />
+              <img src={require('./../../img/future_mail.png')} />
               <div className='f12'>e-mail adress</div>
               <div className='f14'><a href={'mailto:' + info.email}>{info.email}</a></div>
             </div>
             <div className='f05'>
-              <img src='./../img/future_map.png'/>
+              <img src={require('./../../img/future_map.png')}/>
               <div className='f12'>current location</div>
               <div className='f14'>
                 <a href='https://www.google.co.uk/maps/place/Oxford/'>{info.location[1][1]}</a>
               </div>
             </div>
             <div className='f06'>
-              <img src='./../img/future_QR_mini.png' />
+              <img src={require('./../../img/future_QR_mini.png')} />
               <div className='QR'>
-                <img src='./../img/future_QR.svg' />
+                <img src={require('./../../img/future_QR.svg')} />
               </div>
             </div>
             <div className='f07'>

@@ -1,9 +1,9 @@
 import React from 'react';
-import Intro from './Intro';
+import Intro from './Intro/Intro';
 import Language from './Language';
-import Past from './Past';
-import Present from './Present';
-import Future from './Future';
+import Past from './Past/Past';
+import Present from './Present/Present';
+import Future from './Future/Future';
 import Phone from './Phone';
 const originalDb = require('./../../db.json');
 

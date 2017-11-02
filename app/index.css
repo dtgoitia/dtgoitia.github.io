@@ -10,7 +10,7 @@
 html {
 	margin: 0px;
   padding: 0px;
-	background: url("../img/index_background.png");
+	background: url("./img/index_background.png");
 	font-size: 16px;
 }
 body {

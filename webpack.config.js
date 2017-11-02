@@ -6,15 +6,22 @@ module.exports = {
     './app/index.js'
   ],
   output: {
+    // publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js'
   },
   module: {
     rules: [
-      { test: /\.(js)$/,      use: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/,       use: ['style-loader', 'css-loader'] },
-      { test: /\.(json)$/,    use: 'json-loader' },
-      { test: /\.(png|jpg)$/, use: 'url-loader' }
+      { test: /\.(js)$/i,   loader: 'babel-loader',                 include: path.resolve(__dirname,'app'), exclude: /node_modules/ },
+      { test: /\.css$/i,    loader: ['style-loader', 'css-loader'], include: path.resolve(__dirname,'app'), exclude: /node_modules/  },
+      { test: /\.(json)$/i, loader: 'json-loader',                  include: path.resolve(__dirname,'app'), exclude: /node_modules/ },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [{
+          loader: 'url-loader',
+          options: { limit: 30000, name: '[name].[ext]' }
+        }]
+      }
     ]
   },
   devServer: {
