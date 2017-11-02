@@ -19,7 +19,6 @@ class App extends React.Component {
   }
 
   changePage(pag) {
-    console.log('changePage trigered. Arg:', pag);
     this.setState(() => ({page: pag}));
   }
   
