@@ -11,10 +11,7 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      // page: 'intro',
-      // page: 'past',
-      // page: 'present',
-      page: 'future',
+      page: 'introNoLang',
       language: 'English'
     };
     this.changePage = this.changePage.bind(this);
@@ -52,6 +49,16 @@ class App extends React.Component {
               originalDb={originalDb}
               st={this.state}
               changeLanguage={this.changeLanguage}
+            />
+          </div>
+        );
+      case 'introNoLang':
+        return (
+          <div>
+            <Intro
+              originalDb={originalDb}
+              st={this.state}
+              changePage={this.changePage}
             />
           </div>
         );

@@ -33,7 +33,7 @@
       "end": "",
       "img": "autolisp.svg",
       "color": "#5555dd",
-      "bars": [ 40, 40, 48, 65, 80, 85, 90, 95, 98, 100, 100, 100, 100, 100 ],
+      "bars": [ 40, 40, 48, 65, 80, 85, 90, 95, 98, 100, 100, 100, 100, 100, 100 ],
       "x": 390,
       "y": 70,
      "relevant": true
@@ -46,7 +46,7 @@
       "end": "",
       "img": "programming.svg",
       "color": "#555",
-      "bars": [ 30, 30, 40, 45, 50, 50, 50, 70, 80, 90 ],
+      "bars": [ 30, 30, 40, 45, 50, 50, 50, 70, 80, 90, 100 ],
       "x": 320,
       "y": -40,
      "relevant": true
@@ -59,7 +59,7 @@
       "end": "",
       "img": "webdev.svg",
       "color": "#888888",
-      "bars": [ 200 ],
+      "bars": [ 200, 200 ],
       "x": 80,
       "y": -8,
      "relevant": true
@@ -256,7 +256,7 @@
       "end": "2017-11",
       "img": "bridge.svg",
       "color": "#004793",
-      "bars": [170, 170, 170, 170, 175, 175, 180, 195, 200, 205, 210, 210, 210, 210, 0],
+      "bars": [170, 170, 170, 170, 175, 175, 180, 195, 200, 205, 210, 210, 210, 210, 210],
       "x": 130,
       "y": 27,
      "relevant": true
@@ -266,10 +266,10 @@
       "subtitle": "BMF (British Military Fitness)",
       "description": "\"Legs like jelly. Lungs on fire. Heart of a lion!\" Amazing outdoor training sessions to keep a high stamina. Great atmosphere, better people!",
       "start": "2015-12",
-      "end": "2017-10",
+      "end": "",
       "img": "bmf.svg",
       "color": "#565656",
-      "bars": [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ],
+      "bars": [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ],
       "x": 50,
       "y": 77,
      "relevant": false
@@ -489,7 +489,7 @@
       "graph": "graphURL!!"
     },
     {
-      "text": "I went to the uni to become a Civil Engineer when I was 18 years old. During my first year, I also got my certifications and license to work as a lifeguard and -training quite hard- I got a position as a lifeguard in Plentzi Beach when I was 19. This made me juggle between exams and full time working on rescue industry for 3 summers. No student holiday/break. Tough, but fun. These savings, together with some cash earned giving drawing private lessons to university students, allowed me to leave my parents home at the age of 21.",
+      "text": "I went to the uni to become a Civil Engineer when I was 18 years old. During my first year, I also got my certifications and license to work as a lifeguard. After a quite hard training, I got a position as a lifeguard in Plentzi Beach when I was 19. This made me juggle between exams and full time working on rescue industry for 3 summers. No student holiday/break. Tough, but fun. These savings, together with some cash earned giving drawing private lessons to university students, allowed me to leave my parents home at the age of 21.",
       "graph": "graphURL!!"
     },
     {
@@ -536,11 +536,10 @@
       "title": "Programming",
       "text": "Git+Yarn are my repository musts. To write JavaScript, I use Visual Studio Code with ESLint. I have created some unit tests with Mocha and Chia to test the logic behind this website. To produce markdown reports and to develop with AutoLISP I tend to use Atom as I created an AutoLISP language package for this editor.",
       "graph": "coding"
-    },
-    {
-      "title": "Effective communication",
-      "text": "Ineffective communication is, unfortunately, more common than we'd wish, and it wastes resources and wears relationships down. It's critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.",
-      "graph": "discommunication"
+    },{
+      "title": "UX/UI awareness",
+      "text": "I have a strong UX awareness and, on top of front and backend technical abilities, I do have designer skills.",
+      "graph": "uxui"
     },
     {
       "title": "Problem solving",
@@ -548,9 +547,9 @@
       "graph": "analytic"
     },
     {
-      "title": "UX/UI awareness",
-      "text": "I have a strong UX awareness and, on top of front and backend technical abilities, I do have designer skills.",
-      "graph": "uxui"
+      "title": "Effective communication",
+      "text": "Ineffective communication is, unfortunately, more common than we'd wish, and it wastes resources and wears relationships down. It's critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.",
+      "graph": "discommunication"
     }
   ],
   "portfolio": [
