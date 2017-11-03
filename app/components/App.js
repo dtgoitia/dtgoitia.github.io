@@ -4,7 +4,7 @@ import Language from './Language';
 import Past from './Past/Past';
 import Present from './Present/Present';
 import Future from './Future/Future';
-import Phone from './Phone';
+import Phone from './Phone/Phone';
 const originalDb = require('./../../db.json');
 
 class App extends React.Component {
