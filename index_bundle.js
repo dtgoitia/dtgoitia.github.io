@@ -26757,8 +26757,8 @@ var Social = function Social(props) {
   return _react2.default.createElement(
     'div',
     { className: 'social' },
-    Object.values(props.db).map(function (url, i) {
-      return _react2.default.createElement(_SocialEntry2.default, { key: i, socialMedia: dbKeys[i], url: url });
+    Object.values(props.db).map(function (entry, i) {
+      return _react2.default.createElement(_SocialEntry2.default, { key: i, socialMedia: dbKeys[i], url: entry.url });
     })
   );
 };
