@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --progress --colors",
     "build": "webpack --optimize-minimize",
+    "buildX": "webpack",
+    "deploy": "gh-pages -d dist --branch master",
     "deleteDist": "rm -rf dist",
     "x": "yarn deleteDist && webpack",
     "test": "mocha --reporter spec"
@@ -46,6 +48,7 @@
     "eslint": "^4.10.0",
     "eslint-plugin-react": "^7.4.0",
     "file-loader": "^1.1.5",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
     "json-loader": "^0.5.7",
     "mocha": "^3.5.3",
