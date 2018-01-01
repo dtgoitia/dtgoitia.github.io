@@ -5,13 +5,15 @@ import Past from './Past/Past';
 import Present from './Present/Present';
 import Future from './Future/Future';
 import Phone from './Phone/Phone';
+import UnderConstruction from './UnderConstruction/UnderConstruction';
 const originalDb = require('./../../db.json');
 
 class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      page: 'introNoLang',
+      // page: 'introNoLang',
+      page: 'underConstruction',
       language: 'English'
     };
     this.changePage = this.changePage.bind(this);
@@ -28,7 +30,9 @@ class App extends React.Component {
 
   render() {
     const currentPage = this.state.page;
-    if (window.screen.width < 430) {
+    if (this.state.page === 'underConstruction') {
+      return <UnderConstruction />;
+    } else if (window.screen.width < 430) {
       return(
         <Phone
           originalDb={originalDb}

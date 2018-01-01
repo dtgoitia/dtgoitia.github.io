@@ -1157,3 +1157,17 @@ body {
 .big svg{
 	height: 120px;
 }
+
+
+/* --- UNDER CONSTRUCTION ------------------------------- */
+
+#monkey {
+	margin: 0 auto;
+	max-width: 50%;
+}
+#monkey p {
+	font-size: 200%;
+}
+#monkey svg {
+	margin-top: 10%;
+}
