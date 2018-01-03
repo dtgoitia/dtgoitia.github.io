@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MenuText from './MenuText';
 
 class MenuPathCenter extends React.Component {
   render() {
     return(
       <path
-        onClick={this.props.changePage.bind(null, this.props.targetPage)}
         d={ 
           'm 275 200' +
           'v -170' +
@@ -23,15 +23,17 @@ class MenuPathCenter extends React.Component {
 class MenuCenter extends React.Component {
   render() {
     return(
-      <g className='SvgMenu'>
-        <MenuPathCenter changePage={this.props.changePage} targetPage='present' />
-        <MenuText
-          words={this.props.words}
-          changePage={this.props.changePage}
-          targetPage='present'
-          translationCoordinates={this.props.translationCoordinates}
-        />
-      </g>
+      <Link to={'present'}>
+        <g className='SvgMenu'>
+          <MenuPathCenter />
+          <MenuText
+            words={this.props.words}
+            changePage={this.props.changePage}
+            targetPage='present'
+            translationCoordinates={this.props.translationCoordinates}
+          />
+        </g>
+      </Link>
     );
   }
 }

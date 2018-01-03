@@ -30,10 +30,10 @@
       "subtitle": "Self tought",
       "description": "I use AutoLISP to script in AutoCAD in order to speed up my work, get a standard output and reduce the number of human errors as much as possible.",
       "start": "2015-07",
-      "end": "",
+      "end": "2018-01",
       "img": "autolisp.svg",
       "color": "#5555dd",
-      "bars": [ 40, 40, 48, 65, 80, 85, 90, 95, 98, 100, 100, 100, 100, 100, 100 ],
+      "bars": [ 40, 40, 48, 65, 80, 85, 90, 95, 98, 100, 100, 100, 100, 100, 100, 100 ],
       "x": 390,
       "y": 70,
      "relevant": true
@@ -46,7 +46,7 @@
       "end": "",
       "img": "programming.svg",
       "color": "#555",
-      "bars": [ 30, 30, 40, 45, 50, 50, 50, 70, 80, 90, 100 ],
+      "bars": [ 30, 30, 40, 45, 50, 50, 50, 70, 80, 90, 100, 100 ],
       "x": 320,
       "y": -40,
      "relevant": true
@@ -59,7 +59,7 @@
       "end": "",
       "img": "webdev.svg",
       "color": "#888888",
-      "bars": [ 200, 200 ],
+      "bars": [ 200, 200, 200 ],
       "x": 80,
       "y": -8,
      "relevant": true
@@ -269,7 +269,7 @@
       "end": "",
       "img": "bmf.svg",
       "color": "#565656",
-      "bars": [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ],
+      "bars": [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 ],
       "x": 50,
       "y": 77,
      "relevant": false

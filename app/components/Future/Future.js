@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './../NavBar';
+import NavBar from './../NavBar/NavBar';
 import SocialMedia from './SocialMedia';
 
 class Future extends React.Component {
@@ -10,7 +10,6 @@ class Future extends React.Component {
         <NavBar
           left={{label:'MY PRESENT',target:'present'}}
           right={{label:'MY PAST',target:'past'}}
-          changePage={this.props.changePage}
         />
         <div className='future_main'>
           <div className='future_submain'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './../NavBar';
+import NavBar from './../NavBar/NavBar';
 import PresentEntry from './PresentEntry';
 
 class Present extends React.Component {
@@ -9,7 +9,6 @@ class Present extends React.Component {
         <NavBar
           left={{label:'MY PAST',target:'past'}}
           right={{label:'YOUR FUTURE',target:'future'}}
-          changePage={this.props.changePage}
         />
         <div className='present'>
           <PresentEntry title='PORTFOLIO' entryArray={this.props.originalDb.portfolio} color={'white'}/>
