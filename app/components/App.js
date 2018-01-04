@@ -10,6 +10,7 @@ import Language from './Language';
 import Past from './Past/Past';
 import Present from './Present/Present';
 import Future from './Future/Future';
+import NotFound from './NotFound/NotFound';
 import Phone from './Phone/Phone';
 import UnderConstruction from './UnderConstruction/UnderConstruction';
 const originalDb = require('./../../db.json');
@@ -38,9 +39,6 @@ class App extends React.Component {
       return(
         <Router>
           <div>
-            <Link to={'/'}>
-              <h1>Home</h1>
-            </Link>
             <Switch>
               {/* Intro page without language */}
               <Route exact={true} path='/' render={() => (
@@ -64,9 +62,7 @@ class App extends React.Component {
               <Route path='/future' render={() => (
                 <Future originalDb={originalDb} changePage={this.changePage}/>
               )} />
-              <Route render={() => (
-                <h1>404</h1>
-              )} />
+              <Route render={() => <NotFound /> } />
             </Switch>
           </div>
         </Router>

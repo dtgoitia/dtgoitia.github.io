@@ -7,6 +7,10 @@
 	--text-color: #c1cee1;
 	--h1-color: #DCE6EF;
 }
+a {
+	text-decoration:none;
+	color: var(--text-color);
+}
 html {
 	margin: 0px;
   padding: 0px;
