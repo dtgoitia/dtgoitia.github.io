@@ -3103,6 +3103,65 @@ module.exports = DOMLazyTree;
 
 /***/ }),
 /* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(279);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(282);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(105);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(284);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(287);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(290);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(292);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(106);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(60);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(298);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(300);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(302);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(303);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3116,7 +3175,7 @@ module.exports = DOMLazyTree;
 
 
 
-var EventPluginHub = __webpack_require__(25);
+var EventPluginHub = __webpack_require__(26);
 var EventPluginUtils = __webpack_require__(42);
 
 var accumulateInto = __webpack_require__(77);
@@ -3240,7 +3299,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3518,7 +3577,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3580,7 +3639,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3627,65 +3686,6 @@ var ReactInstanceMap = {
 };
 
 module.exports = ReactInstanceMap;
-
-/***/ }),
-/* 28 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(279);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(282);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(105);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(284);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(287);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(290);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(292);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(106);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(60);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(298);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(300);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(302);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(303);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /***/ }),
 /* 29 */
@@ -4385,7 +4385,7 @@ module.exports = TransactionImpl;
 
 
 
-var SyntheticUIEvent = __webpack_require__(26);
+var SyntheticUIEvent = __webpack_require__(27);
 var ViewportMetrics = __webpack_require__(84);
 
 var getEventModifierState = __webpack_require__(46);
@@ -6299,7 +6299,7 @@ module.exports = KeyEscapeUtils;
 var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactInstanceMap = __webpack_require__(27);
+var ReactInstanceMap = __webpack_require__(28);
 var ReactInstrumentation = __webpack_require__(11);
 var ReactUpdates = __webpack_require__(15);
 
@@ -7483,7 +7483,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(28);
+var _reactRouterDom = __webpack_require__(24);
 
 var _NavBarButton = __webpack_require__(313);
 
@@ -10851,7 +10851,7 @@ var ReactDOMComponentTree = __webpack_require__(6);
 var ReactDOMContainerInfo = __webpack_require__(263);
 var ReactDOMFeatureFlags = __webpack_require__(264);
 var ReactFeatureFlags = __webpack_require__(81);
-var ReactInstanceMap = __webpack_require__(27);
+var ReactInstanceMap = __webpack_require__(28);
 var ReactInstrumentation = __webpack_require__(11);
 var ReactMarkupChecksum = __webpack_require__(265);
 var ReactReconciler = __webpack_require__(22);
@@ -12189,69 +12189,69 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 /***/ }),
 /* 134 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_ESO.svg";
 
 /***/ }),
 /* 135 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_SOS.svg";
 
 /***/ }),
 /* 136 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_SOSPER.svg";
 
 /***/ }),
 /* 137 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_UTM.svg";
 
 /***/ }),
 /* 138 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_acuatico.svg";
 
 /***/ }),
 /* 139 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_arbitro.svg";
 
 /***/ }),
 /* 140 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_atle.svg";
 
 /***/ }),
 /* 141 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_bachiller.svg";
 
 /***/ }),
 /* 142 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_bachiller_backup.svg";
 
 /***/ }),
 /* 143 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_background.svg";
 
 /***/ }),
 /* 144 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_basket.svg";
 
 /***/ }),
 /* 145 */
@@ -12261,99 +12261,99 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 /***/ }),
 /* 146 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_capm.svg";
 
 /***/ }),
 /* 147 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_catalisis.svg";
 
 /***/ }),
 /* 148 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_civil.svg";
 
 /***/ }),
 /* 149 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_click.svg";
 
 /***/ }),
 /* 150 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_climbing.svg";
 
 /***/ }),
 /* 151 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_coach.svg";
 
 /***/ }),
 /* 152 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_hapkido.svg";
 
 /***/ }),
 /* 153 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_hormigon.svg";
 
 /***/ }),
 /* 154 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_itop.svg";
 
 /***/ }),
 /* 155 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_jamies.svg";
 
 /***/ }),
 /* 156 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_lifeacademia.svg";
 
 /***/ }),
 /* 157 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_master.svg";
 
 /***/ }),
 /* 158 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_primaux.svg";
 
 /***/ }),
 /* 159 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_projitop.svg";
 
 /***/ }),
 /* 160 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_summercamp.svg";
 
 /***/ }),
 /* 161 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "past_timeexperience.svg";
 
 /***/ }),
 /* 162 */
@@ -12363,15 +12363,15 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2
 
 /***/ }),
 /* 163 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "present_lang.svg";
 
 /***/ }),
 /* 164 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "present_nucleo.svg";
 
 /***/ }),
 /* 165 */
@@ -14691,7 +14691,7 @@ module.exports = ARIADOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(24);
+var EventPropagators = __webpack_require__(25);
 var ExecutionEnvironment = __webpack_require__(7);
 var FallbackCompositionState = __webpack_require__(192);
 var SyntheticCompositionEvent = __webpack_require__(193);
@@ -15255,8 +15255,8 @@ module.exports = SyntheticInputEvent;
 
 
 
-var EventPluginHub = __webpack_require__(25);
-var EventPropagators = __webpack_require__(24);
+var EventPluginHub = __webpack_require__(26);
+var EventPropagators = __webpack_require__(25);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(15);
@@ -16298,7 +16298,7 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(24);
+var EventPropagators = __webpack_require__(25);
 var ReactDOMComponentTree = __webpack_require__(6);
 var SyntheticMouseEvent = __webpack_require__(35);
 
@@ -17091,7 +17091,7 @@ var DOMLazyTree = __webpack_require__(23);
 var DOMNamespaces = __webpack_require__(48);
 var DOMProperty = __webpack_require__(17);
 var DOMPropertyOperations = __webpack_require__(88);
-var EventPluginHub = __webpack_require__(25);
+var EventPluginHub = __webpack_require__(26);
 var EventPluginRegistry = __webpack_require__(33);
 var ReactBrowserEventEmitter = __webpack_require__(38);
 var ReactDOMComponentFlags = __webpack_require__(76);
@@ -18655,7 +18655,7 @@ module.exports = quoteAttributeValueForBrowser;
 
 
 
-var EventPluginHub = __webpack_require__(25);
+var EventPluginHub = __webpack_require__(26);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -19378,7 +19378,7 @@ module.exports = ReactDOMTextarea;
 var _prodInvariant = __webpack_require__(4);
 
 var ReactComponentEnvironment = __webpack_require__(51);
-var ReactInstanceMap = __webpack_require__(27);
+var ReactInstanceMap = __webpack_require__(28);
 var ReactInstrumentation = __webpack_require__(11);
 
 var ReactCurrentOwner = __webpack_require__(14);
@@ -19989,7 +19989,7 @@ var React = __webpack_require__(20);
 var ReactComponentEnvironment = __webpack_require__(51);
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactErrorUtils = __webpack_require__(43);
-var ReactInstanceMap = __webpack_require__(27);
+var ReactInstanceMap = __webpack_require__(28);
 var ReactInstrumentation = __webpack_require__(11);
 var ReactNodeTypes = __webpack_require__(92);
 var ReactReconciler = __webpack_require__(22);
@@ -22057,7 +22057,7 @@ module.exports = getUnboundedScrollPosition;
 
 
 var DOMProperty = __webpack_require__(17);
-var EventPluginHub = __webpack_require__(25);
+var EventPluginHub = __webpack_require__(26);
 var EventPluginUtils = __webpack_require__(42);
 var ReactComponentEnvironment = __webpack_require__(51);
 var ReactEmptyComponent = __webpack_require__(93);
@@ -22977,7 +22977,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(24);
+var EventPropagators = __webpack_require__(25);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInputSelection = __webpack_require__(97);
@@ -23172,7 +23172,7 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(4);
 
 var EventListener = __webpack_require__(96);
-var EventPropagators = __webpack_require__(24);
+var EventPropagators = __webpack_require__(25);
 var ReactDOMComponentTree = __webpack_require__(6);
 var SyntheticAnimationEvent = __webpack_require__(254);
 var SyntheticClipboardEvent = __webpack_require__(255);
@@ -23183,7 +23183,7 @@ var SyntheticMouseEvent = __webpack_require__(35);
 var SyntheticDragEvent = __webpack_require__(259);
 var SyntheticTouchEvent = __webpack_require__(260);
 var SyntheticTransitionEvent = __webpack_require__(261);
-var SyntheticUIEvent = __webpack_require__(26);
+var SyntheticUIEvent = __webpack_require__(27);
 var SyntheticWheelEvent = __webpack_require__(262);
 
 var emptyFunction = __webpack_require__(10);
@@ -23481,7 +23481,7 @@ module.exports = SyntheticClipboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(26);
+var SyntheticUIEvent = __webpack_require__(27);
 
 /**
  * @interface FocusEvent
@@ -23520,7 +23520,7 @@ module.exports = SyntheticFocusEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(26);
+var SyntheticUIEvent = __webpack_require__(27);
 
 var getEventCharCode = __webpack_require__(57);
 var getEventKey = __webpack_require__(258);
@@ -23761,7 +23761,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(26);
+var SyntheticUIEvent = __webpack_require__(27);
 
 var getEventModifierState = __webpack_require__(46);
 
@@ -24085,7 +24085,7 @@ var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstanceMap = __webpack_require__(27);
+var ReactInstanceMap = __webpack_require__(28);
 
 var getHostComponentFromComposite = __webpack_require__(100);
 var invariant = __webpack_require__(2);
@@ -24449,7 +24449,7 @@ exports = module.exports = __webpack_require__(275)(undefined);
 
 
 // module
-exports.push([module.i, ":root {\r\n\t--index-vertical-menu-text: #2d3c4b;\r\n\t--index-vertical-menu-text-hover: #1b252e;\r\n\t--timeline-bar-space: 30px;\r\n\t--background-color: #2d3c4b;\r\n\t--background-line-color: #222e39;\r\n\t--text-color: #c1cee1;\r\n\t--h1-color: #DCE6EF;\r\n}\r\nhtml {\r\n\tmargin: 0px;\r\n  padding: 0px;\r\n\tbackground: url(" + __webpack_require__(101) + ");\r\n\tfont-size: 16px;\r\n}\r\nbody {\r\n\tfont-family: \"Open Sans\", sans;\r\n\ttext-align: center;\r\n\tcolor: white;\r\n\tmargin: 0px auto;\r\n\tpadding: 0px;\r\n\tposition: relative;\r\n}\r\n.introHeader {\r\n\ttext-align:center;\r\n\tcolor: white;\r\n\tmargin: 0px;\r\n\tpadding: 50px 70px;\r\n\theight: 460px;\r\n}\r\n.myName {\r\n\tfont-size: 70px;\r\n\tfont-weight: 600;\r\n\tletter-spacing: -5px;\r\n\tcolor: #c8c8c8;\r\n\tpadding: 100px 0px 0px 0px;\r\n}\r\n.mySurname {\r\n\tfont-size: 70px;\r\n\tfont-weight: 700;\r\n\tletter-spacing: -5px;\r\n\tcolor: #ffffff;\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n}\r\n.web2 {\r\n\tfont-size: 14px;\r\n\tfont-weight: 400;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 10px;\r\n\tpadding: 0px 0px 0px 0px;\r\n}\r\n.menu {\r\n\tposition: fixed;\r\n\tbottom: 0px;\r\n\twidth: 100%;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\theight: 350px;\r\n}\r\n.SvgMenu {\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n}\r\n.SvgMenu:hover path {\r\n\tcursor: pointer;\r\n\tfill: rgba(255, 255, 255, 0.9);\r\n}\r\n.SvgMenu:hover .verticalTextHidden {\r\n\topacity: 1;\r\n}\r\n.SvgMenu .verticalText {\r\n\tcursor: pointer;\r\n\tfill: var(--index-vertical-menu-text)\r\n}\r\n.SvgMenu .verticalTextHidden {\r\n\topacity: 0;\r\n\tcursor: pointer;\r\n\ttransition: opacity 0.1s ease-in-out 0s;\r\n}\r\n\r\n/* --- LANGUAGE ---------------------------------------------- */\r\n.language-container {\r\n\tmargin: 0px -45px;\r\n\tposition: fixed;\r\n\tleft: 50%;\r\n\tright: 50%;\r\n\tbottom: 30px;\r\n\tz-index: 9999;\r\n}\r\n.language {\r\n\tfont-size: 15px;\r\n\tfont-weight: 600;\r\n\tmargin: 0;\r\n\tline-height: 10px;\r\n\twidth: 90px;\r\n\theight: 40px;\r\n}\r\n.language h1 {\r\n\tfont-size: 13px;\r\n\tfont-weight: 600;\r\n\tmargin: 0px auto;\r\n}\r\n.language h2 {\r\n\tfont-size: 20px;\r\n\tfont-weight: 600;\r\n\tmargin: 10px auto;\r\n\tpadding: 0px;\r\n}\r\n\r\n\r\n/* --- LINKS ----------------------------------------------- */\r\n.language-container span:link {\r\n\ttext-decoration:none;\r\n\tcolor: #ffffff;\r\n}\r\n.language-container span:visited {\r\n\ttext-decoration:none;\r\n\tcolor: #ffffff;\r\n}\r\n.language-container span:hover {\r\n\ttext-decoration:none;\r\n\tcolor: #2d3c4b;\r\n\ttext-decoration: blink;\r\n\tcursor: pointer;\r\n}\r\n\r\n\r\n/* --- NAVBAR ---------------------------------------------- */\r\n.navBar {\r\n\tdisplay: flex;\r\n  justify-content: space-between;\r\n\tflex-wrap: wrap;\r\n\tbackground-color: black;\r\n}\r\n.navBar .navBarLeft,\r\n.navBar .navBarRight {\r\n\tmargin: 10px 15px;\r\n\tcolor: #dfdfdf;\r\n\tcursor: pointer;\r\n}\r\n.navBar .navBarLeft:hover,\r\n.navBar .navBarRight:hover {\r\n\tcolor: white;\r\n}\r\n\r\n\r\n/* --- TAGS. Closed  --------------------------------------- */\r\n\r\n.academiaTagContainer, .experienceTagContainer { position: absolute }\r\n.academiaTagContainer   { left:  0 }\r\n.experienceTagContainer { right: 0 }\r\n.academiaTag, .experienceTag {\r\n\tposition: absolute;\r\n\tz-index: 1000;\r\n}\r\n.academiaTag   { left:  0 }\r\n.experienceTag { right: 0 }\r\n\r\n.academiaTagClosed,\r\n.experienceTagClosed {\r\n\tfont-family: 'Open Sans', sans;\r\n\tposition: relative;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tborder-radius: 30px;\r\n\tborder: solid 4px #2d3c4b;\r\n\t-webkit-transition: all 0.3s ease-in-out;\r\n\t-moz-transition: all 0.3s ease-in-out;\r\n\t-ms-transition: all 0.3s ease-in-out;\r\n\t-o-transition: all 0.3s ease-in-out;\r\n\ttransition: all 0.3s ease-in-out;\r\n}\r\n.academiaTagClosed img,\r\n.experienceTagClosed img {\r\n\twidth: 30px;\r\n\tposition: absolute;\r\n\ttop: 5px;\r\n\t-webkit-transition: all 0.3s ease-in-out;\r\n\t-moz-transition: all 0.3s ease-in-out;\r\n\t-ms-transition: all 0.3s ease-in-out;\r\n\t-o-transition: all 0.3s ease-in-out;\r\n\ttransition: all 0.3s ease-in-out;\r\n}\r\n.academiaTagClosed   img { left: 5px }\r\n.experienceTagClosed img { right: 5px }\r\n/* .academiaTagClosed:hover,\r\n .experienceTagClosed:hover {\r\n\tbox-shadow: 0 0 5px white;\r\n} */\r\n\r\n.academiaTagClosed   .tagTray{\r\n\tposition: relative;\r\n\tmargin: 0 21.35px 0 25px;\r\n\twidth: 90%;\r\n}\r\n.experienceTagClosed .tagTray {\r\n\tposition: relative;\r\n\tmargin: 0 25px 0 21.35px;\r\n\twidth: 90%;\r\n}\r\n.academiaTagClosed h1   {\r\n\ttext-align: right;\r\n\tpadding: 6px 25px 2px 65px;\r\n}\r\n.experienceTagClosed h1 {\r\n\ttext-align: left;\r\n\tpadding: 6px 65px 2px 25px;\r\n}\r\n.academiaTagClosed h1,\r\n.experienceTagClosed h1 {\r\n\tfont-size: 106%;\r\n\tfont-weight: 800;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 0px;\r\n\tline-height: 4px;\r\n\tcolor: rgba(255,255,255,0.9);\r\n\topacity: 0;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n\r\n.academiaTagClosed h2   {text-align: right }\r\n.experienceTagClosed h2 {text-align: left }\r\n.academiaTagClosed h2,\r\n.experienceTagClosed h2 {\r\n\tfont-size: 81%;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 1px;\r\n\tfont-weight: 400;\r\n\tline-height: 0px;\r\n\tcolor: rgba(255,255,255,0.6);\r\n\topacity: 0;\r\n\tpadding: 0px 25px 0px 25px;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n\r\n.academiaTagClosed h3,\r\n.academiaTagClosed p,\r\n.experienceTagClosed h3,\r\n.experienceTagClosed p {\r\n\tfont-size: 62.5%;\r\n\tfont-weight: 400;\r\n\tmargin: 0;\r\n\tpadding: 5px 0px 0px 0px;\r\n}\r\n\r\n.academiaTagClosed h3,\r\n.experienceTagClosed h3 {\r\n  opacity: 0;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n.academiaTagClosed   h3 { text-align: right }\r\n.experienceTagClosed h3 { text-align: left  }\r\n\r\n.academiaTagClosed p,\r\n.experienceTagClosed p {\r\n\ttext-align: left;\r\n  opacity: 0;\r\n  z-index: 1000;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n.academiaTagClosed   p { text-align: left  }\r\n.experienceTagClosed p { text-align: right }\r\n\r\n/* --- TAGS. Open ------------------------------------------ */\r\n\r\n.academiaTagOpen {\r\n\tborder-radius: 30px 30px 70px 30px;\r\n}\r\n.experienceTagOpen {\r\n\tborder-radius: 30px 30px 30px 70px;\r\n}\r\n.academiaTagOpen,\r\n.experienceTagOpen {\r\n\tposition: relative;\r\n\twidth: 435px;\r\n\theight: 140px;\r\n  box-shadow:\r\n\t\t1px 1px 3px rgba(0,0,0,0.2),\r\n\t\t0px 0px 0px 5px rgba(188,188,188,0.5);\r\n\t-webkit-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  -moz-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  -ms-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  -o-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n}\r\n.academiaTagOpen img,\r\n.experienceTagOpen img {\r\n\twidth: 45px;\r\n\ttop: 7px;\r\n\t-webkit-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\t-moz-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\t-ms-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\t-o-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\ttransition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n}\r\n.academiaTagOpen   img { left:  10px }\r\n.experienceTagOpen img { right: 10px }\r\n\r\n.academiaTagOpen   h1 {\r\n\topacity: 1;\r\n\tpadding: 12px 25px 2px 65px;\r\n\t-webkit-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-moz-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-ms-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-o-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\ttransition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n}\r\n.experienceTagOpen h1 {\r\n\topacity: 1;\r\n\tpadding: 12px 65px 2px 25px;\r\n\t-webkit-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-moz-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-ms-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-o-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\ttransition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n}\r\n\r\n.academiaTagOpen h2,\r\n.experienceTagOpen h2 {\r\n\topacity: 1;\r\n\t-webkit-transition: opacity 0.2s ease-in-out 0.8s;\r\n  -moz-transition:    opacity 0.2s ease-in-out 0.8s;\r\n  -ms-transition:     opacity 0.2s ease-in-out 0.8s;\r\n  -o-transition:      opacity 0.2s ease-in-out 0.8s;\r\n  transition:         opacity 0.2s ease-in-out 0.8s;\r\n}\r\n.academiaTagOpen   h2 { text-align: right }\r\n.experienceTagOpen h2 { text-align: left  }\r\n\r\n.academiaTagOpen h3,\r\n.experienceTagOpen h3 {\r\n  opacity: 1;\r\n  -webkit-transition: opacity 0.4s ease 0.9s;\r\n  -moz-transition: opacity 0.4s ease 0.9s;\r\n  -ms-transition: opacity 0.4s ease 0.9s;\r\n  -o-transition: opacity 0.4s ease 0.9s;\r\n  transition: opacity 0.4s ease 0.9s;\r\n}\r\n.academiaTagOpen p,\r\n.experienceTagOpen p {\r\n\topacity: 1;\r\n\t-webkit-transition: opacity 0.4s ease 1.1s;\r\n  -moz-transition: opacity 0.4s ease 1.1s;\r\n  -ms-transition: opacity 0.4s ease 1.1s;\r\n  -o-transition: opacity 0.4s ease 1.1s;\r\n  transition: opacity 0.4s ease 1.1s;\r\n}\r\n.academiaTagOpen .tagTray,\r\n.experienceTagOpen .tagTray {\r\n\t-webkit-transition: all 0.25s ease-in-out;\r\n  -moz-transition: all 0.25s ease-in-out;\r\n  -ms-transition: all 0.25s ease-in-out;\r\n  -o-transition: all 0.25s ease-in-out;\r\n  transition: all 0.25s ease-in-out;\r\n}\r\n\r\n/* --- ACADEMIA BAR ---------------------------------------- */\r\n\r\n.timelineContainer {\r\n\tposition: relative;\r\n\twidth: 980px;\r\n\tmargin: auto;\r\n\tmargin-top: 170px;\r\n\tcursor: default;\r\n}\r\n.timeline {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tright: 0px;\r\n}\r\n.timelineHeader {\r\n\tfont-family: Lato, 'Open Sans', sans;\r\n\tfont-size: 2.33em;\r\n\tfont-weight: 700;\r\n\tword-spacing: 0.35em;\r\n\tposition: absolute;\r\n\ttop: -135px;\r\n\twidth: 100%;\r\n}\r\n.timelineHeaderFlex {\r\n\tmargin-top: 10px;\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n}\r\n.timelineH2 {\r\n\tpadding-top: 10px;\r\n\tborder-top: 1px solid rgba(255, 255, 255, 1);\r\n}\r\n.timelineH2 {\r\n\tfont-weight: 400;\r\n\tfont-size: 0.8em;\r\n\twidth: 30%;\r\n\tmargin: 0 20px;\r\n}\r\n#timelineHeaderLeft { text-align: right; }\r\n#timelineHeaderRight { text-align: left; }\r\n.bars {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tbottom: 0px;\r\n\tright: 0px;\r\n\tleft: 0px;\r\n}\r\n.years {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tright: 0px;\r\n\tbottom: 0px;\r\n\tz-index: 0;\r\n}\r\n.year {\r\n\tbackground: #2d3c4b;\r\n\tborder: 3px solid rgba(0, 0, 0, 0.15);\r\n\tborder-radius: 15px;\r\n\ttext-align: left;\r\n\tbox-sizing: border-box;\r\n}\r\n.yearTag {\r\n\tcolor: rgba(255, 255, 255, 0.2);\r\n\tfont-size: 105%;\r\n\tfont-weight: 700;\r\n\tletter-spacing: -.8px;\r\n\tmargin: 8px 0 0 12px;\r\n}\r\n.academia {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tright: calc(50% + calc(0.5 * var(--timeline-bar-space)));\r\n\tbottom: 0px;\r\n\tz-index: 0;\r\n}\r\n.academiaBar {\r\n\tdisplay: block;\r\n\tmargin: 0 0 0 auto;\r\n\tz-index: 10;\r\n}\r\n.experience {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: calc(50% + calc(0.5 * var(--timeline-bar-space)));\r\n\tright: 0px;\r\n\tbottom: 0px;\r\n\tz-index: 0;\r\n}\r\n.experienceBar {\r\n\tdisplay: block;\r\n\tmargin: 0 auto 0 0;\r\n\tz-index: 10;\r\n}\r\n.tagsContainer {\r\n\twidth: 100%;\r\n}\r\n\r\n\r\n\r\n/* --- VERTICAL BAR -------------------------------------- */\r\n.verticalBar {\r\n\tposition: absolute;\r\n\ttop: -85px;\r\n\tleft: 50%;\r\n\ttransform: translateX(-50%);\r\n\tz-index: 0;\r\n\tfill: white;\r\n}\r\n\r\n/* --- FUTURE -------------------------------------------- */\r\n.future_main {\r\n\ttext-align: left;\r\n\tmargin: 0px auto;\r\n\tmargin-top: 30px;\r\n\tpadding: 0;\r\n\tmax-width: 900px;\r\n\t/* display: inline-block; */\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\t/* height: 600px; */\r\n\tflex-wrap: wrap;\r\n}\r\n.future_submain {\r\n\tfont-family: \"Arimo\", sans;\r\n\t/* float: left; */\r\n\tmargin: 0;\r\n\twidth: 50%;\r\n\t/* height: 600px; */\r\n\t/* opacity: 1;\t\t */\r\n}\r\n.future_main > img {\r\n\t/* display: inline-block; */\r\n\twidth: 450px;\r\n\theight: 600px;\r\n}\r\n.future_main h1 {\r\n\tfont-family: 'Open Sans', sans;\r\n\tfont-size: 15px;\r\n\tfont-weight: 300;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 0px;\r\n\tcolor: rgba(255,255,255,0.9);\r\n\topacity: 1;\r\n\tmargin: 0px 40px;\r\n\tpadding: 0px;\r\n}\r\n.future_main h2 {\r\n\tfont-family: 'Open Sans', sans;\r\n\tfont-size: 22px;\r\n\tfont-weight: 800;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 0px;\r\n\tcolor: rgba(255,255,255,0.9);\r\n\topacity: 1;\r\n\tmargin: 0px 25px;\r\n}\r\n\r\n.future_main a:link {\r\n\ttext-decoration:none;\r\n\tcolor: #999999;\r\n}\r\n.future_main a:visited {\r\n\ttext-decoration:none;\r\n\tcolor: #999999;\r\n}\r\n.future_main a:hover {\r\n\ttext-decoration:none;\r\n\tcolor: white;\r\n}\r\n.future_main a:active {\r\n\ttext-decoration:none;\r\n    color: white;\r\n}\r\n\r\n.f01 {\r\n\tfont-family: \"Lato\", sans;\r\n\tmargin: 18px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 423px;\r\n\theight: 30px;\r\n\tposition: relative;\r\n}\r\n.f02 {\r\n\tmargin: 15px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f03 {\r\n\tmargin-top: 16px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f04 {\r\n\tmargin-top: 15px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f05 {\r\n\tmargin-top: 19px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f06 {\r\n\tmargin: 22px 0px 0px 179px;\r\n\tpadding: 0px;\r\n\twidth: 88px;\r\n\theight: 88px;\r\n\tposition: relative;\r\n}\r\n.f07 {\r\n\tfont-family: \"Lato\", sans;\r\n\tmargin: 20px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 423px;\r\n\theight: 30px;\r\n\tposition: relative;\r\n}\r\n.f08 {\r\n\tmargin: 5px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 423px;\r\n\theight: 75px;\r\n\tposition: relative;\r\n}\r\n.f09 {\r\n\tfont-size: 16px;\r\n\tfont-weight: 700;\r\n\tletter-spacing: 1px;\r\n\topacity: 1;\r\n\tmargin: 2px;\r\n\tpadding: 0px;\r\n\twidth: 135px;\r\n\theight: 20px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 10px;\r\n}\r\n.f10 {\r\n\ttext-align: left;\r\n\tfont-size: 16px;\r\n\tfont-weight: 300;\r\n\tletter-spacing: 1px;\r\n\topacity: 1;\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n}\r\n.f11 {\r\n\tborder-top: solid 1px white;\r\n\topacity: 1;\r\n\tmargin: 0px 0px 0px 2px;\r\n\tpadding: 0px;\r\n\theight: 0px;\r\n\twidth: 415px;\r\n\tposition: relative;\r\n\ttop: 22px;\r\n\tleft: 10px;\r\n}\r\n.f12 {\r\n\tfont-size: 12px;\r\n\tfont-weight: 400;\r\n\tletter-spacing: -1px;\r\n\topacity: 1;\r\n\tpadding: 0px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 121px;\r\n}\r\n.f13 {\r\n\tpadding: 0px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 61px;\r\n}\r\n.f14 {\r\n\tfont-family: \"Arimo\";\r\n\tfont-size: 24px;\r\n\tfont-weight: 700;\r\n\tletter-spacing: -1.7px;\r\n\tword-spacing: -0.6px;\r\n\tposition: absolute;\r\n\ttop: 10px;\r\n\tleft: 121px;\r\n}\r\n.f15 {\r\n\t/*background: rgba(255,255,255,0.1);*/\r\n\twidth: 207px;\r\n\theight: 75px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 13px;\r\n}\r\n.f02 img,\r\n.f03 img,\r\n.f04 img,\r\n.f05 img {\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tright: 287px;\r\n}\r\n.f04 .f14,\r\n.f05 .f14 {\r\n\tfont-weight: 400;\r\n}\r\n\r\n.f14 a:link {\r\n\ttext-decoration: none;\r\n    color: white;\r\n}\r\n.f14 a:visited {\r\n\ttext-decoration: none;\r\n    color: white;\r\n}\r\n.f14 a:hover {\r\n\ttext-decoration: none;\r\n    color: rgba(255,255,255,0.7);\r\n}\r\n.f14 a:active {\r\n\ttext-decoration: none;\r\n    color: white;\r\n}\r\n\r\n.f06 img {\r\n\tborder: solid black 0px;\r\n\tborder-radius: 10%;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n}\r\n.QR {\r\n\twidth: 88px;\r\n\theight: 88px;\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\ttransition: 0.2s;\r\n}\r\n.QR img {\r\n\topacity: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tz-index: 9999;\r\n\ttransition: 0.2s;\r\n}\r\n.QR img:hover {\r\n\topacity: 1;\r\n\twidth: 238px;\r\n\theight: 238px;\r\n\tposition:absolute;\r\n\ttop: -75px;\r\n\tleft: -75px;\r\n\tbox-shadow:\r\n        0px 0px 0px 10px rgba(188,188,188,0.3);\r\n\ttransition-property: opacity, top, left, width, height, box-shadow;\r\n\ttransition-duration: 0.4s, 0.3s, 0.3s, 0.3s, 0.3s, 0.4s;\r\n    transition-delay: 0s, 0.2s, 0.2s, 0.2s, 0.2s, 0.3s;\r\n}\r\n\r\n.f15 img {\r\n\tposition: absolute;\r\n\ttop: 12px;\r\n\tleft: 129px;\r\n}\r\n.f16 img {\r\n\topacity: 0.2;\r\n\theight: 58px;\r\n\tposition: absolute;\r\n\ttop: 8px;\r\n\tleft: 125px;\r\n\ttransition: 0.4s;\r\n}\r\n.f16 img:hover {\r\n\topacity: 0.8;\r\n\theight: 66px;\r\n\tposition: absolute;\r\n\ttop: 4px;\r\n\tleft: 121px;\r\n\t-webkit-transform: rotate(180deg);\r\n\t-moz-transform: rotate(180deg);\r\n\t-o-transform: rotate(180deg);\r\n\ttransform: rotate(180deg);\r\n\ttransition: 0.4s;\r\n}\r\n.f16 img:active {\r\n\topacity: 1;\r\n\theight: 70px;\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tleft: 119px;\r\n\ttransition: 0s;\r\n}\r\n.f17 {\r\n\twidth: 218px;\r\n\theight: 75px;\r\n\tposition: relative;\r\n\ttop: 0px;\r\n\tleft: 218px;\r\n}\r\n.f17 img {\r\n\tposition: absolute;\r\n\ttop: 12px;\r\n\tleft: 42px;\r\n}\r\n.f18 img {\r\n\topacity: 0.2;\r\n\theight: 58px;\r\n\tposition: absolute;\r\n\ttop: 8px;\r\n\tleft: 38px;\r\n\ttransition: 0.4s;\r\n}\r\n.f18 img:hover {\r\n\topacity: 0.8;\r\n\theight: 66px;\r\n\tposition: absolute;\r\n\ttop: 4px;\r\n\tleft: 34px;\r\n\t-webkit-transform: rotate(180deg);\r\n\t-moz-transform: rotate(180deg);\r\n\t-o-transform: rotate(180deg);\r\n\ttransform: rotate(180deg);\r\n\ttransition: 0.4s;\r\n}\r\n.f18 img:active {\r\n\topacity: 1;\r\n\theight: 70px;\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tleft: 32px;\r\n\ttransition: 0s;\r\n}\r\n\r\n.futureSocialContainer {\r\n\tmargin: 5px 0 0 0;\r\n\tpadding: 0 70px;\r\n\theight: 75px;\r\n\tdisplay: flex;\r\n\tjustify-content: space-around;\r\n\talign-items: center;\t\r\n}\r\n.futureSocialEntry {\r\n\tpadding: 0;\r\n\tposition: relative;\r\n\theight: 66px;\r\n\twidth: 58px;\r\n}\r\n.futureSocialEntry > img,\r\n.futureSocialEntry > .symbol {\r\n\tposition: absolute;\r\n\ttop: 7px;\r\n\tleft: 7px;\r\n\theight: 50px;\r\n}\r\n.futureSocialEntry > a {\r\n\tposition: absolute;\r\n\ttop: 3px;\r\n\tleft: 3px;\r\n}\r\n.futureSocialEntry > a > img {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 66px;\r\n\tmax-height: 58px;\r\n\topacity: 0.4;\r\n\ttransition: 0.4s;\r\n}\r\n.futureSocialEntry > a:hover > img {\r\n\tposition: absolute;\r\n\ttop: -4px;\r\n\tleft: -4px;\r\n\tmax-height: 66px;\r\n\topacity: 1;\r\n\t-webkit-transform: rotate(180deg);\r\n\t-moz-transform: rotate(180deg);\r\n\t-o-transform: rotate(180deg);\r\n\ttransform: rotate(180deg);\r\n\ttransition: 0.4s all;\r\n}\r\n\r\n\r\n/* --- SMALL SCREEN VIEW --------------------------------- */\r\n.smallView {\r\n\tcolor: var(--text-color);\r\n\tmargin: 0;\r\n\tpadding: 45px;\r\n\t/* margin-bottom: .5em; */\r\n\tfont-size: 30px;\r\n}\r\n.smallView a:link,\r\n.smallView a:active,\r\n.smallView a:hover,\r\n.smallView a:visited {\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n}\r\n.androidButton {\r\n\tposition: fixed;\r\n\tright: \t80px;\r\n\tbottom: 80px;\r\n\twidth: \t240px;\r\n\theight: 230px;\r\n\tpadding-bottom: 10px;\r\n\tline-height: 230px;\r\n\tfont-size: 128px;\r\n\tborder-radius: 50%;\r\n\tcolor: white;\r\n\tbox-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);\r\n\tbackground-color: var(--index-vertical-menu-text-hover);\r\n}\r\n.foldingTab {\r\n\ttext-align: left;\r\n\tmargin-bottom: 0.8em;\r\n\tfont-size: 36px;\r\n}\r\n.foldingTab .headerContainer {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tfont-family: 'PT Sans', 'Lato', 'Noto Sans', 'Source Sans Pro', 'Open Sans', 'Droid Sans', 'Helvetica', sans-serif;\r\n\tfont-size: 1.5em;\r\n}\r\n.arrowOpen,\r\n.arrowClose {\r\n\twidth:  40px;\r\n\theight: 40px;\r\n}\r\n.arrowOpen path,\r\n.arrowClose path {\r\n\tstroke: white;\r\n}\r\n.foldingTab .headerContainer .header {\r\n\tdisplay: inline-block;\r\n\tfont-size: 1.3em;\r\n\tfont-weight: 700;\r\n\tmargin-left: 0.3em;\r\n\tpadding: 0;\r\n\tcolor: var(--h1-color);\r\n}\r\n.foldingTab .headerContainer i {\r\n\tline-height: 1.5em;\r\n\tfont-size: 0.3em;\r\n\twidth: 47px;\r\n}\r\n.foldingTab .tab {\r\n\tdisplay: block;\r\n\tfont-size: 1em;\r\n\tmargin-left: 0.7em;\r\n\tborder-left: 1px solid rgba(255, 255, 255, 1);\r\n\tpadding-left: 1em;\r\n}\r\n.tabEntry {\r\n\tmargin-top: 0.3em;\r\n\tmargin-bottom: 0.7em;\r\n}\r\n.entryHead {\r\n\tmargin: 0;\r\n\tfont-size: 1em;\r\n}\r\n.entrySub {\r\n\tmargin: 0;\r\n\tfont-size: 0.4em;\r\n\topacity: 0.7;\r\n}\r\n.tab .pa {\r\n\tfont-size: 0.7em;\r\n\tline-height: 1.66;\r\n\tmargin-top: 20px;\r\n\tmargin-bottom: 60px;\r\n\t/* text-align: justify; */\r\n}\r\n.social {\r\n\tdisplay: flex;\r\n\tflex-wrap: wrap;\r\n\talign-items: center;\r\n\tmargin: 0 auto 2em auto;\r\n\tpadding-top: 2.5em;\r\n\tjustify-content: center;\r\n}\r\n.social a {\r\n\tmargin: 0 1.5em;\r\n}\r\n.social a:hover {\r\n\topacity: 0.5;\r\n}\r\n.photo img {\r\n\tmargin-top: 8%;\r\n\twidth: 70%;\r\n\tmax-width: 800px;\r\n\t/* border-top-left-radius: 30%; */\r\n\t/* border-bottom-right-radius: 30%; */\r\n\tbox-shadow: 0 0 1.5em rgba(0, 0, 0, 0.8);\r\n}\r\n.reminder {\r\n\tposition: fixed;\r\n\ttop:   2em;\r\n\tleft:  2em;\r\n\tright: 2em;\r\n\tpadding: 1.5em;\r\n\tbackground-color: rgba(0, 0, 0, 0.95);\r\n\tbox-shadow: 0 0 1em white;\r\n\tborder-radius: 1.5em;\r\n\tfont-size: 1.5em;\r\n\tz-index: 9999;\r\n}\r\n.reminder .diagram {\r\n\tdisplay: flex;\r\n\tflex-wrap: nowrap;\r\n\tjustify-content: space-around;\r\n\talign-items: center;\r\n\twidth: 50%;\r\n\tmargin: 0 auto;\r\n}\r\n.reminder i {\r\n\tcolor: white;\r\n}\r\n.reminder .fadeOut {\r\n\topacity: 0.6;\r\n}\r\n\r\n\r\n/* --- NUTSHELL ------------------------------------------ */\r\n.nutshellContainer {\r\n\tposition: relative;\r\n\tmargin: 0 auto 100px auto;\r\n\tmax-width: 800px;\r\n}\r\n.nutshellTitle {\r\n\tfont-size: 2em;\r\n\tmargin-top: 30px;\r\n\tmargin-bottom: 30px;\r\n}\r\n.nutshellEntryContainer {\r\n\tborder-left: 1px solid white;\r\n}\r\n.nutshellEntry {\r\n\tmargin: 1.7em auto;\r\n\tpadding: 0 30px;\r\n\ttext-align: justify;\r\n\tline-height: 1.70;\r\n}\r\n\r\n\r\n/* --- PRESENT ------------------------------------------ */\r\n.presentEntryContainer {\r\n\tposition: relative;\r\n\tmargin: 0 auto 100px auto;\r\n}\r\n.presentEntry { margin: 0; }\r\n.presentTitle {\r\n\tfont-size: 2em;\r\n\tmargin-top: 80px;\r\n\tmargin-bottom: 0;\r\n}\r\n.presentSubEntryContainer {\r\n\tdisplay: flex;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: center;\r\n\t/* max-width: 600px; */\r\n}\r\n.presentSubEntry {\r\n\tmargin: 2em 20px 4em 20px;\r\n\tmax-width: 600px;\r\n\tmin-width: 400px;\r\n}\r\n.presentSubEntryTitle {\r\n\tmargin: 0;\r\n\tmargin-top: 15px;\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tfont-size: 1.5em;\r\n}\r\n.presentSubEntryText {\r\n\tmargin: 0 auto;\r\n\twidth: 70%;\r\n\tmargin-top: 15px;\r\n}\r\n.presentSubEntryGraph {\r\n\tmargin: 0;\r\n\twidth: 100%;\r\n}\r\n.presentSubEntryGraph svg {\r\n\theight: 75px;\r\n\tmargin: 0 20px;\r\n}\r\n.presentSubEntryGraph .pack {\r\n\tdisplay: inline-block;\r\n}\r\n.presentSubEntry a:link,\r\n.presentSubEntry a:hover,\r\n.presentSubEntry a:visited,\r\n.presentSubEntry a:active {\r\n\tdisplay: inline-block;\r\n\tmargin: 20px;\r\n\tpadding: 10px 25px;\r\n\tbackground-color: rgba(0,0,0,0.5);\r\n\tborder-radius: 25px;\r\n\ttext-decoration:none;\r\n\t/* display: block; */\r\n}\r\n.presentSubEntry a:link,\r\n.presentSubEntry a:visited,\r\n.presentSubEntry a:active {\r\n\tcolor: #bdbdbd;\r\n}\r\n.presentSubEntry a:hover {\r\n\tcolor: white;\r\n\tbackground-color: rgba(0,0,0,0.7);\r\n}\r\n.big svg{\r\n\theight: 120px;\r\n}\r\n\r\n\r\n/* --- UNDER CONSTRUCTION ------------------------------- */\r\n\r\n#monkey {\r\n\tmargin: 0 auto;\r\n\tmax-width: 50%;\r\n}\r\n#monkey p {\r\n\tfont-size: 200%;\r\n}\r\n#monkey svg {\r\n\tmargin-top: 10%;\r\n}\r\n", ""]);
+exports.push([module.i, ":root {\r\n\t--index-vertical-menu-text: #2d3c4b;\r\n\t--index-vertical-menu-text-hover: #1b252e;\r\n\t--timeline-bar-space: 30px;\r\n\t--background-color: #2d3c4b;\r\n\t--background-line-color: #222e39;\r\n\t--text-color: #c1cee1;\r\n\t--h1-color: #DCE6EF;\r\n}\r\na {\r\n\ttext-decoration:none;\r\n\tcolor: var(--text-color);\r\n}\r\nhtml {\r\n\tmargin: 0px;\r\n  padding: 0px;\r\n\tbackground: url(" + __webpack_require__(101) + ");\r\n\tfont-size: 16px;\r\n}\r\nbody {\r\n\tfont-family: \"Open Sans\", sans;\r\n\ttext-align: center;\r\n\tcolor: white;\r\n\tmargin: 0px auto;\r\n\tpadding: 0px;\r\n\tposition: relative;\r\n}\r\n.introHeader {\r\n\ttext-align:center;\r\n\tcolor: white;\r\n\tmargin: 0px;\r\n\tpadding: 50px 70px;\r\n\theight: 460px;\r\n}\r\n.myName {\r\n\tfont-size: 70px;\r\n\tfont-weight: 600;\r\n\tletter-spacing: -5px;\r\n\tcolor: #c8c8c8;\r\n\tpadding: 100px 0px 0px 0px;\r\n}\r\n.mySurname {\r\n\tfont-size: 70px;\r\n\tfont-weight: 700;\r\n\tletter-spacing: -5px;\r\n\tcolor: #ffffff;\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n}\r\n.web2 {\r\n\tfont-size: 14px;\r\n\tfont-weight: 400;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 10px;\r\n\tpadding: 0px 0px 0px 0px;\r\n}\r\n.menu {\r\n\tposition: fixed;\r\n\tbottom: 0px;\r\n\twidth: 100%;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\theight: 350px;\r\n}\r\n.SvgMenu {\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n}\r\n.SvgMenu:hover path {\r\n\tcursor: pointer;\r\n\tfill: rgba(255, 255, 255, 0.9);\r\n}\r\n.SvgMenu:hover .verticalTextHidden {\r\n\topacity: 1;\r\n}\r\n.SvgMenu .verticalText {\r\n\tcursor: pointer;\r\n\tfill: var(--index-vertical-menu-text)\r\n}\r\n.SvgMenu .verticalTextHidden {\r\n\topacity: 0;\r\n\tcursor: pointer;\r\n\ttransition: opacity 0.1s ease-in-out 0s;\r\n}\r\n\r\n/* --- LANGUAGE ---------------------------------------------- */\r\n.language-container {\r\n\tmargin: 0px -45px;\r\n\tposition: fixed;\r\n\tleft: 50%;\r\n\tright: 50%;\r\n\tbottom: 30px;\r\n\tz-index: 9999;\r\n}\r\n.language {\r\n\tfont-size: 15px;\r\n\tfont-weight: 600;\r\n\tmargin: 0;\r\n\tline-height: 10px;\r\n\twidth: 90px;\r\n\theight: 40px;\r\n}\r\n.language h1 {\r\n\tfont-size: 13px;\r\n\tfont-weight: 600;\r\n\tmargin: 0px auto;\r\n}\r\n.language h2 {\r\n\tfont-size: 20px;\r\n\tfont-weight: 600;\r\n\tmargin: 10px auto;\r\n\tpadding: 0px;\r\n}\r\n\r\n\r\n/* --- LINKS ----------------------------------------------- */\r\n.language-container span:link {\r\n\ttext-decoration:none;\r\n\tcolor: #ffffff;\r\n}\r\n.language-container span:visited {\r\n\ttext-decoration:none;\r\n\tcolor: #ffffff;\r\n}\r\n.language-container span:hover {\r\n\ttext-decoration:none;\r\n\tcolor: #2d3c4b;\r\n\ttext-decoration: blink;\r\n\tcursor: pointer;\r\n}\r\n\r\n\r\n/* --- NAVBAR ---------------------------------------------- */\r\n.navBar {\r\n\tdisplay: flex;\r\n  justify-content: space-between;\r\n\tflex-wrap: wrap;\r\n\tbackground-color: black;\r\n}\r\n.navBar .navBarLeft,\r\n.navBar .navBarRight {\r\n\tmargin: 10px 15px;\r\n\tcolor: #dfdfdf;\r\n\tcursor: pointer;\r\n}\r\n.navBar .navBarLeft:hover,\r\n.navBar .navBarRight:hover {\r\n\tcolor: white;\r\n}\r\n\r\n\r\n/* --- TAGS. Closed  --------------------------------------- */\r\n\r\n.academiaTagContainer, .experienceTagContainer { position: absolute }\r\n.academiaTagContainer   { left:  0 }\r\n.experienceTagContainer { right: 0 }\r\n.academiaTag, .experienceTag {\r\n\tposition: absolute;\r\n\tz-index: 1000;\r\n}\r\n.academiaTag   { left:  0 }\r\n.experienceTag { right: 0 }\r\n\r\n.academiaTagClosed,\r\n.experienceTagClosed {\r\n\tfont-family: 'Open Sans', sans;\r\n\tposition: relative;\r\n\twidth: 40px;\r\n\theight: 40px;\r\n\tborder-radius: 30px;\r\n\tborder: solid 4px #2d3c4b;\r\n\t-webkit-transition: all 0.3s ease-in-out;\r\n\t-moz-transition: all 0.3s ease-in-out;\r\n\t-ms-transition: all 0.3s ease-in-out;\r\n\t-o-transition: all 0.3s ease-in-out;\r\n\ttransition: all 0.3s ease-in-out;\r\n}\r\n.academiaTagClosed img,\r\n.experienceTagClosed img {\r\n\twidth: 30px;\r\n\tposition: absolute;\r\n\ttop: 5px;\r\n\t-webkit-transition: all 0.3s ease-in-out;\r\n\t-moz-transition: all 0.3s ease-in-out;\r\n\t-ms-transition: all 0.3s ease-in-out;\r\n\t-o-transition: all 0.3s ease-in-out;\r\n\ttransition: all 0.3s ease-in-out;\r\n}\r\n.academiaTagClosed   img { left: 5px }\r\n.experienceTagClosed img { right: 5px }\r\n/* .academiaTagClosed:hover,\r\n .experienceTagClosed:hover {\r\n\tbox-shadow: 0 0 5px white;\r\n} */\r\n\r\n.academiaTagClosed   .tagTray{\r\n\tposition: relative;\r\n\tmargin: 0 21.35px 0 25px;\r\n\twidth: 90%;\r\n}\r\n.experienceTagClosed .tagTray {\r\n\tposition: relative;\r\n\tmargin: 0 25px 0 21.35px;\r\n\twidth: 90%;\r\n}\r\n.academiaTagClosed h1   {\r\n\ttext-align: right;\r\n\tpadding: 6px 25px 2px 65px;\r\n}\r\n.experienceTagClosed h1 {\r\n\ttext-align: left;\r\n\tpadding: 6px 65px 2px 25px;\r\n}\r\n.academiaTagClosed h1,\r\n.experienceTagClosed h1 {\r\n\tfont-size: 106%;\r\n\tfont-weight: 800;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 0px;\r\n\tline-height: 4px;\r\n\tcolor: rgba(255,255,255,0.9);\r\n\topacity: 0;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n\r\n.academiaTagClosed h2   {text-align: right }\r\n.experienceTagClosed h2 {text-align: left }\r\n.academiaTagClosed h2,\r\n.experienceTagClosed h2 {\r\n\tfont-size: 81%;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 1px;\r\n\tfont-weight: 400;\r\n\tline-height: 0px;\r\n\tcolor: rgba(255,255,255,0.6);\r\n\topacity: 0;\r\n\tpadding: 0px 25px 0px 25px;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n\r\n.academiaTagClosed h3,\r\n.academiaTagClosed p,\r\n.experienceTagClosed h3,\r\n.experienceTagClosed p {\r\n\tfont-size: 62.5%;\r\n\tfont-weight: 400;\r\n\tmargin: 0;\r\n\tpadding: 5px 0px 0px 0px;\r\n}\r\n\r\n.academiaTagClosed h3,\r\n.experienceTagClosed h3 {\r\n  opacity: 0;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n.academiaTagClosed   h3 { text-align: right }\r\n.experienceTagClosed h3 { text-align: left  }\r\n\r\n.academiaTagClosed p,\r\n.experienceTagClosed p {\r\n\ttext-align: left;\r\n  opacity: 0;\r\n  z-index: 1000;\r\n\t-webkit-transition: all 0.1s ease-in-out;\r\n\t-moz-transition: all 0.1s ease-in-out;\r\n\t-ms-transition: all 0.1s ease-in-out;\r\n\t-o-transition: all 0.1s ease-in-out;\r\n\ttransition: all 0.1s ease-in-out;\r\n}\r\n.academiaTagClosed   p { text-align: left  }\r\n.experienceTagClosed p { text-align: right }\r\n\r\n/* --- TAGS. Open ------------------------------------------ */\r\n\r\n.academiaTagOpen {\r\n\tborder-radius: 30px 30px 70px 30px;\r\n}\r\n.experienceTagOpen {\r\n\tborder-radius: 30px 30px 30px 70px;\r\n}\r\n.academiaTagOpen,\r\n.experienceTagOpen {\r\n\tposition: relative;\r\n\twidth: 435px;\r\n\theight: 140px;\r\n  box-shadow:\r\n\t\t1px 1px 3px rgba(0,0,0,0.2),\r\n\t\t0px 0px 0px 5px rgba(188,188,188,0.5);\r\n\t-webkit-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  -moz-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  -ms-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  -o-transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n  transition:\r\n    width 0.25s ease-in-out,\r\n    left 0.25s ease-in-out,\r\n    box-shadow 0.25s ease-in-out,\r\n    height 0.5s ease-in-out 0.4s,\r\n\t\tborder-radius 0.8s ease-in-out 0.7s;\r\n}\r\n.academiaTagOpen img,\r\n.experienceTagOpen img {\r\n\twidth: 45px;\r\n\ttop: 7px;\r\n\t-webkit-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\t-moz-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\t-ms-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\t-o-transition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n\ttransition:\r\n\t\tleft 0.25s ease-in-out 0s,\r\n\t\twidth 0.4s ease-in-out 0.5s,\r\n\t\ttop 0.2s ease-in-out 0.5s;\r\n}\r\n.academiaTagOpen   img { left:  10px }\r\n.experienceTagOpen img { right: 10px }\r\n\r\n.academiaTagOpen   h1 {\r\n\topacity: 1;\r\n\tpadding: 12px 25px 2px 65px;\r\n\t-webkit-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-moz-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-ms-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-o-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\ttransition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n}\r\n.experienceTagOpen h1 {\r\n\topacity: 1;\r\n\tpadding: 12px 65px 2px 25px;\r\n\t-webkit-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-moz-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-ms-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\t-o-transition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n\ttransition:\r\n\t\topacity 0.7s ease 0.1s,\r\n\t\tpadding 0.5s ease 0.5s;\r\n}\r\n\r\n.academiaTagOpen h2,\r\n.experienceTagOpen h2 {\r\n\topacity: 1;\r\n\t-webkit-transition: opacity 0.2s ease-in-out 0.8s;\r\n  -moz-transition:    opacity 0.2s ease-in-out 0.8s;\r\n  -ms-transition:     opacity 0.2s ease-in-out 0.8s;\r\n  -o-transition:      opacity 0.2s ease-in-out 0.8s;\r\n  transition:         opacity 0.2s ease-in-out 0.8s;\r\n}\r\n.academiaTagOpen   h2 { text-align: right }\r\n.experienceTagOpen h2 { text-align: left  }\r\n\r\n.academiaTagOpen h3,\r\n.experienceTagOpen h3 {\r\n  opacity: 1;\r\n  -webkit-transition: opacity 0.4s ease 0.9s;\r\n  -moz-transition: opacity 0.4s ease 0.9s;\r\n  -ms-transition: opacity 0.4s ease 0.9s;\r\n  -o-transition: opacity 0.4s ease 0.9s;\r\n  transition: opacity 0.4s ease 0.9s;\r\n}\r\n.academiaTagOpen p,\r\n.experienceTagOpen p {\r\n\topacity: 1;\r\n\t-webkit-transition: opacity 0.4s ease 1.1s;\r\n  -moz-transition: opacity 0.4s ease 1.1s;\r\n  -ms-transition: opacity 0.4s ease 1.1s;\r\n  -o-transition: opacity 0.4s ease 1.1s;\r\n  transition: opacity 0.4s ease 1.1s;\r\n}\r\n.academiaTagOpen .tagTray,\r\n.experienceTagOpen .tagTray {\r\n\t-webkit-transition: all 0.25s ease-in-out;\r\n  -moz-transition: all 0.25s ease-in-out;\r\n  -ms-transition: all 0.25s ease-in-out;\r\n  -o-transition: all 0.25s ease-in-out;\r\n  transition: all 0.25s ease-in-out;\r\n}\r\n\r\n/* --- ACADEMIA BAR ---------------------------------------- */\r\n\r\n.timelineContainer {\r\n\tposition: relative;\r\n\twidth: 980px;\r\n\tmargin: auto;\r\n\tmargin-top: 170px;\r\n\tcursor: default;\r\n}\r\n.timeline {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tright: 0px;\r\n}\r\n.timelineHeader {\r\n\tfont-family: Lato, 'Open Sans', sans;\r\n\tfont-size: 2.33em;\r\n\tfont-weight: 700;\r\n\tword-spacing: 0.35em;\r\n\tposition: absolute;\r\n\ttop: -135px;\r\n\twidth: 100%;\r\n}\r\n.timelineHeaderFlex {\r\n\tmargin-top: 10px;\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n}\r\n.timelineH2 {\r\n\tpadding-top: 10px;\r\n\tborder-top: 1px solid rgba(255, 255, 255, 1);\r\n}\r\n.timelineH2 {\r\n\tfont-weight: 400;\r\n\tfont-size: 0.8em;\r\n\twidth: 30%;\r\n\tmargin: 0 20px;\r\n}\r\n#timelineHeaderLeft { text-align: right; }\r\n#timelineHeaderRight { text-align: left; }\r\n.bars {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tbottom: 0px;\r\n\tright: 0px;\r\n\tleft: 0px;\r\n}\r\n.years {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tright: 0px;\r\n\tbottom: 0px;\r\n\tz-index: 0;\r\n}\r\n.year {\r\n\tbackground: #2d3c4b;\r\n\tborder: 3px solid rgba(0, 0, 0, 0.15);\r\n\tborder-radius: 15px;\r\n\ttext-align: left;\r\n\tbox-sizing: border-box;\r\n}\r\n.yearTag {\r\n\tcolor: rgba(255, 255, 255, 0.2);\r\n\tfont-size: 105%;\r\n\tfont-weight: 700;\r\n\tletter-spacing: -.8px;\r\n\tmargin: 8px 0 0 12px;\r\n}\r\n.academia {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tright: calc(50% + calc(0.5 * var(--timeline-bar-space)));\r\n\tbottom: 0px;\r\n\tz-index: 0;\r\n}\r\n.academiaBar {\r\n\tdisplay: block;\r\n\tmargin: 0 0 0 auto;\r\n\tz-index: 10;\r\n}\r\n.experience {\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: calc(50% + calc(0.5 * var(--timeline-bar-space)));\r\n\tright: 0px;\r\n\tbottom: 0px;\r\n\tz-index: 0;\r\n}\r\n.experienceBar {\r\n\tdisplay: block;\r\n\tmargin: 0 auto 0 0;\r\n\tz-index: 10;\r\n}\r\n.tagsContainer {\r\n\twidth: 100%;\r\n}\r\n\r\n\r\n\r\n/* --- VERTICAL BAR -------------------------------------- */\r\n.verticalBar {\r\n\tposition: absolute;\r\n\ttop: -85px;\r\n\tleft: 50%;\r\n\ttransform: translateX(-50%);\r\n\tz-index: 0;\r\n\tfill: white;\r\n}\r\n\r\n/* --- FUTURE -------------------------------------------- */\r\n.future_main {\r\n\ttext-align: left;\r\n\tmargin: 0px auto;\r\n\tmargin-top: 30px;\r\n\tpadding: 0;\r\n\tmax-width: 900px;\r\n\t/* display: inline-block; */\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\t/* height: 600px; */\r\n\tflex-wrap: wrap;\r\n}\r\n.future_submain {\r\n\tfont-family: \"Arimo\", sans;\r\n\t/* float: left; */\r\n\tmargin: 0;\r\n\twidth: 50%;\r\n\t/* height: 600px; */\r\n\t/* opacity: 1;\t\t */\r\n}\r\n.future_main > img {\r\n\t/* display: inline-block; */\r\n\twidth: 450px;\r\n\theight: 600px;\r\n}\r\n.future_main h1 {\r\n\tfont-family: 'Open Sans', sans;\r\n\tfont-size: 15px;\r\n\tfont-weight: 300;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 0px;\r\n\tcolor: rgba(255,255,255,0.9);\r\n\topacity: 1;\r\n\tmargin: 0px 40px;\r\n\tpadding: 0px;\r\n}\r\n.future_main h2 {\r\n\tfont-family: 'Open Sans', sans;\r\n\tfont-size: 22px;\r\n\tfont-weight: 800;\r\n\tletter-spacing: -1px;\r\n\tword-spacing: 0px;\r\n\tcolor: rgba(255,255,255,0.9);\r\n\topacity: 1;\r\n\tmargin: 0px 25px;\r\n}\r\n\r\n.future_main a:link {\r\n\ttext-decoration:none;\r\n\tcolor: #999999;\r\n}\r\n.future_main a:visited {\r\n\ttext-decoration:none;\r\n\tcolor: #999999;\r\n}\r\n.future_main a:hover {\r\n\ttext-decoration:none;\r\n\tcolor: white;\r\n}\r\n.future_main a:active {\r\n\ttext-decoration:none;\r\n    color: white;\r\n}\r\n\r\n.f01 {\r\n\tfont-family: \"Lato\", sans;\r\n\tmargin: 18px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 423px;\r\n\theight: 30px;\r\n\tposition: relative;\r\n}\r\n.f02 {\r\n\tmargin: 15px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f03 {\r\n\tmargin-top: 16px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f04 {\r\n\tmargin-top: 15px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f05 {\r\n\tmargin-top: 19px;\r\n\tpadding: 0px;\r\n\twidth: 400px;\r\n\theight: 40px;\r\n\tposition: relative;\r\n}\r\n.f06 {\r\n\tmargin: 22px 0px 0px 179px;\r\n\tpadding: 0px;\r\n\twidth: 88px;\r\n\theight: 88px;\r\n\tposition: relative;\r\n}\r\n.f07 {\r\n\tfont-family: \"Lato\", sans;\r\n\tmargin: 20px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 423px;\r\n\theight: 30px;\r\n\tposition: relative;\r\n}\r\n.f08 {\r\n\tmargin: 5px 0px 0px 0px;\r\n\tpadding: 0px;\r\n\twidth: 423px;\r\n\theight: 75px;\r\n\tposition: relative;\r\n}\r\n.f09 {\r\n\tfont-size: 16px;\r\n\tfont-weight: 700;\r\n\tletter-spacing: 1px;\r\n\topacity: 1;\r\n\tmargin: 2px;\r\n\tpadding: 0px;\r\n\twidth: 135px;\r\n\theight: 20px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 10px;\r\n}\r\n.f10 {\r\n\ttext-align: left;\r\n\tfont-size: 16px;\r\n\tfont-weight: 300;\r\n\tletter-spacing: 1px;\r\n\topacity: 1;\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n}\r\n.f11 {\r\n\tborder-top: solid 1px white;\r\n\topacity: 1;\r\n\tmargin: 0px 0px 0px 2px;\r\n\tpadding: 0px;\r\n\theight: 0px;\r\n\twidth: 415px;\r\n\tposition: relative;\r\n\ttop: 22px;\r\n\tleft: 10px;\r\n}\r\n.f12 {\r\n\tfont-size: 12px;\r\n\tfont-weight: 400;\r\n\tletter-spacing: -1px;\r\n\topacity: 1;\r\n\tpadding: 0px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 121px;\r\n}\r\n.f13 {\r\n\tpadding: 0px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 61px;\r\n}\r\n.f14 {\r\n\tfont-family: \"Arimo\";\r\n\tfont-size: 24px;\r\n\tfont-weight: 700;\r\n\tletter-spacing: -1.7px;\r\n\tword-spacing: -0.6px;\r\n\tposition: absolute;\r\n\ttop: 10px;\r\n\tleft: 121px;\r\n}\r\n.f15 {\r\n\t/*background: rgba(255,255,255,0.1);*/\r\n\twidth: 207px;\r\n\theight: 75px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 13px;\r\n}\r\n.f02 img,\r\n.f03 img,\r\n.f04 img,\r\n.f05 img {\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tright: 287px;\r\n}\r\n.f04 .f14,\r\n.f05 .f14 {\r\n\tfont-weight: 400;\r\n}\r\n\r\n.f14 a:link {\r\n\ttext-decoration: none;\r\n    color: white;\r\n}\r\n.f14 a:visited {\r\n\ttext-decoration: none;\r\n    color: white;\r\n}\r\n.f14 a:hover {\r\n\ttext-decoration: none;\r\n    color: rgba(255,255,255,0.7);\r\n}\r\n.f14 a:active {\r\n\ttext-decoration: none;\r\n    color: white;\r\n}\r\n\r\n.f06 img {\r\n\tborder: solid black 0px;\r\n\tborder-radius: 10%;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n}\r\n.QR {\r\n\twidth: 88px;\r\n\theight: 88px;\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\ttransition: 0.2s;\r\n}\r\n.QR img {\r\n\topacity: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tposition: absolute;\r\n\ttop: 0px;\r\n\tleft: 0px;\r\n\tz-index: 9999;\r\n\ttransition: 0.2s;\r\n}\r\n.QR img:hover {\r\n\topacity: 1;\r\n\twidth: 238px;\r\n\theight: 238px;\r\n\tposition:absolute;\r\n\ttop: -75px;\r\n\tleft: -75px;\r\n\tbox-shadow:\r\n        0px 0px 0px 10px rgba(188,188,188,0.3);\r\n\ttransition-property: opacity, top, left, width, height, box-shadow;\r\n\ttransition-duration: 0.4s, 0.3s, 0.3s, 0.3s, 0.3s, 0.4s;\r\n    transition-delay: 0s, 0.2s, 0.2s, 0.2s, 0.2s, 0.3s;\r\n}\r\n\r\n.f15 img {\r\n\tposition: absolute;\r\n\ttop: 12px;\r\n\tleft: 129px;\r\n}\r\n.f16 img {\r\n\topacity: 0.2;\r\n\theight: 58px;\r\n\tposition: absolute;\r\n\ttop: 8px;\r\n\tleft: 125px;\r\n\ttransition: 0.4s;\r\n}\r\n.f16 img:hover {\r\n\topacity: 0.8;\r\n\theight: 66px;\r\n\tposition: absolute;\r\n\ttop: 4px;\r\n\tleft: 121px;\r\n\t-webkit-transform: rotate(180deg);\r\n\t-moz-transform: rotate(180deg);\r\n\t-o-transform: rotate(180deg);\r\n\ttransform: rotate(180deg);\r\n\ttransition: 0.4s;\r\n}\r\n.f16 img:active {\r\n\topacity: 1;\r\n\theight: 70px;\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tleft: 119px;\r\n\ttransition: 0s;\r\n}\r\n.f17 {\r\n\twidth: 218px;\r\n\theight: 75px;\r\n\tposition: relative;\r\n\ttop: 0px;\r\n\tleft: 218px;\r\n}\r\n.f17 img {\r\n\tposition: absolute;\r\n\ttop: 12px;\r\n\tleft: 42px;\r\n}\r\n.f18 img {\r\n\topacity: 0.2;\r\n\theight: 58px;\r\n\tposition: absolute;\r\n\ttop: 8px;\r\n\tleft: 38px;\r\n\ttransition: 0.4s;\r\n}\r\n.f18 img:hover {\r\n\topacity: 0.8;\r\n\theight: 66px;\r\n\tposition: absolute;\r\n\ttop: 4px;\r\n\tleft: 34px;\r\n\t-webkit-transform: rotate(180deg);\r\n\t-moz-transform: rotate(180deg);\r\n\t-o-transform: rotate(180deg);\r\n\ttransform: rotate(180deg);\r\n\ttransition: 0.4s;\r\n}\r\n.f18 img:active {\r\n\topacity: 1;\r\n\theight: 70px;\r\n\tposition: absolute;\r\n\ttop: 2px;\r\n\tleft: 32px;\r\n\ttransition: 0s;\r\n}\r\n\r\n.futureSocialContainer {\r\n\tmargin: 5px 0 0 0;\r\n\tpadding: 0 70px;\r\n\theight: 75px;\r\n\tdisplay: flex;\r\n\tjustify-content: space-around;\r\n\talign-items: center;\t\r\n}\r\n.futureSocialEntry {\r\n\tpadding: 0;\r\n\tposition: relative;\r\n\theight: 66px;\r\n\twidth: 58px;\r\n}\r\n.futureSocialEntry > img,\r\n.futureSocialEntry > .symbol {\r\n\tposition: absolute;\r\n\ttop: 7px;\r\n\tleft: 7px;\r\n\theight: 50px;\r\n}\r\n.futureSocialEntry > a {\r\n\tposition: absolute;\r\n\ttop: 3px;\r\n\tleft: 3px;\r\n}\r\n.futureSocialEntry > a > img {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: 66px;\r\n\tmax-height: 58px;\r\n\topacity: 0.4;\r\n\ttransition: 0.4s;\r\n}\r\n.futureSocialEntry > a:hover > img {\r\n\tposition: absolute;\r\n\ttop: -4px;\r\n\tleft: -4px;\r\n\tmax-height: 66px;\r\n\topacity: 1;\r\n\t-webkit-transform: rotate(180deg);\r\n\t-moz-transform: rotate(180deg);\r\n\t-o-transform: rotate(180deg);\r\n\ttransform: rotate(180deg);\r\n\ttransition: 0.4s all;\r\n}\r\n\r\n\r\n/* --- SMALL SCREEN VIEW --------------------------------- */\r\n.smallView {\r\n\tcolor: var(--text-color);\r\n\tmargin: 0;\r\n\tpadding: 45px;\r\n\t/* margin-bottom: .5em; */\r\n\tfont-size: 30px;\r\n}\r\n.smallView a:link,\r\n.smallView a:active,\r\n.smallView a:hover,\r\n.smallView a:visited {\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n}\r\n.androidButton {\r\n\tposition: fixed;\r\n\tright: \t80px;\r\n\tbottom: 80px;\r\n\twidth: \t240px;\r\n\theight: 230px;\r\n\tpadding-bottom: 10px;\r\n\tline-height: 230px;\r\n\tfont-size: 128px;\r\n\tborder-radius: 50%;\r\n\tcolor: white;\r\n\tbox-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);\r\n\tbackground-color: var(--index-vertical-menu-text-hover);\r\n}\r\n.foldingTab {\r\n\ttext-align: left;\r\n\tmargin-bottom: 0.8em;\r\n\tfont-size: 36px;\r\n}\r\n.foldingTab .headerContainer {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tfont-family: 'PT Sans', 'Lato', 'Noto Sans', 'Source Sans Pro', 'Open Sans', 'Droid Sans', 'Helvetica', sans-serif;\r\n\tfont-size: 1.5em;\r\n}\r\n.arrowOpen,\r\n.arrowClose {\r\n\twidth:  40px;\r\n\theight: 40px;\r\n}\r\n.arrowOpen path,\r\n.arrowClose path {\r\n\tstroke: white;\r\n}\r\n.foldingTab .headerContainer .header {\r\n\tdisplay: inline-block;\r\n\tfont-size: 1.3em;\r\n\tfont-weight: 700;\r\n\tmargin-left: 0.3em;\r\n\tpadding: 0;\r\n\tcolor: var(--h1-color);\r\n}\r\n.foldingTab .headerContainer i {\r\n\tline-height: 1.5em;\r\n\tfont-size: 0.3em;\r\n\twidth: 47px;\r\n}\r\n.foldingTab .tab {\r\n\tdisplay: block;\r\n\tfont-size: 1em;\r\n\tmargin-left: 0.7em;\r\n\tborder-left: 1px solid rgba(255, 255, 255, 1);\r\n\tpadding-left: 1em;\r\n}\r\n.tabEntry {\r\n\tmargin-top: 0.3em;\r\n\tmargin-bottom: 0.7em;\r\n}\r\n.entryHead {\r\n\tmargin: 0;\r\n\tfont-size: 1em;\r\n}\r\n.entrySub {\r\n\tmargin: 0;\r\n\tfont-size: 0.4em;\r\n\topacity: 0.7;\r\n}\r\n.tab .pa {\r\n\tfont-size: 0.7em;\r\n\tline-height: 1.66;\r\n\tmargin-top: 20px;\r\n\tmargin-bottom: 60px;\r\n\t/* text-align: justify; */\r\n}\r\n.social {\r\n\tdisplay: flex;\r\n\tflex-wrap: wrap;\r\n\talign-items: center;\r\n\tmargin: 0 auto 2em auto;\r\n\tpadding-top: 2.5em;\r\n\tjustify-content: center;\r\n}\r\n.social a {\r\n\tmargin: 0 1.5em;\r\n}\r\n.social a:hover {\r\n\topacity: 0.5;\r\n}\r\n.photo img {\r\n\tmargin-top: 8%;\r\n\twidth: 70%;\r\n\tmax-width: 800px;\r\n\t/* border-top-left-radius: 30%; */\r\n\t/* border-bottom-right-radius: 30%; */\r\n\tbox-shadow: 0 0 1.5em rgba(0, 0, 0, 0.8);\r\n}\r\n.reminder {\r\n\tposition: fixed;\r\n\ttop:   2em;\r\n\tleft:  2em;\r\n\tright: 2em;\r\n\tpadding: 1.5em;\r\n\tbackground-color: rgba(0, 0, 0, 0.95);\r\n\tbox-shadow: 0 0 1em white;\r\n\tborder-radius: 1.5em;\r\n\tfont-size: 1.5em;\r\n\tz-index: 9999;\r\n}\r\n.reminder .diagram {\r\n\tdisplay: flex;\r\n\tflex-wrap: nowrap;\r\n\tjustify-content: space-around;\r\n\talign-items: center;\r\n\twidth: 50%;\r\n\tmargin: 0 auto;\r\n}\r\n.reminder i {\r\n\tcolor: white;\r\n}\r\n.reminder .fadeOut {\r\n\topacity: 0.6;\r\n}\r\n\r\n\r\n/* --- NUTSHELL ------------------------------------------ */\r\n.nutshellContainer {\r\n\tposition: relative;\r\n\tmargin: 0 auto 100px auto;\r\n\tmax-width: 800px;\r\n}\r\n.nutshellTitle {\r\n\tfont-size: 2em;\r\n\tmargin-top: 30px;\r\n\tmargin-bottom: 30px;\r\n}\r\n.nutshellEntryContainer {\r\n\tborder-left: 1px solid white;\r\n}\r\n.nutshellEntry {\r\n\tmargin: 1.7em auto;\r\n\tpadding: 0 30px;\r\n\ttext-align: justify;\r\n\tline-height: 1.70;\r\n}\r\n\r\n\r\n/* --- PRESENT ------------------------------------------ */\r\n.presentEntryContainer {\r\n\tposition: relative;\r\n\tmargin: 0 auto 100px auto;\r\n}\r\n.presentEntry { margin: 0; }\r\n.presentTitle {\r\n\tfont-size: 2em;\r\n\tmargin-top: 80px;\r\n\tmargin-bottom: 0;\r\n}\r\n.presentSubEntryContainer {\r\n\tdisplay: flex;\r\n\tflex-wrap: wrap;\r\n\tjustify-content: center;\r\n\t/* max-width: 600px; */\r\n}\r\n.presentSubEntry {\r\n\tmargin: 2em 20px 4em 20px;\r\n\tmax-width: 600px;\r\n\tmin-width: 400px;\r\n}\r\n.presentSubEntryTitle {\r\n\tmargin: 0;\r\n\tmargin-top: 15px;\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tfont-size: 1.5em;\r\n}\r\n.presentSubEntryText {\r\n\tmargin: 0 auto;\r\n\twidth: 70%;\r\n\tmargin-top: 15px;\r\n}\r\n.presentSubEntryGraph {\r\n\tmargin: 0;\r\n\twidth: 100%;\r\n}\r\n.presentSubEntryGraph svg {\r\n\theight: 75px;\r\n\tmargin: 0 20px;\r\n}\r\n.presentSubEntryGraph .pack {\r\n\tdisplay: inline-block;\r\n}\r\n.presentSubEntry a:link,\r\n.presentSubEntry a:hover,\r\n.presentSubEntry a:visited,\r\n.presentSubEntry a:active {\r\n\tdisplay: inline-block;\r\n\tmargin: 20px;\r\n\tpadding: 10px 25px;\r\n\tbackground-color: rgba(0,0,0,0.5);\r\n\tborder-radius: 25px;\r\n\ttext-decoration:none;\r\n\t/* display: block; */\r\n}\r\n.presentSubEntry a:link,\r\n.presentSubEntry a:visited,\r\n.presentSubEntry a:active {\r\n\tcolor: #bdbdbd;\r\n}\r\n.presentSubEntry a:hover {\r\n\tcolor: white;\r\n\tbackground-color: rgba(0,0,0,0.7);\r\n}\r\n.big svg{\r\n\theight: 120px;\r\n}\r\n\r\n\r\n/* --- UNDER CONSTRUCTION ------------------------------- */\r\n\r\n#monkey {\r\n\tmargin: 0 auto;\r\n\tmax-width: 50%;\r\n}\r\n#monkey p {\r\n\tfont-size: 200%;\r\n}\r\n#monkey svg {\r\n\tmargin-top: 10%;\r\n}\r\n", ""]);
 
 // exports
 
@@ -25003,7 +25003,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(28);
+var _reactRouterDom = __webpack_require__(24);
 
 var _Intro = __webpack_require__(306);
 
@@ -25025,11 +25025,15 @@ var _Future = __webpack_require__(384);
 
 var _Future2 = _interopRequireDefault(_Future);
 
-var _Phone = __webpack_require__(388);
+var _NotFound = __webpack_require__(388);
+
+var _NotFound2 = _interopRequireDefault(_NotFound);
+
+var _Phone = __webpack_require__(389);
 
 var _Phone2 = _interopRequireDefault(_Phone);
 
-var _UnderConstruction = __webpack_require__(398);
+var _UnderConstruction = __webpack_require__(399);
 
 var _UnderConstruction2 = _interopRequireDefault(_UnderConstruction);
 
@@ -25041,7 +25045,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var originalDb = __webpack_require__(400);
+var originalDb = __webpack_require__(401);
 
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
@@ -25087,15 +25091,6 @@ var App = function (_React$Component) {
             'div',
             null,
             _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/' },
-              _react2.default.createElement(
-                'h1',
-                null,
-                'Home'
-              )
-            ),
-            _react2.default.createElement(
               _reactRouterDom.Switch,
               null,
               _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render() {
@@ -25114,11 +25109,7 @@ var App = function (_React$Component) {
                   return _react2.default.createElement(_Future2.default, { originalDb: originalDb, changePage: _this2.changePage });
                 } }),
               _react2.default.createElement(_reactRouterDom.Route, { render: function render() {
-                  return _react2.default.createElement(
-                    'h1',
-                    null,
-                    '404'
-                  );
+                  return _react2.default.createElement(_NotFound2.default, null);
                 } })
             )
           )
@@ -28385,7 +28376,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(28);
+var _reactRouterDom = __webpack_require__(24);
 
 var _MenuText = __webpack_require__(64);
 
@@ -28468,7 +28459,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(28);
+var _reactRouterDom = __webpack_require__(24);
 
 var _MenuText = __webpack_require__(64);
 
@@ -28552,7 +28543,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(28);
+var _reactRouterDom = __webpack_require__(24);
 
 var _MenuText = __webpack_require__(64);
 
@@ -29851,21 +29842,21 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACN
 
 /***/ }),
 /* 356 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "index_construction.png";
 
 /***/ }),
 /* 357 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "profile.png";
 
 /***/ }),
 /* 358 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: Cannot find module 'file-loader'\n    at Function.Module._resolveFilename (module.js:536:15)\n    at Function.Module._load (module.js:466:25)\n    at Module.require (module.js:579:17)\n    at require (internal/module.js:11:18)\n    at Object.module.exports (C:\\Users\\dtg\\projects\\dtgoitia.github.io\\node_modules\\url-loader\\index.js:35:24)");
+module.exports = __webpack_require__.p + "webdev.png";
 
 /***/ }),
 /* 359 */
@@ -31118,27 +31109,107 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Reminder = __webpack_require__(389);
+var _reactRouterDom = __webpack_require__(24);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NotFound = function (_React$Component) {
+  _inherits(NotFound, _React$Component);
+
+  function NotFound() {
+    _classCallCheck(this, NotFound);
+
+    return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
+  }
+
+  _createClass(NotFound, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'introHeader' },
+        _react2.default.createElement(
+          'div',
+          { className: 'myName' },
+          'david',
+          _react2.default.createElement(
+            'span',
+            { className: 'mySurname' },
+            'torralba'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'monkey' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            '404'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'It looks the page you are looking for doesn\'t exist'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Click here to go to the home page'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return NotFound;
+}(_react2.default.Component);
+
+module.exports = NotFound;
+
+/***/ }),
+/* 389 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Reminder = __webpack_require__(390);
 
 var _Reminder2 = _interopRequireDefault(_Reminder);
 
-var _Photo = __webpack_require__(390);
+var _Photo = __webpack_require__(391);
 
 var _Photo2 = _interopRequireDefault(_Photo);
 
-var _Social = __webpack_require__(391);
+var _Social = __webpack_require__(392);
 
 var _Social2 = _interopRequireDefault(_Social);
 
-var _FoldingMenu = __webpack_require__(393);
+var _FoldingMenu = __webpack_require__(394);
 
 var _FoldingMenu2 = _interopRequireDefault(_FoldingMenu);
 
-var _Nutshell = __webpack_require__(396);
+var _Nutshell = __webpack_require__(397);
 
 var _Nutshell2 = _interopRequireDefault(_Nutshell);
 
-var _AndroidButton = __webpack_require__(397);
+var _AndroidButton = __webpack_require__(398);
 
 var _AndroidButton2 = _interopRequireDefault(_AndroidButton);
 
@@ -31194,7 +31265,7 @@ var Phone = function (_React$Component) {
 module.exports = Phone;
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31305,7 +31376,7 @@ var Reminder = function (_React$Component) {
 module.exports = Reminder;
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31328,7 +31399,7 @@ var Photo = function Photo(props) {
 module.exports = Photo;
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31338,7 +31409,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SocialEntry = __webpack_require__(392);
+var _SocialEntry = __webpack_require__(393);
 
 var _SocialEntry2 = _interopRequireDefault(_SocialEntry);
 
@@ -31358,7 +31429,7 @@ var Social = function Social(props) {
 module.exports = Social;
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31385,7 +31456,7 @@ var SocialEntry = function SocialEntry(props) {
 module.exports = SocialEntry;
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31405,7 +31476,7 @@ var _ArrowOpen = __webpack_require__(170);
 
 var _ArrowOpen2 = _interopRequireDefault(_ArrowOpen);
 
-var _Entries = __webpack_require__(394);
+var _Entries = __webpack_require__(395);
 
 var _Entries2 = _interopRequireDefault(_Entries);
 
@@ -31462,7 +31533,7 @@ var FoldingMenu = function (_React$Component) {
 module.exports = FoldingMenu;
 
 /***/ }),
-/* 394 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31472,7 +31543,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Entry = __webpack_require__(395);
+var _Entry = __webpack_require__(396);
 
 var _Entry2 = _interopRequireDefault(_Entry);
 
@@ -31491,7 +31562,7 @@ var Entries = function Entries(props) {
 module.exports = Entries;
 
 /***/ }),
-/* 395 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31523,7 +31594,7 @@ var Entry = function Entry(props) {
 module.exports = Entry;
 
 /***/ }),
-/* 396 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31610,7 +31681,7 @@ var Nutshell = function (_React$Component) {
 module.exports = Nutshell;
 
 /***/ }),
-/* 397 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31633,7 +31704,7 @@ var AndroidButton = function AndroidButton(props) {
 module.exports = AndroidButton;
 
 /***/ }),
-/* 398 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31645,7 +31716,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _DevMonkey = __webpack_require__(399);
+var _DevMonkey = __webpack_require__(400);
 
 var _DevMonkey2 = _interopRequireDefault(_DevMonkey);
 
@@ -31702,7 +31773,7 @@ var UnderConstruction = function (_React$Component) {
 module.exports = UnderConstruction;
 
 /***/ }),
-/* 399 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31727,7 +31798,7 @@ var DevMonkey = function DevMonkey(props) {
 module.exports = DevMonkey;
 
 /***/ }),
-/* 400 */
+/* 401 */
 /***/ (function(module, exports) {
 
 module.exports = {"languageBar":[["Spanish","idioma"],["English","language"]],"introSubtitle":[["Spanish","CREATIVO · DINÁMICO · COMPROMETIDO · CURIOSO"],["English","CREATIVE · DYNAMIC · COMMITTED · INQUISITIVE"]],"personalInfo":{"name":"David","surnames":"Torralba Goitia","phone":"+44 (0)7598 178 122","email":"david.torralba.goitia@gmail.com","location":[["Spanish","Oxford, Reino Unido"],["English","Oxford, United Kingdom"]],"photo":"profile.png"},"socialMedia":{"github":{"img":"future_gh","url":"https://github.com/dtgoitia"},"linkedin":{"img":"future_in","url":"https://www.linkedin.com/in/dtgoitia"},"twitter":{"img":"future_tw","url":"https://twitter.com/dtgoitia"},"facebook":{"img":"future_fb","url":"https://www.facebook.com/dtgoitia"}},"academia":[{"title":"AutoLISP","subtitle":"Self tought","description":"I use AutoLISP to script in AutoCAD in order to speed up my work, get a standard output and reduce the number of human errors as much as possible.","start":"2015-07","end":"2018-01","img":"autolisp.svg","color":"#5555dd","bars":[40,40,48,65,80,85,90,95,98,100,100,100,100,100,100,100],"x":390,"y":70,"relevant":true},{"title":"Programming","subtitle":"Teach myself to code professionaly","description":"Learn and use: version control system (Git), IDEs, linters, testing libraries (Mocha + Chia). Study JavaScript. Fiddle with Go, Python and C#. If possible, apply TDD.","start":"2016-03","end":"","img":"programming.svg","color":"#555","bars":[30,30,40,45,50,50,50,70,80,90,100,100],"x":320,"y":-40,"relevant":true},{"title":"Web development","subtitle":"Teach myself to develop websites, both front and backend.","description":"I want to become a full (MERN) stack developer. Thus, I am studying how to use Node, Express, Webpack, React, Redux and MongoDb.","start":"2017-09","end":"","img":"webdev.svg","color":"#888888","bars":[200,200,200],"x":80,"y":-8,"relevant":true},{"title":"Finance","subtitle":"Learn and study about investing and trading","description":"Attend meetups and courses about macroeconomics, swing trading and intraday trading. Code and backtest algorithms with MetaTrader.","start":"2010-07","end":"2015-01","img":"trading.svg","color":"#2e6193","bars":[30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,29,27,25,23,20,17,15],"x":130,"y":295,"relevant":true},{"title":"Photography","subtitle":"Teach myself professional photography","description":"Stage of artistic growth. Hours and hours invested in my DSLR, experimenting with Darktable/Gimp, playing with different light sets...","start":"2015-01","end":"2015-04","img":"photo.svg","color":"#797900","bars":[120,120],"x":270,"y":-23,"relevant":true},{"title":"Certified Associate in Project Management","subtitle":"Project Management Institute (PMI) & Learning People","description":"This online course is the first step to get involved in project management world, focused to a later PMP, to progress towards a career as Project Manager.","start":"2014-11","end":"2015-10","img":"past_capm.svg","color":"#92905d","bars":[30,0,0,60,100,250],"x":200,"y":-55,"relevant":true},{"title":"Smart cities","subtitle":"Open University (OU)","description":"Get introduced to and reflect on the challenges the future cities will face and the role the information technology and innovation can play to improve citizens live.","start":"2017-01","end":"2017-03","img":"smartcity.svg","color":"#004793","bars":[40,40],"x":230,"y":-10,"relevant":true},{"title":"Web development. HTML and CSS","subtitle":"Self tought. Just for fun","description":"Learn HTML & CSS basics along an intense month in which I dedicated my whole non-working time to learn and code a static site (check same color on the right).","start":"2014-12","end":"2014-12","img":"webdev.svg","color":"#888888","bars":[300],"x":140,"y":-25,"relevant":true},{"title":"Graduated in Civil Engineering","subtitle":"University of the Basque Country (UPV/EHU)","description":"Single-year course, to adapt my Bachelor's degree to new european academic standards.","start":"2013-09","end":"2014-10","img":"past_civil.svg","color":"#8789e3","bars":[100,120,130,155,170,25,35],"x":260,"y":40,"relevant":true},{"title":"Master's in Advanced Materials Engineering","subtitle":"University of the Basque Country (UPV/EHU)","description":"18 months master's focused on materials research and manufacturing. Finished in 12 months, working the whole year on laboratory.","start":"2012-10","end":"2013-09","img":"past_master.svg","color":"#fa70ae","bars":[60,278,286,292,300,25,35],"x":210,"y":8,"relevant":true},{"title":"Bachelor's degree Final Project","subtitle":"Reconditioning project of the Meñakoz parking and its access","description":"Theoretical project which involves the design of a new parking, its acces and link to the principal road which original path was modified too.","start":"2011-09","end":"2012-09","img":"past_projitop.svg","color":"#b9b97c","bars":[70,110,90,120,100,220,220],"x":280,"y":0,"relevant":false},{"title":"Bachelor's degree in Civil Engineering","subtitle":"University of the Basque Country (UPV/EHU)","description":"3-year degree, known as \"Ingeniería Técnica\" in Spain, focused on civil construction.","start":"2008-09","end":"2012-10","img":"past_itop.svg","color":"#f95151","bars":[270,280,270,285,100,110,290,300,290,300,100,110,190,200,190,120,140,260,195,200,210,200,210,50,50],"x":220,"y":295,"relevant":true},{"title":"Water rescue","subtitle":"Red Cross of Biscay","description":"3 month theoretical and practical rescue course to get the required competences to work as swimming pool, sea, river, lakes or waterpark lifeguard.","start":"2010-02","end":"2010-04","img":"past_acuatico.svg","color":"#d375f7","bars":[70,70],"x":50,"y":-40,"relevant":false},{"title":"First Aid","subtitle":"Red Cross of Biscay","description":"2 month theoretical and practical course to get the required First Aid, Cardiopulmonary Resuscitation and AED competences compulsory to be lifeguard.","start":"2009-10","end":"2009-12","img":"past_primaux.svg","color":"#ca2222","bars":[60,60],"x":100,"y":15,"relevant":false},{"title":"Science High School","subtitle":"J. M. Barandiaran (goikoa)","description":"2 years of non-obligatory education, in which I had to start defining my future studies, focusing on science areas.","start":"2006-09","end":"2008-06","img":"past_bachiller.svg","color":"#fa70ae","bars":[150,155,160,170,180,0,150,155,160,180,200],"x":340,"y":25,"relevant":false},{"title":"Secondary School","subtitle":"J. M. Barandiaran (behekoa)","description":"4 years during which I had every detail about my life's path perfectly defined and I was absolutelly sure about my future... (naive)","start":"2002-09","end":"2006-06","img":"past_ESO.svg","color":"#f71d81","bars":[100,105,110,115,120,0,100,105,110,115,120,0,100,105,110,115,120,0,100,105,110,115,120],"x":350,"y":250,"relevant":false},{"title":"Primary School","subtitle":"Txomin Aresti C.P.","description":"Time spent hoping to grow faster... :)","start":"1996-09","end":"2002-06","img":"past_ESO.svg","color":"#a71d81","bars":[70,75,80,85,90,0,70,75,80,85,90,0,70,75,80,85,90,0,70,75,80,85,90,0,70,75,80,85,90,0,70,75,80,85,90],"x":370,"y":100,"relevant":false}],"experience":[{"title":"Graduate Civil Engineer","subtitle":"MJA Consulting","description":"Produce level information, drainage calculations, 3D models, cut & fill analysis and other required documents. Liaise with local authorities for Technical Approval.","start":"2015-07","end":"2017-11","img":"bridge.svg","color":"#004793","bars":[170,170,170,170,175,175,180,195,200,205,210,210,210,210,210],"x":130,"y":27,"relevant":true},{"title":"Bootcamp training","subtitle":"BMF (British Military Fitness)","description":"\"Legs like jelly. Lungs on fire. Heart of a lion!\" Amazing outdoor training sessions to keep a high stamina. Great atmosphere, better people!","start":"2015-12","end":"","img":"bmf.svg","color":"#565656","bars":[40,40,40,40,40,40,40,40,40,40,40,40,40,40],"x":50,"y":77,"relevant":false},{"title":"Rewrite davidtorralba.com fully in React","subtitle":"Personal project for learning purposes","description":"This new version is fully written in React (no Redux). Now, the content is stored in a JSON file from which the site pulls data to create all diagrams from scratch","start":"2017-09","end":"2017-10","img":"webdev.svg","color":"#888888","bars":[260],"x":30,"y":-38,"relevant":true},{"title":"Front of house","subtitle":"Byron","description":"Informal restaurant were I could strike up any kind of conversation with clients. Target: fast service with a double portion of warmth.","start":"2015-05","end":"2016-01","img":"byron.svg","color":"#1fb657","bars":[115,70,70,70,70],"x":90,"y":-10,"relevant":true},{"title":"Bartender","subtitle":"Jamie's Italian Restaurant","description":"High standard restaurant in which dealt with clients on a regular basis. Greet friendly and serve customers fast to create for them a unique experience.","start":"2014-11","end":"2015-05","img":"past_jamies.svg","color":"#48c649","bars":[230,230,230,115],"x":185,"y":7,"relevant":true},{"title":"Write davidtorralba.com only in  HTML and CSS","subtitle":"Personal project for learning purposes","description":"This was my first web project. Fully written in HTML and CSS with a plain text editor! No, I had no clue about IDEs.","start":"2014-12","end":"2014-11","img":"webdev.svg","color":"#888888","bars":[130],"x":80,"y":-40,"relevant":true},{"title":"Climbing","subtitle":"Leioa Mendi Taldea, Leioa (Spain)","description":"I wanted to try a sport with mind challenges and I found climbing was perfect. It challenged me to be disciplined, strong and focused.","start":"2013-09","end":"2014-10","img":"past_climbing.svg","color":"#565656","bars":[70,70,70,70,70,70,70],"x":20,"y":0,"relevant":false},{"title":"Bachelor's degree Final Project","subtitle":"University of the Basque Country (UPV/EHU)","description":"Research and experimental project to study the feasibility of using metallurgical byproducts on mansory mortars, to get greener materials.","start":"2014-01","end":"2014-09","img":"past_hormigon.svg","color":"#92dd93","bars":[230,240,250,290,300],"x":200,"y":9,"relevant":false},{"title":"Master's Final Project","subtitle":"University of the Basque Country (UPV/EHU)","description":"Research and experimental project to obtain greener and more efficient catalysts for the production of Hydrogen from industrial byproducts.","start":"2012-10","end":"2013-10","img":"past_catalisis.svg","color":"#92905d","bars":[225,230,240,250,260,360,300],"x":130,"y":7,"relevant":false},{"title":"Rescue craft master and beach lifeguard","subtitle":"Biscay Red Cross, Plentzia (Spain)","description":"Summer job in which I learnt a lot about team-work, fast decissions under pressure, camaraderie and communal living. Extra task: use and maintain craft.","start":"2012-05","end":"2012-09","img":"past_SOSPER.svg","color":"#6563e2","bars":[180,320,130],"x":180,"y":-40,"relevant":true},{"title":"Athletics","subtitle":"ASM team, Santurtzi (Spain)","description":"One of the best experiences related to physical activies. Incredible people, fantastic environment and better trainer. I learnt a lot about self-trainning.","start":"2011-09","end":"2012-04","img":"past_atle.svg","color":"#565656","bars":[90,95,100,100],"x":20,"y":-20,"relevant":false},{"title":"Volunteer basketball coach","subtitle":"School Teams in Biscay (Spain)","description":"Basketball coach for many school teams, as wel as a disabled team. I was responsible for the coaching and training of students.","start":"2005-09","end":"2010-05","img":"past_coach.svg","color":"#5a5903","bars":[80,80,80,80,80,0,80,80,80,80,80,0,80,80,80,80,80,0,80,80,80,80,80,0,80,80,80,80,80],"x":410,"y":5,"relevant":false},{"title":"Basketball","subtitle":"12 seasons as basketball player that defined me","description":"During these years, I learnt and felt the importance of team work, hard work, honesty, commitment or loyalty among others.","start":"1998-09","end":"2010-05","img":"past_basket.svg","color":"#515a47","bars":[60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115,0,60,100,105,110,115],"x":200,"y":570,"relevant":false},{"title":"Beach lifeguard","subtitle":"Biscay Red Cross, Plentzia (Spain)","description":"Summer job in which I learnt a lot about team-work, fast decissions under pressure, camaraderie and communal living.","start":"2010-05","end":"2011-09","img":"past_SOS.svg","color":"#9290eb","bars":[180,320,330,0,0,0,180,320,330],"x":120,"y":-55,"relevant":true},{"title":"Safety Technician Internship","subtitle":"UTE TMB Arraiz. Proyectos y Obras Pabisa, S.A.","description":"First situation in real contact with engineering, in the construction of the Mechanical Biological Treatment Plant in Arraiz Mountain in Bilbao (Spain).","start":"2010-10","end":"2011-03","img":"past_UTM.svg","color":"#4ab15b","bars":[0,220,220,220],"x":350,"y":8,"relevant":true},{"title":"Hapkido","subtitle":"Self defense course, Bilbao (Spain)","description":"Since I was a kid I wanted to master combat habilities. Top challenge to try to think clear when somebody is kicking your ass!","start":"2010-10","end":"2011-03","img":"past_hapkido.svg","color":"#565656","bars":[50,50,50,50],"x":20,"y":20,"relevant":false},{"title":"Volunteer basketball referee","subtitle":"School Teams in Biscay (Spain)","description":"Basketball referee for local school teams. I was responsible for correct evolution of the competitions and its fairness.","start":"2005-09","end":"2008-05","img":"past_arbitro.svg","color":"#3258f7","bars":[25,25,25,25,25,0,25,25,25,25,25,0,25,25,25,25,25],"x":330,"y":195,"relevant":false},{"title":"Summercamp basketball coach","subtitle":"End of term camps in Biscay and Galicia (Spain)","description":"Basketball coach in few end of term camps during 2 summers. I was responsible for the care, coaching and training of kids.","start":"2007-06","end":"2008-07","img":"past_summercamp.svg","color":"#a2a006","bars":[50,160,0,0,0,0,70,190],"x":200,"y":-40,"relevant":false}],"nutshell":[{"text":"I was (am) an active and inquisitive kid... and I haven't grown -fortunately. The sport was the king of my extracurricular activities and I committed to it since I was 6 until 19, engaging it as a player, trainer and referee.","graph":"graphURL!!"},{"text":"I went to the uni to become a Civil Engineer when I was 18 years old. During my first year, I also got my certifications and license to work as a lifeguard. After a quite hard training, I got a position as a lifeguard in Plentzi Beach when I was 19. This made me juggle between exams and full time working on rescue industry for 3 summers. No student holiday/break. Tough, but fun. These savings, together with some cash earned giving drawing private lessons to university students, allowed me to leave my parents home at the age of 21.","graph":"graphURL!!"},{"text":"When I was 20, I stumbled into stock markets. I taught myself how to code automatic trading systems and invested lots of time and effort learning more about finances. The same year I took my boating license in order to progress in my summer job.","graph":"graphURL!!"},{"text":"I graduated in Civil Engineering with Honors in 2012 and decided to carry on with a research-focused Material Science masters as I was hungry for deeper science knowledge. The more I dove into an academic environment, the less I was enjoying to learn anything, so I decided to speed up my year-and-a-half master's and conclude it in a single year. Lectures in the evenings and working in laboratories as a volunteer in the mornings. Tough, but -once more- fun. I chose catalyst labs looking to broaden my engineering knowledge, as they were not related at all with my degree. Thanks to this challenging volunteering, I was able to defend my master's final dissertation in less than a year.","graph":"graphURL!!"},{"text":"Once I was a postgraduate, I was caught in the middle of an education system transition at a national level. So, I went back to my civil engineering roots and returned to the uni for one year more to get my degree according to the new standards.","graph":"graphURL!!"},{"text":"After 6 years in the university, I moved to Oxford and took a break. I worked as bartender and waiter in a couple of well-named restaurants. It was great. I really enjoyed the restaurant hustle and bustle. During this time I learnt about photography and built my personal website: purely HTML and CSS, written in a miserable notepad... I had no clue what an IDE or linter was!","graph":"graphURL!!"},{"text":"Some months after, summer 2015, I joined a civil engineering consultancy and returned back to my good old friend AutoCAD. Soon I discovered AutoLISP, a scripting language to build your custom commands. I set my first messy GitHub repository (a.k.a. branchless dump folder) and soon took over the maintenance of my company custom menu. I cleaned its face and extend it with some new cool features.","graph":"graphURL!!"},{"text":"Along this years, I also taught myself web development, photography, meditation, finance, nutrition, dance, etc.","graph":"graphURL!!"},{"text":"I am currently trying to split my time in a fair way between my adorable girlfriend, teaching to myself serious web development, keeping fit (boot camp), and codirecting Valtor -a small company I've just co-founded with a friend of mine.","graph":"graphURL!!"}],"skills":[{"title":"Front End development","text":"My first page was a static site purely developed on HTML and CSS. Recently I started to learn about React and decided to fully rewrite my website to be able to update it from a JSON.","graph":"frontEnd"},{"title":"Back End development","text":"I have some experience in Node, Express and SocketIO. Check my GitHub raspberry-chat' repository. I am currently working on extending my backend experience.","graph":"backEndNoMongo"},{"title":"Programming","text":"Git+Yarn are my repository musts. To write JavaScript, I use Visual Studio Code with ESLint. I have created some unit tests with Mocha and Chia to test the logic behind this website. To produce markdown reports and to develop with AutoLISP I tend to use Atom as I created an AutoLISP language package for this editor.","graph":"coding"},{"title":"UX/UI awareness","text":"I have a strong UX awareness and, on top of front and backend technical abilities, I do have designer skills.","graph":"uxui"},{"title":"Problem solving","text":"My core strength is the creative thinking. Besides, I face challenges from an analytic perspective and I effectivelly solve problems. I have successfully applied this in different fields such us chemistry research, construction consultancy projects or business decisions.","graph":"analytic"},{"title":"Effective communication","text":"Ineffective communication is, unfortunately, more common than we'd wish, and it wastes resources and wears relationships down. It's critical for me to be on the same page as my team/client. To this effect, I feel fluent and comfortable communicating my ideas effectively in spoken and written format, or even produce reports, charts, sketches, etc. to achieve a successful communication if needed.","graph":"discommunication"}],"portfolio":[{"link":{"url":"https://github.com/dtgoitia/dtgoitia.github.io","alt":"See GitHub repository"},"title":"Current site","text":"Personal static site: HTML + CSS + React (data fed from JSON). HTML & CSS exclusivelly was unmaintainable.","graph":"davidtorralba"},{"link":{"url":"https://github.com/dtgoitia/ndb-ingredients","alt":"See GitHub repository"},"title":"NDB search bar","text":"React + Electron search bar to find food ingredients within National Nutrient Database (USDA).","graph":"searchbar"},{"link":{"url":"https://github.com/dtgoitia/civil-autolisp","alt":"See GitHub repository"},"title":"civil-autolisp","text":"Library with core AutoLISP scripts used in my civil engineering day by day. Check \"Dump folder\" for latest features","graph":"civilAutolisp"},{"link":{"url":"https://github.com/dtgoitia?tab=repositories","alt":"Check out my repos"},"title":"More on the way!","text":"There are a couple more projects in the oven...","graph":"factory"}],"interests":[{"text":"When I’m not at a computer, I enjoy training and travelling. I also periodically throw myself into photography, finance, foreign languages and dancing.","graph":"interests"}]}
