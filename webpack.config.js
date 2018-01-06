@@ -12,9 +12,9 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.(js)$/i,   loader: 'babel-loader',                 include: path.resolve(__dirname,'app'), exclude: /node_modules/ },
-      { test: /\.css$/i,    loader: ['style-loader', 'css-loader'], include: path.resolve(__dirname,'app'), exclude: /node_modules/  },
-      { test: /\.(json)$/i, loader: 'json-loader',                  include: path.resolve(__dirname,'app'), exclude: /node_modules/ },
+      { test: /\.js$/i,   loader: 'babel-loader',                 include: path.resolve(__dirname,'app'), exclude: /node_modules/ },
+      { test: /\.css$/i,  loader: ['style-loader', 'css-loader'], include: path.resolve(__dirname,'app'), exclude: /node_modules/  },
+      { test: /\.json$/i, loader: 'json-loader',                  include: path.resolve(__dirname,'app'), exclude: /node_modules/ },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [{

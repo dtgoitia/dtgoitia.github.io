@@ -53,14 +53,14 @@ class App extends React.Component {
               )} />
               */}
               <Route path='/past' render={() => (
-                // <Past originalDb={originalDb} changePage={this.changePage}/>
-                <UnderConstruction />
+                <Past originalDb={originalDb}/>
+                // <UnderConstruction />
               )} />
               <Route path='/present' render={() => (
                 <Present originalDb={originalDb}/>
               )} />
               <Route path='/future' render={() => (
-                <Future originalDb={originalDb} changePage={this.changePage}/>
+                <Future originalDb={originalDb}/>
               )} />
               <Route render={() => <NotFound /> } />
             </Switch>

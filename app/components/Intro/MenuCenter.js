@@ -28,7 +28,6 @@ class MenuCenter extends React.Component {
           <MenuPathCenter />
           <MenuText
             words={this.props.words}
-            changePage={this.props.changePage}
             targetPage='present'
             translationCoordinates={this.props.translationCoordinates}
           />

@@ -28,7 +28,6 @@ class MenuRight extends React.Component {
           <MenuPathRight />
           <MenuText
             words={this.props.words}
-            changePage={this.props.changePage}
             targetPage='future'
             translationCoordinates={this.props.translationCoordinates}
           />
