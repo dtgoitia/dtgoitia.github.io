@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "404": "cp ./app/404.html ./dist/404.html",
+    "blog": "cp -r ./app/blog ./dist/blog",
     "start": "webpack-dev-server --progress --colors",
     "buildOptimized": "webpack --optimize-minimize",
-    "build": "rm -rf ./dist && webpack",
+    "build": "rm -rf ./dist && webpack && yarn blog",
     "cname": "cp ./app/CNAME ./dist/CNAME",
     "deploy": "npm run build && npm run cname && npm run 404 && ssh-add ~/.ssh/id_rsa && gh-pages -d dist --branch master",
     "x": "webpack --optimize-minimize",
@@ -20,21 +21,11 @@
       "react"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dtgoitia/react-project-template.git"
-  },
   "keywords": [
-    "react",
-    "project",
-    "template"
+    "personal site"
   ],
   "author": "dtgoitia",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dtgoitia/react-project-template/issues"
-  },
-  "homepage": "https://github.com/dtgoitia/react-project-template#readme",
   "dependencies": {
     "react": "^15.6.2",
     "react-addons-css-transition-group": "^15.6.2",
