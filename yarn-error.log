@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn predeploy
+  /usr/bin/node /usr/bin/yarn devBlog
 
 PATH: 
   /home/dtg/.gem/ruby/2.5.0/bin:/home/dtg/.cargo/bin:/home/dtg/.cargo/bin:/home/dtg/.gem/ruby/2.5.0/bin:/home/dtg/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dtg/.gem/ruby/2.5.0/bin
@@ -26,7 +26,7 @@ npm manifest:
       "devBlog": "jekyll serve --source ./blog",
       "buildBlog": "jekyll build --source ./blog",
       "buildSpa": "webpack",
-      "build": "npm run purge && npm run buildSpa && npm buildBlog",
+      "build": "npm run purge && npm run buildSpa && npm run buildBlog",
       "purge": "rm -rf ./dist",
       "cname": "cp ./app/CNAME ./dist/CNAME",
       "predeploy": "npm run build && npm run cname && npm run 404",
@@ -5983,7 +5983,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c npm run build && npm run cname && npm run 404
+  Arguments: -c jekyll serve --source ./blog
   Directory: /home/dtg/projects/dtgoitia.github.io
   Output:
   
