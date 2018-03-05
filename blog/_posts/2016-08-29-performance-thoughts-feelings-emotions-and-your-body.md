@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "Performance, thoughts, feelings, emotions and your body"
+title: Performance, thoughts, feelings, emotions and your body
 date: 2016-08-29 17:58
-# feature-img: "assets/img/posts/helloworld.jpg"
 tags: [Alan Watkins, emotions, feelings, performance, physiology, self awareness, TED talks, thoughts]
+categories: [mind, productivity]
 ---
-
 Yesterday I found this video between my "Watch later" list and gave it a go:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0xc3XdOiGGI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

@@ -2,7 +2,6 @@
 layout: post
 title:  "Blockchain: the game changer"
 date: 2016-09-24
-# feature-img: "assets/img/posts/helloworld.jpg"
 ---
 Health, security, currency, copyright... these are just some of the possibilities of this not very known concept called <i>blockchain</i>. But, first things first, what is it?
 
