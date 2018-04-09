@@ -27,7 +27,7 @@
   "academia": [
     {
       "title": "AutoLISP",
-      "subtitle": "Self tought",
+      "subtitle": "Self taught",
       "description": "I use AutoLISP to script in AutoCAD in order to speed up my work, get a standard output and reduce the number of human errors as much as possible.",
       "start": "2015-07",
       "end": "2018-01",
@@ -40,8 +40,8 @@
     },
     {
       "title": "Programming",
-      "subtitle": "Teach myself to code professionaly",
-      "description": "Learn and use: version control system (Git), IDEs, linters, testing libraries (Mocha + Chia). Study JavaScript. Fiddle with Go, Python and C#. If possible, apply TDD.",
+      "subtitle": "Teach myself to code professionally",
+      "description": "TypeScript, Javascript, Node, Mocha, Chai. Most used tools: VSCode, Git, Yarn, ESLint. Other languages: C#, Python, Go, AutoLISP.",
       "start": "2016-03",
       "end": "2018-07",
       "img": "programming.svg",
@@ -118,7 +118,7 @@
     },
     {
       "title": "Web development. HTML and CSS",
-      "subtitle": "Self tought. Just for fun",
+      "subtitle": "Self taught. Just for fun",
       "description": "Learn HTML & CSS basics along an intense month in which I dedicated my whole non-working time to learn and code a static site (check same color on the right).",
       "start": "2014-12",
       "end": "2014-12",
@@ -249,6 +249,19 @@
   ],
   "experience": [
     {
+      "title": "Software Engineer",
+      "subtitle": "Software Imaging",
+      "description": "Develop software solutions written mainly in C# using Azure, Microsoft Bot Framework and LUIS. Continuous use of scrum and Kaizen methodologies.",
+      "start": "2018-02",
+      "end": "",
+      "img": "webdev.svg",
+      "color": "#616161",
+      "bars": [200, 200],
+      "x": 170,
+      "y": -60,
+     "relevant": true
+    },
+    {
       "title": "Graduate Civil Engineer",
       "subtitle": "MJA Consulting",
       "description": "Produce level information, drainage calculations, 3D models, cut & fill analysis and other required documents. Liaise with local authorities for Technical Approval.",
@@ -258,7 +271,7 @@
       "color": "#004793",
       "bars": [170, 170, 170, 170, 175, 175, 180, 195, 200, 205, 210, 210, 210, 210, 210],
       "x": 130,
-      "y": 27,
+      "y": 7,
      "relevant": true
     },
     {
