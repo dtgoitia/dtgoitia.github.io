@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- JQuery (used for bootstrap and jekyll search) -->
+    <script src="/blog/assets/js/jquery-3.2.1.min.js" ></script>
+    
+    <!-- Main JS (navbar.js and katex_init.js)-->
+    <script defer=true src="/blog/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/blog/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/blog/" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://davidtorralba.com/blog/productivity/2016/10/23/autocad-cs-helloworld.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="David Torralba Goitia" href="http://davidtorralba.com//blog//feed.xml"/>
+
+    <!-- Font Awesome -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css"> 
+    
+
+    <!-- KaTeX 0.8.3 -->
+    
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/katex.min.css">
+    <script src="/blog/assets/js/katex.min.js">
+    </script>
+    
+
+    <!-- Google Analytics -->
+    
+    
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>AutoCAD C# ‘HelloWorld’</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="AutoCAD C# ‘HelloWorld’" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Are you a newbie looking for a start point to get started in C# for AutoCAD? Take a look to this post then. As mentioned in my previous post, I did my first C# written HelloWorld within AutoCAD 2017 with Visual Studio 2015. Here what I did:" />
+<meta property="og:description" content="Are you a newbie looking for a start point to get started in C# for AutoCAD? Take a look to this post then. As mentioned in my previous post, I did my first C# written HelloWorld within AutoCAD 2017 with Visual Studio 2015. Here what I did:" />
+<link rel="canonical" href="http://davidtorralba.com/blog/productivity/2016/10/23/autocad-cs-helloworld.html" />
+<meta property="og:url" content="http://davidtorralba.com/blog/productivity/2016/10/23/autocad-cs-helloworld.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-10-23T20:29:00+01:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://davidtorralba.com/blog/productivity/2016/10/23/autocad-cs-helloworld.html"},"@type":"BlogPosting","url":"http://davidtorralba.com/blog/productivity/2016/10/23/autocad-cs-helloworld.html","headline":"AutoCAD C# ‘HelloWorld’","dateModified":"2016-10-23T20:29:00+01:00","datePublished":"2016-10-23T20:29:00+01:00","description":"Are you a newbie looking for a start point to get started in C# for AutoCAD? Take a look to this post then. As mentioned in my previous post, I did my first C# written HelloWorld within AutoCAD 2017 with Visual Studio 2015. Here what I did:","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Manual seo tags -->
+    <!--
+    <title>AutoCAD C# 'HelloWorld' | David Torralba Goitia</title>
+    <meta name="description" content="Are you a newbie looking for a start point to get started in C# for AutoCAD? Take a look to this post then. As mentioned in my previous post, I did my first ...">
+    -->
+</head>
+
+  <body>
+    <header class="site-header">
+    
+    <!-- Logo and title -->
+	<div class="branding">
+		<a href="/blog/">
+			<img class="avatar" src="/blog/" alt=""/>
+		</a>
+
+		<h1 class="site-title">
+			<a href="/blog/">David Torralba Goitia</a>
+		</h1>
+	</div>
+    
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+    
+    <!-- Menu -->
+    <ul>
+        
+        
+        
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="/blog/about/">
+                About
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="http://davidtorralba.com/blog/portfolio">
+                Portfolio
+            </a>
+        </li>
+        
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="http://davidtorralba.com/blog/search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="http://davidtorralba.com/blog/tags">
+                <i class="fa fa-tags" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+    </ul>
+        
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image">
+  <header id="main" style="background-image: url('/blog/assets/img/posts/2016-10-22-acad-vs.png')">
+    <h1 id="AutoCAD+C%23+%27HelloWorld%27" class="title">AutoCAD C# 'HelloWorld'</h1>
+    <p class="meta">
+    October 23, 2016
+    
+    </p>
+  </header>
+  <section class="post-content"><p>Are you a newbie looking for a start point to get started in C# for AutoCAD? Take a look to this post then. As mentioned in <a href="https://davidtorralbablog.wordpress.com/2016/10/22/autocad-net-api-the-next-step-towards-efficiency/">my previous post</a>, I did my first <i>C#</i> written HelloWorld within <i>AutoCAD 2017</i> with <i>Visual Studio 2015</i>. Here what I did:</p>
+
+<h3 id="step-0-prerequisites">STEP 0: prerequisites</h3>
+
+<p>For this process I have installed the following:</p>
+
+<ul>
+  <li>AutoCAD 2017</li>
+  <li>Visual Studio 2015</li>
+  <li>AutoCAD ObjectARX SDK</li>
+</ul>
+
+<p>Now on I will assume you have already downloaded and installed them.</p>
+
+<h3 id="step-1-create-a-new-project">STEP 1: create a new project</h3>
+
+<p>On <i>Start Page</i> tab, select <i>New Project…</i></p>
+
+<p><img class="  wp-image-456 aligncenter" src="https://davidtorralbablog.files.wordpress.com/2016/10/2016-10-22-09_27_33-start-page-microsoft-visual-studio1.png" alt="2016-10-22-09_27_33-start-page-microsoft-visual-studio" width="343" height="294" /></p>
+
+<p>Select the template for an <i>AutoCAD</i> <i>C#</i> project at: <i>Installed</i> &gt; <i>Templates</i> &gt;<i> Visual C#</i> &gt;<i> Autodesk</i></p>
+
+<p><img class="  wp-image-475 aligncenter" src="https://davidtorralbablog.files.wordpress.com/2016/10/2016-10-22-09_29_57-new-project_edit.png" alt="2016-10-22-09_29_57-new-project_edit" width="647" height="116" /></p>
+
+<p>Note you will have some default values at <i>Name</i> and <i>Solution name</i> fields (bottom of the window). Override the <i>Name</i> field with any name you want to give to this project, any name is valid. <i>Solution name</i> field will fill up automatically too when you write on <i>Name</i> field. Hit <i>OK</i>.</p>
+
+<p>As shown below, we need to tell to <i>Visual Studio</i> where to find <i>AcMgd.dll</i> library and <i>acad.exe</i> executable:</p>
+<ul>
+	<li><i>AcMgd.dll</i>: it is wherever you have downloaded the <i>ObjectARX SDK</i>.</li>
+	<li><i>acad.exe</i>: if you have use default installation directory, it should be at <i>C:\Program Files\Autodesk\AutoCAD 2017</i>.</li>
+</ul>
+<p><img class="aligncenter  wp-image-499" src="https://davidtorralbablog.files.wordpress.com/2016/10/2016-10-22-09_38_01-autocad-net-wizard-configurator_edit4.png" alt="2016-10-22-09_38_01-autocad-net-wizard-configurator_edit" width="549" height="604" /></p>
+
+<p>Hit <i>OK</i> to create your project.</p>
+
+<h3 id="step-2-insert-our-code">STEP 2: insert our code</h3>
+
+<p>At the <i>Solution Explorer</i> tab, find <i>myCommand.cs</i> file and click on it.</p>
+</section>
+   
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/blog/tags#AutoCAD">
+      <p><i class="fa fa-tag fa-fw"></i> AutoCAD</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#C#">
+      <p><i class="fa fa-tag fa-fw"></i> C#</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#how to">
+      <p><i class="fa fa-tag fa-fw"></i> how to</p>
+    </a>
+    
+  </div>
+</footer>
+
+    
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+  <div id="previous-post" class="post-nav-post">
+      <p>Previous post</p>
+      <a href="/blog/productivity/2016/10/22/autocad-net-api.html">
+        AutoCAD .NET API: the next step towards efficiency
+      </a>
+  </div>
+  
+  
+  <div id="next-post" class="post-nav-post">
+      <p>Next post</p>
+      <a href="/blog/productivity/2016/12/23/autolisp-script-1.html">
+        AutoLISP: script #1
+      </a>
+  </div>
+  
+</div>
+
+    </div>
+    
+<footer class="site-footer">
+    <p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+	<a href="http://davidtorralba.com/blog/feed.xml" title="Follow RSS feed">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/dtgoitia" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://www.linkedin.com/in/dtgoitia/" title="Follow on LinkedIn">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/dtgoitia" title="Follow on Twitter" class="type">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+
+  </body>
+</html>

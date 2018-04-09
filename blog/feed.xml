@@ -1,13 +1,390 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="localhost:8080/blog/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="localhost:8080/blog/blog/" rel="alternate" type="text/html" /><updated>2018-03-04T18:55:13+00:00</updated><id>localhost:8080/blog/blog/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="localhost:8080/blog/blog/jekyll/update/2018/03/04/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-03-04T18:22:15+00:00</published><updated>2018-03-04T18:22:15+00:00</updated><id>localhost:8080/blog/blog/jekyll/update/2018/03/04/welcome-to-jekyll</id><content type="html" xml:base="localhost:8080/blog/blog/jekyll/update/2018/03/04/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>David Torralba Goitia</title>
+        <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
+        <link>http://davidtorralba.com/blog/</link>
+        <description></description>
+        <pubDate>Mon, 09 Apr 2018 21:42:15 +0100</pubDate>
+        
+        <item>
+            <title>Madoko. Taking the writing to the next level</title>
+            <link>/blog/productivity/2017/06/26/madoko-writing-next-level.html</link>
+            <guid isPermaLink="true">/blog/productivity/2017/06/26/madoko-writing-next-level.html</guid>
+            <description>&lt;p&gt;Have you ever felt you want to have your text in a versatile and light format and don’t find an easy way? This post is for you!&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Some months ago I started &lt;del&gt;to write reports&lt;/del&gt; to &lt;strong&gt;prepare&lt;/strong&gt; myself to write reports for my chartership. Why prepare? Is it really necessary? Well… yes, definitely yes.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h3 id=&quot;preparation-matters-true-story&quot;&gt;Preparation matters: true story…&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;As university student I have had to elaborate the Degree Final Projects (Bachelor’s, Master’s and Bachelor’s again), plus a long list of academic works, reports, lecture notes, presentations… and trust me, the preparation matters. There are many examples but styling is probably one of the most visual cases.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;My final project reached the &lt;strong&gt;1000 pages&lt;/strong&gt;. Before submitting it I passed onto my director for a last check. Guess what? Image footers needed to be left aligned, instead of centre aligned. WTF?! Imagine to do that one by one? ONE BY ONE??? Luckily, I was using LibreOffice that allowed &lt;strong&gt;text hierarchy&lt;/strong&gt; and &lt;strong&gt;style customization&lt;/strong&gt;. This made the gargantuan reformatting task as long as 2 minutes as all the text within the document had perfectly defined categories associated with their corresponding style. I only needed to update the style associated to the image footers and done. If I had used a platform with a poor style management, such us the Windows Notepad I would have been in a serious problem.&lt;/p&gt;
+
+&lt;p&gt;This is the importance of the right choice in advance.&lt;/p&gt;
+
+&lt;h3 id=&quot;requirements&quot;&gt;Requirements&lt;/h3&gt;
+
+&lt;p&gt;Obviously, before choosing the right tool you need to decide &lt;strong&gt;what will you produce&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Is not the same to write a short report or a novel, use many mathematical expressions or not, need to draw diagrams or not, need to collaborate with more people or write on your own, need to export it to PDF or to a blog…&lt;/p&gt;
+
+&lt;p&gt;There are a pile of tools out there and each one is specialist in one field.&lt;/p&gt;
+
+&lt;h3 id=&quot;madoko&quot;&gt;Madoko&lt;/h3&gt;
+
+&lt;p&gt;In my case I usually don’t have very clear how I am going to export my document…maybe as a post? or I will keep it for me as a plain text note? or it might be used for a presentation?&lt;/p&gt;
+
+&lt;p&gt;This is a pain. I don’t want to decide at documents early stages what will I do with my document. Because usually I have no clue!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.madoko.net/&quot; target=&quot;_blank&quot;&gt;Madoko&lt;/a&gt; solves this (and many other) problem(s) for me. Madoko is based on Markdown. This means you write plain text, which brings many advantages:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Self readable: you can perfectly read it without any format.&lt;/li&gt;
+  &lt;li&gt;Editability: it’s a plain text, you can open it with anything!&lt;/li&gt;
+  &lt;li&gt;Longevity: you will always have a program to open your plain text.&lt;/li&gt;
+  &lt;li&gt;Procesablity: as plain text can be easily imported and processed to carry out checkings, batch formatings, etc. or simply extract the information to use it somewhere else.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Till here, nothing different to Markdown. So, what does Madoko offer that Markdown doesn’t?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;LaTeX full support: great if you are a LaTeX user. You can keep your formulas while writing in a much more friendly way. Is way much easier to read a Markdown code than a LaTeX code.&lt;/li&gt;
+  &lt;li&gt;Multiple export: PDF + HTML + slides. You can export your document to a PDF in case you are looking to create a book or a printable document. You can also generate a website, or go even further and create a web-based presentation (which is great because you just need any browser to run it!).&lt;/li&gt;
+  &lt;li&gt;CSS based style management.&lt;/li&gt;
+  &lt;li&gt;Offline CLI or online GUI. The online GUI offers a nice editor with many options.&lt;/li&gt;
+  &lt;li&gt;Dropbox, GitHub and other platform integration for synchronization.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How can I say it… it was love at first sight. Now I can focus on my content and worry about the formatting later on. I will always be able to access my information from anywhere, and doesn’t matter I don’t have internet, the “code” itself is so clear and clean you can read it easily without any render. I can issue my reports on PDF to print them and hand a hard copy to my mentor or simply upload an static HTML to a temporary repository and share the link with my mentor so that he can access it from anywhere (avoid paper waste!). I still can’t imagine where the slides might be useful for my chartership… but as we say in my mother tongue: &lt;em&gt;everything will come&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;extra&quot;&gt;EXTRA&lt;/h3&gt;
+
+&lt;p&gt;Here the a video of the author, Daan Leijen, explaining Madoko’s capabilities:&lt;/p&gt;
+
+&lt;iframe width=&quot;830&quot; height=&quot;492&quot; src=&quot;https://www.youtube.com/embed/Aa-ustkfU4Y&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</description>
+            <pubDate>Mon, 26 Jun 2017 21:01:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>AutoLISP: scripting in AutoCAD</title>
+            <link>/blog/brainstorming/2017/04/18/python-script-from-autocad.html</link>
+            <guid isPermaLink="true">/blog/brainstorming/2017/04/18/python-script-from-autocad.html</guid>
+            <description>&lt;h3 id=&quot;start-point&quot;&gt;Start-point&lt;/h3&gt;
+
+&lt;p&gt;This has been achieved using AutoCAD 2017 and Python 3.5.&lt;/p&gt;
+
+&lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
+
+&lt;p&gt;First, I wrote a python script which will throw a pop up with a dumb message.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ctypes&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;it's alive!&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ctypes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;windll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user32&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MessageBoxW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;TEST POP UP&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The aim of this script is to check if AutoCAD is really executing the script. Thus, I need something that shows me it’s working. If I wouldn’t add this pop up (which waits for my input) the python shell would close so fast I would not feel any difference.&lt;/p&gt;
+
+&lt;p&gt;Save the script. I saved my file at C:/alive.py.&lt;/p&gt;
+
+&lt;p&gt;After testing the python script from Windows shell (cmd.exe) to ensure it does what I aimed, I jumped to AutoCAD.&lt;/p&gt;
+
+&lt;h3 id=&quot;autocad&quot;&gt;AutoCAD&lt;/h3&gt;
+
+&lt;p&gt;First I tried to open the python shell from AutoCAD. This is possible using the command start and typing the path of python shell executable &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Users\&amp;lt;yourUsername&amp;gt;\AppData\Local\Programs\Python\Python35-32\python.exe&lt;/code&gt;. Hit ENTER and voilà! You are inside a python shell.&lt;/p&gt;
+
+&lt;p&gt;And finally I executed the python script from AutoCAD using the following AutoLISP lines:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-lisp&quot;&gt;(setq
+  python &quot;C:/Users/&amp;lt;yourUsername&amp;gt;/AppData/Local/Programs/Python/Python35-32/python.exe&quot;
+  pyscript &quot;C:/alive.py&quot;
+)
+(startapp python pyscript)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and once more… bingo! I triggered my first python script from AutoCAD!&lt;/p&gt;
+
+&lt;h3 id=&quot;why&quot;&gt;Why?&lt;/h3&gt;
+
+&lt;p&gt;This little test has its origin in my tiredness. I’m bored of being let down constantly by &lt;code class=&quot;highlighter-rouge&quot;&gt;(startapp)&lt;/code&gt; AutoLISP function. This function is supposed to trigger an external app accepting some arguments, such us open windows explorer in a specific directory, etc. The problem is that I am not able to make it work as I want. So I thought, “hey, python might be able to accomplish this dumb task with its eyes closed, let’s give it a try, if this works it will open me a whole new world of toys!”. And it has done it, indeed.&lt;/p&gt;
+
+&lt;p&gt;Happy coding!&lt;/p&gt;
+</description>
+            <pubDate>Tue, 18 Apr 2017 13:00:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>How to write math in atom</title>
+            <link>/blog/productivity/2017/04/14/markdown-latex.html</link>
+            <guid isPermaLink="true">/blog/productivity/2017/04/14/markdown-latex.html</guid>
+            <description>&lt;p&gt;I find quite often I want to write few mathematical expressions, but diving into LaTeX might sound a bit overwhelming. As we say in Spanish, it’s like &lt;em&gt;hunting flies with cannons&lt;/em&gt;…&lt;/p&gt;
+
+&lt;p&gt;I describe below an open source solution which I believe will be really helpful for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;You will need to&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install the latest &lt;em&gt;atom&lt;/em&gt; version from &lt;a href=&quot;https://atom.io/&quot;&gt;official website&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Open &lt;em&gt;atom&lt;/em&gt; and go to &lt;em&gt;Settings&lt;/em&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + ,&lt;/code&gt;) &amp;gt; &lt;em&gt;Install&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Install &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown-preview-enhanced&lt;/code&gt; package.&lt;/li&gt;
+  &lt;li&gt;Disable &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown-preview&lt;/code&gt; package. This package is installed by default after installing &lt;em&gt;atom&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;how-to-use-it&quot;&gt;How to use it&lt;/h2&gt;
+
+&lt;h3 id=&quot;render-in-real-time&quot;&gt;Render in real time&lt;/h3&gt;
+
+&lt;p&gt;The point of using this package is the possibility to render &lt;strong&gt;in real time&lt;/strong&gt; &lt;em&gt;TeX&lt;/em&gt; expressions together with &lt;em&gt;markdown&lt;/em&gt;. To do so:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to &lt;em&gt;Settings&lt;/em&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + ,&lt;/code&gt;) &amp;gt; &lt;em&gt;Packages&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Look for &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown-preview-enhanced&lt;/code&gt; package.&lt;/li&gt;
+  &lt;li&gt;Click the button &lt;em&gt;Settings&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Scroll down and check the box &lt;em&gt;Live Update&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;writing&quot;&gt;Writing&lt;/h2&gt;
+
+&lt;p&gt;We are ready to write, we need to enable the &lt;em&gt;Preview&lt;/em&gt; pane. Otherwise, you will just see your markdown code, instead of the render.&lt;/p&gt;
+
+&lt;p&gt;You can do this in three different ways:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Shortcut&lt;/strong&gt;: hit &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Shift + M&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Command palette&lt;/strong&gt;:
+    &lt;ol&gt;
+      &lt;li&gt;Hit &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Shift + P&lt;/code&gt; to open the &lt;em&gt;Command Palette&lt;/em&gt;.
+ 	2. Type &lt;code class=&quot;highlighter-rouge&quot;&gt;Markdown Preview Enhanced: Toggle&lt;/code&gt; and hit &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTER&lt;/code&gt;.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Right click menu&lt;/strong&gt;: right click over the text of a markdown file and select the option &lt;code class=&quot;highlighter-rouge&quot;&gt;Toggle markdown-preview-enhanced&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;/h2&gt;
+
+&lt;h3 id=&quot;inline&quot;&gt;Inline&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is an inline formula. $e^{\pi i - 1} = 0$. Do you like it?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This is an inline formula. $e^{\pi i - 1} = 0$. Do you like it?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;block&quot;&gt;Block&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$$ a_0 + \dfrac{1}{a_1 + \dfrac{1}{a_2 + \dfrac{1}{a_3 + \dfrac{1}{...}}}} $$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a block latex formula, see below:
+&lt;script type=&quot;math/tex&quot;&gt;a_0 + \dfrac{1}{a_1 + \dfrac{1}{a_2 + \dfrac{1}{a_3 + \dfrac{1}{...}}}}&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;more-stuff&quot;&gt;More stuff&lt;/h2&gt;
+
+&lt;h3 id=&quot;math-rendering-option&quot;&gt;Math Rendering Option&lt;/h3&gt;
+&lt;p&gt;This option can be found in the package settings.&lt;/p&gt;
+
+&lt;p&gt;Change the &lt;em&gt;Math Rendering Option&lt;/em&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;MathJax&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The package sets &lt;code class=&quot;highlighter-rouge&quot;&gt;KaTeX&lt;/code&gt; by default. However, I found this package didn’t support &lt;code class=&quot;highlighter-rouge&quot;&gt;\dfrac&lt;/code&gt; (and it sucks to use &lt;code class=&quot;highlighter-rouge&quot;&gt;\frac&lt;/code&gt; for big fractions as they look pretty poor… ¬¬).&lt;/p&gt;
+
+&lt;h3 id=&quot;exporting-to-pdf&quot;&gt;Exporting to PDF&lt;/h3&gt;
+
+&lt;p&gt;To export your document to a PDF:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Right click on the preview pane.&lt;/li&gt;
+  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;Export to Disk&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;PDF&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Choose your settings and hit &lt;code class=&quot;highlighter-rouge&quot;&gt;Export&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;You can check the &lt;a href=&quot;https://atom.io/packages/markdown-preview-enhanced&quot;&gt;official repository&lt;/a&gt; of this package in GitHub for further information. There are much more things this package can do apart from rendering &lt;em&gt;LaTeX&lt;/em&gt;.&lt;/p&gt;
+</description>
+            <pubDate>Fri, 14 Apr 2017 12:25:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>TRIM command | Advanced AutoCAD</title>
+            <link>/blog/productivity/2017/04/05/trim-command-advanced-autocad.html</link>
+            <guid isPermaLink="true">/blog/productivity/2017/04/05/trim-command-advanced-autocad.html</guid>
+            <description>&lt;p&gt;Hi guys!&lt;/p&gt;
+
+&lt;p&gt;This weeks I have been very busy playing with screen recording, audio edition and video edition. But I’m back!&lt;/p&gt;
+
+&lt;p&gt;Have a look to my first video! Let me know on the comments any other AutoCAD topic you would like me to speak about.&lt;/p&gt;
+
+&lt;p&gt;Enable English subtitles (unless you want to practice your Spanish :P).&lt;/p&gt;
+
+&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/syTzTEeLG0Y&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</description>
+            <pubDate>Wed, 05 Apr 2017 21:36:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>How to boost your AutoCAD workflow</title>
+            <link>/blog/productivity/2017/01/14/how-to-boost-your-autocad-workflow.html</link>
+            <guid isPermaLink="true">/blog/productivity/2017/01/14/how-to-boost-your-autocad-workflow.html</guid>
+            <description>&lt;p&gt;If you are reading this post you are probably an AutoCAD user who wants to improve its drafting performance.&lt;/p&gt;
+
+&lt;p&gt;There are basically 2 wayls to speed up your AutoCAD workflow:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Delegate&lt;/strong&gt;. It might be worth to delegate drafting tasks to a specialised professional.
+    &lt;ul&gt;
+      &lt;li&gt;Pros: &lt;strong&gt;forget&lt;/strong&gt; about the process problems, just detail the desired output and it will be done for you.&lt;/li&gt;
+      &lt;li&gt;Cons: you need to &lt;strong&gt;pay&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Automate&lt;/strong&gt;. AutoCAD offers many ways to automate tasks: macros, custom commands, plug-ins…
+    &lt;ul&gt;
+      &lt;li&gt;Pros: once built they are &lt;strong&gt;forever&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;Cons: you need to &lt;strong&gt;know&lt;/strong&gt; how to code.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I know what are you thinking &lt;em&gt;hold on, hold on… what are you suggesting? ¬¬ I don’t have time to learn to program and in my situation is not worth it to hire nobody to draw for me.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here my proposal: &lt;strong&gt;delegate the automation&lt;/strong&gt;. It will probably require a bigger starting cost, but you will recover the initial investment as you produce faster. Remember: an automation is forever.&lt;/p&gt;
+</description>
+            <pubDate>Sat, 14 Jan 2017 00:02:00 +0000</pubDate>
+        </item>
+        
+        <item>
+            <title>AutoLISP: script #1</title>
+            <link>/blog/productivity/2016/12/23/autolisp-script-1.html</link>
+            <guid isPermaLink="true">/blog/productivity/2016/12/23/autolisp-script-1.html</guid>
+            <description>&lt;p&gt;AutoLISP has become an essential tool in my job. Small scripts like the one I want to share with you now make me the life easier and help to ensure the things are done right (and way much faster). These scripts can also be used as many times as you need, so is worth it to invest some more time in them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Case&lt;/strong&gt;: I had to process hundreds of &lt;del&gt;cheeky&lt;/del&gt; polylines which were supposed to be closed, but they weren’t. Instead, the first and the last vertexes of every polyline had the same coordinates.&lt;/p&gt;
+
+&lt;p&gt;In order not have duplicated vertexes, I needed to remove manually the first (or last) vertex and then close the polyline. I was not going to repeat that process manually, &lt;strong&gt;no way&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;https://gist.github.com/dtgoitia/09015eda906cc376794c125300030561&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
+            <pubDate>Fri, 23 Dec 2016 23:00:00 +0000</pubDate>
+        </item>
+        
+        <item>
+            <title>AutoCAD C# 'HelloWorld'</title>
+            <link>/blog/productivity/2016/10/23/autocad-cs-helloworld.html</link>
+            <guid isPermaLink="true">/blog/productivity/2016/10/23/autocad-cs-helloworld.html</guid>
+            <description>&lt;p&gt;Are you a newbie looking for a start point to get started in C# for AutoCAD? Take a look to this post then. As mentioned in &lt;a href=&quot;https://davidtorralbablog.wordpress.com/2016/10/22/autocad-net-api-the-next-step-towards-efficiency/&quot;&gt;my previous post&lt;/a&gt;, I did my first &lt;i&gt;C#&lt;/i&gt; written HelloWorld within &lt;i&gt;AutoCAD 2017&lt;/i&gt; with &lt;i&gt;Visual Studio 2015&lt;/i&gt;. Here what I did:&lt;/p&gt;
+
+&lt;h3 id=&quot;step-0-prerequisites&quot;&gt;STEP 0: prerequisites&lt;/h3&gt;
+
+&lt;p&gt;For this process I have installed the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AutoCAD 2017&lt;/li&gt;
+  &lt;li&gt;Visual Studio 2015&lt;/li&gt;
+  &lt;li&gt;AutoCAD ObjectARX SDK&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now on I will assume you have already downloaded and installed them.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-create-a-new-project&quot;&gt;STEP 1: create a new project&lt;/h3&gt;
+
+&lt;p&gt;On &lt;i&gt;Start Page&lt;/i&gt; tab, select &lt;i&gt;New Project…&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;  wp-image-456 aligncenter&quot; src=&quot;https://davidtorralbablog.files.wordpress.com/2016/10/2016-10-22-09_27_33-start-page-microsoft-visual-studio1.png&quot; alt=&quot;2016-10-22-09_27_33-start-page-microsoft-visual-studio&quot; width=&quot;343&quot; height=&quot;294&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select the template for an &lt;i&gt;AutoCAD&lt;/i&gt; &lt;i&gt;C#&lt;/i&gt; project at: &lt;i&gt;Installed&lt;/i&gt; &amp;gt; &lt;i&gt;Templates&lt;/i&gt; &amp;gt;&lt;i&gt; Visual C#&lt;/i&gt; &amp;gt;&lt;i&gt; Autodesk&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;  wp-image-475 aligncenter&quot; src=&quot;https://davidtorralbablog.files.wordpress.com/2016/10/2016-10-22-09_29_57-new-project_edit.png&quot; alt=&quot;2016-10-22-09_29_57-new-project_edit&quot; width=&quot;647&quot; height=&quot;116&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note you will have some default values at &lt;i&gt;Name&lt;/i&gt; and &lt;i&gt;Solution name&lt;/i&gt; fields (bottom of the window). Override the &lt;i&gt;Name&lt;/i&gt; field with any name you want to give to this project, any name is valid. &lt;i&gt;Solution name&lt;/i&gt; field will fill up automatically too when you write on &lt;i&gt;Name&lt;/i&gt; field. Hit &lt;i&gt;OK&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;As shown below, we need to tell to &lt;i&gt;Visual Studio&lt;/i&gt; where to find &lt;i&gt;AcMgd.dll&lt;/i&gt; library and &lt;i&gt;acad.exe&lt;/i&gt; executable:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;i&gt;AcMgd.dll&lt;/i&gt;: it is wherever you have downloaded the &lt;i&gt;ObjectARX SDK&lt;/i&gt;.&lt;/li&gt;
+	&lt;li&gt;&lt;i&gt;acad.exe&lt;/i&gt;: if you have use default installation directory, it should be at &lt;i&gt;C:\Program Files\Autodesk\AutoCAD 2017&lt;/i&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img class=&quot;aligncenter  wp-image-499&quot; src=&quot;https://davidtorralbablog.files.wordpress.com/2016/10/2016-10-22-09_38_01-autocad-net-wizard-configurator_edit4.png&quot; alt=&quot;2016-10-22-09_38_01-autocad-net-wizard-configurator_edit&quot; width=&quot;549&quot; height=&quot;604&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hit &lt;i&gt;OK&lt;/i&gt; to create your project.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-insert-our-code&quot;&gt;STEP 2: insert our code&lt;/h3&gt;
+
+&lt;p&gt;At the &lt;i&gt;Solution Explorer&lt;/i&gt; tab, find &lt;i&gt;myCommand.cs&lt;/i&gt; file and click on it.&lt;/p&gt;
+</description>
+            <pubDate>Sun, 23 Oct 2016 20:29:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>AutoCAD .NET API: the next step towards efficiency</title>
+            <link>/blog/productivity/2016/10/22/autocad-net-api.html</link>
+            <guid isPermaLink="true">/blog/productivity/2016/10/22/autocad-net-api.html</guid>
+            <description>&lt;p&gt;I published not so long ago a post about &lt;a href=&quot;https://davidtorralbablog.wordpress.com/2016/10/03/autolisp-scripting-in-autocad/&quot;&gt;scripting in &lt;i&gt;AutoCAD&lt;/i&gt;&lt;/a&gt; to boost your productivity. Scripting is great! You don’t need to set up anything, &lt;i&gt;AutoCAD&lt;/i&gt; is enough to start doing magic. And is pretty easy to update and test your code. Actually, the experience of discover and learn &lt;i&gt;AutoLISP&lt;/i&gt; and &lt;i&gt;VLISP&lt;/i&gt; during this year it has been amazing. However, the more scripts I was building, the more limitations I was finding, such as create custom objects.&lt;/p&gt;
+
+&lt;p&gt;So, a step towards a more powerful tool was unavoidable. &lt;i&gt;.NET&lt;/i&gt; had to happen, in my case with &lt;i&gt;C#&lt;/i&gt; (or &lt;i&gt;CSharp&lt;/i&gt;). Why not &lt;i&gt;VisualBasic&lt;/i&gt;? Why not &lt;i&gt;ObjectARX &lt;/i&gt;(&lt;i&gt;C++&lt;/i&gt; based)? Well, despite I have played a bit with &lt;i&gt;VisualBasic&lt;/i&gt; before to create some Macros, and I had some relation with C++, as I spent couple of years building &lt;i&gt;Expert Advisors&lt;/i&gt; for &lt;i&gt;MetraTrader&lt;/i&gt; with &lt;i&gt;MQL4&lt;/i&gt; and &lt;i&gt;MQL5&lt;/i&gt;, I think &lt;i&gt;C#&lt;/i&gt; is the best option to start. “Alright David, but you haven’t told us why…¬¬” Okey…okey! I basically looked for professional advice, a friend within the industry. The answer was straight and without any doubt &lt;i&gt;C#&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, here we are. After 2 weeks reading about &lt;i&gt;C#&lt;/i&gt;, classes - I still don’t understand how could I write any code till today without knowing what was a class…-, namespaces, inheritance and a whole bunch of new and very interesting concepts, I took &lt;i&gt;Visual Studio 2015&lt;/i&gt; and created my first command &lt;i&gt;AutoCAD 2017&lt;/i&gt; (eh, debug included!).&lt;/p&gt;
+
+&lt;p&gt;I can’t wait to learn more and create my super cool drafting stuff!&lt;/p&gt;
+</description>
+            <pubDate>Sat, 22 Oct 2016 20:29:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>AutoLISP: scripting in AutoCAD</title>
+            <link>/blog/productivity/2016/10/03/autolisp-scripting-in-autocad.html</link>
+            <guid isPermaLink="true">/blog/productivity/2016/10/03/autolisp-scripting-in-autocad.html</guid>
+            <description>&lt;p&gt;As civil engineer, I work with CAD everyday. During last year, I have been focused on &lt;i&gt;&lt;a href=&quot;http://www.autodesk.es/products/autocad/free-trial&quot; target=&quot;_blank&quot;&gt;AutoCAD&lt;/a&gt;&lt;/i&gt;, specially on its scripting language &lt;i&gt;AutoLISP&lt;/i&gt;. As I don’t have any academic background on programming, it has been a great adventure to explore this world bit by bit, learning on the way and solving real day by day problems.&lt;/p&gt;
+
+&lt;p&gt;I certainly have boosted my productivity since I have started writing &lt;i&gt;AutoCAD&lt;/i&gt; scripts, not just speed wise, but being consistent in my work too. &lt;i&gt;AutoCAD&lt;/i&gt; looks quite different when you start to understand how is designed inside. Highly recommended for any person who works close to any CAD (bear in mind many other CAD softwares allow scripting, not just &lt;i&gt;AutoCAD&lt;/i&gt;).&lt;/p&gt;
+
+&lt;p&gt;As a result, I have built a small library of scripts developed day by day to improve my productivity at work. I believe many of this code is applicable to other disciplines thought. That’s why, today I have released my library. Now on, it will be available on &lt;i&gt;GitHub&lt;/i&gt;, under the following repository: &lt;a href=&quot;http://github.com/dtgoitia/civil-autolisp&quot; target=&quot;_blank&quot;&gt;github.com/dtgoitia/civil-autolisp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I would like to thank &lt;a href=&quot;https://github.com/txomon&quot; target=&quot;_blank&quot;&gt;Javier Domingo&lt;/a&gt;, who introduced me to &lt;i&gt;Git&lt;/i&gt; &amp;amp; &lt;i&gt;GitHub&lt;/i&gt; and pushed me to &lt;i&gt;push&lt;/i&gt; my code.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
+            <pubDate>Mon, 03 Oct 2016 16:13:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>Performance, thoughts, feelings, emotions and your body</title>
+            <link>/blog/mind/productivity/2016/08/29/performance-thoughts-feelings-emotions-and-your-body.html</link>
+            <guid isPermaLink="true">/blog/mind/productivity/2016/08/29/performance-thoughts-feelings-emotions-and-your-body.html</guid>
+            <description>&lt;p&gt;Yesterday I found this video between my “Watch later” list and gave it a go:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0xc3XdOiGGI&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Originally titled as &lt;em&gt;Being Brilliant Every Single Day&lt;/em&gt; (&lt;a href=&quot;https://www.youtube.com/watch?v=q06YIWCR2Js&quot; target=&quot;_blank&quot;&gt;part 1&lt;/a&gt;,  &lt;a href=&quot;https://www.youtube.com/watch?v=Q_fFattg8N0&quot; target=&quot;_blank&quot;&gt;part 2&lt;/a&gt;), this talk took place at TEDxPortsmouth event (March 2012). The speaker -Dr. Alan Watkins- is the founder and CEO of &lt;a href=&quot;http://www.complete-coherence.com/&quot; target=&quot;_blank&quot;&gt;Complete Coherence&lt;/a&gt;, recognised as an international expert on leadership and human performance, among others.&lt;/p&gt;
+
+&lt;p&gt;The talk was so interesting I kept on looking for more recent information about it and found &lt;em&gt;Why you feel what you feel&lt;/em&gt;, at TEDxOxford event (January, 2015):&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/h-rRgpPbR5w&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Interesting field to keep on growing isn’t it?&lt;/p&gt;
+</description>
+            <pubDate>Mon, 29 Aug 2016 17:58:00 +0100</pubDate>
+        </item>
+        
+        <item>
+            <title>Time to start</title>
+            <link>/blog/2016/08/29/time-to-start.html</link>
+            <guid isPermaLink="true">/blog/2016/08/29/time-to-start.html</guid>
+            <description>&lt;p&gt;Everything looks (more or less) set up. It’s time to prompt a &lt;code&gt;hello world&lt;/code&gt; and start working.&lt;/p&gt;
+</description>
+            <pubDate>Mon, 29 Aug 2016 17:18:00 +0100</pubDate>
+        </item>
+        
+    </channel>
+</rss>

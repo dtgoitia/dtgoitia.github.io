@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- JQuery (used for bootstrap and jekyll search) -->
+    <script src="/blog/assets/js/jquery-3.2.1.min.js" ></script>
+    
+    <!-- Main JS (navbar.js and katex_init.js)-->
+    <script defer=true src="/blog/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/blog/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/blog/" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://davidtorralba.com/blog/productivity/2016/10/03/autolisp-scripting-in-autocad.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="David Torralba Goitia" href="http://davidtorralba.com//blog//feed.xml"/>
+
+    <!-- Font Awesome -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css"> 
+    
+
+    <!-- KaTeX 0.8.3 -->
+    
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/katex.min.css">
+    <script src="/blog/assets/js/katex.min.js">
+    </script>
+    
+
+    <!-- Google Analytics -->
+    
+    
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>AutoLISP: scripting in AutoCAD</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="AutoLISP: scripting in AutoCAD" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As civil engineer, I work with CAD everyday. During last year, I have been focused on AutoCAD, specially on its scripting language AutoLISP. As I don’t have any academic background on programming, it has been a great adventure to explore this world bit by bit, learning on the way and solving real day by day problems." />
+<meta property="og:description" content="As civil engineer, I work with CAD everyday. During last year, I have been focused on AutoCAD, specially on its scripting language AutoLISP. As I don’t have any academic background on programming, it has been a great adventure to explore this world bit by bit, learning on the way and solving real day by day problems." />
+<link rel="canonical" href="http://davidtorralba.com/blog/productivity/2016/10/03/autolisp-scripting-in-autocad.html" />
+<meta property="og:url" content="http://davidtorralba.com/blog/productivity/2016/10/03/autolisp-scripting-in-autocad.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-10-03T16:13:00+01:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://davidtorralba.com/blog/productivity/2016/10/03/autolisp-scripting-in-autocad.html"},"@type":"BlogPosting","url":"http://davidtorralba.com/blog/productivity/2016/10/03/autolisp-scripting-in-autocad.html","headline":"AutoLISP: scripting in AutoCAD","dateModified":"2016-10-03T16:13:00+01:00","datePublished":"2016-10-03T16:13:00+01:00","description":"As civil engineer, I work with CAD everyday. During last year, I have been focused on AutoCAD, specially on its scripting language AutoLISP. As I don’t have any academic background on programming, it has been a great adventure to explore this world bit by bit, learning on the way and solving real day by day problems.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Manual seo tags -->
+    <!--
+    <title>AutoLISP: scripting in AutoCAD | David Torralba Goitia</title>
+    <meta name="description" content="As civil engineer, I work with CAD everyday. During last year, I have been focused on AutoCAD, specially on its scripting language AutoLISP. As I don’t have ...">
+    -->
+</head>
+
+  <body>
+    <header class="site-header">
+    
+    <!-- Logo and title -->
+	<div class="branding">
+		<a href="/blog/">
+			<img class="avatar" src="/blog/" alt=""/>
+		</a>
+
+		<h1 class="site-title">
+			<a href="/blog/">David Torralba Goitia</a>
+		</h1>
+	</div>
+    
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+    
+    <!-- Menu -->
+    <ul>
+        
+        
+        
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="/blog/about/">
+                About
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="http://davidtorralba.com/blog/portfolio">
+                Portfolio
+            </a>
+        </li>
+        
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="http://davidtorralba.com/blog/search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="separator">
+            |
+        </li>
+        <li>
+            <a class="clear" href="http://davidtorralba.com/blog/tags">
+                <i class="fa fa-tags" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+    </ul>
+        
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image">
+  <header id="main" style="background-image: url('/blog/assets/img/posts/2016-10-03-17_03_15-ktf-7-15-5396-engbase-dwg1.png')">
+    <h1 id="AutoLISP%3A+scripting+in+AutoCAD" class="title">AutoLISP: scripting in AutoCAD</h1>
+    <p class="meta">
+    October 3, 2016
+    
+    </p>
+  </header>
+  <section class="post-content"><p>As civil engineer, I work with CAD everyday. During last year, I have been focused on <i><a href="http://www.autodesk.es/products/autocad/free-trial" target="_blank">AutoCAD</a></i>, specially on its scripting language <i>AutoLISP</i>. As I don’t have any academic background on programming, it has been a great adventure to explore this world bit by bit, learning on the way and solving real day by day problems.</p>
+
+<p>I certainly have boosted my productivity since I have started writing <i>AutoCAD</i> scripts, not just speed wise, but being consistent in my work too. <i>AutoCAD</i> looks quite different when you start to understand how is designed inside. Highly recommended for any person who works close to any CAD (bear in mind many other CAD softwares allow scripting, not just <i>AutoCAD</i>).</p>
+
+<p>As a result, I have built a small library of scripts developed day by day to improve my productivity at work. I believe many of this code is applicable to other disciplines thought. That’s why, today I have released my library. Now on, it will be available on <i>GitHub</i>, under the following repository: <a href="http://github.com/dtgoitia/civil-autolisp" target="_blank">github.com/dtgoitia/civil-autolisp</a>.</p>
+
+<p>I would like to thank <a href="https://github.com/txomon" target="_blank">Javier Domingo</a>, who introduced me to <i>Git</i> &amp; <i>GitHub</i> and pushed me to <i>push</i> my code.</p>
+
+<p>Enjoy!</p>
+</section>
+   
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/blog/tags#AutoCAD">
+      <p><i class="fa fa-tag fa-fw"></i> AutoCAD</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#AutoLISP">
+      <p><i class="fa fa-tag fa-fw"></i> AutoLISP</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#Git">
+      <p><i class="fa fa-tag fa-fw"></i> Git</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#GitHub">
+      <p><i class="fa fa-tag fa-fw"></i> GitHub</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#VLisp">
+      <p><i class="fa fa-tag fa-fw"></i> VLisp</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#civil engineering">
+      <p><i class="fa fa-tag fa-fw"></i> civil engineering</p>
+    </a>
+    
+    <a class="button" href="/blog/tags#script">
+      <p><i class="fa fa-tag fa-fw"></i> script</p>
+    </a>
+    
+  </div>
+</footer>
+
+    
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+  <div id="previous-post" class="post-nav-post">
+      <p>Previous post</p>
+      <a href="/blog/mind/productivity/2016/08/29/performance-thoughts-feelings-emotions-and-your-body.html">
+        Performance, thoughts, feelings, emotions and your body
+      </a>
+  </div>
+  
+  
+  <div id="next-post" class="post-nav-post">
+      <p>Next post</p>
+      <a href="/blog/productivity/2016/10/22/autocad-net-api.html">
+        AutoCAD .NET API: the next step towards efficiency
+      </a>
+  </div>
+  
+</div>
+
+    </div>
+    
+<footer class="site-footer">
+    <p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+	<a href="http://davidtorralba.com/blog/feed.xml" title="Follow RSS feed">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/dtgoitia" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://www.linkedin.com/in/dtgoitia/" title="Follow on LinkedIn">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/dtgoitia" title="Follow on Twitter" class="type">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+
+  </body>
+</html>
